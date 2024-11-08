@@ -3,7 +3,7 @@ extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -27,11 +27,9 @@ func resume_game():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	print("Resume Game")
 	PlayMenu.ClosePlayMenu()
-	Inventory.close_inventory()
 
 func pause_game():
 	Variable.Pause()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	print("Pause Game")
 	PlayMenu.OpenPlayMenu()
-	Inventory.close_inventory()

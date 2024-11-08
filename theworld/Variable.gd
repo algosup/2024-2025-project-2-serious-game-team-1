@@ -2,8 +2,9 @@ extends Node
 
 
 var isPaused = true
-var PlayerIsPaused = false
+var PlayerIsPaused = true
 var InventoryOpen = false
+var PlayMenuOpen = false
 var PreviousScene: String = ""
 
 func pause_character():
@@ -22,10 +23,6 @@ func UnPause():
 	isPaused = false
 	get_tree().paused = false
 
-func lunch_game():
-	print("Start Game")
-	get_tree().change_scene_to_file("res://menu.tscn")
-
 func GoBack():
 	get_tree().change_scene_to_file(PreviousScene)
 
@@ -36,6 +33,9 @@ func option_game():
 
 func start_game():
 	UnPause()
+	resume_character()
+	Inventory.close_inventory()
+	PlayMenu.ClosePlayMenu()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	print("Start Game")
-	get_tree().change_scene_to_file("res://Game.tscn")
+	get_tree().change_scene_to_file("res://game_play.tscn")

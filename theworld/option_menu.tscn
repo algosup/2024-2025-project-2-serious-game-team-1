@@ -49,11 +49,13 @@ metadata/_tab_index = 0
 
 [node name="Video" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
 visible = false
+custom_minimum_size = Vector2(0, 600)
 layout_mode = 2
 metadata/_tab_index = 1
 
 [node name="Control" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
 visible = false
+custom_minimum_size = Vector2(0, 600)
 layout_mode = 2
 metadata/_tab_index = 2
 

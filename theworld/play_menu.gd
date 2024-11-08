@@ -8,10 +8,26 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Variable.PlayMenuOpen:
+		$".".show()
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	else:
+		$".".hide()
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func OpenPlayMenu():
-	$".".show()
+	Variable.PlayMenuOpen = true
 
 func ClosePlayMenu():
-	$".".hide()
+	Variable.PlayMenuOpen = false
+
+func _on_resume_button_pressed() -> void:
+	Variable.UnPause()
+	Variable.resume_character()
+
+func _on_option_menu_pressed() -> void:
+	Variable.PreviousScene = "res://game_play.tscn"
+	get_tree().change_scene_to_file("res://option_menu.tscn")
+
+func _on_back_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://main_menu.tscn")
