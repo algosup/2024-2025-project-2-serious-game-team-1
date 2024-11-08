@@ -10,10 +10,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Variable.PlayMenuOpen:
 		$".".show()
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		if Variable.MouseCapture:
+			Variable.CaptureMouseOff()
 	else:
 		$".".hide()
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		if not Variable.MouseCapture:
+			Variable.CaptureMouseOn()
 
 func OpenPlayMenu():
 	Variable.PlayMenuOpen = true
@@ -22,8 +24,7 @@ func ClosePlayMenu():
 	Variable.PlayMenuOpen = false
 
 func _on_resume_button_pressed() -> void:
-	Variable.UnPause()
-	Variable.resume_character()
+	GamePlay.resume_game()
 
 func _on_option_menu_pressed() -> void:
 	Variable.PreviousScene = "res://game_play.tscn"

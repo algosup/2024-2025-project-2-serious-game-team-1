@@ -8,7 +8,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	if Variable.MouseCapture:
+			Variable.CaptureMouseOff()
 
 
 func _on_play_button_pressed() -> void:

@@ -11,11 +11,13 @@ func _process(delta: float) -> void:
 	if Variable.InventoryOpen:
 		$".".show()
 		Variable.pause_character()
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		if Variable.MouseCapture:
+			Variable.CaptureMouseOff()
 	else:
 		$".".hide()
 		Variable.resume_character()
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		if not Variable.MouseCapture:
+			Variable.CaptureMouseOn()
 
 func open_inventory():
 	Variable.InventoryOpen = true
