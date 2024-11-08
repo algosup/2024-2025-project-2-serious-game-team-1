@@ -39,7 +39,7 @@
 | **Mathis Lebel**     | Good progress                                               | Nothing to change                                | Happy                        | Cool, motivated team      | 0                  | 0                   |
 | **Robin Goumy**      | Made good progress, started technical doc                   | Improve team communication                       | Feeling very good, enjoying the project and Godot Engine | Positive, team is motivated | 0                  | 0                   |
 | **Alexis Santos**    | Made progress, learned a lot but faced GitHub issues        | Improve GitHub usage; sync with Matteo and Robin on dev specs | Tired but content | Very good | 0                  | 0                   |
-| **Mattéo Lefin**     | Helped with code tasks                                      | Nothing to change                                | Feeling fine                 | Excellent                 | 0                  | 0                   |
+| **Mattéo Lefin**     | Doing a lot of progress every day!                                    |I don't see anything to change yet.change                                | tired, i need my weekend, but still eager to work!                |  Calm and gives the will to continue the project            | 0                  | 0                   |
 | **Guillaume Despaux**| Gained good project overview, haven't started user manual   | More participation and dedicated tasks; maintain project manager boundaries | Feeling positive and enthusiastic | Well managed             | 0                  | 0                   |
 
 ---
