@@ -9,7 +9,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float):
-	if Input.is_action_just_pressed("Escape"):
+	if Input.is_action_just_pressed("escape"):
 		if Variable.isPaused == false:
 			pause_game()
 		else:
