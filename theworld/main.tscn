@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://dp7oeepyxjc4n"]
+
+[ext_resource type="PackedScene" uid="uid://mtod73dbuk86" path="res://play_interface.tscn" id="1_nir4f"]
+[ext_resource type="PackedScene" uid="uid://bv88nfbx4gk67" path="res://game_play.tscn" id="2_joj3a"]
+[ext_resource type="PackedScene" uid="uid://c7grp6rev45qv" path="res://main_menu.tscn" id="3_pdjwq"]
+[ext_resource type="PackedScene" uid="uid://4ixvq80bwhnp" path="res://option_menu.tscn" id="4_2pl0s"]
+
+[node name="Main" type="Node3D"]
+
+[node name="Game" type="Node3D" parent="."]
+
+[node name="PlayInterface" parent="Game" instance=ExtResource("1_nir4f")]
+
+[node name="GamePlay" parent="Game" instance=ExtResource("2_joj3a")]
+
+[node name="MainMenu" parent="." instance=ExtResource("3_pdjwq")]
+
+[node name="OptionMenu" parent="." instance=ExtResource("4_2pl0s")]
