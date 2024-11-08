@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://bv88nfbx4gk67"]
+[gd_scene load_steps=3 format=3 uid="uid://bv88nfbx4gk67"]
+
+[ext_resource type="Script" path="res://game_play.gd" id="1_4amw0"]
+[ext_resource type="PackedScene" uid="uid://mtod73dbuk86" path="res://play_interface.tscn" id="2_51f6f"]
 
 [node name="GamePlay" type="Node3D"]
+process_mode = 1
+script = ExtResource("1_4amw0")
+
+[node name="PlayInterface" parent="." instance=ExtResource("2_51f6f")]

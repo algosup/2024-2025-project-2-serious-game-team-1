@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dk8cfwbueluki" path="res://assets/images/WaintingBackground.jpg" id="2_nqw8g"]
 
 [node name="MainMenu" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,7 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8w1rs")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -68,3 +69,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Option"
 language = "en"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="OptionButton" to="." method="_on_option_button_pressed"]
