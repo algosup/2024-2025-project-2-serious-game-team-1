@@ -1,17 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://ddwhl6qj6sklx"]
+[gd_scene load_steps=4 format=3 uid="uid://ddwhl6qj6sklx"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_74gmt"]
-size = Vector3(64.5001, 1, 56.8273)
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_te6ih"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_daxoh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ycpbl"]
+albedo_color = Color(0, 0, 1, 1)
 
 [node name="Wall" type="Node3D"]
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_te6ih")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-process_mode = 3
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.753, 0, 27.9136)
-shape = SubResource("BoxShape3D_74gmt")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1000, 0, 0, 0, 5, 0, 0, 0, 1000, 0, -5, 0)
+shape = SubResource("BoxShape3D_daxoh")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="Area3D/CollisionShape3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00334549, 0, 0.00427246)
-size = Vector3(64.4841, 1, 56.8195)
+[node name="CSGBox3D" type="CSGBox3D" parent="StaticBody3D/CollisionShape3D"]
+material = SubResource("StandardMaterial3D_ycpbl")

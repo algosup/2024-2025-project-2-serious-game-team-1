@@ -8,31 +8,21 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float):
 	if Input.is_action_just_pressed("Escape"):
-		if Variable.InventoryOpen:
-			Inventory.close_inventory()
+		if Variable.isPaused == false:
+			pause_game()
 		else:
-			if Variable.isPaused == false:
-				pause_game()
-			else:
-				resume_game()
-	if Input.is_action_just_pressed("Inventory"):
-		if Variable.InventoryOpen:
-			Inventory.close_inventory()
-		else:
-			Inventory.open_inventory()
+			resume_game()
 
 func resume_game():
 	Variable.UnPause()
-	if not Variable.MouseCapture:
-			Variable.CaptureMouseOn()
+	Variable.CaptureMouseOn()
 	print("Resume Game")
 	PlayMenu.ClosePlayMenu()
 
 func pause_game():
 	Variable.Pause()
-	if Variable.MouseCapture:
-			Variable.CaptureMouseOff()
+	Variable.CaptureMouseOff()
 	print("Pause Game")
 	PlayMenu.OpenPlayMenu()

@@ -1,10 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://bv88nfbx4gk67"]
+[gd_scene load_steps=7 format=3 uid="uid://bv88nfbx4gk67"]
 
 [ext_resource type="Script" path="res://game_play.gd" id="1_4amw0"]
 [ext_resource type="Script" path="res://play_menu.gd" id="2_y4b18"]
-[ext_resource type="Script" path="res://inventory.gd" id="3_b0qv1"]
 [ext_resource type="PackedScene" uid="uid://cbbs5nj5fv88x" path="res://player.tscn" id="3_y4ikj"]
 [ext_resource type="PackedScene" uid="uid://ddwhl6qj6sklx" path="res://wall.tscn" id="4_jl1vh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r7j3t"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oreix"]
+vertex_color_is_srgb = true
+albedo_color = Color(1, 0, 0, 1)
 
 [node name="GamePlay" type="Node3D"]
 process_mode = 1
@@ -12,9 +17,11 @@ script = ExtResource("1_4amw0")
 
 [node name="PlayInterface" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="PlayMenu" type="Control" parent="PlayInterface"]
 process_mode = 3
@@ -27,6 +34,7 @@ grow_vertical = 2
 script = ExtResource("2_y4b18")
 
 [node name="ResumeButton" type="Button" parent="PlayInterface/PlayMenu"]
+process_mode = 3
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -42,6 +50,7 @@ grow_vertical = 2
 text = "Resume Game"
 
 [node name="OptionMenu" type="Button" parent="PlayInterface/PlayMenu"]
+process_mode = 3
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -57,6 +66,7 @@ grow_vertical = 2
 text = "Option"
 
 [node name="BackButton" type="Button" parent="PlayInterface/PlayMenu"]
+process_mode = 3
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -72,31 +82,31 @@ grow_vertical = 2
 text = "Go Back to Menu"
 
 [node name="Inventory" type="Control" parent="PlayInterface"]
-process_mode = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("3_b0qv1")
-
-[node name="InventoryList" type="ItemList" parent="PlayInterface/Inventory"]
-layout_mode = 0
-offset_left = 844.0
-offset_top = 57.0
-offset_right = 978.0
-offset_bottom = 275.0
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Player" parent="." instance=ExtResource("3_y4ikj")]
 process_mode = 1
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0206, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.76056, 5)
 
 [node name="Camera3D" type="Camera3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.486161, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.486, -0.471411)
+fov = 105.31
 
 [node name="Wall" parent="." instance=ExtResource("4_jl1vh")]
 process_mode = 3
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.33789, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 54.9575, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.35, 0)
+shape = SubResource("BoxShape3D_r7j3t")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CollisionShape3D"]
+material = SubResource("StandardMaterial3D_oreix")
 
 [connection signal="pressed" from="PlayInterface/PlayMenu/ResumeButton" to="PlayInterface/PlayMenu" method="_on_resume_button_pressed"]
 [connection signal="pressed" from="PlayInterface/PlayMenu/OptionMenu" to="PlayInterface/PlayMenu" method="_on_option_menu_pressed"]

@@ -7,20 +7,17 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if Variable.InventoryOpen:
-		$".".show()
-		Variable.pause_character()
-		if Variable.MouseCapture:
-			Variable.CaptureMouseOff()
-	else:
-		$".".hide()
-		Variable.resume_character()
-		if not Variable.MouseCapture:
-			Variable.CaptureMouseOn()
+func _process(_delta: float) -> void:
+	pass
 
 func open_inventory():
 	Variable.InventoryOpen = true
+	$".".show()
+	if Variable.MouseCapture:
+		Variable.CaptureMouseOff()
 
 func close_inventory():
 	Variable.InventoryOpen = false
+	$".".hide()
+	if not Variable.MouseCapture:
+		Variable.CaptureMouseOn()

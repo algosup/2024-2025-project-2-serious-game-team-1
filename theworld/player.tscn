@@ -2,14 +2,15 @@
 
 [ext_resource type="Script" path="res://character_body_3d.gd" id="1_b4wbb"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_xy42k"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_njda7"]
 height = 1.8
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_b4wbb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("CylinderShape3D_xy42k")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.993637, 0)
+shape = SubResource("CylinderShape3D_njda7")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="CollisionShape3D"]
 height = 1.8

@@ -3,11 +3,11 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	Variable.current_scene = Variable.Gameplay_path # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Variable.PlayMenuOpen:
 		$".".show()
 		if Variable.MouseCapture:
@@ -27,8 +27,8 @@ func _on_resume_button_pressed() -> void:
 	GamePlay.resume_game()
 
 func _on_option_menu_pressed() -> void:
-	Variable.PreviousScene = "res://game_play.tscn"
-	get_tree().change_scene_to_file("res://option_menu.tscn")
+	Variable.PreviousScene = Variable.current_scene
+	get_tree().change_scene_to_file(Variable.OptionMenu_path)
 
 func _on_back_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://main_menu.tscn")
+	get_tree().change_scene_to_file(Variable.MainMenu_path)
