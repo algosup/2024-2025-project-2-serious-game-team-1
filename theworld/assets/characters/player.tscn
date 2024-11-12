@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmid6rx1334ky"]
+
+[ext_resource type="Script" path="res://script/player.gd" id="1_lklbc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_65nqq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6tusv"]
+size = Vector3(1, 1, 3.38037)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8ueno"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_wdyub"]
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("1_lklbc")
+
+[node name="Head" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.25, 0, 0, 0, 1, 0, 0, 0, 1.25, 0, 1.5, 0)
+shape = SubResource("BoxShape3D_65nqq")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Head"]
+transform = Transform3D(0.8, 0, 0, 0, 1, 0, 0, 0, 0.8, 0, -0.0421093, 0)
+
+[node name="Interaction box" type="Area3D" parent="Head"]
+unique_name_in_owner = true
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Head/Interaction box"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.14019)
+shape = SubResource("BoxShape3D_6tusv")
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+
+[node name="Mainbody" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_8ueno")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Mainbody"]
+mesh = SubResource("CapsuleMesh_wdyub")
+skeleton = NodePath("../..")
