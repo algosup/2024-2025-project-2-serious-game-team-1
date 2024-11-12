@@ -9,18 +9,24 @@
   - [I. Document](#i-document)
     - [A. Information](#a-information)
     - [B. History](#b-history)
+    - [C. Documents](#c-documents)
   - [II. Project Overview](#ii-project-overview)
     - [A. Purpose](#a-purpose)
     - [B. What is a Serious Game](#b-what-is-a-serious-game)
   - [III. Requirements](#iii-requirements)
-    - [A. Prototype features](#a-prototype-features)
-    - [B. Optional features](#b-optional-features)
+    - [A. Story](#a-story)
+    - [B. Prototype features](#b-prototype-features)
+    - [C. Optional features](#c-optional-features)
   - [IV. Product](#iv-product)
     - [A. Game Mechanic](#a-game-mechanic)
-      - [1.](#1)
-    - [B. Personas and Scenarios](#b-personas-and-scenarios)
+      - [1. Movements](#1-movements)
+      - [2. Interactions](#2-interactions)
+      - [3. Quests/Reputation](#3-questsreputation)
+      - [4. Teleportation](#4-teleportation)
+      - [5.](#5)
+    - [B. Interface](#b-interface)
+    - [C. Personas and Scenarios](#c-personas-and-scenarios)
       - [1. Sarah](#1-sarah)
-    - [C. Functional Analysis](#c-functional-analysis)
     - [D. Assumptions and Constraints](#d-assumptions-and-constraints)
     - [E. Non-functional Requierements](#e-non-functional-requierements)
       - [1. cost](#1-cost)
@@ -28,7 +34,7 @@
         - [b. Time developement](#b-time-developement)
       - [2. Environment](#2-environment)
       - [3. Security](#3-security)
-  - [IV. Risk](#iv-risk)
+  - [V. Risk](#v-risk)
     - [A. Competitors](#a-competitors)
     - [B. Product problem](#b-product-problem)
     - [C. Data](#c-data)
@@ -45,14 +51,27 @@
 
 | Author | Grégory PAGNOUX |
 | - | - |
-| Creation date | 07/11/2024 |
-| Last Modification | 07/11/2024 |
+| Creation date | 11/07/2024 |
+| Last Modification | 11/12/2024 |
+| Reviewer(s) | Léna DE GERMAIN |
+| Last review | 11/../2024 |
 
 ### B. History
 
 | Version | Edits completed by | Date | Description of edit |
 | - | - | - | - |
-| 01.1 | Grégory PAGNOUX | 07/11/2024 | template creation, [ProjectOverview](#ii-project-overview), [Deadlines](#deadlines) |
+| 01.1 | Grégory PAGNOUX | 11/07/2024 | Create template, [ProjectOverview](#ii-project-overview), [Deadlines](#deadlines) |
+| 01.2 | Grégory PAGNOUX | 11/12/2024 | [Requirements](#iii-requirements), [Time developement](#b-time-developement), [Environment](#2-environment), [Glossary](#glossary) |
+
+### C. Documents
+
+During the brainstorming phase, we split researches between us and the table with results is below:
+
+[Research table](https://docs.google.com/spreadsheets/d/18TqcBMzp2aJckCZGYooOq7OQtThMyXTudi9O38hkBC4/edit?usp=sharing)
+
+You can find the One-sheet document below:
+
+[One-sheet](https://docs.google.com/document/d/153vc26EhVamXTxfOmKHst1HX5ckaABPQhl9MGn1WX2Y/edit?tab=t.0)
 
 ## II. Project Overview
 
@@ -68,7 +87,7 @@ The project was commissioned by ALGOSUP to create a "Serious Game" on the theme 
 
 ### B. What is a Serious Game
 
-A serious game (video game or board game) is the lovely match between serious, educational content and video games’ mechanics and storytelling. It's a tool incredibly efficient at communicating educational messages in an interactive, engaging and federating way.
+A serious game (video game or board game) is the lovely match between serious, educational content and video game's mechanics and storytelling. It's a tool incredibly efficient at communicating educational messages in an interactive, engaging and federating way.
 
 The term of "serious game" is used since the beginning of the twentieth century, and the best-known game is The Landlord's Game (predecessor of Monopoly) in 1903.
 
@@ -85,42 +104,132 @@ sources :
 
 ## III. Requirements
 
-### A. Prototype features
+### A. Story
 
+The player incarn a character named Bob. He has just bought an old house, but the the village mayor ordered him to make the house more environmentally friendly. How can he do that when he knows nothing about it?
+You'll have to carry out missions all over the map to maintain the reputation of the spaces and improve your house. As you carry out your first tasks, you learn that a book that can solve all the world's problems is hiding in the house.
+Will you find it?
 
+### B. Prototype features
 
-### B. Optional features
+To create our serious game, we need to have some basics features that we must have for the prototype:
 
+- ability to control character's movement (move forward, backward, left, right and jump)
+- interactions with objects
+- two differents biomes (village and beach)
+- three quests per biomes
+- reputation for each biome
+- inventory with drag and drop system
 
+**Village**
+
+The village has some houses and building where you can find the town hall, the library, a shop and the museum.
+The quests that you can complete on this place are:
+
+- collecting rubbish
+- sorting waste
+- learn some technics and new things on ecology
+- measure air quality
+
+**Beach**
+
+The beach is a part of the map where you can walk and swim to clean up, and protect the ocean life.
+The quests that you can complete on this place are:
+
+- collecting rubbish
+- restoring coral reefs
+- protecting marine wildlife
+
+### C. Optional features
+
+Here are all optional features that we can find in the game after the prototype phase:
+
+- teleportation between two spaces
+- add biomes (forest, fields, mountain)
+- add quests (until 10 per biomes)
+- the main house of the player (in the city)
+- the story
+- add bike to move on the map
+- NPCs[^1]
+
+**Forest**
+
+The forest is a place where you can find animals and some location where human leave his footprint.
+Some quests that you can complete on this place are:
+
+- collecting rubbish
+- CO2 report
+- return the animals to their living area
+- preventing fire
+- plant trees
+
+**Fields**
+
+There is a farm in the fields where you can help the farmer to cultivate, and take care about important natural ressources.
+The quests that you can complete on this place are:
+
+- Helping planting depending the season
+- water filtration
+- composting
+
+**Mountain**
+
+The mountain is a great spot to work on projects that help the environment, like using clean energy and protecting the land.
+The quests that you can complete on this place are:
+
+- renewable energy (solar or wind turbine)
+- study glaciers
+- measure air quality
 
 ## IV. Product
 
 ### A. Game Mechanic
 
-#### 1. 
+#### 1. Movements
 
-![img](./img/)
+*description*
+
+![movements flow chart](./img/)
+
+#### 2. Interactions
+
+*description*
+
+![interactions flow chart](./img/)
+
+#### 3. Quests/Reputation
+
+*description*
+
+![quests/reputation flow chart](./img/)
+
+#### 4. Teleportation
+
+*description*
+
+![teleportation flow chart](./img/)
+
+#### 5. 
+
+*description*
+
+![ flow chart](./img/)
+
+### B. Interface
 
 
 
-### B. Personas and Scenarios
+### C. Personas and Scenarios
 
 #### 1. Sarah
 
-The working mother who cares about her children's health
+*general description (physique and moral)*
 
 ![Sarah's persona](./img/)
 
-Sarah is a 35-year-old working mother with a hectic schedule. She's always concerned about her family's health, especially since they have a history of cancer and other diseases.
+*role play*
 
-Sarah recently stumbled upon Phoenix, the healthy mirror, and was intrigued by its features. She envisions using it to monitor her two children's health more efficiently while seamlessly integrating it into their daily routines.
-With Phoenix, Sarah can easily track their temperature, pulse, and glucose levels, ensuring she stays on top of their health despite her busy lifestyle. Plus, the breathalyzer feature gives her peace of mind regarding alcohol consumption.
-
-Sarah appreciates the convenience of accessing all this data through her smartphone, making it easier for her to keep track of everyone's health status.
-
-### C. Functional Analysis
-
-![functional analysis](./img/)
+*conclusion*
 
 ### D. Assumptions and Constraints
 
@@ -138,19 +247,20 @@ Sarah appreciates the convenience of accessing all this data through her smartph
 
 ##### b. Time developement
 
-
+We have 61 hours and 45 minutes dedicated to develop the game.
+This amount of time don't take in consideration any overtime that members can do during the project.
 
 #### 2. Environment
 
-- MacOS on development
-- Visual Studio Code
-- Godot
+- Visual Studio Code on documents
+- Godot on development
+- MacOS and Windows on development
 
 #### 3. Security
 
 - respect RGPD and data saving law
 
-## IV. Risk
+## V. Risk
 
 ### A. Competitors
 
@@ -175,7 +285,7 @@ source :
 ## Deadlines
 
 | PURPOSE | CONCERNED | DATE |
-| - | - |
+| - | - | - |
 | Functional Specification | Grégory PAGNOUX | 22/11/2024 |
 | Technical Specification | Robin GOUMY | 29/11/2024 |
 | Test Plan | Léna DE GERMAIN | 06/12/2024 |
@@ -186,6 +296,6 @@ source :
 
 ## Glossary
 
-[^1]: **Thermometer laser**
-It's a device allows to mesure the temperature of the body.
-source : [.]()
+[^1]: **NPC**
+Abbreviation for non-playable character: a character in a computer game that is not controlled by someone playing the game
+source : [Cambridge dictionnary](https://dictionary.cambridge.org/fr/dictionnaire/anglais/npc)
