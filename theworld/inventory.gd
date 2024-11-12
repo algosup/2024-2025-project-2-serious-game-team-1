@@ -10,14 +10,14 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 
-func open_inventory():
-	Variable.InventoryOpen = true
+func OpenInventory():
 	$".".show()
-	if Variable.MouseCapture:
-		Variable.CaptureMouseOff()
+	Variable.CaptureMouseOff()
+	Variable.InventoryOpen = true
+	Variable.pause_character()
 
-func close_inventory():
-	Variable.InventoryOpen = false
+func CloseInventory():
 	$".".hide()
-	if not Variable.MouseCapture:
-		Variable.CaptureMouseOn()
+	Variable.CaptureMouseOn()
+	Variable.InventoryOpen = false
+	Variable.resume_character()

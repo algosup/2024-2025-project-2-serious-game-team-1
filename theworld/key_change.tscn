@@ -23,10 +23,11 @@ theme_override_font_sizes/font_size = 32
 text = "ACTION"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="HBoxContainer"]
+[node name="Button" type="Button" parent="HBoxContainer" groups=["hotkey_button"]]
 custom_minimum_size = Vector2(576, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 27
 text = "ACTION_KEY"
 
+[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="toggled" from="HBoxContainer/Button" to="." method="_on_button_toggled"]

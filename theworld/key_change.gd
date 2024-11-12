@@ -43,7 +43,8 @@ func set_text_for_key():
 	button.text = "%s" % action_keycode
 
 func _on_button_toggled(button_pressed):
-	if button_pressed:
+	if button.pressed:
+		print("Button pressed")
 		button.text = "Press any key..."
 		set_process_unhandled_key_input(button_pressed)
 		
@@ -71,3 +72,4 @@ func rebind_action_key(event):
 	set_process_unhandled_key_input(false)
 	set_text_for_key()
 	set_action_name()
+ # Replace with function body.

@@ -1,9 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://bv88nfbx4gk67"]
+[gd_scene load_steps=10 format=3 uid="uid://bv88nfbx4gk67"]
 
 [ext_resource type="Script" path="res://game_play.gd" id="1_4amw0"]
 [ext_resource type="Script" path="res://play_menu.gd" id="2_y4b18"]
+[ext_resource type="Script" path="res://inventory.gd" id="3_3xbuq"]
 [ext_resource type="PackedScene" uid="uid://cbbs5nj5fv88x" path="res://player.tscn" id="3_y4ikj"]
+[ext_resource type="PackedScene" uid="uid://daiv872v0q0sc" path="res://inventory_case.tscn" id="4_abm38"]
 [ext_resource type="PackedScene" uid="uid://ddwhl6qj6sklx" path="res://wall.tscn" id="4_jl1vh"]
+[ext_resource type="Texture2D" uid="uid://1j6mq5t0e8x6" path="res://icon.svg" id="5_rw44c"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_r7j3t"]
 
@@ -82,9 +85,32 @@ grow_vertical = 2
 text = "Go Back to Menu"
 
 [node name="Inventory" type="Control" parent="PlayInterface"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_3xbuq")
+
+[node name="Inventory_case" parent="PlayInterface/Inventory" instance=ExtResource("4_abm38")]
+layout_mode = 0
+texture = ExtResource("5_rw44c")
+
+[node name="Inventory_case2" parent="PlayInterface/Inventory" instance=ExtResource("4_abm38")]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 229.0
+offset_right = 340.0
+offset_bottom = 357.0
+
+[node name="Inventory_case3" parent="PlayInterface/Inventory" instance=ExtResource("4_abm38")]
+layout_mode = 0
+offset_left = 785.0
+offset_top = 64.0
+offset_right = 913.0
+offset_bottom = 192.0
 
 [node name="Player" parent="." instance=ExtResource("3_y4ikj")]
 process_mode = 1
@@ -101,13 +127,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.33789, 0)
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 54.9575, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.35, 0)
 shape = SubResource("BoxShape3D_r7j3t")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CollisionShape3D"]
+[node name="CSGBox3D" type="CSGBox3D" parent="Area3D/CollisionShape3D"]
 material = SubResource("StandardMaterial3D_oreix")
 
 [connection signal="pressed" from="PlayInterface/PlayMenu/ResumeButton" to="PlayInterface/PlayMenu" method="_on_resume_button_pressed"]
 [connection signal="pressed" from="PlayInterface/PlayMenu/OptionMenu" to="PlayInterface/PlayMenu" method="_on_option_menu_pressed"]
 [connection signal="pressed" from="PlayInterface/PlayMenu/BackButton" to="PlayInterface/PlayMenu" method="_on_back_button_pressed"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

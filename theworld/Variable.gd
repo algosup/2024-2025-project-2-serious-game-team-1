@@ -1,6 +1,5 @@
 extends Node
 
-
 var isPaused = true
 var PlayerIsPaused = true
 var InventoryOpen = false
@@ -56,8 +55,6 @@ func option_game():
 func start_game():
 	UnPause()
 	resume_character()
-	Inventory.close_inventory()
-	PlayMenu.ClosePlayMenu()
 	if not MouseCapture:
 		CaptureMouseOn()
 	print("Start Game")

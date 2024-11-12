@@ -6,11 +6,12 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if Variable.MouseCapture:
 		Variable.CaptureMouseOff()
+	if Input.is_action_just_pressed("escape"):
+		Variable.GoBack()
 
 
 func _on_back_button_pressed() -> void:
-	Variable.GoBack() # Replace with function body.
+	Variable.GoBack()
