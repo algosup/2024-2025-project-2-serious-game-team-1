@@ -20,13 +20,14 @@
   - [IV. Product](#iv-product)
     - [A. Game Mechanic](#a-game-mechanic)
       - [1. Movements](#1-movements)
-      - [2. Interactions](#2-interactions)
+      - [2. Inventory](#2-inventory)
       - [3. Quests/Reputation](#3-questsreputation)
       - [4. Teleportation](#4-teleportation)
-      - [5.](#5)
+      - [5. Map](#5-map)
     - [B. Interface](#b-interface)
     - [C. Personas and Scenarios](#c-personas-and-scenarios)
       - [1. Sarah](#1-sarah)
+      - [2. Carl](#2-carl)
     - [D. Assumptions and Constraints](#d-assumptions-and-constraints)
     - [E. Non-functional Requierements](#e-non-functional-requierements)
       - [1. cost](#1-cost)
@@ -52,7 +53,7 @@
 | Author | Grégory PAGNOUX |
 | - | - |
 | Creation date | 11/07/2024 |
-| Last Modification | 11/12/2024 |
+| Last Modification | 11/13/2024 |
 | Reviewer(s) | Léna DE GERMAIN |
 | Last review | 11/../2024 |
 
@@ -62,6 +63,7 @@
 | - | - | - | - |
 | 01.1 | Grégory PAGNOUX | 11/07/2024 | Create template, [ProjectOverview](#ii-project-overview), [Deadlines](#deadlines) |
 | 01.2 | Grégory PAGNOUX | 11/12/2024 | [Requirements](#iii-requirements), [Time developement](#b-time-developement), [Environment](#2-environment), [Glossary](#glossary) |
+| 01.3 | Grégory PAGNOUX | 11/13/2024 | [Security](#3-security), [Risk](#v-risk), [Glossary](#glossary) |
 
 ### C. Documents
 
@@ -191,7 +193,7 @@ The quests that you can complete on this place are:
 
 ![movements flow chart](./img/)
 
-#### 2. Interactions
+#### 2. Inventory
 
 *description*
 
@@ -209,7 +211,7 @@ The quests that you can complete on this place are:
 
 ![teleportation flow chart](./img/)
 
-#### 5. 
+#### 5. Map
 
 *description*
 
@@ -226,6 +228,16 @@ The quests that you can complete on this place are:
 *general description (physique and moral)*
 
 ![Sarah's persona](./img/)
+
+*role play*
+
+*conclusion*
+
+#### 2. Carl
+
+*general description (physique and moral)*
+
+![Carl's persona](./img/)
 
 *role play*
 
@@ -258,29 +270,50 @@ This amount of time don't take in consideration any overtime that members can do
 
 #### 3. Security
 
-- respect RGPD and data saving law
+- respect GDPR[^2] and data saving law
+- ensure the integrity[^3] of the information given to the player about climate change
 
 ## V. Risk
 
 ### A. Competitors
 
+Today, serious games cover a lot of subjects and have a lot of competitors.
+For our game, there are two other games that partially cover the subject we're talking about and that could be potential indirect competitors.
+The first one is Esperide and the second one is Nuage.
 
+**Esperide**
+
+You embody a forester, and you have one mission, save french forest by taking decision and manage flora and fauna[^4].
+This game is developped for the French Government and the ONF[^5] and has the Néo Terra label[^6].
+The aim of this game is to experiment with different forest management methods adapted to tomorrow's climate and developing innovative awareness-raising tools to explain forest management to the general public.
+
+Here you can find [Esperide](https://www.onf.fr/vivre-la-foret/%2B/12bd::entrez-au-coeur-des-enjeux-du-changement-climatique-et-sauvez-la-foret.html)
+
+**Nuage**
+
+Zeus is your name, you can control a city and help it to reduce the pollution, and become an utopic city where it's a good place to live.
+This game is developped by Hakatah[^7] whose aim is to help people understand the phenomenon of climate change and raising awareness of its consequences.
+
+Here you can find [Nuage](https://www.serious-game.fr/nuage-le-serious-game-sur-le-changement-climatique/)
 
 ### B. Product problem
 
-One of the big problems to consider with this mirror is the increase in people's paranoia about illness and the growing number of people suffering from hypochondria.
+We need to think about the problems our game may have, and the first thing to consider is the message it conveys. More specifically, the fact that the information we want to convey to the player is unclear or misunderstood could, in the worst case scenario, lead to an adaptation of behaviour that would go against the climate and the very idea of the game.
+The second is if our game is too big to install or requires specific handling to install, many potential players will not launch the game and the impact will be reduced or even non-existent.
+The third problem is that the risk of transmitting too much information through the game and therefore losing the educational and fun value of the game.
 
 ### C. Data
 
-If we want to have a connected mirror with smartphone, we need to interest us on the **the reglementation of data backups**.
+Our game doesn't need to save player's data, but if the game evolves and we need to save information, we need to interest us on the **the reglementation of data backups**.
 There are three different archives depending on the type of data :
+
 - **Active database archiving** where data that are no longer useful to the enterprise (for example, data on job seekers to which they have not followed up) are deleted once the reason for the study has been completed (after a maximum of two years).
 - **Intermediate archiving** where data are saved even after the purpose of data collection has been achieved as they are still of interest to the enterprise. The duration is set by the person responsible and must be relevant to its usefulness.
 - **Final archiving** where data that remains of great interest in the future without an end date are saved, after an upstream check.
 
 source :
 
- - [.]()
+- [CNIL](https://www.cnil.fr/fr/reglement-europeen-protection-donnees)
 
 ## Deadlines
 
@@ -297,5 +330,35 @@ source :
 ## Glossary
 
 [^1]: **NPC**
-Abbreviation for non-playable character: a character in a computer game that is not controlled by someone playing the game
+Abbreviation for Non-Playable Character. It's a character in a computer game that is not controlled by someone playing the game.
 source : [Cambridge dictionnary](https://dictionary.cambridge.org/fr/dictionnaire/anglais/npc)
+
+[^2]: **GDPR**
+Abbreviation for General Data Protection Regulation. It's a European Union regulation adopted on 27 April 2016. It's the reference text for personal data protection. It strengthens and unifies data protection for individuals within the European Union.
+source : [Wikipedia](https://fr.wikipedia.org/wiki/Règlement_général_sur_la_protection_des_données)
+
+[^3]: **integrity**
+The quality of being whole and complete. It's the fact that an information is certified as true and we can believe on it.
+source : [Cambridge dictionnary](https://dictionary.cambridge.org/fr/dictionnaire/anglais/integrity)
+
+[^4]: **flora and fauna**
+The flora and fauna of a place are its plants and animals.
+source : [Cambridge dictionnary](https://dictionary.cambridge.org/fr/dictionnaire/anglais/flora-and-fauna)
+
+[^5]: **ONF**
+Abbreviation for Office National des Forêts. The organisation was created in 1966 and has 5 fundamental missions: to develop wood resources, to act for the environment, to welcome the public to the forest, to prevent natural risks and to offer tailor-made services.
+source : [ONF](https://www.onf.fr/onf/connaitre-lonf/+/28::les-enjeux-valeurs-et-missions-de-lonf.html)
+
+[^6]: **Néo Terra label**
+Néo Terra was created in 2019 to develop the environmental transition of the Nouvelle-Aquitaine. Their objective: to accelerate change and support the process. Their ambitions: natural resources, solidarity, agriculture and food, the economy, mobility and habitats, health.
+source : [Néo Terra](https://www.neo-terra.fr/quest-ce-que-neo-terra/)
+
+[^7]: **Hakatah**
+Hakatah is a collective of video game designers committed to global warming founded in 2014. They run educational workshops and organise Game Jams (the event at which Nuage was born).
+source : [Hakatah](https://www.hakatah.com)
+
+//TODO
+Research table
+Name + pochette
+19/11
+validate the One-sheet document by Franck
