@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://cffnk8rm32iw6"]
+
+[ext_resource type="Script" path="res://key_change.gd" id="1_hvmwf"]
+
+[node name="KeyChange" type="Control" groups=["hotkey_button"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hvmwf")
+action_name = null
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(576, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "ACTION"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(576, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "ACTION_KEY"

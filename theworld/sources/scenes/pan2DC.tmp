@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpws8ahgg3r3v"]
+
+[ext_resource type="Script" path="res://sources/scripts/slot.gd" id="1_cbdyh"]
+[ext_resource type="Texture2D" uid="uid://d4nsiyey5acwl" path="res://sources/assets/images/inventory_slot_background.png" id="1_e6uss"]
+
+[node name="inventory_slot" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_cbdyh")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_e6uss")
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 2
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

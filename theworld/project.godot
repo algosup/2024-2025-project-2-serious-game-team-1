@@ -11,18 +11,19 @@ config_version=5
 [application]
 
 config/name="TheWorld"
-run/main_scene="res://main_menu.tscn"
+config/version="1"
+run/main_scene="res://sources/scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://sources/icon.svg"
 
 [autoload]
 
-Inventory="*res://inventory.gd"
-MainMenu="*res://main_menu.gd"
-OptionMenu="*res://option_menu.gd"
-GamePlay="*res://game_play.gd"
-PlayMenu="*res://play_menu.gd"
-Variable="*res://Variable.gd"
+Inventory="*res://sources/scripts/inventory.gd"
+MainMenu="*res://sources/scripts/main_menu.gd"
+OptionMenu="*res://sources/scripts/option_menu.gd"
+GamePlay="*res://sources/scripts/game_play.gd"
+PlayMenu="*res://sources/scripts/play_menu.gd"
+Variable="*res://sources/scripts/Variable.gd"
 
 [display]
 
@@ -30,7 +31,7 @@ window/vsync/vsync_mode=0
 
 [global_group]
 
-hotkey_button=""
+key_group=""
 
 [input]
 
