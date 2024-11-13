@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="item" load_steps=3 format=3 uid="uid://cdpj4n0cvhqtv"]
+
+[ext_resource type="Texture2D" uid="uid://c0jlvjniiw2i7" path="res://assets/images/shovel.png" id="1_705yv"]
+[ext_resource type="Script" path="res://scripts/item_class.gd" id="2_swe3t"]
+
+[resource]
+script = ExtResource("2_swe3t")
+title = "Shovel"
+icon = ExtResource("1_705yv")
+description = "A shovel is a tool used for digging, lifting, and moving bulk materials, such as soil, coal, gravel, snow, sand, or ore."

@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bp7pk156bp0qr"]
+[gd_scene load_steps=5 format=3 uid="uid://bp7pk156bp0qr"]
 
-[ext_resource type="Texture2D" uid="uid://dk8cfwbueluki" path="res://sources/assets/images/WaintingBackground.jpg" id="1_81syd"]
-[ext_resource type="Script" path="res://sources/scripts/inventory.gd" id="2_hquu6"]
-[ext_resource type="PackedScene" uid="uid://cpws8ahgg3r3v" path="res://panel_container.tscn" id="2_qoywu"]
-[ext_resource type="Texture2D" path="res://assets/images/inventory_slot_background.png" id="3_vrw3m"]
-[ext_resource type="Texture2D" uid="uid://1j6mq5t0e8x6" path="res://sources/icon.svg" id="5_odygf"]
+[ext_resource type="Texture2D" uid="uid://dk8cfwbueluki" path="res://assets/images/WaintingBackground.jpg" id="1_81syd"]
+[ext_resource type="Script" path="res://scripts/inventory.gd" id="2_hquu6"]
+[ext_resource type="PackedScene" uid="uid://cpws8ahgg3r3v" path="res://scenes/panel_container.tscn" id="2_qoywu"]
+[ext_resource type="Texture2D" uid="uid://d4nsiyey5acwl" path="res://assets/images/inventory_slot_background.png" id="3_vrw3m"]
 
 [node name="Test" type="Control"]
 layout_mode = 3
@@ -22,9 +21,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -167.0
+offset_left = -167.5
 offset_top = -106.0
-offset_right = 168.0
+offset_right = 167.5
 offset_bottom = 106.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -117,7 +116,6 @@ layout_mode = 0
 offset_right = 128.0
 offset_bottom = 128.0
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("5_odygf")
 
 [node name="Name" type="Label" parent="Inventory/Description"]
 layout_mode = 2

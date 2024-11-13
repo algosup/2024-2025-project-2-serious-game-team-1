@@ -7,9 +7,9 @@ var PlayMenuOpen = false
 var PreviousScene: String = ""
 var MouseCapture = false
 var current_scene = ""
-var MainMenu_path = "res://sources/scenes/main_menu.tscn"
-var OptionMenu_path = "res://sources/scenes/option_menu.tscn"
-var Gameplay_path = "res://sources/scenes/game_play.tscn"
+var MainMenu_path = "res://scenes/main_menu.tscn"
+var OptionMenu_path = "res://scenes/option_menu.tscn"
+var Gameplay_path = "res://scenes/game_play.tscn"
 
 
 func CaptureMouseOn():

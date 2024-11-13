@@ -6,6 +6,8 @@ extends Control
 func _ready() -> void:
 	pass # Replace with function body.
 
+@warning_ignore("shadowed_global_identifier")
+const Item = preload("res://scripts/item_class.gd")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

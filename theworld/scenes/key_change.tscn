@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://r4mh0k01hbms"]
 
-[ext_resource type="Script" path="res://sources/scripts/key_change.gd" id="1_avp1r"]
+[ext_resource type="Script" path="res://scripts/key_change.gd" id="1_t624p"]
 
 [node name="KeyChange" type="Control" groups=["key_group"]]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_avp1r")
+script = ExtResource("1_t624p")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0

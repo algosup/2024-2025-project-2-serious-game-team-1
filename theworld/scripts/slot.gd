@@ -1,6 +1,6 @@
 extends TextureRect
 
-
+const Item = preload("res://scripts/item.gd")
 
 func _get_drag_data(_at_position):
 	var preview_texture = TextureRect.new()
@@ -26,10 +26,12 @@ func _can_drop_data(_at_position, data):
 func _drop_data(_at_position, data):
 	texture = data
 
-@export var item : Item :
-	set(value):
-		item = value
-		$Icon.texture = item.icon
+@export var item_ : Item 
+
+func set_item(value):
+	item_ = value
+	if item_:
+		$Icon.texture = item_.icon
 
 
 func _on_mouse_entered():

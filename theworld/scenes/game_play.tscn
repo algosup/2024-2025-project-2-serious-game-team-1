@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cfxyee5oobf5t"]
+[gd_scene load_steps=6 format=3 uid="uid://cfxyee5oobf5t"]
 
-[ext_resource type="Script" path="res://sources/scripts/game_play.gd" id="1_xwbuh"]
+[ext_resource type="Script" path="res://scripts/game_play.gd" id="1_nkkgl"]
 [ext_resource type="Script" path="res://sources/scripts/play_menu.gd" id="2_dja3l"]
-[ext_resource type="Script" path="res://sources/scripts/inventory.gd" id="3_3u8ve"]
-[ext_resource type="PackedScene" uid="uid://bo71u6spynr4d" path="res://wall.tscn" id="4_jl1vh"]
+[ext_resource type="PackedScene" uid="uid://bo71u6spynr4d" path="res://scenes/wall.tscn" id="4_jl1vh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_r7j3t"]
 
@@ -13,7 +12,7 @@ albedo_color = Color(1, 0, 0, 1)
 
 [node name="GamePlay" type="Node3D"]
 process_mode = 1
-script = ExtResource("1_xwbuh")
+script = ExtResource("1_nkkgl")
 
 [node name="PlayInterface" type="Control" parent="."]
 layout_mode = 3
@@ -88,7 +87,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("3_3u8ve")
 
 [node name="Wall" parent="." instance=ExtResource("4_jl1vh")]
 process_mode = 3

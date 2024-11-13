@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b31wjwnn4gip3"]
 
-[ext_resource type="Script" path="res://sources/scripts/option_menu.gd" id="1_1b3co"]
-[ext_resource type="PackedScene" uid="uid://r4mh0k01hbms" path="res://key_change.tscn" id="2_ufot1"]
+[ext_resource type="Script" path="res://scripts/option_menu.gd" id="1_4tu4t"]
+[ext_resource type="PackedScene" uid="uid://r4mh0k01hbms" path="res://scenes/key_change.tscn" id="2_ufot1"]
 
 [node name="OptionMenu" type="Control"]
 process_mode = 3
@@ -11,7 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_1b3co")
+script = ExtResource("1_4tu4t")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
