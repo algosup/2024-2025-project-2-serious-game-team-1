@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://bp7pk156bp0qr"]
+[gd_scene load_steps=10 format=3 uid="uid://bp7pk156bp0qr"]
 
-[ext_resource type="Texture2D" uid="uid://dk8cfwbueluki" path="res://assets/images/WaintingBackground.jpg" id="1_81syd"]
+[ext_resource type="Texture2D" uid="uid://bg85v4vpbk8n5" path="res://assets/images/WaintingBackground.jpg" id="1_81syd"]
 [ext_resource type="Script" path="res://scripts/inventory.gd" id="2_hquu6"]
-[ext_resource type="PackedScene" uid="uid://cpws8ahgg3r3v" path="res://scenes/panel_container.tscn" id="2_qoywu"]
-[ext_resource type="Texture2D" uid="uid://d4nsiyey5acwl" path="res://assets/images/inventory_slot_background.png" id="3_vrw3m"]
+[ext_resource type="PackedScene" uid="uid://cpws8ahgg3r3v" path="res://scenes/inventory_slot.tscn" id="2_qoywu"]
+[ext_resource type="Texture2D" uid="uid://i2kndroy583y" path="res://assets/images/inventory_slot_background.png" id="3_vrw3m"]
+[ext_resource type="Resource" uid="uid://cve0ch4lai1l4" path="res://assets/items/tree_shoots.tres" id="4_v4n2k"]
+[ext_resource type="Resource" uid="uid://ct5p33c02btmb" path="res://assets/items/bin_bag.tres" id="5_ejnw8"]
+[ext_resource type="Resource" uid="uid://dbopmc5emfcwe" path="res://assets/items/extinguisher.tres" id="6_451o1"]
+[ext_resource type="Resource" uid="uid://dutqskw0jov3y" path="res://assets/items/planks.tres" id="7_fffvw"]
+[ext_resource type="Resource" uid="uid://cdpj4n0cvhqtv" path="res://assets/items/shovel.tres" id="8_tddrv"]
 
 [node name="Test" type="Control"]
 layout_mode = 3
@@ -21,10 +26,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -167.5
-offset_top = -106.0
-offset_right = 167.5
-offset_bottom = 106.0
+offset_left = -307.0
+offset_top = -187.5
+offset_right = 307.0
+offset_bottom = 187.5
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_81syd")
@@ -32,70 +37,96 @@ script = ExtResource("2_hquu6")
 
 [node name="GridContainer" type="GridContainer" parent="Inventory"]
 layout_mode = 1
-offset_left = 15.0
-offset_top = 15.0
-offset_right = 151.0
-offset_bottom = 196.0
+offset_left = 20.0
+offset_top = 23.0
+offset_right = 544.0
+offset_bottom = 679.0
+scale = Vector2(0.5, 0.5)
 columns = 4
 
 [node name="inventory_slot" parent="Inventory/GridContainer" instance=ExtResource("2_qoywu")]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
+item = ExtResource("5_ejnw8")
 
 [node name="inventory_slot2" parent="Inventory/GridContainer" instance=ExtResource("2_qoywu")]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
+item = ExtResource("6_451o1")
 
 [node name="inventory_slot3" parent="Inventory/GridContainer" instance=ExtResource("2_qoywu")]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
+item = ExtResource("7_fffvw")
 
 [node name="inventory_slot4" parent="Inventory/GridContainer" instance=ExtResource("2_qoywu")]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
+item = ExtResource("8_tddrv")
 
 [node name="inventory_slot5" parent="Inventory/GridContainer" instance=ExtResource("2_qoywu")]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
+item = ExtResource("4_v4n2k")
 
 [node name="inventory_slot6" parent="Inventory/GridContainer" instance=ExtResource("2_qoywu")]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="inventory_slot7" parent="Inventory/GridContainer" instance=ExtResource("2_qoywu")]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="inventory_slot8" parent="Inventory/GridContainer" instance=ExtResource("2_qoywu")]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="inventory_slot9" parent="Inventory/GridContainer" instance=ExtResource("2_qoywu")]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="inventory_slot10" parent="Inventory/GridContainer" instance=ExtResource("2_qoywu")]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="inventory_slot11" parent="Inventory/GridContainer" instance=ExtResource("2_qoywu")]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="inventory_slot12" parent="Inventory/GridContainer" instance=ExtResource("2_qoywu")]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="inventory_slot13" parent="Inventory/GridContainer" instance=ExtResource("2_qoywu")]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="inventory_slot14" parent="Inventory/GridContainer" instance=ExtResource("2_qoywu")]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="inventory_slot15" parent="Inventory/GridContainer" instance=ExtResource("2_qoywu")]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="inventory_slot16" parent="Inventory/GridContainer" instance=ExtResource("2_qoywu")]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="inventory_slot17" parent="Inventory/GridContainer" instance=ExtResource("2_qoywu")]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="inventory_slot18" parent="Inventory/GridContainer" instance=ExtResource("2_qoywu")]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="inventory_slot19" parent="Inventory/GridContainer" instance=ExtResource("2_qoywu")]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="inventory_slot20" parent="Inventory/GridContainer" instance=ExtResource("2_qoywu")]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="Description" type="NinePatchRect" parent="Inventory"]
@@ -103,31 +134,33 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -151.5
+offset_left = -277.0
 offset_top = 15.0
-offset_right = -15.5
-offset_bottom = 196.0
+offset_right = -15.0
+offset_bottom = 358.0
 grow_horizontal = 0
 texture = ExtResource("3_vrw3m")
 region_rect = Rect2(2.34615, 3.1778, 26.4982, 27.2089)
 
-[node name="Icon" type="TextureRect" parent="Inventory/Description"]
+[node name="DescriptionBox" type="VBoxContainer" parent="Inventory/Description"]
 layout_mode = 0
-offset_right = 128.0
-offset_bottom = 128.0
-scale = Vector2(0.25, 0.25)
+offset_right = 261.0
+offset_bottom = 328.0
 
-[node name="Name" type="Label" parent="Inventory/Description"]
+[node name="Header" type="HBoxContainer" parent="Inventory/Description/DescriptionBox"]
 layout_mode = 2
-offset_left = 33.0
-offset_top = 1.0
-offset_right = 134.0
-offset_bottom = 31.0
 
-[node name="Text" type="RichTextLabel" parent="Inventory/Description"]
-custom_minimum_size = Vector2(0, 130)
+[node name="Icon" type="TextureRect" parent="Inventory/Description/DescriptionBox/Header"]
+custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-offset_left = 2.0
-offset_top = 33.0
-offset_right = 135.0
-offset_bottom = 163.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Name_Label" type="Label" parent="Inventory/Description/DescriptionBox/Header"]
+custom_minimum_size = Vector2(197, 64)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="DescriptionLabel" type="RichTextLabel" parent="Inventory/Description/DescriptionBox"]
+custom_minimum_size = Vector2(265, 130)
+layout_mode = 2

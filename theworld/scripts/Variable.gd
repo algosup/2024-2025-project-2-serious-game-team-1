@@ -55,7 +55,6 @@ func option_game():
 func start_game():
 	UnPause()
 	resume_character()
-	if not MouseCapture:
-		CaptureMouseOn()
+	CaptureMouseOn()
 	print("Start Game")
 	get_tree().change_scene_to_file(Gameplay_path)

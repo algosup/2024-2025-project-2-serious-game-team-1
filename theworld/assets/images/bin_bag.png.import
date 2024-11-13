@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvavmxihtcuxe"
-path="res://.godot/imported/planks.jpg-d680d3dcdcc45b5605a3c406646e7f48.ctex"
+uid="uid://j03ylp7rjwpp"
+path="res://.godot/imported/bin_bag.png-4be7611195ac8548fd3b07d86bede7f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/planks.jpg"
-dest_files=["res://.godot/imported/planks.jpg-d680d3dcdcc45b5605a3c406646e7f48.ctex"]
+source_file="res://assets/images/bin_bag.png"
+dest_files=["res://.godot/imported/bin_bag.png-4be7611195ac8548fd3b07d86bede7f3.ctex"]
 
 [params]
 

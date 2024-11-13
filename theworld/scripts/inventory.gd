@@ -1,10 +1,18 @@
 extends Control
 
-@onready var description: NinePatchRect = $Description
+@onready var icon: TextureRect = $Description/DescriptionBox/Header/Icon as TextureRect
+@onready var description_label: RichTextLabel = $Description/DescriptionBox/DescriptionLabel as RichTextLabel
+@onready var name_label: Label = $Description/DescriptionBox/Header/Name_Label as Label
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	if icon == null:
+		print("Error: icon is null")
+	if description_label == null:
+		print("Error: description_label is null")
+	if name_label == null:
+		print("Error: name_label is null")
 
 @warning_ignore("shadowed_global_identifier")
 const Item = preload("res://scripts/item_class.gd")
@@ -14,9 +22,9 @@ func _process(_delta: float) -> void:
 	pass
 
 func set_description(item : Item):
-	description.find_child("Name").text = item.title
-	description.find_child("Icon").texture = item.icon
-	description.find_child("Description").text = item.description
+	name_label.text = item.title
+	icon.texture = item.icon
+	description_label.text = item.description
 
 
 

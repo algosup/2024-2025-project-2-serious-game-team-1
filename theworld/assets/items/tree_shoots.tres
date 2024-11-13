@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="item" load_steps=3 format=3 uid="uid://cve0ch4lai1l4"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cve0ch4lai1l4"]
 
-[ext_resource type="Texture2D" uid="uid://dfcqky1yhckxn" path="res://assets/images/sapling.jpg" id="1_g820c"]
+[ext_resource type="Texture2D" uid="uid://dy8iiskycrse1" path="res://assets/images/sapling.png" id="1_t21rh"]
 [ext_resource type="Script" path="res://scripts/item_class.gd" id="2_1j0r8"]
 
 [resource]
 script = ExtResource("2_1j0r8")
 title = "Tree shoots"
-icon = ExtResource("1_g820c")
+icon = ExtResource("1_t21rh")
 description = "Tree shoots are young trees used to grow future trees. They can be useful for reforestation."
