@@ -16,5 +16,4 @@ func set_item(value):
 
 func _on_mouse_entered():
 	if item != null:
-		var Owner = get_node("/root/Inventory")
-		Owner.set_description(item)
+		owner.set_description(item)

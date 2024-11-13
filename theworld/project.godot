@@ -14,7 +14,7 @@ config/name="TheWorld"
 config/version="1"
 run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/images/icon.svg"
 
 [autoload]
 
@@ -28,6 +28,10 @@ Variable="*res://scripts/Variable.gd"
 [display]
 
 window/vsync/vsync_mode=0
+
+[editor]
+
+import/reimport_missing_imported_files=false
 
 [global_group]
 
