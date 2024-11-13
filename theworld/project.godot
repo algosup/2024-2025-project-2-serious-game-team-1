@@ -15,9 +15,9 @@ run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
-[global_group]
+[autoload]
 
-catchable=""
+EcoFollow="*res://script/eco_follow.gd"
 
 [input]
 

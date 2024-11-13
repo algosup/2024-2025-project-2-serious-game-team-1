@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://owqt7wlat2j8"]
+
+[ext_resource type="Script" path="res://script/interaction_ray_cast.gd" id="1_8fawq"]
+
+[node name="InteractionRayCast" type="RayCast3D"]
+target_position = Vector3(0, 0, -4)
+script = ExtResource("1_8fawq")
+
+[node name="Prompt" type="Label" parent="."]
+anchors_preset = -1
+anchor_top = 0.545
+anchor_right = 1.0
+anchor_bottom = 0.58
+offset_top = -0.160004
+offset_bottom = 0.159973
+grow_horizontal = 2
+grow_vertical = 2
+text = "Interact
+[KEY]"
+horizontal_alignment = 1
+vertical_alignment = 1

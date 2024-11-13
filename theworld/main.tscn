@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bjv8cpq4c35st"]
 
-[ext_resource type="PackedScene" uid="uid://bdjxrgi051sw3" path="res://assets/models/spawn_area.tscn" id="2_ao6ps"]
 [ext_resource type="PackedScene" uid="uid://bmid6rx1334ky" path="res://assets/characters/player.tscn" id="2_obrd6"]
+[ext_resource type="PackedScene" uid="uid://vasl4mw0xxqw" path="res://assets/models/object.tscn" id="2_vopmd"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_imn8r"]
 
@@ -24,5 +24,5 @@ mesh = SubResource("CylinderMesh_wghdc")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.900433, 0.434995, 0, -0.434995, 0.900433, 0, 0, 0)
 
-[node name="SpawnArea" parent="." instance=ExtResource("2_ao6ps")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.52178, 0)
+[node name="Object" parent="." instance=ExtResource("2_vopmd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.555655, -0.5, 1.05112)

@@ -7,3 +7,4 @@
 script = ExtResource("1_ht5hg")
 object_scene = ExtResource("2_3lkv1")
 spawn_count = 8
+spawn_area_size = Vector3(3, 5, 10)
