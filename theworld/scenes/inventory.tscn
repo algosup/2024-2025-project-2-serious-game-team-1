@@ -1,7 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://bp7pk156bp0qr"]
+[gd_scene load_steps=12 format=3 uid="uid://f51858rkgwej"]
 
 [ext_resource type="Texture2D" uid="uid://bg85v4vpbk8n5" path="res://assets/images/WaintingBackground.jpg" id="1_81syd"]
-[ext_resource type="Script" path="res://scripts/test.gd" id="1_ya1uh"]
+[ext_resource type="Script" path="res://scripts/inventory_gestion.gd" id="1_ya1uh"]
 [ext_resource type="PackedScene" uid="uid://cpws8ahgg3r3v" path="res://scenes/inventory_slot.tscn" id="2_qoywu"]
 [ext_resource type="Texture2D" uid="uid://i2kndroy583y" path="res://assets/images/inventory_slot_background.png" id="3_vrw3m"]
 [ext_resource type="Resource" uid="uid://cve0ch4lai1l4" path="res://assets/items/tree_shoots.tres" id="4_v4n2k"]
@@ -14,7 +14,7 @@
 [sub_resource type="LabelSettings" id="LabelSettings_saide"]
 font_size = 40
 
-[node name="Test" type="Control"]
+[node name="Inventory_Gestion" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

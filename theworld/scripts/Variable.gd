@@ -57,7 +57,7 @@ func start_game():
 	if PlayerIsPaused == true:
 		resume_character()
 	if Variable.InventoryOpen == true:
-		Inventory.CloseInventory()
+		InventoryGestion.CloseInventory()
 	if Variable.PlayMenuOpen == true:
 		PlayMenu.ClosePlayMenu()
 	if not MouseCapture:
