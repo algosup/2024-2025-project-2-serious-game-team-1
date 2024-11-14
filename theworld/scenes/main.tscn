@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dg0n2t0mnkxea"]
 
-[ext_resource type="PackedScene" uid="uid://cfxyee5oobf5t" path="res://game_play.tscn" id="2_joj3a"]
-[ext_resource type="PackedScene" uid="uid://c7grp6rev45qv" path="res://main_menu.tscn" id="3_pdjwq"]
-[ext_resource type="PackedScene" uid="uid://b31wjwnn4gip3" path="res://option_menu.tscn" id="4_2pl0s"]
+[ext_resource type="PackedScene" uid="uid://cfxyee5oobf5t" path="res://scenes/game_play.tscn" id="2_joj3a"]
+[ext_resource type="PackedScene" uid="uid://c7grp6rev45qv" path="res://scenes/main_menu.tscn" id="3_pdjwq"]
+[ext_resource type="PackedScene" uid="uid://b31wjwnn4gip3" path="res://scenes/option_menu.tscn" id="4_2pl0s"]
 
 [node name="Main" type="Node3D"]
 

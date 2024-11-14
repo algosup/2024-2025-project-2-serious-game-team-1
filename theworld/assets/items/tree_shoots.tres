@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cve0ch4lai1l4"]
 
-[ext_resource type="Texture2D" uid="uid://dy8iiskycrse1" path="res://assets/images/sapling.png" id="1_t21rh"]
+[ext_resource type="Texture2D" uid="uid://cg2d1f5ldu1ny" path="res://assets/images/sapling.png" id="1_t21rh"]
 [ext_resource type="Script" path="res://scripts/item_class.gd" id="2_1j0r8"]
 
 [resource]

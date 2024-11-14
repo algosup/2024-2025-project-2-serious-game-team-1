@@ -1,5 +1,6 @@
 extends PanelContainer
 
+@warning_ignore("shadowed_global_identifier")
 const Item = preload("res://scripts/item_class.gd")
 
 @export var item : Item 
@@ -16,4 +17,5 @@ func set_item(value):
 
 func _on_mouse_entered():
 	if item != null:
-		owner.set_description(item)
+		var base = $"../../.."
+		base.set_description(item)

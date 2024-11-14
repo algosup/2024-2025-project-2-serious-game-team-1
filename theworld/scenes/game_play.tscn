@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cfxyee5oobf5t"]
+[gd_scene load_steps=18 format=3 uid="uid://cfxyee5oobf5t"]
 
 [ext_resource type="Script" path="res://scripts/game_play.gd" id="1_nkkgl"]
 [ext_resource type="Script" path="res://scripts/play_menu.gd" id="2_dja3l"]
@@ -13,6 +13,7 @@
 [ext_resource type="Resource" uid="uid://cve0ch4lai1l4" path="res://assets/items/tree_shoots.tres" id="10_ragc1"]
 [ext_resource type="Texture2D" uid="uid://i2kndroy583y" path="res://assets/images/inventory_slot_background.png" id="11_po76j"]
 [ext_resource type="Texture2D" uid="uid://d5nsjmsj6ddd" path="res://assets/images/icon.png" id="12_axjvv"]
+[ext_resource type="PackedScene" uid="uid://duiiww4popk0x" path="res://scenes/player.tscn" id="14_8xcie"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_f5khm"]
 font_size = 40
@@ -37,6 +38,7 @@ grow_vertical = 2
 
 [node name="PlayMenu" type="Control" parent="PlayInterface"]
 process_mode = 3
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -93,7 +95,8 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Go Back to Menu"
 
-[node name="Inventory" type="Control" parent="PlayInterface"]
+[node name="Inventory_base" type="Control" parent="PlayInterface"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -102,7 +105,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_mwhpq")
 
-[node name="Inventory" type="NinePatchRect" parent="PlayInterface/Inventory"]
+[node name="Inventory" type="NinePatchRect" parent="PlayInterface/Inventory_base"]
 custom_minimum_size = Vector2(335, 212)
 layout_mode = 1
 anchors_preset = 8
@@ -118,7 +121,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_0hdnx")
 
-[node name="GridInventory" type="GridContainer" parent="PlayInterface/Inventory/Inventory"]
+[node name="GridInventory" type="GridContainer" parent="PlayInterface/Inventory_base/Inventory"]
 layout_mode = 1
 offset_left = 20.0
 offset_top = 23.0
@@ -127,92 +130,92 @@ offset_bottom = 679.0
 scale = Vector2(0.5, 0.5)
 columns = 4
 
-[node name="inventory_slot" parent="PlayInterface/Inventory/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
+[node name="inventory_slot" parent="PlayInterface/Inventory_base/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 item = ExtResource("6_r1s12")
 
-[node name="inventory_slot2" parent="PlayInterface/Inventory/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
+[node name="inventory_slot2" parent="PlayInterface/Inventory_base/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 item = ExtResource("7_knihl")
 
-[node name="inventory_slot3" parent="PlayInterface/Inventory/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
+[node name="inventory_slot3" parent="PlayInterface/Inventory_base/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 item = ExtResource("8_vy06a")
 
-[node name="inventory_slot4" parent="PlayInterface/Inventory/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
+[node name="inventory_slot4" parent="PlayInterface/Inventory_base/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 item = ExtResource("9_4vfcj")
 
-[node name="inventory_slot5" parent="PlayInterface/Inventory/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
+[node name="inventory_slot5" parent="PlayInterface/Inventory_base/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 item = ExtResource("10_ragc1")
 
-[node name="inventory_slot6" parent="PlayInterface/Inventory/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
+[node name="inventory_slot6" parent="PlayInterface/Inventory_base/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
-[node name="inventory_slot7" parent="PlayInterface/Inventory/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
+[node name="inventory_slot7" parent="PlayInterface/Inventory_base/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
-[node name="inventory_slot8" parent="PlayInterface/Inventory/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
+[node name="inventory_slot8" parent="PlayInterface/Inventory_base/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
-[node name="inventory_slot9" parent="PlayInterface/Inventory/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
+[node name="inventory_slot9" parent="PlayInterface/Inventory_base/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
-[node name="inventory_slot10" parent="PlayInterface/Inventory/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
+[node name="inventory_slot10" parent="PlayInterface/Inventory_base/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
-[node name="inventory_slot11" parent="PlayInterface/Inventory/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
+[node name="inventory_slot11" parent="PlayInterface/Inventory_base/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
-[node name="inventory_slot12" parent="PlayInterface/Inventory/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
+[node name="inventory_slot12" parent="PlayInterface/Inventory_base/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
-[node name="inventory_slot13" parent="PlayInterface/Inventory/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
+[node name="inventory_slot13" parent="PlayInterface/Inventory_base/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
-[node name="inventory_slot14" parent="PlayInterface/Inventory/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
+[node name="inventory_slot14" parent="PlayInterface/Inventory_base/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
-[node name="inventory_slot15" parent="PlayInterface/Inventory/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
+[node name="inventory_slot15" parent="PlayInterface/Inventory_base/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
-[node name="inventory_slot16" parent="PlayInterface/Inventory/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
+[node name="inventory_slot16" parent="PlayInterface/Inventory_base/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
-[node name="inventory_slot17" parent="PlayInterface/Inventory/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
+[node name="inventory_slot17" parent="PlayInterface/Inventory_base/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
-[node name="inventory_slot18" parent="PlayInterface/Inventory/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
+[node name="inventory_slot18" parent="PlayInterface/Inventory_base/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
-[node name="inventory_slot19" parent="PlayInterface/Inventory/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
+[node name="inventory_slot19" parent="PlayInterface/Inventory_base/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
-[node name="inventory_slot20" parent="PlayInterface/Inventory/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
+[node name="inventory_slot20" parent="PlayInterface/Inventory_base/Inventory/GridInventory" instance=ExtResource("5_trkc3")]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
-[node name="Description" type="NinePatchRect" parent="PlayInterface/Inventory/Inventory"]
+[node name="Description" type="NinePatchRect" parent="PlayInterface/Inventory_base/Inventory"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -225,23 +228,23 @@ grow_horizontal = 0
 texture = ExtResource("11_po76j")
 region_rect = Rect2(2.34615, 3.1778, 26.4982, 27.2089)
 
-[node name="DescriptionBox" type="VBoxContainer" parent="PlayInterface/Inventory/Inventory/Description"]
+[node name="DescriptionBox" type="VBoxContainer" parent="PlayInterface/Inventory_base/Inventory/Description"]
 layout_mode = 0
 offset_right = 526.0
 offset_bottom = 632.0
 scale = Vector2(0.5, 0.5)
 
-[node name="Header" type="HBoxContainer" parent="PlayInterface/Inventory/Inventory/Description/DescriptionBox"]
+[node name="Header" type="HBoxContainer" parent="PlayInterface/Inventory_base/Inventory/Description/DescriptionBox"]
 layout_mode = 2
 
-[node name="Icon" type="TextureRect" parent="PlayInterface/Inventory/Inventory/Description/DescriptionBox/Header"]
+[node name="Icon" type="TextureRect" parent="PlayInterface/Inventory_base/Inventory/Description/DescriptionBox/Header"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 texture = ExtResource("12_axjvv")
 
-[node name="Name_Label" type="Label" parent="PlayInterface/Inventory/Inventory/Description/DescriptionBox/Header"]
+[node name="Name_Label" type="Label" parent="PlayInterface/Inventory_base/Inventory/Description/DescriptionBox/Header"]
 custom_minimum_size = Vector2(394, 128)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -249,7 +252,7 @@ text = "Item Name"
 label_settings = SubResource("LabelSettings_f5khm")
 vertical_alignment = 1
 
-[node name="DescriptionLabel" type="RichTextLabel" parent="PlayInterface/Inventory/Inventory/Description/DescriptionBox"]
+[node name="DescriptionLabel" type="RichTextLabel" parent="PlayInterface/Inventory_base/Inventory/Description/DescriptionBox"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
 focus_mode = 2
@@ -274,8 +277,11 @@ shape = SubResource("BoxShape3D_r7j3t")
 [node name="CSGBox3D" type="CSGBox3D" parent="Area3D/CollisionShape3D"]
 material = SubResource("StandardMaterial3D_oreix")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.24656, 4.52859)
+[node name="Player" parent="." instance=ExtResource("14_8xcie")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.07333, 5.02393)
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.57428, 0)
 fov = 105.31
 
 [connection signal="pressed" from="PlayInterface/PlayMenu/ResumeButton" to="PlayInterface/PlayMenu" method="_on_resume_button_pressed"]

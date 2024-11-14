@@ -54,7 +54,13 @@ func option_game():
 
 func start_game():
 	UnPause()
-	resume_character()
-	CaptureMouseOn()
+	if PlayerIsPaused == true:
+		resume_character()
+	if Variable.InventoryOpen == true:
+		Inventory.CloseInventory()
+	if Variable.PlayMenuOpen == true:
+		PlayMenu.ClosePlayMenu()
+	if not MouseCapture:
+		CaptureMouseOn()
 	print("Start Game")
 	get_tree().change_scene_to_file(Gameplay_path)
