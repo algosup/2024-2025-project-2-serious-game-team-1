@@ -1,12 +1,9 @@
 extends Node3D
 
-@onready var menu = InventoryGestion
 
-func _ready() -> void:
-	menu.hide()
 
 func _input(_event):
-	if Input.is_action_just_pressed("escape"):
+	if Input.is_action_pressed("escape"):
 		if Variable.InventoryOpen == true:
 			InventoryGestion.CloseInventory()
 		else:
@@ -21,7 +18,7 @@ func _input(_event):
 			InventoryGestion.CloseInventory()
 		else:
 			InventoryGestion.OpenInventory()
-	if Input.is_action_just_pressed("interact"):
+	if Input.is_action_just_pressed("interaction"):
 		print("Interact")
 
 func resume_game():

@@ -83,16 +83,19 @@ grow_vertical = 2
 text = "Go Back to Menu"
 
 [node name="Inventory_Gestion" parent="PlayInterface" instance=ExtResource("3_bbat2")]
+process_mode = 1
 layout_mode = 1
 
 [node name="Wall" parent="." instance=ExtResource("4_jl1vh")]
-process_mode = 3
+process_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.33789, 0)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
+process_mode = 3
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 54.9575, 0)
 
 [node name="Area3D" type="Area3D" parent="."]
+process_mode = 1
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.35, 0)
@@ -102,6 +105,7 @@ shape = SubResource("BoxShape3D_r7j3t")
 material = SubResource("StandardMaterial3D_oreix")
 
 [node name="Player" parent="." instance=ExtResource("14_8xcie")]
+process_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.07333, 5.02393)
 
 [node name="Camera3D" type="Camera3D" parent="Player"]
