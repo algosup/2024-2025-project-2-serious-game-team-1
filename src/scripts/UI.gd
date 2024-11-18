@@ -1,6 +1,5 @@
 extends Control
 
-@onready var zone = $Zones
 
 var player: Node
 var visible_mode: int = 1

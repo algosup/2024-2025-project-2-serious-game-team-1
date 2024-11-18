@@ -1,13 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://ckathttcxx1me"]
+[gd_scene load_steps=2 format=3 uid="uid://ckathttcxx1me"]
 
-[ext_resource type="PackedScene" uid="uid://cluhe0cgolehg" path="res://designs/LowpolyFarmV2_byAutomataWorkshop/Models/farm.fbx" id="1_pbshr"]
-[ext_resource type="Texture2D" uid="uid://dsijjd3q5rs56" path="res://designs/LowpolyFarmV2_byAutomataWorkshop/Texture/farm_basecolor.png" id="2_ebhfm"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0pl3o"]
-albedo_texture = ExtResource("2_ebhfm")
+[ext_resource type="PackedScene" uid="uid://cluhe0cgolehg" path="res://assets/designs/LowpolyFarmV2_byAutomataWorkshop/Models/farm.fbx" id="1_pbshr"]
 
 [node name="farm" instance=ExtResource("1_pbshr")]
-
-[node name="Cube_009" parent="." index="0"]
-visible = false
-surface_material_override/0 = SubResource("StandardMaterial3D_0pl3o")

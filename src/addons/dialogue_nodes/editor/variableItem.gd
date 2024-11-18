@@ -1,81 +1,153 @@
 @tool
 extends HBoxContainer
 
+
 signal modified
+signal delete_requested(node : BoxContainer)
 
-@onready var var_name : LineEdit = $Name
+@onready var var_name = $Name
 @onready var type = $Type
-@onready var string_value : LineEdit = $StringValue
-@onready var int_value : SpinBox = $IntValue
-@onready var float_value : SpinBox = $FloatValue
-@onready var bool_value : CheckBox = $BoolValue
+@onready var string_value = $StringValue
+@onready var int_value = $IntValue
+@onready var float_value = $FloatValue
+@onready var bool_value = $BoolValue
 
-var types = [TYPE_STRING, TYPE_INT, TYPE_FLOAT, TYPE_BOOL]
-var last_shown : Control
+const types := [TYPE_STRING, TYPE_INT, TYPE_FLOAT, TYPE_BOOL]
+var undo_redo : EditorUndoRedoManager
+var last_set_name : String
+var last_set_type : int
+var last_shown_input : Control
+var last_value := ['', 0, 0.0, false]
+
 
 func _ready():
-	last_shown = string_value
+	last_set_name = var_name.text
+	last_set_type = type.selected
+	last_shown_input = string_value
+	last_value[0] = string_value.text
 	
 	for i in range(type.item_count):
 		type.set_item_id(i, types[i])
-	
-	type.item_selected.connect(_on_type_changed)
-	
-	var_name.text_changed.connect(_on_modified)
-	type.item_selected.connect(_on_modified)
-	string_value.text_changed.connect(_on_modified)
-	int_value.value_changed.connect(_on_modified)
-	float_value.value_changed.connect(_on_modified)
-	bool_value.toggled.connect(_on_modified)
+
+
+func get_var_name():
+	return var_name.text
+
+
+func set_var_name(new_name : String):
+	if new_name != var_name.text:
+		var_name.text = new_name
+	last_set_name = var_name.text
 
 
 func get_value():
 	match types[type.selected]:
 		TYPE_STRING:
-			return string_value.text
+			return str(string_value.text)
 		TYPE_INT:
-			return int_value.value
+			return int(int_value.value)
 		TYPE_FLOAT:
-			return float_value.value
+			return float(float_value.value)
 		TYPE_BOOL:
-			return bool_value.button_pressed
+			return bool(bool_value.button_pressed)
 	return ''
 
 
 func set_value(new_value):
 	match types[type.selected]:
 		TYPE_STRING:
-			string_value.text = str(new_value)
+			if new_value != string_value.text:
+				string_value.text = str(new_value)
 		TYPE_INT:
-			int_value.value = int(new_value)
+			int_value.set_value_no_signal(int(new_value))
 		TYPE_FLOAT:
-			float_value.value = float(new_value)
+			float_value.set_value_no_signal(float(new_value))
 		TYPE_BOOL:
-			bool_value.button_pressed = bool(new_value)
+			bool_value.set_pressed_no_signal(bool(new_value))
+	
+	last_value = [
+		string_value.text,
+		int_value.value,
+		float_value.value,
+		bool_value.button_pressed
+	]
 
 
-func _on_type_changed(new_idx : int):
-	if last_shown:
-		last_shown.hide()
+func set_type(new_idx : int):
+	if last_shown_input:
+		last_shown_input.hide()
 	
 	match types[new_idx]:
 		TYPE_STRING:
 			string_value.show()
-			last_shown = string_value
+			last_shown_input = string_value
 		TYPE_INT:
 			int_value.show()
-			last_shown = int_value
+			last_shown_input = int_value
 		TYPE_FLOAT:
 			float_value.show()
-			last_shown = float_value
+			last_shown_input = float_value
 		TYPE_BOOL:
 			bool_value.show()
-			last_shown = bool_value
+			last_shown_input = bool_value
+	
+	last_set_type = new_idx
+
+
+func get_data():
+	var data_type : int = type.get_item_id(type.selected)
+	var data_value = get_value()
+	return {'type': data_type, 'value': data_value}
+
+
+func load_data(new_name : String, data : Dictionary):
+	set_var_name(new_name)
+	type.select(types.find(data['type']))
+	set_type(types.find(data['type']))
+	set_value(data['value'])
+
+
+func _on_name_changed(new_text : String):
+	if not undo_redo:
+		return
+	
+	undo_redo.create_action('Set variable name')
+	undo_redo.add_do_method(self, 'set_var_name', new_text)
+	undo_redo.add_do_method(self, '_on_modified')
+	undo_redo.add_undo_method(self, '_on_modified')
+	undo_redo.add_undo_method(self, 'set_var_name', last_set_name)
+	undo_redo.commit_action()
+
+
+func _on_type_changed(new_idx : int):
+	if not undo_redo:
+		set_type(new_idx)
+		return
+	
+	undo_redo.create_action('Set variable type')
+	undo_redo.add_do_method(type, 'select', new_idx)
+	undo_redo.add_do_method(self, 'set_type', new_idx)
+	undo_redo.add_do_method(self, '_on_modified')
+	undo_redo.add_undo_method(self, '_on_modified')
+	undo_redo.add_undo_method(type, 'select', last_set_type)
+	undo_redo.add_undo_method(self, 'set_type', last_set_type)
+	undo_redo.commit_action()
+
+
+func _on_value_changed(new_value):
+	if not undo_redo:
+		return
+	
+	undo_redo.create_action('Set variable value')
+	undo_redo.add_do_method(self, 'set_value', new_value)
+	undo_redo.add_do_method(self, '_on_modified')
+	undo_redo.add_undo_method(self, '_on_modified')
+	undo_redo.add_undo_method(self, 'set_value', last_value[type.selected])
+	undo_redo.commit_action()
 
 
 func _on_delete_pressed():
-	_on_modified()
-	queue_free()
+	delete_requested.emit(self)
 
 
 func _on_modified(_a= 0, _b= 0):

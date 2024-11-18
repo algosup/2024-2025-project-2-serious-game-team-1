@@ -3,13 +3,11 @@
 [ext_resource type="Script" path="res://addons/dialogue_nodes/nodes/commentNode.gd" id="1"]
 
 [node name="CommentNode" type="GraphNode"]
-custom_minimum_size = Vector2(200, 122)
+custom_minimum_size = Vector2(200, 100)
 offset_right = 200.0
-offset_bottom = 122.0
-title = "Comment"
-show_close = true
+offset_bottom = 100.0
 resizable = true
-comment = true
+title = "Comment"
 slot/0/left_enabled = false
 slot/0/left_type = 0
 slot/0/left_color = Color(1, 1, 1, 1)
@@ -22,8 +20,18 @@ slot/0/draw_stylebox = true
 script = ExtResource("1")
 
 [node name="TextEdit" type="TextEdit" parent="."]
-custom_minimum_size = Vector2(20, 90)
 layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ResizeTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="TextTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
 
 [connection signal="resize_request" from="." to="." method="_on_resize"]
-[connection signal="text_changed" from="TextEdit" to="." method="_on_node_modified"]
+[connection signal="text_changed" from="TextEdit" to="." method="_on_text_changed"]
+[connection signal="timeout" from="ResizeTimer" to="." method="_on_resize_timer_timeout"]
+[connection signal="timeout" from="TextTimer" to="." method="_on_text_timer_timeout"]

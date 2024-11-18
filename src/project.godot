@@ -17,14 +17,14 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Zones="*res://src/zones.gd"
+Zones="*res://scripts/zones.gd"
 EcoFollow="*res://scripts/eco_follow.gd"
 DialogManager="*res://scripts/dialog_manager.gd"
 QuestList="*res://scripts/quest_list.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_nodes/plugin.cfg", "res://addons/proton_scatter/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogue_nodes/plugin.cfg", "res://addons/proton_scatter/plugin.cfg", "res://addons/terrain_3d/plugin.cfg", "res://addons/wakatime/plugin.cfg")
 
 [input]
 
