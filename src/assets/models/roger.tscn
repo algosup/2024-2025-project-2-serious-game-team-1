@@ -1,0 +1,49 @@
+[gd_scene load_steps=10 format=3 uid="uid://clqp5fnpifobb"]
+
+[ext_resource type="Script" path="res://scripts/pnj.gd" id="1_e8hhb"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="2_lon26"]
+[ext_resource type="Resource" uid="uid://c6chxy5w5cd2n" path="res://assets/dialog/testdialog.tres" id="3_de4i4"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="4_pt6gd"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="5_lq7re"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rrdw1"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_jrws7"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_u5x2h"]
+script = ExtResource("4_pt6gd")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_jsjqm"]
+script = ExtResource("5_lq7re")
+
+[node name="Roger" type="StaticBody3D"]
+script = ExtResource("1_e8hhb")
+Pnj_name = "Roger"
+prompt_message = "talk"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_rrdw1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_jrws7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogueBox" type="Panel" parent="CanvasLayer"]
+custom_minimum_size = Vector2(256, 128)
+anchors_preset = -1
+anchor_left = 0.273
+anchor_top = 0.542
+anchor_right = 0.727
+anchor_bottom = 0.946
+offset_left = -0.496002
+offset_top = -0.216034
+offset_right = 0.495911
+offset_bottom = -0.00799561
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("2_lon26")
+dialogue_data = ExtResource("3_de4i4")
+start_id = "Roger"
+hide_portrait = true
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_u5x2h"), SubResource("RichTextEffect_jsjqm")])
