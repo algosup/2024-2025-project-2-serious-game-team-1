@@ -18,55 +18,53 @@ var inventory : Array[Item] = [
 	null, null, null, null, null
 ]
 
-@onready var inventory_slot_1: PanelContainer = $Inventory/GridInventory/inventory_slot1
-@onready var inventory_slot_2: PanelContainer = $Inventory/GridInventory/inventory_slot2
-@onready var inventory_slot_3: PanelContainer = $Inventory/GridInventory/inventory_slot3
-@onready var inventory_slot_4: PanelContainer = $Inventory/GridInventory/inventory_slot4
-@onready var inventory_slot_5: PanelContainer = $Inventory/GridInventory/inventory_slot5
-@onready var inventory_slot_6: PanelContainer = $Inventory/GridInventory/inventory_slot6
-@onready var inventory_slot_7: PanelContainer = $Inventory/GridInventory/inventory_slot7
-@onready var inventory_slot_8: PanelContainer = $Inventory/GridInventory/inventory_slot8
-@onready var inventory_slot_9: PanelContainer = $Inventory/GridInventory/inventory_slot9
-@onready var inventory_slot_10: PanelContainer = $Inventory/GridInventory/inventory_slot10
-@onready var inventory_slot_11: PanelContainer = $Inventory/GridInventory/inventory_slot11
-@onready var inventory_slot_12: PanelContainer = $Inventory/GridInventory/inventory_slot12
-@onready var inventory_slot_13: PanelContainer = $Inventory/GridInventory/inventory_slot13
-@onready var inventory_slot_14: PanelContainer = $Inventory/GridInventory/inventory_slot14
-@onready var inventory_slot_15: PanelContainer = $Inventory/GridInventory/inventory_slot15
-@onready var inventory_slot_16: PanelContainer = $Inventory/GridInventory/inventory_slot16
-@onready var inventory_slot_17: PanelContainer = $Inventory/GridInventory/inventory_slot17
-@onready var inventory_slot_18: PanelContainer = $Inventory/GridInventory/inventory_slot18
-@onready var inventory_slot_19: PanelContainer = $Inventory/GridInventory/inventory_slot19
-@onready var inventory_slot_20: PanelContainer = $Inventory/GridInventory/inventory_slot20
+@onready var slot_1: TextureRect = $Inventory/GridInventory/Slot1
+@onready var slot_2: TextureRect = $Inventory/GridInventory/Slot2
+@onready var slot_3: TextureRect = $Inventory/GridInventory/Slot3
+@onready var slot_4: TextureRect = $Inventory/GridInventory/Slot4
+@onready var slot_5: TextureRect = $Inventory/GridInventory/Slot5
+@onready var slot_6: TextureRect = $Inventory/GridInventory/Slot6
+@onready var slot_7: TextureRect = $Inventory/GridInventory/Slot7
+@onready var slot_8: TextureRect = $Inventory/GridInventory/Slot8
+@onready var slot_9: TextureRect = $Inventory/GridInventory/Slot9
+@onready var slot_10: TextureRect = $Inventory/GridInventory/Slot10
+@onready var slot_11: TextureRect = $Inventory/GridInventory/Slot11
+@onready var slot_12: TextureRect = $Inventory/GridInventory/Slot12
+@onready var slot_13: TextureRect = $Inventory/GridInventory/Slot13
+@onready var slot_14: TextureRect = $Inventory/GridInventory/Slot14
+@onready var slot_15: TextureRect = $Inventory/GridInventory/Slot15
+@onready var slot_16: TextureRect = $Inventory/GridInventory/Slot16
+@onready var slot_17: TextureRect = $Inventory/GridInventory/Slot17
+@onready var slot_18: TextureRect = $Inventory/GridInventory/Slot18
+@onready var slot_19: TextureRect = $Inventory/GridInventory/Slot19
+@onready var slot_20: TextureRect = $Inventory/GridInventory/Slot20
 
-@onready var slots : Array[PanelContainer] = [
-	inventory_slot_1, inventory_slot_2, inventory_slot_3, inventory_slot_4, inventory_slot_5, 
-	inventory_slot_6, inventory_slot_7, inventory_slot_8, inventory_slot_9, inventory_slot_10,
-	inventory_slot_11, inventory_slot_12, inventory_slot_13, inventory_slot_14, inventory_slot_15,
-	inventory_slot_16, inventory_slot_17, inventory_slot_18, inventory_slot_19, inventory_slot_20
-	]
 
-# Called when the node enters the scene tree for the first time.
-func _enter_tree() -> void:
-	for i in range(slots.size()):
-		if inventory[i] != null:
-			slots[i].set_item(inventory[i])
+@onready var slots : Array = [
+	slot_1, slot_2, slot_3, slot_4, slot_5,
+	slot_6, slot_7, slot_8, slot_9, slot_10,
+	slot_11, slot_12, slot_13, slot_14, slot_15,
+	slot_16, slot_17, slot_18, slot_19, slot_20,
+]
 
-var item_in_hand: Item = null #Credit Matteo
+#func _enter_tree() -> void:
+	#for i in range(slots.size()):
+		#if inventory[i] != null:
+			#slots[i].set_item(inventory[i])
 
-func add_to_inventory(item : Item):
-	#Credit Matteo & Alexis
-	if item not in inventory:
-		if null not in inventory:
-			print("Inventory is full")
-		for i in inventory:
-			if i == null :
-				inventory[i] = item
-				print("Added %s to inventory" % item.title)
-				item.pick_up()
-				break
-	else:
-		print("%s is already in inventory" % item.title)
+#func add_to_inventory(item : Item):
+	##Credit Matteo & Alexis
+	#if item not in inventory:
+		#if null not in inventory:
+			#print("Inventory is full")
+		#for i in inventory:
+			#if i == null :
+				#inventory[i] = item
+				#print("Added %s to inventory" % item.title)
+				#item.pick_up()
+				#break
+	#else:
+		#print("%s is already in inventory" % item.title)
 
 func OpenInventory():
 	print("Open Inventory")
