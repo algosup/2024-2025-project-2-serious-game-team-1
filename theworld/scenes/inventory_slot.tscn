@@ -6,7 +6,6 @@
 [node name="inventory_slot" type="PanelContainer"]
 offset_right = 128.0
 offset_bottom = 128.0
-scale = Vector2(0.5, 0.5)
 script = ExtResource("1_n83hj")
 
 [node name="Background" type="TextureRect" parent="."]
