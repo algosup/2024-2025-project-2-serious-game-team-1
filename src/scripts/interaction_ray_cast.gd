@@ -19,10 +19,10 @@ func _physics_process(delta: float) -> void:
 					if EcoFollow.add_to_inventory(collider):
 						print("Added to inventory")
 					collider.interact(owner)
-				if collider.is_in_group("pnj") and collider is Pnj:
-					if DialogManager.dialog(collider):
-						print("Entered dialog with " + str(collider))
-					collider.interact(owner)
+				#if collider.is_in_group("pnj") and collider is Pnj:
+					#if DialogManager.dialog(collider):
+						#print("Entered dialog with " + str(collider))
+					#collider.interact(owner)
 					
 				if collider.is_in_group("waste"):
 					print("Waste object detected.")  # Debug: Waste object is detected
