@@ -20,15 +20,13 @@ func CaptureMouseOff():
 	MouseCapture = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
+
 func pause_character():
 	PlayerIsPaused = true
-	if MouseCapture:
-		CaptureMouseOff()
+
 
 func resume_character():
 	PlayerIsPaused = false
-	if not MouseCapture:
-		CaptureMouseOn()
 
 func Pause():
 	isPaused = true
@@ -42,25 +40,7 @@ func GoBack():
 	if PreviousScene == Gameplay_path:
 		PlayMenuOpen = true
 		InventoryOpen = false
-		if MouseCapture:
-			CaptureMouseOff()
 	get_tree().change_scene_to_file(PreviousScene)
 
 func option_game():
-	if MouseCapture:
-		CaptureMouseOff()
 	get_tree().change_scene_to_file(OptionMenu_path)
-	
-
-func start_game():
-	UnPause()
-	if PlayerIsPaused == true:
-		resume_character()
-	if Variable.InventoryOpen == true:
-		InventoryGestion.CloseInventory()
-	if Variable.PlayMenuOpen == true:
-		PlayMenu.ClosePlayMenu()
-	if not MouseCapture:
-		CaptureMouseOn()
-	print("Start Game")
-	get_tree().change_scene_to_file(Gameplay_path)

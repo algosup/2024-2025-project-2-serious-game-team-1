@@ -9,12 +9,12 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if Variable.MouseCapture:
-		Variable.CaptureMouseOff()
+	Variable.CaptureMouseOff()
 
 
 func _on_play_button_pressed() -> void:
-	Variable.start_game()
+	Variable.CaptureMouseOn()
+	get_tree().change_scene_to_file(Variable.Gameplay_path)
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit() 

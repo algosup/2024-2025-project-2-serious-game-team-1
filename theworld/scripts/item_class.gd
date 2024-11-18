@@ -9,4 +9,4 @@ class_name Item
 func pick_up():
 	#Credit Matteo 
 	print(self.title + "picked up")
-	InventoryGestion.add_to_inventory(self)
+	#InventoryGestion.add_to_inventory(self)

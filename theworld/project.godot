@@ -18,12 +18,7 @@ config/icon="res://assets/images/icon.svg"
 
 [autoload]
 
-MainMenu="*res://scripts/main_menu.gd"
-OptionMenu="*res://scripts/option_menu.gd"
-GamePlay="*res://scripts/game_play.gd"
-PlayMenu="*res://scripts/play_menu.gd"
 Variable="*res://scripts/Variable.gd"
-InventoryGestion="*res://scripts/inventory_gestion.gd"
 
 [display]
 

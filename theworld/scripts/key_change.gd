@@ -4,7 +4,7 @@ extends Control
 @onready var label: Label = $HBoxContainer/Label as Label
 @onready var button: Button = $HBoxContainer/Button as Button
 
-@export var action_name : String = "Move_up"
+@export var action_name : String = ""
 var key_code
 
 # Called when the node enters the scene tree for the first time.
@@ -29,7 +29,7 @@ func set_action_name() -> void:
 			label.text = "Escape"
 		"jump":
 			label.text = "Jump"
-		"interact":
+		"interaction":
 			label.text = "Interact"
 		"inventory":
 			label.text = "Inventory"
@@ -40,7 +40,6 @@ func set_text_for_key():
 	var action_events = InputMap.action_get_events(action_name)
 	var action_event = action_events[0]
 	var action_keycode = OS.get_keycode_string(action_event.physical_keycode)
-	
 	button.text = "%s" % action_keycode
 
 func _on_button_toggled(button_pressed):

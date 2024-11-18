@@ -5,6 +5,7 @@ extends Control
 func _ready() -> void:
 	Variable.current_scene = Variable.Gameplay_path # Replace with function body.
 
+@onready var GamePlay: Node3D = $"../.."
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

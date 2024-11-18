@@ -98,7 +98,7 @@ action_name = "escape"
 
 [node name="KeyChange7" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer" instance=ExtResource("2_ufot1")]
 layout_mode = 2
-action_name = "interact"
+action_name = "interaction"
 
 [node name="KeyChange8" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer" instance=ExtResource("2_ufot1")]
 layout_mode = 2
