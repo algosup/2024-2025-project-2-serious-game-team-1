@@ -4,11 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b3eeakacihlai"
-valid=false
+path="res://.godot/imported/Bush_2_autumn.fbx-c7647e744aebcd6c61a9cef590241b70.scn"
 
 [deps]
 
 source_file="res://assets/designs/LowPolyNaturePackLite_FBX/Models/Bushes/Bush_2_autumn.fbx"
+dest_files=["res://.godot/imported/Bush_2_autumn.fbx-c7647e744aebcd6c61a9cef590241b70.scn"]
 
 [params]
 
