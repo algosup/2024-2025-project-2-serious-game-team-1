@@ -16,7 +16,7 @@
 
 ![alt text](Godot_Logo-1.png)
 
-#### *Last Update on November 8th, 2024*
+#### *Last Update on November 19th, 2024*
 
 
 <details>
@@ -107,15 +107,17 @@
 ## Introduction
 
 The goal of this document is to define the technical specifications of the project.
-It will be used to define the requirements and the conventions of the project,
-as well as the tools we will use.
+It will be used to define the requirements and the conventions of the project, as well as the tools we will use.
 
 ## Audience 
 
 This document intended for all the team:
 
+Main audiences
+
 - Software engineers: to help them grasp user and technical requirements and support informed decision-making during project planning. It provides insights into client expectations, potential risks and challenges, as well as the technical choices made.
-Secondary audiences:
+  
+Secondary audiences
 
 - Project manager: to pinpoint risks and help him to take decision.
 
@@ -131,59 +133,48 @@ ALGOSUP's school commissioned us to create a serious game on GODOT Game Engine.
 
 
 ## Glossary
+| Term           | Definition  |
+|----------------|-------------|
+| **Animation**  | A file used to define the movement of 3D objects in Unreal Engine |
+| **Asset**      | A file that can be imported into Godot Engine |
+| **Dialogue**   | Text that appears on the screen |
+| **FPS**        | First-person View |
+| **Game Engine**| A Game Engine is software that provides the tools needed to create video games, such as graphics, physics, audio, and interaction management |
+| **GitHub**     | A version control system |
+| **HUD**        | Heads-Up Display, a graphical interface that displays essential information to the player in real time, such as health, score, resources... |
+| **MIT**        | The MIT licence is a permissive open-source licence that allows developers to use, copy, modify, and distribute the software, even in commercial projects, without paying royalties |
+| **Lore**       | A story that is not directly related to the gameplay |
+| **NPC**        | Non-Playable Character |
+| **Path**       | A path is a sequence of points in space that defines a route for objects to move along |
+| **Path3D**     | A Path3D defines a 3D path for objects to follow.|
+| **Ragdolls**   | A Physical structures used to simulate the realistic movement of an articulated body |
+| **Texture**    | A file used to define the surface properties of 3D objects in Unreal Engine |
+| **UI**         | AUser Interface is the set of visual elements that enable the user to interact with an application or game |
+| **WIP**        | Work In Progress |
 
-| Term | Definition |
-| --- | --- |
-| **WIP** | Work In Progress |
-| **Asset** | A file that can be imported into Godot Engine |
-| **GitHub** | A version control system   |
-| **Texture** | A file used to define the surface properties of 3D objects in Unreal Engine |
-| **Animation** | A file used to define the movement of 3D objects in Unreal Engine |
-| **NPC** | Non-Playable Character |
-| **UI** | User Interface |
-| **Dialogue** | Text that appears on the screen |
-| **Lore** | A story that is not directly related to the gameplay |
-| **FPS** | First-person View |
-| **UI** | The User Interface is the set of visual elements that enable the user to interact with an application or game |
-| **Ragdolls** |  Physical structures used to simulate the realistic movement of an articulated body |
-| **HUD** |  Heads-Up Display, a graphical interface that displays essential information to the player in real time, such as health, score, resources...|
-| **Game Engine** |  A Game Engine is software that provides the tools needed to create video games, such as graphics, physics, audio and interaction management|
-| **MIT** |  The MIT licence is a permissive open source licence that allows developers to use, copy, modify and distribute the software, even in commercial projects, without paying royalties|
 
 ## Requirements
 
 
 ### Game Engine :
 
-- Use Godot Engine version 4.3 for development, with GDScript as the main scripting language.
-
-The game must be designed using the Godot Engine, relying on GDScript for optimum integration with Godot's native features. This will allow greater flexibility to create interactive and dynamic gameplay elements.
+The game must be designed using the Godot Engine 4.3, relying on GDScript for optimum integration with Godot's native features. This will allow greater flexibility to create interactive and dynamic gameplay elements.
 
 ### Objective :
-
-- Design, code and produce a complete serious game.
-- Educational content.
 
 The aim of the game is to educate players about environmental and climate issues. The game aims to raise players' awareness of ecological issues and make them understand the impact of their actions on the planet.
 
 ### Game Quality :
 
-- The game must be small but well finished, respecting the principles of game design and development.
-- Continuous testing will be an essential aspect of development.
-
-The game must be sufficiently compact to guarantee a neat, well-finished quality. Regular and rigorous testing throughout the development process is necessary to ensure a smooth and enjoyable gaming experience.
+The game must be well finished, respecting the principles of game design and development. Regular and rigorous testing throughout the development process is necessary to ensure a smooth and enjoyable gaming experience.
   
 ### Deliverable Requirements :
 
-- The game must be enjoyable, bug-free and as full-featured as possible.
-
-The final product must offer a pleasant and engaging experience for players. All essential elements must be included, and the game must be bug-free for optimal playability.
+The final product must offer a pleasant and engaging experience for players. All essential elements must be included, the game must be bug-free for optimal playability and as full-featured as possible.
 
 
 ### Game theme :
 
-- Global warming.
-  
 The central theme of the game is global warming, approached in a fun and educational way. This choice allows us to deal with contemporary issues and encourage players to think about climate change.
 
 ---
@@ -234,20 +225,7 @@ Multiple commits within a single branch are acceptable to document progressive u
 
 <br>
 
-- It is important to establish a naming convention for projects. This makes the source code easier to read and understand with less effort. There are many naming conventions :
-
-| Naming Convention       | Description                                                     |
-|-------------------------|-----------------------------------------------------------------|
-| snake_case              | Words are separated by underscores                              |
-| camelCase               | First word is lowercase, subsequent words are capitalized       |
-| PascalCase              | Every word is capitalized, no spaces or underscores             |
-| kebab-case              | Words are separated by hyphens                                  |
-| SCREAMING_SNAKE_CASE    | Words are uppercase and separated by underscores                |
-| Train-Case              | Similar to PascalCase but words are separated by hyphens        |
-| dot.case                | Words are separated by periods                                  |
-| Title Case              | Every word is capitalized with spaces in between (UI purposes)  |
-| camel_Snake_case        | Combination of camelCase and snake_case conventions             |
-| flatcase                | All lowercase letters with no spaces or special characters      |
+It is important to establish a naming convention for projects. This makes the source code easier to read and understand with less effort. There are many naming conventions :
 
 <br>
 
@@ -255,15 +233,15 @@ Multiple commits within a single branch are acceptable to document progressive u
 
 
 
-| Naming Context | Naming Convention | Example             |
-|----------------|-------------------|---------------------|
-| InputMap       | flatcase          | `inputmap`          |
-| Autoload       | PascalCase        | `AutoLoad`          |
-| function       | camel_Snake_case  | `example_Name`      |
-| variable       | kebab-case        | `example-name`      |
-| groups         | camelCase         | `exampleGroup`      |
-| folder         | Train-Case        | `Example-Name`      |
-| files          | snake_case        | `example_file`      |
+| Naming Context | Naming Convention |
+|----------------|-------------------|
+| InputMap       | `flatcase`         |
+| Autoload       | `PascalCase`        |
+| function       | `camel_Snake_case`  |
+| variable       | `kebab-case`        |
+| groups         | `camelCase`         |
+| folder         | `Train-Case`        |
+| files          | `snake_case`        |
 
 
 ## Comments
@@ -317,40 +295,40 @@ Multiple commits within a single branch are acceptable to document progressive u
 
 The "Source" folder contains all the game code in the form of files and folders.
 
-### └── Assets 
+###  Assets 
 
 This folder contains all the graphics resources and 3D models used in the game, which are essential for the game's functionality and aesthetics.
 
-### | └───── Characters
+#### Characters
 
 This folder contains all the graphics and animations for the game's characters, whether playable or not.
 
-### | └── Sounds
+#### Sounds
 
 This folder contains all the sound effects used in the game, such as sounds for specific actions such as collisions or player interactions and actions.
 
-### | └── Fonts
+#### Fonts
 
 This folder contains all the fonts used in the game, including user interface display fonts, in-game text fonts and any other design elements involving typography.
 
-### | └── Music
+#### Music
 
 This folder contains all the music tracks used in the game, including background music, ambient sounds and any other tracks that accompany gameplay.
 
-### | └── Texture
+#### Texture
 
 This folder contains all the textures and images used in the game. This includes background textures, character sprites, user interface elements, and any other visual elements needed to make the game look good.
 
-### | └── Object
+#### Object
 
 This folder contains all the interactive and visual objects in the game, including those that the player can interact with and the scenery elements.
 
 
-###  └── Script
+### Script
 
 This folder stores all the main scripts needed to make the game work. This includes gameplay logic, player controls and all the essential functions for managing the player's interaction with the game.
 
-### └── Interfaces
+### Interfaces
 
 This folder contains all the files relating to the game's user interfaces and the way in which players interact visually with the game.
 
@@ -400,13 +378,11 @@ In our case, we decided to use 3D, thinking that it was better suited to our gam
 
 #### Main Menu
 
-A menu will be available, accessible by pressing the ‘escape’ key. It will allow you to access all the settings (audio, graphics, keys, etc.), or quit the game.
+A menu will be available, accessible by pressing the `esc` "escape" key. It will allow you to access all the settings (audio, graphics, keys, etc.), or quit the game.
 
 #### Inventory
 
-Inventory
-
-An inventory will keep track of all the player's items and allow them to navigate between the items in their hand and those in their bag. A drag-and-drop system will be used to create this system.
+An inventory will keep track of all the player's items and allow them to navigate between the items in their bag by pressing the `e` key . A drag-and-drop system will be used to create this system.
 
 #### HUD
 
@@ -429,20 +405,20 @@ The player will be able to move in four directions (Up, Down, Left, Right) using
 
 | Key | Direction |
 | --- | --------- |
-| Z   | Forward   |
-| S   | Backward  |
-| Q   | Left      |
-| D   | Right     |
+| `Z`   | Forward   |
+| `S`   | Backward  |
+| `Q`   | Left      |
+| `D`   | Right     |
 
 #### Inspection 
 
 The player can inspect the objects. They can rotate the objects in four directions (up, down, left, right) using the following key combinations:
 | Key | Direction      |
 | --- | ---------------|
-| Z   | Rotation Up    |
-| S   | Rotation Down  |
-| Q   | Rotation Left  |
-| D   | Rotation Right |
+| `Z`   | Rotation Up    |
+| `S`   | Rotation Down  |
+| `Q`   | Rotation Left  |
+| `D`   | Rotation Right |
 
 This action temporarily disables the player's movement for as long as the inspection function is in use.
 
@@ -463,11 +439,11 @@ The player can enter and drive a vehicle. Once inside, they can move the vehicle
 
 | Key | Action            |
 | --- | ------------------ |
-| Z   | Move Forward      |
-| S   | Move Backward     |
-| Q   | Turn Left         |
-| D   | Turn Right        |
-| F   | Enter/Exit Vehicle |
+| `Z`   | Move Forward      |
+| `S`   | Move Backward     |
+| `Q`   | Turn Left         |
+| `D`   | Turn Right        |
+| `F`   | Enter/Exit Vehicle |
 
 When inside the vehicle, the player's standard movement controls are disabled until they exit the vehicle using the **F** key.
 
@@ -495,7 +471,7 @@ We will use Itch.io,  to get free assets. It is available [here](https://itch.io
 
 ## Sound bank
 
-We will use Universal Soundbank, to get free and royalty-free sounds. It is available [here](https://universal-soundbank.com/).
+We will use Universal Soundbank and Zapsplat, to get free and royalty-free sounds. It is available [Universal Soundbank](https://universal-soundbank.com/) and [Zapsplat](https://www.zapsplat.com/).
 
 ---
 
@@ -562,7 +538,7 @@ To edit and export to Godot Engine you need a desktop or laptop computer with th
 
 ## 3D tools 
 
-- Built-in meshes: cube, cylinder/cone, (hemi)sphere, prism, plane, quad, torus, ribbon, tube.
+- Built-in meshes: cube, cylinder, cone, sphere, prism, plane, quad, torus, ribbon, tube.
 
 - GridMaps for 3D tile-based level design.
 
@@ -645,21 +621,33 @@ func _ready():
 
 ### Methods
 
-| **Type**       | **Method**                                                                                                                                                           |
-|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **[Color](https://docs.godotengine.org/en/stable/classes/class_color.html)**      | - [Color8(r8: int, g8: int, b8: int, a8: int = 255)](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-color8)             |
-| **[String](https://docs.godotengine.org/en/stable/classes/class_string.html)**     | - [char(char: int)](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-char)                                                 |
-| **[Variant](https://docs.godotengine.org/en/stable/classes/class_variant.html)**    | - [convert(what: Variant, type: int)](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-convert)                           |
-| **[Object](https://docs.godotengine.org/en/stable/classes/class_object.html)**     | - [dict_to_inst(dictionary: Dictionary)](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-dict-to-inst)                   |
-| **[Dictionary](https://docs.godotengine.org/en/stable/classes/class_dictionary.html)** | - [inst_to_dict(instance: Object)](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-inst-to-dict)                         |
-| **[Boolean](https://docs.godotengine.org/en/stable/classes/class_bool.html)**    | - [is_instance_of(value: Variant, type: Variant)](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-is-instance-of)        |
-| **[Integer](https://docs.godotengine.org/en/stable/classes/class_int.html)**    | - [len(var: Variant)](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-len)                                               |
-| **[Resource](https://docs.godotengine.org/en/stable/classes/class_resource.html)**   | - [load(path: String)](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-load)                                             |
-| **[Resource](https://docs.godotengine.org/en/stable/classes/class_resource.html)**   | - [preload(path: String)](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-preload)                                       |
-| **[Void](https://docs.godotengine.org/en/stable/classes/class_void.html)**       | - [print_debug(...) vararg](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-print-debug)                                 |
-| **[Void](https://docs.godotengine.org/en/stable/classes/class_void.html)**       | - [print_stack()](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-print-stack)                                           |
-| **[Array](https://docs.godotengine.org/en/stable/classes/class_array.html)**      | - [range(...) vararg](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-range)                                             |
-| **[Boolean](https://docs.godotengine.org/en/stable/classes/class_bool.html)**    | - [type_exists(type: StringName)](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-type-exists)                           |
+In GDScript, methods are functions that belong to a class. They are used to define actions that an object can perform. Methods can be used to manipulate data, interact with other objects, or perform calculations.
+
+Example :
+
+`func my_method():
+    var my_array = [1, 2, 3, 4, 5]
+    var array_length = len(my_array)
+    print("Length of the array: ", array_length)  # Display "5"`
+
+The methods that can be used in Godot :
+
+
+| **Type**  | **Method**  | 
+|-----------|-------------|
+| **[Color](https://docs.godotengine.org/en/stable/classes/class_color.html)** | - [Color8(r8: int, g8: int, b8: int, a8: int = 255)](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-color8) |
+| **[String](https://docs.godotengine.org/en/stable/classes/class_string.html)** | - [char(char: int)](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-char) |
+| **[Variant](https://docs.godotengine.org/en/stable/classes/class_variant.html)** | - [convert(what: Variant, type: int)](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-convert) |
+| **[Object](https://docs.godotengine.org/en/stable/classes/class_object.html)** | - [dict_to_inst(dictionary: Dictionary)](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-dict-to-inst) |
+| **[Dictionary](https://docs.godotengine.org/en/stable/classes/class_dictionary.html)** | - [inst_to_dict(instance: Object)](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-inst-to-dict) |
+| **[Boolean](https://docs.godotengine.org/en/stable/classes/class_bool.html)** | - [is_instance_of(value: Variant, type: Variant)](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-is-instance-of) |
+| **[Integer](https://docs.godotengine.org/en/stable/classes/class_int.html)** | - [len(var: Variant)](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-len) |
+| **[Resource](https://docs.godotengine.org/en/stable/classes/class_resource.html)** | - [load(path: String)](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-load) |
+| **[Resource](https://docs.godotengine.org/en/stable/classes/class_resource.html)** | - [preload(path: String)](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-preload) |
+| **[Void](https://docs.godotengine.org/en/stable/classes/class_void.html)** | - [print_debug(...) vararg](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-print-debug) |
+| **[Void](https://docs.godotengine.org/en/stable/classes/class_void.html)** | - [print_stack()](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-print-stack) |
+| **[Array](https://docs.godotengine.org/en/stable/classes/class_array.html)** | - [range(...) vararg](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-range) |
+| **[Boolean](https://docs.godotengine.org/en/stable/classes/class_bool.html)** | - [type_exists(type: StringName)](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-type-exists)|
 
 
 
