@@ -2,7 +2,7 @@ extends Interactable
 
 class_name Pnj
 
-#@onready var player: CharacterBody3D = %Player
+@onready var player: CharacterBody3D = %Player
 
 @onready var dialogue_box: DialogueBox = $CanvasLayer/DialogueBox
 
@@ -24,9 +24,10 @@ func pnj_talk():
 	if talking == false :
 		talking = true
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		#player.CameraLock = true
-		#print(player.CameraLock)
-		$CanvasLayer/DialogueBox.start("Roger")
+		player.movelock = true
+		player.camera_manager.CameraLock = true
+		print(player.camera_manager.CameraLock)
+		$CanvasLayer/DialogueBox.start()
 		
 
 func _on_dialogue_box_dialogue_signal(value):
@@ -34,7 +35,8 @@ func _on_dialogue_box_dialogue_signal(value):
 		queststarted = true
 		QuestList.quest_manager(name)
 	if value == 'end':
+		print('end')
+		player.movelock = false
+		player.camera_manager.CameraLock = false
 		talking = false
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		#player.CameraLock = false
-		#print(player.CameraLock)

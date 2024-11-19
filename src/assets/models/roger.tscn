@@ -1,23 +1,24 @@
-[gd_scene load_steps=11 format=3 uid="uid://clqp5fnpifobb"]
+[gd_scene load_steps=12 format=3 uid="uid://clqp5fnpifobb"]
 
 [ext_resource type="Script" path="res://scripts/pnj.gd" id="1_cruax"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="2_d2d85"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="3_kajo0"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="4_qwr10"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="5_d1mit"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="2_y40os"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="3_3aqhd"]
+[ext_resource type="Resource" uid="uid://ygflmn3y0knr" path="res://assets/dialog/testdialog.tres" id="3_hpxmu"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="4_x54j5"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="5_w7j7m"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rrdw1"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_jrws7"]
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_8xh0h"]
-script = ExtResource("3_kajo0")
+[sub_resource type="RichTextEffect" id="RichTextEffect_408c8"]
+script = ExtResource("3_3aqhd")
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_u76mo"]
-script = ExtResource("4_qwr10")
+[sub_resource type="RichTextEffect" id="RichTextEffect_j54cc"]
+script = ExtResource("4_x54j5")
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_k3x31"]
-script = ExtResource("5_d1mit")
+[sub_resource type="RichTextEffect" id="RichTextEffect_glggq"]
+script = ExtResource("5_w7j7m")
 
 [node name="Roger" type="StaticBody3D" groups=["pnj"]]
 script = ExtResource("1_cruax")
@@ -31,7 +32,21 @@ mesh = SubResource("CapsuleMesh_jrws7")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogueBox" type="Panel" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_d2d85")
-custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_8xh0h"), SubResource("RichTextEffect_u76mo"), SubResource("RichTextEffect_k3x31")])
+anchors_preset = -1
+anchor_left = 0.258
+anchor_top = 0.665
+anchor_right = 0.743
+anchor_bottom = 0.938
+offset_left = -0.216003
+offset_top = 0.0799866
+offset_right = 0.0639648
+offset_bottom = 0.175964
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("2_y40os")
+data = ExtResource("3_hpxmu")
+start_id = "Roger"
+hide_portrait = true
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_408c8"), SubResource("RichTextEffect_j54cc"), SubResource("RichTextEffect_glggq")])
+
+[connection signal="dialogue_signal" from="CanvasLayer/DialogueBox" to="." method="_on_dialogue_box_dialogue_signal"]

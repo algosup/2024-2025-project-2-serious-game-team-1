@@ -1,7 +1,7 @@
 extends Node
 
-func quest_manager(quest):
-	if quest.quest == "Roger":
+func quest_manager(quest: String):
+	if quest == "Roger":
 		print('quest accepted')
 	
 	

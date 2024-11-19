@@ -10,20 +10,22 @@ const CAMERA_RATIO: float = .625
 @onready var _camera_yaw: Node3D = self
 @onready var _camera_pitch: Node3D = %Arm
 
+var CameraLock = false
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
 func _input(p_event: InputEvent) -> void:
-	if p_event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		rotate_camera(p_event.relative)
-		get_viewport().set_input_as_handled()
-		return
+		if p_event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+			rotate_camera(p_event.relative)
+			get_viewport().set_input_as_handled()
+			return
 
 
 func rotate_camera(p_relative:Vector2) -> void:
-	_camera_yaw.rotation.y -= p_relative.x * mouse_sensitivity
-	_camera_yaw.orthonormalize()
-	_camera_pitch.rotation.x += p_relative.y * mouse_sensitivity * CAMERA_RATIO * mouse_y_inversion 
-	_camera_pitch.rotation.x = clamp(_camera_pitch.rotation.x, CAMERA_MIN_PITCH, CAMERA_MAX_PITCH)
+	if not CameraLock :
+		_camera_yaw.rotation.y -= p_relative.x * mouse_sensitivity
+		_camera_yaw.orthonormalize()
+		_camera_pitch.rotation.x += p_relative.y * mouse_sensitivity * CAMERA_RATIO * mouse_y_inversion 
+		_camera_pitch.rotation.x = clamp(_camera_pitch.rotation.x, CAMERA_MIN_PITCH, CAMERA_MAX_PITCH)
