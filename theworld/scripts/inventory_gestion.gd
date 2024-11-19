@@ -7,6 +7,8 @@ extends Control
 @warning_ignore("shadowed_global_identifier")
 const Item = preload("res://scripts/item_class.gd")
 
+var inventorySize : int = 20
+
 var inventory : Array[Item] = [
 	preload("res://assets/items/bin_bag.tres"),
 	preload("res://assets/items/extinguisher.tres"),
@@ -46,25 +48,6 @@ var inventory : Array[Item] = [
 	slot_11, slot_12, slot_13, slot_14, slot_15,
 	slot_16, slot_17, slot_18, slot_19, slot_20,
 ]
-
-#func _enter_tree() -> void:
-	#for i in range(slots.size()):
-		#if inventory[i] != null:
-			#slots[i].set_item(inventory[i])
-
-#func add_to_inventory(item : Item):
-	##Credit Matteo & Alexis
-	#if item not in inventory:
-		#if null not in inventory:
-			#print("Inventory is full")
-		#for i in inventory:
-			#if i == null :
-				#inventory[i] = item
-				#print("Added %s to inventory" % item.title)
-				#item.pick_up()
-				#break
-	#else:
-		#print("%s is already in inventory" % item.title)
 
 func OpenInventory():
 	print("Open Inventory")

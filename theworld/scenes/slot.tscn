@@ -6,6 +6,7 @@
 custom_minimum_size = Vector2(128, 128)
 offset_right = 128.0
 offset_bottom = 128.0
+expand_mode = 2
 script = ExtResource("1_8rftt")
 
 [node name="Panel" type="Panel" parent="."]
@@ -15,3 +16,5 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 2
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

@@ -28,6 +28,10 @@ window/vsync/vsync_mode=0
 
 import/reimport_missing_imported_files=false
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/wakatime/plugin.cfg")
+
 [global_group]
 
 key_group=""

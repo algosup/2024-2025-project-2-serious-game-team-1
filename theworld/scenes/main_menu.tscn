@@ -12,6 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ery66")
+metadata/_edit_lock_ = true
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -21,6 +22,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_nqw8g")
+metadata/_edit_lock_ = true
 
 [node name="PlayButton" type="Button" parent="."]
 layout_mode = 1
@@ -38,6 +40,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 text = "Play"
 language = "en"
+metadata/_edit_lock_ = true
 
 [node name="QuitButton" type="Button" parent="."]
 layout_mode = 1
@@ -55,6 +58,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 text = "Quit"
 language = "en"
+metadata/_edit_lock_ = true
 
 [node name="OptionButton" type="Button" parent="."]
 layout_mode = 1
@@ -72,6 +76,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 text = "Option"
 language = "en"
+metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
