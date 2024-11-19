@@ -33,7 +33,7 @@ func pnj_talk():
 func _on_dialogue_box_dialogue_signal(value):
 	if value == 'quest':
 		queststarted = true
-		QuestList.quest_manager(name)
+		QuestList.add_to_questlog(self, name)
 	if value == 'end':
 		print('end')
 		player.movelock = false

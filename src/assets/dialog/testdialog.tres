@@ -24,7 +24,7 @@ Trying to lay down on our humble beach?",
 "text": ""
 }
 },
-"size": Vector2(300, 359),
+"size": Vector2(300, 420),
 "speaker": "Roger"
 },
 "1_2": {
@@ -42,7 +42,7 @@ Trying to lay down on our humble beach?",
 "text": "Goodby then"
 }
 },
-"size": Vector2(300, 481),
+"size": Vector2(300, 542),
 "speaker": "Roger"
 },
 "1_3": {
@@ -55,7 +55,7 @@ Trying to lay down on our humble beach?",
 "text": ""
 }
 },
-"size": Vector2(300, 359),
+"size": Vector2(300, 420),
 "speaker": "Roger "
 },
 "1_4": {
@@ -68,7 +68,7 @@ Trying to lay down on our humble beach?",
 "text": ""
 }
 },
-"size": Vector2(300, 359),
+"size": Vector2(300, 420),
 "speaker": "Roger"
 },
 "3_1": {
@@ -85,8 +85,16 @@ Trying to lay down on our humble beach?",
 "link": "END",
 "offset": Vector2(846.897, 266.619),
 "signalValue": "end"
+},
+"5_1": {
+"false": "END",
+"offset": Vector2(1820, -20),
+"operator": 0,
+"true": "END",
+"value1": "",
+"value2": ""
 }
 }
 variables = {}
-strays = Array[String]([])
+strays = Array[String](["5_1"])
 characters = ""

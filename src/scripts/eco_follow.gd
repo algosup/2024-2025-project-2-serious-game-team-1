@@ -14,11 +14,6 @@ func set_eco_forest(value):
 	eco_forest = clamp(value, 0, 100)
 func set_eco_farm(value):
 	eco_farm = clamp(value, 0, 100)
-
-# New variable for holding an item in hand
-
-# Setter methods for eco variables...
-
 # Adds a simple string name of the item to the inventory if it's not already there
 func add_to_inventory(item: Item):
 	if item.name not in inventory:

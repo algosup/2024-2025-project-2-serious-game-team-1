@@ -32,15 +32,14 @@ mesh = SubResource("CapsuleMesh_jrws7")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogueBox" type="Panel" parent="CanvasLayer"]
-visible = false
 anchors_preset = -1
-anchor_left = 0.258
-anchor_top = 0.665
-anchor_right = 0.743
+anchor_left = 0.5
+anchor_top = 0.938
+anchor_right = 0.5
 anchor_bottom = 0.938
-offset_left = -0.216003
-offset_top = 0.0799866
-offset_right = 0.0639648
+offset_left = -279.0
+offset_top = -176.824
+offset_right = 280.0
 offset_bottom = 0.175964
 grow_horizontal = 2
 grow_vertical = 0
