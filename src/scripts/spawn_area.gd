@@ -10,25 +10,25 @@ func _ready():
 	randomize()  # Ensure randomness each time the scene is run
 	spawn_objects()
 
-# Function to spawn multiple objects in random positions within the defined area
 func spawn_objects() -> void:
+	print("Spawning...")
 	for i in range(spawn_count):
-		var obj_instance = object_scene.instantiate()  # Create an instance of the object scene
-		EcoFollow.set_eco_beach(-10)
-		print(EcoFollow.eco_beach)
-		obj_instance.global_transform.origin = get_random_position_in_area()
-		add_child(obj_instance)
-		print("Spawned object at:", obj_instance.global_transform.origin)
 		
-		# Generate a random cooldown time between min_spawn_interval and max_spawn_interval
-		var cooldown = randf_range(min_spawn_interval, max_spawn_interval)
-		
-		# Wait for the cooldown before spawning the next object
-		await get_tree().create_timer(cooldown).timeout
+		await get_tree().create_timer(randf_range(min_spawn_interval, max_spawn_interval)).timeout
+		var obj_instance = object_scene.instantiate()
+		var current_position = Vector3 (0,0,0)
+		if obj_instance:
+			obj_instance.transform.origin = random_position(current_position)  # Spawn at the origin
+			add_child(obj_instance)
+		else:
+			print("Failed to instantiate.")
 
-# Generates a random position within the defined spawn area size
-func get_random_position_in_area() -> Vector3:
+func random_position(value):
 	var random_x = randf_range(-spawn_area_size.x / 2, spawn_area_size.x / 2)
-	var random_y = randf_range(0, spawn_area_size.y)  # Control the vertical spawn height
+	var random_y = randf_range(0, spawn_area_size.y)
 	var random_z = randf_range(-spawn_area_size.z / 2, spawn_area_size.z / 2)
-	return global_transform.origin + Vector3(random_x, random_y, random_z)
+	
+	
+	value = Vector3(random_x, random_y, random_z)
+	print("value")
+	return value

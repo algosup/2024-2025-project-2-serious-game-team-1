@@ -16,7 +16,6 @@ func set_eco_farm(value):
 	eco_farm = clamp(value, 0, 100)
 
 # New variable for holding an item in hand
-var item_in_hand: Item = null  # Null if no item is held
 
 # Setter methods for eco variables...
 

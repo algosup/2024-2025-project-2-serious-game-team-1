@@ -6,6 +6,8 @@
 
 [node name="trash" type="RigidBody3D" groups=["waste"]]
 script = ExtResource("1_82vgb")
+waste_name = "plastic wastes"
+prompt_message = "clean the plastic"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_2ilfx")
