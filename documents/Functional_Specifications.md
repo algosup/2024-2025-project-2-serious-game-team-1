@@ -21,20 +21,20 @@
     - [A. Game Mechanic](#a-game-mechanic)
       - [1. Movements](#1-movements)
       - [2. Inventory](#2-inventory)
-      - [3. Quests/Reputation](#3-questsreputation)
+      - [3. Quests](#3-quests)
       - [4. Teleportation](#4-teleportation)
       - [5. Map](#5-map)
     - [B. Interface](#b-interface)
     - [C. Personas and Scenarios](#c-personas-and-scenarios)
       - [1. Sarah](#1-sarah)
       - [2. Carl](#2-carl)
-    - [D. Assumptions and Constraints](#d-assumptions-and-constraints)
-    - [E. Non-functional Requierements](#e-non-functional-requierements)
+    - [D. Non-functional Requierements](#d-non-functional-requierements)
       - [1. cost](#1-cost)
         - [a. Assets](#a-assets)
         - [b. Time developement](#b-time-developement)
       - [2. Environment](#2-environment)
       - [3. Security](#3-security)
+    - [E. Assumptions and Constraints](#e-assumptions-and-constraints)
   - [V. Risk](#v-risk)
     - [A. Competitors](#a-competitors)
     - [B. Product problem](#b-product-problem)
@@ -53,35 +53,30 @@
 | Author | Grégory PAGNOUX |
 | - | - |
 | Creation date | 11/07/2024 |
-| Last Modification | 11/13/2024 |
-| Reviewer(s) | Léna DE GERMAIN |
+| Last Modification | 11/19/2024 |
+| Reviewer(s) | Léna DE GERMAIN / Mathis LEBEL |
 | Last review | 11/../2024 |
 
 ### B. History
 
 | Version | Edits completed by | Date | Description of edit |
 | - | - | - | - |
-| 01.1 | Grégory PAGNOUX | 11/07/2024 | Create template, [ProjectOverview](#ii-project-overview), [Deadlines](#deadlines) |
-| 01.2 | Grégory PAGNOUX | 11/12/2024 | [Requirements](#iii-requirements), [Time developement](#b-time-developement), [Environment](#2-environment), [Glossary](#glossary) |
-| 01.3 | Grégory PAGNOUX | 11/13/2024 | [Security](#3-security), [Risk](#v-risk), [Glossary](#glossary) |
+| 01.1 | Grégory PAGNOUX | 11/07/2024 | Create template, <br> [ProjectOverview](#ii-project-overview), <br> [Deadlines](#deadlines) |
+| 01.2 | Grégory PAGNOUX | 11/12/2024 | [Requirements](#iii-requirements), <br> [Time developement](#b-time-developement), <br> [Environment](#2-environment), <br> [Glossary](#glossary) |
+| 01.3 | Grégory PAGNOUX | 11/13/2024 | [Security](#3-security), <br> [Risk](#v-risk), <br> [Glossary](#glossary) |
+| 01.4 | Grégory PAGNOUX | 11/19/2024 | rework on the concept, <br> new [competitors](#a-competitors), <br> [Personas](#c-personas-and-scenarios), <br> [Assumptions and constraints](#e-assumptions-and-constraints) |
 
 ### C. Documents
 
 During the brainstorming phase, we split researches between us and the table with results is below:
 
-[Research table](https://docs.google.com/spreadsheets/d/18TqcBMzp2aJckCZGYooOq7OQtThMyXTudi9O38hkBC4/edit?usp=sharing)
+- [Research table](https://docs.google.com/spreadsheets/d/18TqcBMzp2aJckCZGYooOq7OQtThMyXTudi9O38hkBC4/edit?usp=sharing)
 
 You can find the One-sheet document below:
 
-[One-sheet](https://docs.google.com/document/d/153vc26EhVamXTxfOmKHst1HX5ckaABPQhl9MGn1WX2Y/edit?tab=t.0)
+- [One-sheet](https://docs.google.com/document/d/153vc26EhVamXTxfOmKHst1HX5ckaABPQhl9MGn1WX2Y/edit?tab=t.0)
 
 ## II. Project Overview
-
-<center>
-
-![img](./img/)
-
-</center>
 
 ### A. Purpose
 
@@ -106,10 +101,16 @@ sources :
 
 ## III. Requirements
 
+<center>
+
+![An island with renewable energies in low poly design for a game illustration in square picture with few elements.](./img/)
+
+</center>
+
 ### A. Story
 
-The player incarn a character named Bob. He has just bought an old house, but the the village mayor ordered him to make the house more environmentally friendly. How can he do that when he knows nothing about it?
-You'll have to carry out missions all over the map to maintain the reputation of the spaces and improve your house. As you carry out your first tasks, you learn that a book that can solve all the world's problems is hiding in the house.
+The Renewable Island is a serious game where the player incarn a character named Bob. He has just bought an old house, but the the village mayor ordered him to renovate the house with renewable energies. How can he do that when he knows nothing about it?
+You'll have to carry out missions all over the map to convert all fossil fuels in renewable energies and improve your house. As you carry out your first tasks, you learn that a book that can solve all the world's problems is hiding in the house.
 Will you find it?
 
 ### B. Prototype features
@@ -120,7 +121,6 @@ To create our serious game, we need to have some basics features that we must ha
 - interactions with objects
 - two differents biomes (village and beach)
 - three quests per biomes
-- reputation for each biome
 - inventory with drag and drop system
 
 **Village**
@@ -128,19 +128,18 @@ To create our serious game, we need to have some basics features that we must ha
 The village has some houses and building where you can find the town hall, the library, a shop and the museum.
 The quests that you can complete on this place are:
 
-- collecting rubbish
-- sorting waste
 - learn some technics and new things on ecology
 - measure air quality
+- convert the energy of a factory (from fossil to renewable)
 
 **Beach**
 
 The beach is a part of the map where you can walk and swim to clean up, and protect the ocean life.
 The quests that you can complete on this place are:
 
-- collecting rubbish
+- collecting plastic rubbish
 - restoring coral reefs
-- protecting marine wildlife
+- saving animals from the oil spill.
 
 ### C. Optional features
 
@@ -152,16 +151,21 @@ Here are all optional features that we can find in the game after the prototype 
 - the main house of the player (in the city)
 - the story
 - add bike to move on the map
-- NPCs[^1]
+- NPCs[^1], discussions and quests
+
+**Village**
+
+This quest can be added to the prototype:
+
+- convince villagers to leave use bike
 
 **Forest**
 
 The forest is a place where you can find animals and some location where human leave his footprint.
 Some quests that you can complete on this place are:
 
-- collecting rubbish
+- collecting plastic rubbish
 - CO2 report
-- return the animals to their living area
 - preventing fire
 - plant trees
 
@@ -170,7 +174,6 @@ Some quests that you can complete on this place are:
 There is a farm in the fields where you can help the farmer to cultivate, and take care about important natural ressources.
 The quests that you can complete on this place are:
 
-- Helping planting depending the season
 - water filtration
 - composting
 
@@ -199,11 +202,11 @@ The quests that you can complete on this place are:
 
 ![interactions flow chart](./img/)
 
-#### 3. Quests/Reputation
+#### 3. Quests
 
 *description*
 
-![quests/reputation flow chart](./img/)
+![quests flow chart](./img/)
 
 #### 4. Teleportation
 
@@ -215,7 +218,7 @@ The quests that you can complete on this place are:
 
 *description*
 
-![ flow chart](./img/)
+![map flow chart](./img/)
 
 ### B. Interface
 
@@ -225,33 +228,37 @@ The quests that you can complete on this place are:
 
 #### 1. Sarah
 
-*general description (physique and moral)*
+Sarah is 12 years old, with long, wavy blonde hair often tied up in a ponytail. She’s small with an energetic presence, always moving and curious. She loves wearing colorful t-shirts with animal or nature-themed prints and comfortable sneakers for running around.
+Sarah is full of enthusiasm and curiosity, always asking questions about the world around her. She’s passionate about animals, the environment, and making sure the planet stays healthy. Sarah is very open-minded and loves learning new things, especially when it’s fun. She is sensitive to the environment and can get upset when she hears about pollution or climate change. She enjoys playing games that teach her new facts, solve problems, and involve adventure.
 
-![Sarah's persona](./img/)
+![Sarah's persona](./img/Sarah.png)
 
-*role play*
-
-*conclusion*
+Sarah is a middle school student who loves to play outside and is fascinated by nature. She often spends her weekends visiting parks and taking care of the family’s garden. She enjoys watching nature documentaries and reading books about animals and the planet.
+Sarah is active on social media, where she follows environmental groups and shares eco-friendly tips with her friends. She often feels the urge to make a difference but isn't always sure how to take action.
+Playing games like yours gives her a sense of empowerment, as she learns more about how she can help the environment while having fun.
+Sarah is a perfect fit for our serious game because she has a natural interest in the environment but lacks in-depth knowledge about renewable energy and sustainability.
+The game’s engaging, interactive elements will captivate her attention while teaching important lessons about the climate crisis and how to make a difference. She will likely find the adventure and exploration of the game motivating, while the hands-on learning approach will help her understand complex concepts in a fun and digestible way.
 
 #### 2. Carl
 
-*general description (physique and moral)*
+Carl is 35 years old, with short, dark hair and a slightly muscular build. He dresses casually, often wearing jeans and a T-shirt, and he prefers comfort over fashion. His facial expression is serious but often lights up with enthusiasm when discussing topics that interest him, especially technology and the environment.
+Carl is a practical, hands-on person who values efficiency and progress. He's deeply concerned about the future of the planet but often feels overwhelmed by the magnitude of the problem. He is more of a problem-solver than an advocate and enjoys finding solutions rather than discussing the issues. Carl has a growing interest in renewable energy technologies and sees them as an opportunity for innovation. He enjoys games but prefers ones with clear goals and logical challenges.
 
-![Carl's persona](./img/)
+![Carl's persona](./img/Carl.png)
 
-*role play*
+Carl works as an engineer in a tech company and is always looking for ways to improve systems and processes. He's not particularly active in environmental organizations, but his increasing interest in renewable energy and sustainable tech is growing.
+He plays video games in his free time to unwind, but he appreciates games that challenge his problem-solving skills. He would be drawn to a game that not only teaches him about renewable energy but also offers practical, hands-on ways to make real-world change.
+Carl is likely to appreciate the strategic and goal-oriented aspects of our serious game. His focus on solving problems and learning about new technologies aligns with the game's emphasis on converting fossil fuels into renewable energy.
 
-*conclusion*
+The game will appeal to his desire for practical solutions to the climate crisis while engaging him in a way that feels both educational and rewarding.
 
-### D. Assumptions and Constraints
-
-
-
-### E. Non-functional Requierements
+### D. Non-functional Requierements
 
 #### 1. cost
 
 ##### a. Assets
+
+We design some object of the game, but time reasons, we use assets listed below:
 
 | ASSETS | PRICE | PROTOTYPE | FINAL GAME |
 | :-: | :-: | :-: | :-: |
@@ -272,6 +279,20 @@ This amount of time don't take in consideration any overtime that members can do
 
 - respect GDPR[^2] and data saving law
 - ensure the integrity[^3] of the information given to the player about climate change
+
+### E. Assumptions and Constraints
+
+**Assumptions**
+
+- Players will have access to a computer capable of running the game.
+- The game will run without requiring specific hardware or installation prerequisites.
+- Players are assumed to have access to a stable internet connection for downloading the game and updates.
+
+**Constraints**
+
+- Time and budget constraints may limit the scope of the initial prototype.
+- The complexity of some features, like NPC interactions and additional biomes, may need to be simplified for the prototype phase.
+- The game must be compatible with both Windows and MacOS, which may impose certain technical constraints.
 
 ## V. Risk
 
@@ -296,6 +317,13 @@ This game is developped by Hakatah[^7] whose aim is to help people understand th
 
 Here you can find [Nuage](https://www.serious-game.fr/nuage-le-serious-game-sur-le-changement-climatique/)
 
+**Plan It Green The Big Switch**
+
+The player take on the role of mayor of his fictional city and attempt to build an urban environment that is energy efficient while still meeting the needs of its citizens. He earn money and decide how to spend it, using various energy-efficient technologies to expand and grow his city into the most eco-friendly city in the world.
+Plan It Green: The Big Switch is an online, city-building simulation game that gives students the opportunity to make complex decisions about the role of green energy, energy conservation, and energy efficiency in a fictional city. Plan It Green: The Big Switch provides a unique opportunity for players to make decisions related to energy efficiency and energy sources and to see how those choices affect life in their city.
+
+Here you can find the Guide of [Plan It Green The Big Switch](https://media.nationalgeographic.org/assets/file/Plan_It_Green_Educator_Guide_2.pdf)
+
 ### B. Product problem
 
 We need to think about the problems our game may have, and the first thing to consider is the message it conveys. More specifically, the fact that the information we want to convey to the player is unclear or misunderstood could, in the worst case scenario, lead to an adaptation of behaviour that would go against the climate and the very idea of the game.
@@ -304,7 +332,7 @@ The third problem is that the risk of transmitting too much information through 
 
 ### C. Data
 
-Our game doesn't need to save player's data, but if the game evolves and we need to save information, we need to interest us on the **the reglementation of data backups**.
+Our game doesn't need to save player's data, but if the game evolves and that we need to save information, we need to interest us on the **the reglementation of data backups**.
 There are three different archives depending on the type of data :
 
 - **Active database archiving** where data that are no longer useful to the enterprise (for example, data on job seekers to which they have not followed up) are deleted once the reason for the study has been completed (after a maximum of two years).
@@ -319,8 +347,9 @@ source :
 
 | PURPOSE | CONCERNED | DATE |
 | - | - | - |
-| Functional Specification | Grégory PAGNOUX | 22/11/2024 |
-| Technical Specification | Robin GOUMY | 29/11/2024 |
+| Functional Specification | Grégory PAGNOUX | 11/22/2024 |
+| Design () | Léna DE GERMAIN / Guillaume DESPAUX | 11/29/2024 |
+| Technical Specification | Robin GOUMY | 11/29/2024 |
 | Test Plan | Léna DE GERMAIN | 06/12/2024 |
 | Code | Mattéo LEFIN / Alexis SANTOS | 13/12/2024 |
 | User Manual | Guillaume DESPAUX | 13/12/2024 |
@@ -356,9 +385,3 @@ source : [Néo Terra](https://www.neo-terra.fr/quest-ce-que-neo-terra/)
 [^7]: **Hakatah**
 Hakatah is a collective of video game designers committed to global warming founded in 2014. They run educational workshops and organise Game Jams (the event at which Nuage was born).
 source : [Hakatah](https://www.hakatah.com)
-
-//TODO
-Research table
-Name + pochette
-19/11
-validate the One-sheet document by Franck
