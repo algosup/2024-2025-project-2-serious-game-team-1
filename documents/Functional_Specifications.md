@@ -231,7 +231,7 @@ The quests that you can complete on this place are:
 Sarah is 12 years old, with long, wavy blonde hair often tied up in a ponytail. She’s small with an energetic presence, always moving and curious. She loves wearing colorful t-shirts with animal or nature-themed prints and comfortable sneakers for running around.
 Sarah is full of enthusiasm and curiosity, always asking questions about the world around her. She’s passionate about animals, the environment, and making sure the planet stays healthy. Sarah is very open-minded and loves learning new things, especially when it’s fun. She is sensitive to the environment and can get upset when she hears about pollution or climate change. She enjoys playing games that teach her new facts, solve problems, and involve adventure.
 
-![Sarah's persona](./img/Sarah.png)
+![Sarah's persona](./images/Sarah.png)
 
 Sarah is a middle school student who loves to play outside and is fascinated by nature. She often spends her weekends visiting parks and taking care of the family’s garden. She enjoys watching nature documentaries and reading books about animals and the planet.
 Sarah is active on social media, where she follows environmental groups and shares eco-friendly tips with her friends. She often feels the urge to make a difference but isn't always sure how to take action.
@@ -244,7 +244,7 @@ The game’s engaging, interactive elements will captivate her attention while t
 Carl is 35 years old, with short, dark hair and a slightly muscular build. He dresses casually, often wearing jeans and a T-shirt, and he prefers comfort over fashion. His facial expression is serious but often lights up with enthusiasm when discussing topics that interest him, especially technology and the environment.
 Carl is a practical, hands-on person who values efficiency and progress. He's deeply concerned about the future of the planet but often feels overwhelmed by the magnitude of the problem. He is more of a problem-solver than an advocate and enjoys finding solutions rather than discussing the issues. Carl has a growing interest in renewable energy technologies and sees them as an opportunity for innovation. He enjoys games but prefers ones with clear goals and logical challenges.
 
-![Carl's persona](./img/Carl.png)
+![Carl's persona](./images/Carl.png)
 
 Carl works as an engineer in a tech company and is always looking for ways to improve systems and processes. He's not particularly active in environmental organizations, but his increasing interest in renewable energy and sustainable tech is growing.
 He plays video games in his free time to unwind, but he appreciates games that challenge his problem-solving skills. He would be drawn to a game that not only teaches him about renewable energy but also offers practical, hands-on ways to make real-world change.

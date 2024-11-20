@@ -14,7 +14,7 @@
 
 ---
 
-![alt text](Godot_Logo-1.png)
+![alt text](./images/Godot_Logo-1.png)
 
 #### *Last Update on November 19th, 2024*
 
@@ -47,15 +47,15 @@
   - [Comments](#comments)
   - [Folder structure](#folder-structure)
   - [Source Folder](#source-folder)
-    - [└── Assets](#-assets)
-    - [| └───── Characters](#--characters)
-    - [| └── Sounds](#--sounds)
-    - [| └── Fonts](#--fonts)
-    - [| └── Music](#--music)
-    - [| └── Texture](#--texture)
-    - [| └── Object](#--object)
-    - [└── Script](#-script)
-    - [└── Interfaces](#-interfaces)
+    - [Assets](#-assets)
+      - [Characters](#--characters)
+      - [Sounds](#--sounds)
+      - [Fonts](#--fonts)
+      - [Music](#--music)
+      - [Texture](#--texture)
+      - [Object](#--object)
+    - [Script](#-script)
+    - [Interfaces](#-interfaces)
   - [About Godot Engine](#about-godot-engine)
     - [Node](#node)
   - [Scene](#scene)
@@ -68,7 +68,6 @@
     - [Mechanics](#mechanics)
       - [Movement](#movement)
       - [Inspection](#inspection)
-      - [Teleportation](#teleportation)
       - [Vehicules](#vehicules)
 - [Technical Sources](#technical-sources)
   - [Godot Engine](#godot-engine)
@@ -394,26 +393,16 @@ The following mechanics will be included in the game:
 
 #### Movement
 
-The player will be able to move in four directions (Up, Down, Left, Right) using the following key mappings:
+Players can move in four directions (up, down, left, right), jump and sprint using the following key combinations:
 
-| Key | Direction |
-| --- | --------- |
-| `Z`   | Forward   |
-| `S`   | Backward  |
-| `Q`   | Left      |
-| `D`   | Right     |
-
-#### Inspection 
-
-The player can inspect the objects. They can rotate the objects in four directions (up, down, left, right) using the following key combinations:
-| Key | Direction      |
-| --- | ---------------|
-| `Z`   | Rotation Up    |
-| `S`   | Rotation Down  |
-| `Q`   | Rotation Left  |
-| `D`   | Rotation Right |
-
-This action temporarily disables the player's movement for as long as the inspection function is in use.
+| Key     | Direction |
+| --------| --------- |
+| `Z`     | Forward   |
+| `S`     | Backward  |
+| `Q`     | Left      |
+| `D`     | Right     |
+| `Space` | Jump      |
+| `Shift` | Sprint    |
 
 #### Teleportation
 
@@ -438,8 +427,7 @@ The player can enter and drive a vehicle. Once inside, they can move the vehicle
 | `D`   | Turn Right        |
 | `F`   | Enter/Exit Vehicle |
 
-When inside the vehicle, the player's standard movement controls are disabled until they exit the vehicle using the **F** key.
-
+When inside the vehicle, the player's standard movement controls are disabled until they exit the vehicle using the `F`  key.
 
 ---
 
@@ -573,7 +561,7 @@ Support for exporting the current scene as a glTF 2.0 file, both from the editor
 
 ### Collision detection:
 
-- Built-in shapes: cuboid, sphere, capsule, cylinder, world boundary (infinite plane).
+- Built-in shapes: sphere, capsule, cylinder,...
 
 - Generate triangle collision shapes for any mesh from the editor.
 
@@ -618,10 +606,14 @@ In GDScript, methods are functions that belong to a class. They are used to defi
 
 Example :
 
-`func my_method():
-    var my_array = [1, 2, 3, 4, 5]
-    var array_length = len(my_array)
-    print("Length of the array: ", array_length)  # Display "5"`
+```
+func my_method():
+ 
+  var my_array = [1, 2, 3, 4, 5]
+  var array_length = len(my_array)
+    print("Length of the array: ", array_length)  # Display "5"
+    
+```
 
 The methods that can be used in Godot :
 
