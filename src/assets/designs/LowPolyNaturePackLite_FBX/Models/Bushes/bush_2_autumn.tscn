@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b5wbr8385y8v8"]
-
-[ext_resource type="PackedScene" uid="uid://b3eeakacihlai" path="res://designs/LowPolyNaturePackLite_FBX/Models/Bushes/Bush_2_autumn.fbx" id="1_8g8lc"]
-
-[node name="Bush_2_autumn" instance=ExtResource("1_8g8lc")]
