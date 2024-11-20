@@ -259,20 +259,13 @@ It is important to establish a naming convention for projects. This makes the so
 📦2024-2025-project-2-serious-game-team-1
 └── 📁Documents
 |    └── 📁 Management
-|    |   └── 📝 ProjectCharter.md
+|    |   └── 📝 project_charter.md
 |    |   └── 📁 Images
-|    └── 📁 Technical Specification
-|    |   └── 📝 TechnicalSpecifications.md
-|    |   └── 📁 Images
-|    └── 📁 Functional Specification
-|    |   └── 📝 FunctionalSpecifications.md
-|    |   └── 📁 Images
-|    └── 📁 Test Plan
-|    |   └── 📝 TestPlan.md
-|    |   └── 📁 Images
-|    └── 📁 Test Case
-|        └── 📝 TestCase.md
-|        └── 📁 Images
+|    └── 📝 technical_specifications.md
+|    └── 📝 functional-specifications.md
+|    └── 📝 test_plan.md
+|    └── 📝 test_case.md
+|    └── 📁 images
 └── 📁Source
 |    └── 📁 assets
 |    |   └── 📁 characters
