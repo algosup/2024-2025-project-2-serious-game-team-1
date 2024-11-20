@@ -1,18 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://f51858rkgwej"]
+[gd_scene load_steps=6 format=3 uid="uid://f51858rkgwej"]
 
 [ext_resource type="Texture2D" uid="uid://bg85v4vpbk8n5" path="res://assets/images/WaintingBackground.jpg" id="1_81syd"]
 [ext_resource type="Script" path="res://scripts/inventory_gestion.gd" id="1_ya1uh"]
-[ext_resource type="PackedScene" uid="uid://cekaafpjb52lv" path="res://scenes/slot.tscn" id="3_0re2n"]
+[ext_resource type="PackedScene" uid="uid://cekaafpjb52lv" path="res://scenes/slot.tscn" id="3_5tgj7"]
 [ext_resource type="Texture2D" uid="uid://i2kndroy583y" path="res://assets/images/inventory_slot_background.png" id="3_vrw3m"]
-[ext_resource type="Texture2D" uid="uid://duf3ag0r4dhda" path="res://assets/images/axe.png" id="4_5gdyo"]
-[ext_resource type="Script" path="res://scripts/item_class.gd" id="5_kywso"]
-[ext_resource type="Resource" uid="uid://b6xvp6t7gowik" path="res://assets/items/axe.tres" id="6_dmlxg"]
-
-[sub_resource type="Resource" id="Resource_yvc3k"]
-script = ExtResource("5_kywso")
-title = "Axe"
-icon = ExtResource("4_5gdyo")
-description = "An axe is an implement that has been used for millennia to shape, split, and cut wood, to harvest timber, as a weapon, and as a ceremonial or heraldic symbol. "
 
 [sub_resource type="LabelSettings" id="LabelSettings_saide"]
 font_size = 40
@@ -54,66 +45,64 @@ scale = Vector2(0.5, 0.5)
 columns = 4
 metadata/_edit_lock_ = true
 
-[node name="Slot1" parent="Inventory/GridInventory" instance=ExtResource("3_0re2n")]
-layout_mode = 2
-item = SubResource("Resource_yvc3k")
-
-[node name="Slot2" parent="Inventory/GridInventory" instance=ExtResource("3_0re2n")]
-layout_mode = 2
-item = ExtResource("6_dmlxg")
-
-[node name="Slot3" parent="Inventory/GridInventory" instance=ExtResource("3_0re2n")]
+[node name="Slot1" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
 
-[node name="Slot4" parent="Inventory/GridInventory" instance=ExtResource("3_0re2n")]
+[node name="Slot2" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
 
-[node name="Slot5" parent="Inventory/GridInventory" instance=ExtResource("3_0re2n")]
+[node name="Slot3" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
 
-[node name="Slot6" parent="Inventory/GridInventory" instance=ExtResource("3_0re2n")]
+[node name="Slot4" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
 
-[node name="Slot7" parent="Inventory/GridInventory" instance=ExtResource("3_0re2n")]
+[node name="Slot5" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
 
-[node name="Slot8" parent="Inventory/GridInventory" instance=ExtResource("3_0re2n")]
+[node name="Slot6" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
 
-[node name="Slot9" parent="Inventory/GridInventory" instance=ExtResource("3_0re2n")]
+[node name="Slot7" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
 
-[node name="Slot10" parent="Inventory/GridInventory" instance=ExtResource("3_0re2n")]
+[node name="Slot8" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
 
-[node name="Slot11" parent="Inventory/GridInventory" instance=ExtResource("3_0re2n")]
+[node name="Slot9" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
 
-[node name="Slot12" parent="Inventory/GridInventory" instance=ExtResource("3_0re2n")]
+[node name="Slot10" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
 
-[node name="Slot13" parent="Inventory/GridInventory" instance=ExtResource("3_0re2n")]
+[node name="Slot11" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
 
-[node name="Slot14" parent="Inventory/GridInventory" instance=ExtResource("3_0re2n")]
+[node name="Slot12" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
 
-[node name="Slot15" parent="Inventory/GridInventory" instance=ExtResource("3_0re2n")]
+[node name="Slot13" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
 
-[node name="Slot16" parent="Inventory/GridInventory" instance=ExtResource("3_0re2n")]
+[node name="Slot14" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
 
-[node name="Slot17" parent="Inventory/GridInventory" instance=ExtResource("3_0re2n")]
+[node name="Slot15" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
 
-[node name="Slot18" parent="Inventory/GridInventory" instance=ExtResource("3_0re2n")]
+[node name="Slot16" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
 
-[node name="Slot19" parent="Inventory/GridInventory" instance=ExtResource("3_0re2n")]
+[node name="Slot17" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
 
-[node name="Slot20" parent="Inventory/GridInventory" instance=ExtResource("3_0re2n")]
+[node name="Slot18" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
+layout_mode = 2
+
+[node name="Slot19" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
+layout_mode = 2
+
+[node name="Slot20" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
 
 [node name="Description" type="NinePatchRect" parent="Inventory"]

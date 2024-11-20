@@ -10,12 +10,13 @@ const Item = preload("res://scripts/item_class.gd")
 var inventorySize : int = 20
 
 var inventory : Array[Item] = [
+	preload("res://assets/items/axe.tres"),
 	preload("res://assets/items/bin_bag.tres"),
 	preload("res://assets/items/extinguisher.tres"),
 	preload("res://assets/items/planks.tres"),
 	preload("res://assets/items/shovel.tres"),
-	preload("res://assets/items/tree_shoots.tres"), 
-	null, null, null, null, null,
+	preload("res://assets/items/tree_shoots.tres"),
+	null, null, null, null,
 	null, null, null, null, null,
 	null, null, null, null, null
 ]
@@ -41,13 +42,20 @@ var inventory : Array[Item] = [
 @onready var slot_19: TextureRect = $Inventory/GridInventory/Slot19
 @onready var slot_20: TextureRect = $Inventory/GridInventory/Slot20
 
-
 @onready var slots : Array = [
 	slot_1, slot_2, slot_3, slot_4, slot_5,
 	slot_6, slot_7, slot_8, slot_9, slot_10,
 	slot_11, slot_12, slot_13, slot_14, slot_15,
 	slot_16, slot_17, slot_18, slot_19, slot_20,
 ]
+
+func _ready() -> void:
+	for i in range(len(slots)):
+		var item = inventory[i]
+		if item is Item:
+			slots[i].set_item(item)
+		else:
+			print("Invalid item type at index ", i)
 
 func OpenInventory():
 	print("Open Inventory")
