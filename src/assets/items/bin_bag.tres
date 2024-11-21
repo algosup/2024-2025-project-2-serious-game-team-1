@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://fdrs5y1it3tr"]
+
+[ext_resource type="Texture2D" uid="uid://j03ylp7rjwpp" path="res://assets/images/bin_bag.png" id="1_n55tf"]
+[ext_resource type="Script" path="res://scripts/item_class.gd" id="2_dmlpg"]
+
+[resource]
+script = ExtResource("2_dmlpg")
+title = "bin bag"
+icon = ExtResource("1_n55tf")
+description = "A bin bag can liner is a disposable container for solid waste. These bags are useful for lining the inside of waste containers to prevent the inside of the container from being covered with garbage. Bin bags can also be used as waste containers."
