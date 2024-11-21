@@ -1,0 +1,100 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://ygflmn3y0knr"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_1uomy"]
+
+[resource]
+script = ExtResource("1_1uomy")
+starts = {
+"Roger": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(-680, -420),
+"start_id": "Roger"
+},
+"1_1": {
+"dialogue": "Oy youngling !
+Trying to lay down on our humble beach?",
+"offset": Vector2(-100, -600),
+"options": {
+0: {
+"condition": {},
+"link": &"1_2",
+"text": ""
+}
+},
+"size": Vector2(300, 420),
+"speaker": "Roger"
+},
+"1_2": {
+"dialogue": "Sorry my friend, but the beach is filled with wastes...",
+"offset": Vector2(440, -600),
+"options": {
+0: {
+"condition": {},
+"link": &"1_3",
+"text": "I'll help you clean"
+},
+1: {
+"condition": {},
+"link": &"3_3",
+"text": "Goodby then"
+}
+},
+"size": Vector2(300, 542),
+"speaker": "Roger"
+},
+"1_3": {
+"dialogue": "Really? Thank you ! Thank you!",
+"offset": Vector2(940, -580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_4",
+"text": ""
+}
+},
+"size": Vector2(300, 420),
+"speaker": "Roger "
+},
+"1_4": {
+"dialogue": "try to get rid of 10 plastic wastes, the seas will be thankfull",
+"offset": Vector2(1347.92, -473.04),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": ""
+}
+},
+"size": Vector2(300, 420),
+"speaker": "Roger"
+},
+"3_1": {
+"link": &"3_2",
+"offset": Vector2(1869.12, -301.04),
+"signalValue": "quest"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2(2276.2, -198.24),
+"signalValue": "end"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2(846.897, 266.619),
+"signalValue": "end"
+},
+"5_1": {
+"false": "END",
+"offset": Vector2(1820, -20),
+"operator": 0,
+"true": "END",
+"value1": "",
+"value2": ""
+}
+}
+variables = {}
+strays = Array[String](["5_1"])
+characters = ""

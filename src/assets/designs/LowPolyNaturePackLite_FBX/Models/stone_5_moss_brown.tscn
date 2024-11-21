@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://ct4uo5atu5phv"]
+
+[ext_resource type="PackedScene" uid="uid://cowultwgll3sh" path="res://assets/designs/LowPolyNaturePackLite_FBX/Models/Stones/Stone_5_moss_brown.fbx" id="1_c0m36"]
+
+[node name="Stone_5_moss_brown" instance=ExtResource("1_c0m36")]

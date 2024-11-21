@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://umm5fxua0dmn"]
+
+[ext_resource type="Script" path="res://scripts/spawn_area.gd" id="1_rgxtp"]
+
+[node name="spawn area" type="Node3D"]
+script = ExtResource("1_rgxtp")
+spawn_area_size = Vector3(10, 1, 10)
