@@ -66,6 +66,7 @@
 | 01.3 | Grégory PAGNOUX | 11/13/2024 | [Security](#3-security), <br> [Risk](#v-risk), <br> [Glossary](#glossary) |
 | 01.4 | Grégory PAGNOUX | 11/19/2024 | rework on the concept, <br> new [competitors](#a-competitors), <br> [Personas](#c-personas-and-scenarios), <br> [Assumptions and constraints](#e-assumptions-and-constraints) |
 | 01.5 | Grégory PAGNOUX | 11/20/2024 | flow charts for [Game Mechanic](#a-game-mechanic), <br> [Assests](#a-assets) |
+| 01.6 | Grégory PAGNOUX | 11/21/2024 | [Interface](#b-interface), <br> finish [Assets](#a-assets) |
 
 ### C. Documents
 
@@ -104,7 +105,7 @@ sources :
 
 <center>
 
-![An island with renewable energies in low poly design for a game illustration in square picture with few elements.](./images/)
+![game design](./images/TRI.png)
 
 </center>
 
@@ -217,7 +218,41 @@ Here's how the teleportation system works, so that players can move around the m
 
 ### B. Interface
 
+**Home page**
 
+When the player open the game, the first windows which is open is the Home page below.
+Firstly, the player can modifiy some settings to adapt the game as he want.
+The second button is to begin a new game, mostly used for new players and those who have already finished the game.
+The third button is to load the last part that the player has launched and saved. To be functional, the player needs to have started at least one game before.
+The last one is to quit the game.
+
+![home interface](./images/HomePage_Interface.png)
+
+**Game screen**
+
+When the player launch his game, he has the following interface :
+- actual location on the map of the player (top left)
+- energy evolution bar of the actual location (top left)
+- quests table (left)
+- mini map, top view (top right)
+- time (top right)
+
+![game interface](./images/Game_Interface.png)
+
+**inventory**
+
+When the player pressed "e" keyboard, the inventory open. You can recovered all object you have on the left side and you can have the description and all details about the object on the right side when you pass the mousse on it.
+
+![inventory interface](./images/Inventory_Interface.png)
+
+**Menu**
+
+When the player launch his part, He can pressed the "esc" keyboard and the menu window open.
+Firstly, the player can modifiy some settings to adapt the game as he want.
+The second button is to save his part. Thanks that, the player quit the game and come back later thanks the load button on the home page.
+The last one is to quit the game.
+
+![menu interface](./images/Menu_Interface.png)
 
 ### C. Success
 
@@ -273,11 +308,12 @@ We design some object of the game, but time reasons, we use assets listed below:
 | map textures | 0€ | Yes | Yes | []() |
 | trees | 0€ | Yes | Yes | [itch.io](https://jaks.itch.io/lowpolyforestpack) |
 | bushes and mushrooms | 0€ | Yes | Yes | [itch.io](https://free-game-assets.itch.io/free-shrubs-flowers-and-mushrooms-3d-low-poly-pack) |
-| buildings | 0€ | Yes | Yes | []() |
-| character and NPCs | 0€ | No | Yes | []() |
-| animals | 0€ | No | Yes | []() |
-| furnitures | 0€ | No | Yes | []() |
-| other objects | 0€ | No | Yes | []() |
+| buildings | 0€ | Yes | Yes | [Automataworkshop](https://automataworkshop.itch.io/lowpoly-farm), <br> [Broken Vector](https://brokenvector.itch.io/low-poly-brick-houses) |
+| character and NPCs | 0€ | No | Yes | [itch.io](https://kaylousberg.itch.io/kaykit-adventurers) |
+| animals | 0€ | No | Yes | [itch.io](https://davidoreilly.itch.io/everything-library-animals) |
+| furnitures | 0€ | No | Yes | [itch.io](https://milkandbanana.itch.io/cooking-assets) |
+| other objects | 0€ | No | Yes | [itch.io (bike)](https://psionicgames.itch.io/free-bmx-3d-model), <br> [itch.io (box and trash)](https://brokenvector.itch.io/low-poly-storage-pack) |
+| **Total** | **0€** |  |  |  |
 
 ##### b. Time developement
 
@@ -363,7 +399,7 @@ source :
 | PURPOSE | CONCERNED | DATE |
 | - | - | - |
 | Functional Specification | Grégory PAGNOUX | 11/22/2024 |
-| Design () | Léna DE GERMAIN / Guillaume DESPAUX | 11/29/2024 |
+| Design (map, object, building, etc) | Léna DE GERMAIN / Guillaume DESPAUX | 11/29/2024 |
 | Technical Specification | Robin GOUMY | 11/29/2024 |
 | Test Plan | Léna DE GERMAIN | 06/12/2024 |
 | Code | Mattéo LEFIN / Alexis SANTOS | 13/12/2024 |
