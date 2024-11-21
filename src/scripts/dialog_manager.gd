@@ -1,6 +1,6 @@
-#extends Node
-#
-#
-#func dialog(pnj: Pnj):
-	#pnj.pnj_talk()
-	#
+extends Node
+
+
+func dialog(pnj: Pnj):
+	pnj.pnj_talk()
+	

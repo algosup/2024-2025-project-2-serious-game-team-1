@@ -1,10 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://clqp5fnpifobb"]
+[gd_scene load_steps=12 format=3 uid="uid://bchj68adctaws"]
+
+[ext_resource type="Script" path="res://scripts/pnj.gd" id="1_il4ok"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="2_8k1o8"]
+[ext_resource type="Resource" uid="uid://bhsr3gd1tv22e" path="res://assets/dialog/testdialog.tres" id="3_057ly"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="3_mcox8"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="4_3qurs"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="5_trvav"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rrdw1"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_jrws7"]
 
-[node name="Roger" type="StaticBody3D"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_w3n3o"]
+script = ExtResource("3_mcox8")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_7j7sd"]
+script = ExtResource("4_3qurs")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_m1c4a"]
+script = ExtResource("5_trvav")
+
+[node name="Roger" type="StaticBody3D" groups=["pnj"]]
+script = ExtResource("1_il4ok")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_rrdw1")
@@ -13,3 +30,22 @@ shape = SubResource("CapsuleShape3D_rrdw1")
 mesh = SubResource("CapsuleMesh_jrws7")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogueBox" type="Panel" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -386.0
+offset_top = -266.0
+offset_right = 386.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("2_8k1o8")
+data = ExtResource("3_057ly")
+start_id = "Roger"
+hide_portrait = true
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_w3n3o"), SubResource("RichTextEffect_7j7sd"), SubResource("RichTextEffect_m1c4a")])
+
+[connection signal="dialogue_signal" from="CanvasLayer/DialogueBox" to="." method="_on_dialogue_box_dialogue_signal"]
