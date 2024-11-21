@@ -20,21 +20,21 @@
   - [IV. Product](#iv-product)
     - [A. Game Mechanic](#a-game-mechanic)
       - [1. Movements](#1-movements)
-      - [2. Inventory](#2-inventory)
+      - [2. Utilities](#2-utilities)
       - [3. Quests](#3-quests)
       - [4. Teleportation](#4-teleportation)
-      - [5. Map](#5-map)
     - [B. Interface](#b-interface)
-    - [C. Personas and Scenarios](#c-personas-and-scenarios)
+    - [C. Success](#c-success)
+    - [D. Personas and Scenarios](#d-personas-and-scenarios)
       - [1. Sarah](#1-sarah)
       - [2. Carl](#2-carl)
-    - [D. Non-functional Requierements](#d-non-functional-requierements)
+    - [E. Non-functional Requierements](#e-non-functional-requierements)
       - [1. cost](#1-cost)
         - [a. Assets](#a-assets)
         - [b. Time developement](#b-time-developement)
       - [2. Environment](#2-environment)
       - [3. Security](#3-security)
-    - [E. Assumptions and Constraints](#e-assumptions-and-constraints)
+    - [F. Assumptions and Constraints](#f-assumptions-and-constraints)
   - [V. Risk](#v-risk)
     - [A. Competitors](#a-competitors)
     - [B. Product problem](#b-product-problem)
@@ -65,6 +65,7 @@
 | 01.2 | Grégory PAGNOUX | 11/12/2024 | [Requirements](#iii-requirements), <br> [Time developement](#b-time-developement), <br> [Environment](#2-environment), <br> [Glossary](#glossary) |
 | 01.3 | Grégory PAGNOUX | 11/13/2024 | [Security](#3-security), <br> [Risk](#v-risk), <br> [Glossary](#glossary) |
 | 01.4 | Grégory PAGNOUX | 11/19/2024 | rework on the concept, <br> new [competitors](#a-competitors), <br> [Personas](#c-personas-and-scenarios), <br> [Assumptions and constraints](#e-assumptions-and-constraints) |
+| 01.5 | Grégory PAGNOUX | 11/20/2024 | flow charts for [Game Mechanic](#a-game-mechanic), <br> [Assests](#a-assets) |
 
 ### C. Documents
 
@@ -103,7 +104,7 @@ sources :
 
 <center>
 
-![An island with renewable energies in low poly design for a game illustration in square picture with few elements.](./img/)
+![An island with renewable energies in low poly design for a game illustration in square picture with few elements.](./images/)
 
 </center>
 
@@ -192,39 +193,45 @@ The quests that you can complete on this place are:
 
 #### 1. Movements
 
-*description*
+Here's how the player moves around the map:
 
-![movements flow chart](./img/)
+![movements flow chart](./images/Movements_FC.png)
 
-#### 2. Inventory
+#### 2. Utilities
 
-*description*
+Here's how the player's interactions work in the game:
 
-![interactions flow chart](./img/)
+![Utilities flow chart](./images/Utilities_FC.png)
 
 #### 3. Quests
 
-*description*
+Here's how the quests that players must complete in the game work:
 
-![quests flow chart](./img/)
+![quests flow chart](./images/Quests_FC.png)
 
 #### 4. Teleportation
 
-*description*
+Here's how the teleportation system works, so that players can move around the map more easily:
 
-![teleportation flow chart](./img/)
-
-#### 5. Map
-
-*description*
-
-![map flow chart](./img/)
+![teleportation flow chart](./images/Teleportation_FC.png)
 
 ### B. Interface
 
 
 
-### C. Personas and Scenarios
+### C. Success
+
+During the game, you can collect multiple success like:
+
+- you complete your first quest
+- you complete 5 quests
+- you complete 10 quests
+- You entierly clean the village
+- You entierly clean the beach
+
+You can also collect data about climate change, Fossil fuels and renewable energies.
+
+### D. Personas and Scenarios
 
 #### 1. Sarah
 
@@ -252,7 +259,7 @@ Carl is likely to appreciate the strategic and goal-oriented aspects of our seri
 
 The game will appeal to his desire for practical solutions to the climate crisis while engaging him in a way that feels both educational and rewarding.
 
-### D. Non-functional Requierements
+### E. Non-functional Requierements
 
 #### 1. cost
 
@@ -260,9 +267,17 @@ The game will appeal to his desire for practical solutions to the climate crisis
 
 We design some object of the game, but time reasons, we use assets listed below:
 
-| ASSETS | PRICE | PROTOTYPE | FINAL GAME |
-| :-: | :-: | :-: | :-: |
-| ... | 0€ | Yes | Yes |
+| ASSETS | PRICE | PROTOTYPE | FINAL GAME | LINK |
+| :-: | :-: | :-: | :-: | :-: |
+| sounds | 0€ | No | Yes | [Universal SoundBank](https://www.universal-soundbank.com) |
+| map textures | 0€ | Yes | Yes | []() |
+| trees | 0€ | Yes | Yes | [itch.io](https://jaks.itch.io/lowpolyforestpack) |
+| bushes and mushrooms | 0€ | Yes | Yes | [itch.io](https://free-game-assets.itch.io/free-shrubs-flowers-and-mushrooms-3d-low-poly-pack) |
+| buildings | 0€ | Yes | Yes | []() |
+| character and NPCs | 0€ | No | Yes | []() |
+| animals | 0€ | No | Yes | []() |
+| furnitures | 0€ | No | Yes | []() |
+| other objects | 0€ | No | Yes | []() |
 
 ##### b. Time developement
 
@@ -280,7 +295,7 @@ This amount of time don't take in consideration any overtime that members can do
 - respect GDPR[^2] and data saving law
 - ensure the integrity[^3] of the information given to the player about climate change
 
-### E. Assumptions and Constraints
+### F. Assumptions and Constraints
 
 **Assumptions**
 
