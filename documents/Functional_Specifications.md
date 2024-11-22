@@ -28,10 +28,10 @@
     - [D. Personas and Scenarios](#d-personas-and-scenarios)
       - [1. Sarah](#1-sarah)
       - [2. Carl](#2-carl)
-    - [E. Non-functional Requierements](#e-non-functional-requierements)
+    - [E. Non-functional Requirements](#e-non-functional-requirements)
       - [1. cost](#1-cost)
         - [a. Assets](#a-assets)
-        - [b. Time developement](#b-time-developement)
+        - [b. Time development](#b-time-development)
       - [2. Environment](#2-environment)
       - [3. Security](#3-security)
     - [F. Assumptions and Constraints](#f-assumptions-and-constraints)
@@ -53,20 +53,21 @@
 | Author | Grégory PAGNOUX |
 | - | - |
 | Creation date | 11/07/2024 |
-| Last Modification | 11/19/2024 |
+| Last Modification | 11/22/2024 |
 | Reviewer(s) | Léna DE GERMAIN / Mathis LEBEL |
-| Last review | 11/../2024 |
+| Last review | 11/21/2024 |
 
 ### B. History
 
 | Version | Edits completed by | Date | Description of edit |
 | - | - | - | - |
-| 01.1 | Grégory PAGNOUX | 11/07/2024 | Create template, <br> [ProjectOverview](#ii-project-overview), <br> [Deadlines](#deadlines) |
-| 01.2 | Grégory PAGNOUX | 11/12/2024 | [Requirements](#iii-requirements), <br> [Time developement](#b-time-developement), <br> [Environment](#2-environment), <br> [Glossary](#glossary) |
-| 01.3 | Grégory PAGNOUX | 11/13/2024 | [Security](#3-security), <br> [Risk](#v-risk), <br> [Glossary](#glossary) |
-| 01.4 | Grégory PAGNOUX | 11/19/2024 | rework on the concept, <br> new [competitors](#a-competitors), <br> [Personas](#c-personas-and-scenarios), <br> [Assumptions and constraints](#e-assumptions-and-constraints) |
-| 01.5 | Grégory PAGNOUX | 11/20/2024 | flow charts for [Game Mechanic](#a-game-mechanic), <br> [Assests](#a-assets) |
-| 01.6 | Grégory PAGNOUX | 11/21/2024 | [Interface](#b-interface), <br> finish [Assets](#a-assets) |
+| 1.1 | Grégory PAGNOUX | 11/07/2024 | Create template, <br> [ProjectOverview](#ii-project-overview), <br> [Deadlines](#deadlines) |
+| 1.2 | Grégory PAGNOUX | 11/12/2024 | [Requirements](#iii-requirements), <br> [Time developement](#b-time-developement), <br> [Environment](#2-environment), <br> [Glossary](#glossary) |
+| 1.3 | Grégory PAGNOUX | 11/13/2024 | [Security](#3-security), <br> [Risk](#v-risk), <br> [Glossary](#glossary) |
+| 1.4 | Grégory PAGNOUX | 11/19/2024 | rework on the concept, <br> new [competitors](#a-competitors), <br> [Personas](#c-personas-and-scenarios), <br> [Assumptions and constraints](#e-assumptions-and-constraints) |
+| 1.5 | Grégory PAGNOUX | 11/20/2024 | flow charts for [Game Mechanic](#a-game-mechanic), <br> [Assests](#a-assets) |
+| 1.6 | Grégory PAGNOUX | 11/21/2024 | [Interface](#b-interface), <br> finish [Assets](#a-assets) |
+| 2.1 | Grégory PAGNOUX | 11/22/2024 | corrections of the first review |
 
 ### C. Documents
 
@@ -86,16 +87,16 @@ The project was commissioned by ALGOSUP to create a "Serious Game" on the theme 
 
 ### B. What is a Serious Game
 
-A serious game (video game or board game) is the lovely match between serious, educational content and video game's mechanics and storytelling. It's a tool incredibly efficient at communicating educational messages in an interactive, engaging and federating way.
+A serious game (video game or board game) is a lovely match between serious, educational content and a video game's mechanics and storytelling. It's a tool incredibly efficient at communicating educational messages in an interactive, engaging, and federating way.
 
 The term of "serious game" is used since the beginning of the twentieth century, and the best-known game is The Landlord's Game (predecessor of Monopoly) in 1903.
 
 In the early 1990s, a number of games on this theme were released, followed by another spike to over 100 games a year and a third in 2007 with over 200 games.
 These spikes are due to a growing awareness of the climate emergency, and there are no fewer than 2,000 different games on the subject.
 
-Serious games are commonly used to educate, raise awareness and develop critical thinking and problem-solving skills, as well as for therapeutic purposes.
+Serious games are commonly used to educate, raise awareness, and develop critical thinking and problem-solving skills, as well as for therapeutic purposes.
 
-sources :
+Sources :
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Serious_game)
 - [Collock](https://www.collock.com/en/serious-game/)
@@ -111,23 +112,23 @@ sources :
 
 ### A. Story
 
-The Renewable Island is a serious game where the player incarn a character named Bob. He has just bought an old house, but the the village mayor ordered him to renovate the house with renewable energies. How can he do that when he knows nothing about it?
+The Renewable Island is a serious game where the player incarn a character named Bob. He has just bought an old house, but the village mayor ordered him to renovate the house with renewable energies. How can he do that when he knows nothing about it?
 You'll have to carry out missions all over the map to convert all fossil fuels in renewable energies and improve your house. As you carry out your first tasks, you learn that a book that can solve all the world's problems is hiding in the house.
 Will you find it?
 
 ### B. Prototype features
 
-To create our serious game, we need to have some basics features that we must have for the prototype:
+To create our serious game, we need to have some basic features that we must have for the prototype:
 
-- ability to control character's movement (move forward, backward, left, right and jump)
+- the ability to control the character's movement (move forward, backward, left, right and jump)
 - interactions with objects
-- two differents biomes (village and beach)
-- three quests per biomes
+- two different biomes (village and beach)
+- three quests per biome
 - inventory with drag and drop system
 
 **Village**
 
-The village has some houses and building where you can find the town hall, the library, a shop and the museum.
+The village has some houses and buildings where you can find the town hall, the library, a shop, and the museum.
 The quests that you can complete on this place are:
 
 - learn some technics and new things on ecology
@@ -136,7 +137,7 @@ The quests that you can complete on this place are:
 
 **Beach**
 
-The beach is a part of the map where you can walk and swim to clean up, and protect the ocean life.
+The beach is a part of the map where you can walk and swim to clean up and protect the ocean life.
 The quests that you can complete on this place are:
 
 - collecting plastic rubbish
@@ -149,7 +150,7 @@ Here are all optional features that we can find in the game after the prototype 
 
 - teleportation between two spaces
 - add biomes (forest, fields, mountain)
-- add quests (until 10 per biomes)
+- add quests (until 10 per biome)
 - the main house of the player (in the city)
 - the story
 - add bike to move on the map
@@ -159,11 +160,11 @@ Here are all optional features that we can find in the game after the prototype 
 
 This quest can be added to the prototype:
 
-- convince villagers to leave use bike
+- convince villagers to leave their cars and use a bike
 
 **Forest**
 
-The forest is a place where you can find animals and some location where human leave his footprint.
+The forest is a place where you can find animals and some locations where humans leave their footprints.
 Some quests that you can complete on this place are:
 
 - collecting plastic rubbish
@@ -173,7 +174,7 @@ Some quests that you can complete on this place are:
 
 **Fields**
 
-There is a farm in the fields where you can help the farmer to cultivate, and take care about important natural ressources.
+There is a farm in the fields where you can help the farmer to cultivate, and take care of important natural resources.
 The quests that you can complete on this place are:
 
 - water filtration
@@ -220,8 +221,8 @@ Here's how the teleportation system works, so that players can move around the m
 
 **Home page**
 
-When the player open the game, the first windows which is open is the Home page below.
-Firstly, the player can modifiy some settings to adapt the game as he want.
+When the player opens the game, the first open window is the Home page below.
+Firstly, the player can modify some settings to adapt the game as he want.
 The second button is to begin a new game, mostly used for new players and those who have already finished the game.
 The third button is to load the last part that the player has launched and saved. To be functional, the player needs to have started at least one game before.
 The last one is to quit the game.
@@ -230,56 +231,57 @@ The last one is to quit the game.
 
 **Game screen**
 
-When the player launch his game, he has the following interface :
+When the player launches his game, he has the following interface :
+
 - actual location on the map of the player (top left)
 - energy evolution bar of the actual location (top left)
 - quests table (left)
-- mini map, top view (top right)
+- mini-map, top view (top right)
 - time (top right)
 
 ![game interface](./images/Game_Interface.png)
 
 **inventory**
 
-When the player pressed "e" keyboard, the inventory open. You can recovered all object you have on the left side and you can have the description and all details about the object on the right side when you pass the mousse on it.
+When the player presses the "e" keyboard, the inventory opens. You can recover all objects you have on the left side and you can have the description and all details about the object on the right side when you pass the mousse on it.
 
 ![inventory interface](./images/Inventory_Interface.png)
 
 **Menu**
 
-When the player launch his part, He can pressed the "esc" keyboard and the menu window open.
-Firstly, the player can modifiy some settings to adapt the game as he want.
-The second button is to save his part. Thanks that, the player quit the game and come back later thanks the load button on the home page.
+When the player launches his part, he can presses the "esc" keyboard and the menu window opens.
+Firstly, the player can modify some settings to adapt the game as he wants.
+The second button is to save his part. Thanks to that, the player quit the game and came back later thanks to the load button on the home page.
 The last one is to quit the game.
 
 ![menu interface](./images/Menu_Interface.png)
 
 ### C. Success
 
-During the game, you can collect multiple success like:
+During the game, you can collect multiple successes like:
 
 - you complete your first quest
 - you complete 5 quests
 - you complete 10 quests
-- You entierly clean the village
-- You entierly clean the beach
+- You entirely clean the village
+- You entirely clean the beach
 
-You can also collect data about climate change, Fossil fuels and renewable energies.
+You can also collect data about climate change, Fossil fuels, and renewable energies.
 
 ### D. Personas and Scenarios
 
 #### 1. Sarah
 
-Sarah is 12 years old, with long, wavy blonde hair often tied up in a ponytail. She’s small with an energetic presence, always moving and curious. She loves wearing colorful t-shirts with animal or nature-themed prints and comfortable sneakers for running around.
-Sarah is full of enthusiasm and curiosity, always asking questions about the world around her. She’s passionate about animals, the environment, and making sure the planet stays healthy. Sarah is very open-minded and loves learning new things, especially when it’s fun. She is sensitive to the environment and can get upset when she hears about pollution or climate change. She enjoys playing games that teach her new facts, solve problems, and involve adventure.
+Sarah is 12 years old, with long, wavy blonde hair often tied up in a ponytail. She's small with an energetic presence, always moving and curious. She loves wearing colourful t-shirts with animal or nature-themed prints and comfortable sneakers for running around.
+Sarah is full of enthusiasm and curiosity, always asking questions about the world around her. She's passionate about animals, the environment, and making sure the planet stays healthy. Sarah is very open-minded and loves learning new things, especially when it’s fun. She is sensitive to the environment and can get upset when she hears about pollution or climate change. She enjoys playing games that teach her new facts, solve problems, and involve adventure.
 
 ![Sarah's persona](./images/Sarah.png)
 
-Sarah is a middle school student who loves to play outside and is fascinated by nature. She often spends her weekends visiting parks and taking care of the family’s garden. She enjoys watching nature documentaries and reading books about animals and the planet.
+Sarah is a middle school student who loves to play outside and is fascinated by nature. She often spends her weekends visiting parks and taking care of the family's garden. She enjoys watching nature documentaries and reading books about animals and the planet.
 Sarah is active on social media, where she follows environmental groups and shares eco-friendly tips with her friends. She often feels the urge to make a difference but isn't always sure how to take action.
 Playing games like yours gives her a sense of empowerment, as she learns more about how she can help the environment while having fun.
 Sarah is a perfect fit for our serious game because she has a natural interest in the environment but lacks in-depth knowledge about renewable energy and sustainability.
-The game’s engaging, interactive elements will captivate her attention while teaching important lessons about the climate crisis and how to make a difference. She will likely find the adventure and exploration of the game motivating, while the hands-on learning approach will help her understand complex concepts in a fun and digestible way.
+The game's engaging, interactive elements will captivate her attention while teaching important lessons about the climate crisis and how to make a difference. She will likely find the adventure and exploration of the game motivating, while the hands-on learning approach will help her understand complex concepts in a fun and digestible way.
 
 #### 2. Carl
 
@@ -294,31 +296,31 @@ Carl is likely to appreciate the strategic and goal-oriented aspects of our seri
 
 The game will appeal to his desire for practical solutions to the climate crisis while engaging him in a way that feels both educational and rewarding.
 
-### E. Non-functional Requierements
+### E. Non-functional Requirements
 
 #### 1. cost
 
 ##### a. Assets
 
-We design some object of the game, but time reasons, we use assets listed below:
+We design some objects of the game, but for time reasons, we use assets listed below:
 
 | ASSETS | PRICE | PROTOTYPE | FINAL GAME | LINK |
 | :-: | :-: | :-: | :-: | :-: |
 | sounds | 0€ | No | Yes | [Universal SoundBank](https://www.universal-soundbank.com) |
 | map textures | 0€ | Yes | Yes | []() |
 | trees | 0€ | Yes | Yes | [itch.io](https://jaks.itch.io/lowpolyforestpack) |
-| bushes and mushrooms | 0€ | Yes | Yes | [itch.io](https://free-game-assets.itch.io/free-shrubs-flowers-and-mushrooms-3d-low-poly-pack) |
-| buildings | 0€ | Yes | Yes | [Automataworkshop](https://automataworkshop.itch.io/lowpoly-farm), <br> [Broken Vector](https://brokenvector.itch.io/low-poly-brick-houses) |
+| bushes and mushrooms | 0€ | Yes | Yes | [itch.io (city)](https://free-game-assets.itch.io/free-shrubs-flowers-and-mushrooms-3d-low-poly-pack), <br> [itch.io (farm)](https://quaternius.itch.io/lowpoly-farm-buildings) |
+| buildings | 0€ | Yes | Yes | [itch.io](https://viravoloshyn.itch.io/colorful-low-poly-city-asset-pack) |
 | character and NPCs | 0€ | No | Yes | [itch.io](https://kaylousberg.itch.io/kaykit-adventurers) |
 | animals | 0€ | No | Yes | [itch.io](https://davidoreilly.itch.io/everything-library-animals) |
 | furnitures | 0€ | No | Yes | [itch.io](https://milkandbanana.itch.io/cooking-assets) |
 | other objects | 0€ | No | Yes | [itch.io (bike)](https://psionicgames.itch.io/free-bmx-3d-model), <br> [itch.io (box and trash)](https://brokenvector.itch.io/low-poly-storage-pack) |
 | **Total** | **0€** |  |  |  |
 
-##### b. Time developement
+##### b. Time development
 
-We have 61 hours and 45 minutes dedicated to develop the game.
-This amount of time don't take in consideration any overtime that members can do during the project.
+We have 61 hours and 45 minutes dedicated to developing the game.
+This amount of time doesn't take into consideration any overtime that members can do during the project.
 
 #### 2. Environment
 
@@ -355,35 +357,35 @@ The first one is Esperide and the second one is Nuage.
 
 **Esperide**
 
-You embody a forester, and you have one mission, save french forest by taking decision and manage flora and fauna[^4].
-This game is developped for the French Government and the ONF[^5] and has the Néo Terra label[^6].
-The aim of this game is to experiment with different forest management methods adapted to tomorrow's climate and developing innovative awareness-raising tools to explain forest management to the general public.
+You embody a forester, and you have one mission, save the French forest by making decisions and managing flora and fauna[^4].
+This game is developed for the French Government and the ONF[^5] and has the Néo Terra label[^6].
+The aim of this game is to experiment with different forest management methods adapted to tomorrow's climate and develop innovative awareness-raising tools to explain forest management to the general public.
 
 Here you can find [Esperide](https://www.onf.fr/vivre-la-foret/%2B/12bd::entrez-au-coeur-des-enjeux-du-changement-climatique-et-sauvez-la-foret.html)
 
 **Nuage**
 
 Zeus is your name, you can control a city and help it to reduce the pollution, and become an utopic city where it's a good place to live.
-This game is developped by Hakatah[^7] whose aim is to help people understand the phenomenon of climate change and raising awareness of its consequences.
+This game is developed by Hakatah[^7] whose aim is to help people understand the phenomenon of climate change and raise awareness of its consequences.
 
 Here you can find [Nuage](https://www.serious-game.fr/nuage-le-serious-game-sur-le-changement-climatique/)
 
 **Plan It Green The Big Switch**
 
-The player take on the role of mayor of his fictional city and attempt to build an urban environment that is energy efficient while still meeting the needs of its citizens. He earn money and decide how to spend it, using various energy-efficient technologies to expand and grow his city into the most eco-friendly city in the world.
+The player takes on the role of mayor of his fictional city and attempts to build an urban environment that is energy efficient while still meeting the needs of its citizens. He earns money and decides how to spend it, using various energy-efficient technologies to expand and grow his city into the most eco-friendly city in the world.
 Plan It Green: The Big Switch is an online, city-building simulation game that gives students the opportunity to make complex decisions about the role of green energy, energy conservation, and energy efficiency in a fictional city. Plan It Green: The Big Switch provides a unique opportunity for players to make decisions related to energy efficiency and energy sources and to see how those choices affect life in their city.
 
 Here you can find the Guide of [Plan It Green The Big Switch](https://media.nationalgeographic.org/assets/file/Plan_It_Green_Educator_Guide_2.pdf)
 
 ### B. Product problem
 
-We need to think about the problems our game may have, and the first thing to consider is the message it conveys. More specifically, the fact that the information we want to convey to the player is unclear or misunderstood could, in the worst case scenario, lead to an adaptation of behaviour that would go against the climate and the very idea of the game.
+We need to think about the problems our game may have, and the first thing to consider is the message it conveys. More specifically, the fact that the information we want to convey to the player is unclear or misunderstood could, in the worst-case scenario, lead to an adaptation of behaviour that would go against the climate and the very idea of the game.
 The second is if our game is too big to install or requires specific handling to install, many potential players will not launch the game and the impact will be reduced or even non-existent.
-The third problem is that the risk of transmitting too much information through the game and therefore losing the educational and fun value of the game.
+The third problem is the risk of transmitting too much information through the game and therefore losing the educational and fun value of the game.
 
 ### C. Data
 
-Our game doesn't need to save player's data, but if the game evolves and that we need to save information, we need to interest us on the **the reglementation of data backups**.
+Our game doesn't need to save players' data, but if the game evolves and we need to save information, we need to interest us on the the reglementation of data backups.
 There are three different archives depending on the type of data :
 
 - **Active database archiving** where data that are no longer useful to the enterprise (for example, data on job seekers to which they have not followed up) are deleted once the reason for the study has been completed (after a maximum of two years).
