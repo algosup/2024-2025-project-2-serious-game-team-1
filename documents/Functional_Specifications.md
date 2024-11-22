@@ -54,7 +54,7 @@
 | - | - |
 | Creation date | 11/07/2024 |
 | Last Modification | 11/22/2024 |
-| Reviewer(s) | Léna DE GERMAIN / Mathis LEBEL |
+| Reviewer(s) | Léna DE GERMAIN / Robin GOUMY |
 | Last review | 11/22/2024 |
 
 ### B. History
@@ -67,7 +67,7 @@
 | 1.4 | Grégory PAGNOUX | 11/19/2024 | rework on the concept, <br> new [competitors](#a-competitors), <br> [Personas](#d-personas-and-scenarios), <br> [Assumptions and constraints](#f-assumptions-and-constraints) |
 | 1.5 | Grégory PAGNOUX | 11/20/2024 | flow charts for [Game Mechanic](#a-game-mechanic), <br> [Assests](#a-assets) |
 | 1.6 | Grégory PAGNOUX | 11/21/2024 | [Interface](#b-interface), <br> finish [Assets](#a-assets) |
-| 2.1 | Grégory PAGNOUX | 11/22/2024 | corrections of the first review |
+| 2.1 | Grégory PAGNOUX | 11/22/2024 | corrections of the first review, corrections of the second review |
 
 ### C. Documents
 
