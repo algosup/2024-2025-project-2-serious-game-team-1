@@ -16,15 +16,14 @@
 
 ![alt text](./images/Godot_Logo-1.png)
 
-#### *Last Update on November 19th, 2024*
-
+#### *Last Update on November 22th, 2024*
 
 <details>
 
 <summary>Table of Contents</summary>
 
 - [**Technical Specifications - 2024-2025-project-2-serious-game-team-1**](#technical-specifications---2024-2025-project-2-serious-game-team-1)
-      - [*Last Update on November 8th, 2024*](#last-update-on-november-8th-2024)
+      - [*Last Update on November 19th, 2024*](#last-update-on-november-19th-2024)
 - [General](#general)
   - [Introduction](#introduction)
   - [Audience](#audience)
@@ -47,15 +46,15 @@
   - [Comments](#comments)
   - [Folder structure](#folder-structure)
   - [Source Folder](#source-folder)
-    - [Assets](#-assets)
-      - [Characters](#--characters)
-      - [Sounds](#--sounds)
-      - [Fonts](#--fonts)
-      - [Music](#--music)
-      - [Texture](#--texture)
-      - [Object](#--object)
-    - [Script](#-script)
-    - [Interfaces](#-interfaces)
+    - [Assets](#assets)
+      - [Characters](#characters)
+      - [Sounds](#sounds)
+      - [Fonts](#fonts)
+      - [Music](#music)
+      - [Texture](#texture)
+      - [Object](#object)
+    - [Script](#script)
+    - [Interfaces](#interfaces)
   - [About Godot Engine](#about-godot-engine)
     - [Node](#node)
   - [Scene](#scene)
@@ -67,7 +66,7 @@
       - [HUD](#hud)
     - [Mechanics](#mechanics)
       - [Movement](#movement)
-      - [Inspection](#inspection)
+      - [Teleportation](#teleportation)
       - [Vehicules](#vehicules)
 - [Technical Sources](#technical-sources)
   - [Godot Engine](#godot-engine)
@@ -95,6 +94,7 @@
   - [General :](#general-)
   - [GDScript:](#gdscript)
     - [Methods](#methods)
+
 
 </details>
 
@@ -180,7 +180,6 @@ The central theme of the game is global warming, approached in a fun and educati
 
 # Convention 
 
-
 Our project needs to respect several conditions, functionalities and conventions : 
 
 ## Github
@@ -229,8 +228,6 @@ It is important to establish a naming convention for projects. This makes the so
 <br>
 
 - It has been decided to use the following convention nammings for this project : 
-
-
 
 | Naming Context | Naming Convention |
 |----------------|-------------------|
@@ -389,7 +386,13 @@ From the main game screen, players can access a range of information :
 
 ### Mechanics
 
-The following mechanics will be included in the game:
+The following mechanisms will be included in the game:
+
+To assign keys, it's simple in Godot, you need to in the general panel go to Project -> Project Settings -> Input Map. 
+
+Then all you have to do is add your keys and link them to their actions.
+
+![alt text](./images/Godot_key.png)
 
 #### Movement
 
@@ -417,17 +420,13 @@ The teleport action temporarily disables the player's movement for as long as th
 
 #### Vehicules
 
-The player can enter and drive a vehicle. Once inside, they can move the vehicle in four directions using the following key combinations:
+The player can enter a vehicle and drive it. Once inside, they can move the vehicle in four directions using the same keys as for basic movement:
 
 | Key | Action            |
-| --- | ------------------ |
-| `Z`   | Move Forward      |
-| `S`   | Move Backward     |
-| `Q`   | Turn Left         |
-| `D`   | Turn Right        |
+| --- | ------------------|
 | `F`   | Enter/Exit Vehicle |
 
-When inside the vehicle, the player's standard movement controls are disabled until they exit the vehicle using the `F`  key.
+When inside the vehicle, the player's standard movement controls are disabled until they exit/enter the vehicle using the `F`  key.
 
 ---
 
@@ -448,11 +447,11 @@ We will use Git combined with GitHub Desktop. It is available [here](https://des
 
 ## 3D Asserts Website
 
-We will use Itch.io,  to get free assets. It is available [here](https://itch.io/).
+We will use Itch.io and Poly Pizza, to get free assets. They are available [Itch.io](https://itch.io/) and [Poly Pizza](https://poly.pizza/).
 
 ## Sound bank
 
-We will use Universal Soundbank and Zapsplat, to get free and royalty-free sounds. It is available [Universal Soundbank](https://universal-soundbank.com/) and [Zapsplat](https://www.zapsplat.com/).
+We will use Universal Soundbank and Zapsplat, to get free and royalty-free sounds. They are available [Universal Soundbank](https://universal-soundbank.com/) and [Zapsplat](https://www.zapsplat.com/).
 
 ---
 
@@ -515,7 +514,29 @@ To edit and export to Godot Engine you need a desktop or laptop computer with th
 
 ---
 
+
+
 # 3D
+| **Aspect** | **2D (Godot)**   | **3D (Godot)** |
+|------------|------------------|----------------|
+|**Advantages**          | | |
+| Simplicity  | - Easier to learn, especially for beginners  | - Enables complex mechanics thanks to depth and perspective                     
+| Performance | - Less resource-intensive, ideal for lightweight projects  | - Optimized with Vulkan to handle complex environments  |
+| Development Time | - Faster development with dedicated tools (e.g., TileMap, AnimationTree 2D) | - Flexible node system for managing 3D objects, lighting, and cameras  |
+| Immersion  | - Sufficient for traditional or stylized gameplay | - Offers realistic immersion with dynamic perspectives |
+| Art Style Flexibility | - Perfect for minimalist or retro styles (pixel art, flat design, etc.)  | - Supports realistic or stylized 3D visuals |
+| Specific Tools  | - Rich library for handling 2D collisions and animations  | - Compatible with standard 3D assets (.glTF, .obj), advanced shaders  |
+| Community & Resources | - Wide range of resources to quickly create 2D games | - Growing library of resources and assets for 3D, especially with Godot 4 |
+|  **Disadvantages**    | | |
+| Artistic Limitations  | - Less immersive than a 3D environment  | - Requires knowledge of 3D modeling and texturing  |
+| Gameplay Limitations  | - Poorly suited for games requiring depth or complex navigation | - Complex gameplay can significantly increase development time |
+| Performance | - Can struggle with highly animation-rich or interactive scenes  | - More resource-intensive, requiring rigorous optimization  |
+| Development Time | - May lack potential for highly ambitious concepts  | - Longer creation and iteration cycles, especially for 3D assets |
+| Learning Curve | - More accessible for beginners | - Steeper learning curve to master 3D tools and workflows |
+| Bugs & Limitations | - Limited for complex simulations requiring multiple dimensions | - 3D performance in Godot is still less optimized than engines like Unreal or Unity  |
+
+After considering the advantages and disadvantages of 3D and 2D, the team decided to create our game in 3D to achieve the most realistic immersion with dynamic perspectives.
+
 
 ## 3D tools 
 
@@ -595,9 +616,7 @@ Example :
 
 ```txt
 func _ready():
-
 	print("Hello world!")
-
 ```
 
 ### Methods
@@ -608,11 +627,9 @@ Example :
 
 ```
 func my_method():
- 
   var my_array = [1, 2, 3, 4, 5]
   var array_length = len(my_array)
     print("Length of the array: ", array_length)  # Display "5"
-    
 ```
 
 The methods that can be used in Godot :
