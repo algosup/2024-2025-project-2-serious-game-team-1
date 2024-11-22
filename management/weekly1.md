@@ -9,7 +9,7 @@
 | **Brainstorming**      | Team brainstorming session                          | Entire Team                                    | 100%               |
 | **Functional Specs**   | Initial drafting of functional specifications       | Grégory Pagnoux                                | 10%                |
 | **Technical Specs**    | Drafting of technical specifications                | Robin Goumy                                    | 10%                |
-| **Getting Started**    | Mapping, game mechanics, and interface design       | Mattéo Lefin, Alexis Santos, Guillaume Despaux | 20%                |
+| **Getting Started**    | Mapping, game mechanics, and interface design       | Mattéo Lefin, Alexis Santos, Guillaume Despaux | 5%                |
 | **Retro-planning**     | Project scheduling and timeline                     | Mathis Lebel                                   | 15%                |
 | **Test Plan**          | Creation of test plan template                      | Lena De Germain                                | 5%                 |
 
@@ -32,7 +32,7 @@
 
 ## Team Satisfaction
 
-| **Team Members**     | **Progress on Day's Tasks**                                 | **Suggestions for Improvement**                  | **Morale**                   | **Team Atmosphere**       | **Warnings Today** | **Total Warnings** |
+| **Team Members**     | **Progress on week's Tasks**                                 | **Suggestions for Improvement**                  | **Morale**                   | **Team Atmosphere**       | **Warnings Today** | **Total Warnings** |
 |----------------------|-------------------------------------------------------------|--------------------------------------------------|------------------------------|---------------------------|--------------------|---------------------|
 | **Grégory Pagnoux**  | Limited progress                                            | Listen more to others' ideas                     | Calm                         | Relaxed for now           | 0                  | 0                   |
 | **Lena De Germain**  | No significant progress                                     | Nothing to change                                | Feeling fine                 | Positive                  | 0                  | 0                   |
