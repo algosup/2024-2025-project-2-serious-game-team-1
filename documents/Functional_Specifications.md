@@ -62,9 +62,9 @@
 | Version | Edits completed by | Date | Description of edit |
 | - | - | - | - |
 | 1.1 | Grégory PAGNOUX | 11/07/2024 | Create template, <br> [ProjectOverview](#ii-project-overview), <br> [Deadlines](#deadlines) |
-| 1.2 | Grégory PAGNOUX | 11/12/2024 | [Requirements](#iii-requirements), <br> [Time developement](#b-time-developement), <br> [Environment](#2-environment), <br> [Glossary](#glossary) |
+| 1.2 | Grégory PAGNOUX | 11/12/2024 | [Requirements](#iii-requirements), <br> [Time development](#b-time-development), <br> [Environment](#2-environment), <br> [Glossary](#glossary) |
 | 1.3 | Grégory PAGNOUX | 11/13/2024 | [Security](#3-security), <br> [Risk](#v-risk), <br> [Glossary](#glossary) |
-| 1.4 | Grégory PAGNOUX | 11/19/2024 | rework on the concept, <br> new [competitors](#a-competitors), <br> [Personas](#c-personas-and-scenarios), <br> [Assumptions and constraints](#e-assumptions-and-constraints) |
+| 1.4 | Grégory PAGNOUX | 11/19/2024 | rework on the concept, <br> new [competitors](#a-competitors), <br> [Personas](#d-personas-and-scenarios), <br> [Assumptions and constraints](#f-assumptions-and-constraints) |
 | 1.5 | Grégory PAGNOUX | 11/20/2024 | flow charts for [Game Mechanic](#a-game-mechanic), <br> [Assests](#a-assets) |
 | 1.6 | Grégory PAGNOUX | 11/21/2024 | [Interface](#b-interface), <br> finish [Assets](#a-assets) |
 | 2.1 | Grégory PAGNOUX | 11/22/2024 | corrections of the first review |
