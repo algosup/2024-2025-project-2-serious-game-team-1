@@ -2,7 +2,4 @@
 .tmp
 .import
 .godot/
-*.cache
-.vulcan.cache
-.cfg
 /android/

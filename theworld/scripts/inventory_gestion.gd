@@ -49,13 +49,13 @@ var inventory : Array[Item] = [
 	slot_16, slot_17, slot_18, slot_19, slot_20,
 ]
 
-func _ready() -> void:
-	for i in range(len(slots)):
-		var item = inventory[i]
-		if item is Item:
-			slots[i].set_item(item)
-		else:
-			print("Invalid item type at index ", i)
+#func _ready() -> void:
+	#for i in range(len(slots)):
+		#var item = inventory[i]
+		#if item is Item:
+			#slots[i].set_item(item)
+		#else:
+			#print("Invalid item type at index ", i)
 
 func OpenInventory():
 	print("Open Inventory")

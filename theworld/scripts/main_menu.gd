@@ -12,7 +12,6 @@ func _ready() -> void:
 	
 	
 	Variable.current_scene = Variable.MainMenu_path
-	Variable.Pause()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
