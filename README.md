@@ -3,6 +3,7 @@
 ---
 
 ## Team Members
+
 | Photo | Name | Role | Contact |
 |---|---|---|---|
 |<img src="https://ca.slack-edge.com/T07NMGKN89J-U07NG76JG21-c0a56378ea45-512" width="100" height="100"> | Project Manager | Grégory PAGNOUX | [GitHub](https://github.com/Gregory-Pagnoux) \| [LinkedIn](https://www.linkedin.com/in/grégory-pagnoux-313b3a251/) \| [Mail](mailto:gregory.pagnoux@algosup.com) |
@@ -17,25 +18,18 @@
 
 ## Overview
 
- 
-This is a student-led ALGOSUP project. The aim of the project is to create a serious game using the Godot Engine.  The game must be educational and fun to play. 
+This is a student-led ALGOSUP project. The aim of the project is to create a serious game using the Godot Engine.  The game must be educational and fun to play.
 
 ## Godot Engine
 
 Godot Engine is an open-source game engine that lets you design 2D and 3D games using GDScript, an integrated scripting language similar to Python. To use it, simply download it [here](https://godotengine.org/) and install it.
 
-
-
 ## Project documents
 
-
-XXXXXXXXXXXXXXXXXXXXXX
-
-
-
-
-
-
+- [Functional Specifications](https://github.com/algosup/2024-2025-project-2-serious-game-team-1/blob/main/documents/Functional_Specifications.md)
+- [Technical Specifications](https://github.com/algosup/2024-2025-project-2-serious-game-team-1/blob/main/documents/technical_specifications.md)
+- [User Manual]()
+- [Test Plan]()
 
 ## MIT License
 
