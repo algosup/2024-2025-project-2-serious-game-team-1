@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://domhm87hbhbg1"]
+[gd_scene load_steps=9 format=3 uid="uid://bw15tqgdpk4s"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_kxglq"]
 [ext_resource type="Script" path="res://scripts/CameraManager.gd" id="2_xl5pu"]
-[ext_resource type="PackedScene" uid="uid://0ydvsa4rak3r" path="res://assets/map/interaction.tscn" id="3_te68b"]
+[ext_resource type="PackedScene" path="res://assets/map/interaction.tscn" id="3_te68b"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_smq6u"]
 

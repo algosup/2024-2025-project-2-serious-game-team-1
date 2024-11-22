@@ -36,4 +36,3 @@ func _on_dialogue_box_dialogue_signal(value):
 		player.camera_manager.CameraLock = false
 		talking = false
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	print(str(value))

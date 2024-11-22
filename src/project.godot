@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Map"
-run/main_scene="res://assets/map/map.tscn"
+run/main_scene="res://assets/interface/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -21,6 +21,8 @@ Zones="*res://scripts/zones.gd"
 EcoFollow="*res://scripts/eco_follow.gd"
 DialogManager="*res://scripts/dialog_manager.gd"
 QuestList="*res://scripts/quest_list.gd"
+Alldictionary="*res://scripts/alldictionary.gd"
+Variable="*res://scripts/variable.gd"
 
 [editor_plugins]
 
