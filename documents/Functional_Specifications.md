@@ -55,7 +55,7 @@
 | Creation date | 11/07/2024 |
 | Last Modification | 11/22/2024 |
 | Reviewer(s) | Léna DE GERMAIN / Mathis LEBEL |
-| Last review | 11/21/2024 |
+| Last review | 11/22/2024 |
 
 ### B. History
 
@@ -89,7 +89,7 @@ The project was commissioned by ALGOSUP to create a "Serious Game" on the theme 
 
 A serious game (video game or board game) is a lovely match between serious, educational content and a video game's mechanics and storytelling. It's a tool incredibly efficient at communicating educational messages in an interactive, engaging, and federating way.
 
-The term of "serious game" is used since the beginning of the twentieth century, and the best-known game is The Landlord's Game (predecessor of Monopoly) in 1903.
+The term "serious game" has been used since the beginning of the twentieth century, and the best-known game is The Landlord's Game (predecessor of Monopoly) in 1903.
 
 In the early 1990s, a number of games on this theme were released, followed by another spike to over 100 games a year and a third in 2007 with over 200 games.
 These spikes are due to a growing awareness of the climate emergency, and there are no fewer than 2,000 different games on the subject.
@@ -112,15 +112,15 @@ Sources :
 
 ### A. Story
 
-The Renewable Island is a serious game where the player incarn a character named Bob. He has just bought an old house, but the village mayor ordered him to renovate the house with renewable energies. How can he do that when he knows nothing about it?
-You'll have to carry out missions all over the map to convert all fossil fuels in renewable energies and improve your house. As you carry out your first tasks, you learn that a book that can solve all the world's problems is hiding in the house.
+The Renewable Island is a serious game in which players take on the role of a character called Bob. He has just bought an old house, but the village mayor ordered him to renovate the house with renewable energies. How can he do that when he knows nothing about it?
+You'll have to carry out missions all over the map to convert all fossil fuels to renewable energies and improve your house. As you carry out your first tasks, you learn that a book that can solve all the world's problems is hiding in the house.
 Will you find it?
 
 ### B. Prototype features
 
 To create our serious game, we need to have some basic features that we must have for the prototype:
 
-- the ability to control the character's movement (move forward, backward, left, right and jump)
+- the ability to control the character's movement (move forward, backward, left, right, and jump)
 - interactions with objects
 - two different biomes (village and beach)
 - three quests per biome
@@ -131,7 +131,7 @@ To create our serious game, we need to have some basic features that we must hav
 The village has some houses and buildings where you can find the town hall, the library, a shop, and the museum.
 The quests that you can complete on this place are:
 
-- learn some technics and new things on ecology
+- learn some techniques and new things on ecology
 - measure air quality
 - convert the energy of a factory (from fossil to renewable)
 
@@ -146,7 +146,7 @@ The quests that you can complete on this place are:
 
 ### C. Optional features
 
-Here are all optional features that we can find in the game after the prototype phase:
+Here are all the optional features that we can find in the game after the prototype phase:
 
 - teleportation between two spaces
 - add biomes (forest, fields, mountain)
@@ -222,7 +222,7 @@ Here's how the teleportation system works, so that players can move around the m
 **Home page**
 
 When the player opens the game, the first open window is the Home page below.
-Firstly, the player can modify some settings to adapt the game as he want.
+Firstly, the player can modify some settings to adapt the game as he wants.
 The second button is to begin a new game, mostly used for new players and those who have already finished the game.
 The third button is to load the last part that the player has launched and saved. To be functional, the player needs to have started at least one game before.
 The last one is to quit the game.
@@ -241,7 +241,7 @@ When the player launches his game, he has the following interface :
 
 ![game interface](./images/Game_Interface.png)
 
-**inventory**
+**Inventory**
 
 When the player presses the "e" keyboard, the inventory opens. You can recover all objects you have on the left side and you can have the description and all details about the object on the right side when you pass the mousse on it.
 
@@ -249,7 +249,7 @@ When the player presses the "e" keyboard, the inventory opens. You can recover a
 
 **Menu**
 
-When the player launches his part, he can presses the "esc" keyboard and the menu window opens.
+When the player launches his part, he can presse the "esc" keyboard and the menu window opens.
 Firstly, the player can modify some settings to adapt the game as he wants.
 The second button is to save his part. Thanks to that, the player quit the game and came back later thanks to the load button on the home page.
 The last one is to quit the game.
@@ -307,10 +307,10 @@ We design some objects of the game, but for time reasons, we use assets listed b
 | ASSETS | PRICE | PROTOTYPE | FINAL GAME | LINK |
 | :-: | :-: | :-: | :-: | :-: |
 | sounds | 0€ | No | Yes | [Universal SoundBank](https://www.universal-soundbank.com) |
-| map textures | 0€ | Yes | Yes | []() |
+| map textures | 0€ | Yes | Yes | [AmbientCG](https://ambientcg.com) |
 | trees | 0€ | Yes | Yes | [itch.io](https://jaks.itch.io/lowpolyforestpack) |
 | bushes and mushrooms | 0€ | Yes | Yes | [itch.io (city)](https://free-game-assets.itch.io/free-shrubs-flowers-and-mushrooms-3d-low-poly-pack), <br> [itch.io (farm)](https://quaternius.itch.io/lowpoly-farm-buildings) |
-| buildings | 0€ | Yes | Yes | [itch.io](https://viravoloshyn.itch.io/colorful-low-poly-city-asset-pack) |
+| buildings | 0€ | Yes | Yes | [Poly Pizza/](https://poly.pizza/u/Quaternius) |
 | character and NPCs | 0€ | No | Yes | [itch.io](https://kaylousberg.itch.io/kaykit-adventurers) |
 | animals | 0€ | No | Yes | [itch.io](https://davidoreilly.itch.io/everything-library-animals) |
 | furnitures | 0€ | No | Yes | [itch.io](https://milkandbanana.itch.io/cooking-assets) |
@@ -352,7 +352,7 @@ This amount of time doesn't take into consideration any overtime that members ca
 ### A. Competitors
 
 Today, serious games cover a lot of subjects and have a lot of competitors.
-For our game, there are two other games that partially cover the subject we're talking about and that could be potential indirect competitors.
+For our game, there are two other games partially cover the subject we're talking about and that could be potential indirect competitors.
 The first one is Esperide and the second one is Nuage.
 
 **Esperide**
@@ -365,8 +365,8 @@ Here you can find [Esperide](https://www.onf.fr/vivre-la-foret/%2B/12bd::entrez-
 
 **Nuage**
 
-Zeus is your name, you can control a city and help it to reduce the pollution, and become an utopic city where it's a good place to live.
-This game is developed by Hakatah[^7] whose aim is to help people understand the phenomenon of climate change and raise awareness of its consequences.
+Zeus is your name, you can control a city and help it to reduce pollution, and become an utopic city where it's a good place to live.
+This game was developed by Hakatah[^7] whose aim is to help people understand the phenomenon of climate change and raise awareness of its consequences.
 
 Here you can find [Nuage](https://www.serious-game.fr/nuage-le-serious-game-sur-le-changement-climatique/)
 
@@ -385,7 +385,7 @@ The third problem is the risk of transmitting too much information through the g
 
 ### C. Data
 
-Our game doesn't need to save players' data, but if the game evolves and we need to save information, we need to interest us on the the reglementation of data backups.
+Our game doesn't need to save players' data, but if the game evolves and we need to save information, we need to be interested in the reglementation of data backups.
 There are three different archives depending on the type of data :
 
 - **Active database archiving** where data that are no longer useful to the enterprise (for example, data on job seekers to which they have not followed up) are deleted once the reason for the study has been completed (after a maximum of two years).
@@ -420,7 +420,7 @@ Abbreviation for General Data Protection Regulation. It's a European Union regul
 source : [Wikipedia](https://fr.wikipedia.org/wiki/Règlement_général_sur_la_protection_des_données)
 
 [^3]: **integrity**
-The quality of being whole and complete. It's the fact that an information is certified as true and we can believe on it.
+The quality of being whole and complete. It's the fact that information is certified as true and we can believe it.
 source : [Cambridge dictionnary](https://dictionary.cambridge.org/fr/dictionnaire/anglais/integrity)
 
 [^4]: **flora and fauna**
@@ -428,7 +428,7 @@ The flora and fauna of a place are its plants and animals.
 source : [Cambridge dictionnary](https://dictionary.cambridge.org/fr/dictionnaire/anglais/flora-and-fauna)
 
 [^5]: **ONF**
-Abbreviation for Office National des Forêts. The organisation was created in 1966 and has 5 fundamental missions: to develop wood resources, to act for the environment, to welcome the public to the forest, to prevent natural risks and to offer tailor-made services.
+Abbreviation for Office National des Forêts. The organization was created in 1966 and has 5 fundamental missions: to develop wood resources, to act for the environment, to welcome the public to the forest, to prevent natural risks**,** and to offer tailor-made services.
 source : [ONF](https://www.onf.fr/onf/connaitre-lonf/+/28::les-enjeux-valeurs-et-missions-de-lonf.html)
 
 [^6]: **Néo Terra label**
