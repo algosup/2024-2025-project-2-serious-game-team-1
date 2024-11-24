@@ -23,28 +23,27 @@
 <summary>Table of Contents</summary>
 
 - [**Technical Specifications - 2024-2025-project-2-serious-game-team-1**](#technical-specifications---2024-2025-project-2-serious-game-team-1)
-      - [*Last Update on November 19th, 2024*](#last-update-on-november-19th-2024)
-- [General](#general)
-  - [Introduction](#introduction)
+      - [*Last Update on November 22th, 2024*](#last-update-on-november-22th-2024)
+- [Introduction](#introduction)
   - [Audience](#audience)
   - [Overview](#overview)
   - [Glossary](#glossary)
-  - [Requirements](#requirements)
-    - [Game Engine :](#game-engine-)
+  - [Client Requirements](#client-requirements)
     - [Objective :](#objective-)
+    - [Game Engine :](#game-engine-)
+    - [Game theme :](#game-theme-)
     - [Game Quality :](#game-quality-)
     - [Deliverable Requirements :](#deliverable-requirements-)
-    - [Game theme :](#game-theme-)
-- [Convention](#convention)
-  - [Github](#github)
-  - [Github Guidelines](#github-guidelines)
+- [Work Environement](#work-environement)
+  - [Github Conventions](#github-conventions)
     - [1. Branch](#1-branch)
     - [2. Commit](#2-commit)
     - [3. Pull Request](#3-pull-request)
     - [4. Issue](#4-issue)
-  - [Naming](#naming)
-  - [Comments](#comments)
-  - [Folder structure](#folder-structure)
+  - [Code Conventions](#code-conventions)
+    - [Naming](#naming)
+    - [Comments](#comments)
+    - [Repository architecture](#repository-architecture)
   - [Source Folder](#source-folder)
     - [Assets](#assets)
       - [Characters](#characters)
@@ -55,35 +54,36 @@
       - [Object](#object)
     - [Script](#script)
     - [Interfaces](#interfaces)
+  - [System :](#system-)
+      - [Desktop or laptop PC - Recommended (More here)](#desktop-or-laptop-pc---recommended-more-here)
+- [Introduction to GODOT](#introduction-to-godot)
   - [About Godot Engine](#about-godot-engine)
     - [Node](#node)
   - [Scene](#scene)
-  - [About Game](#about-game)
-    - [Perspective](#perspective)
+- [Game Developement Steps](#game-developement-steps)
+  - [Perspective](#perspective)
   - [User Interface](#user-interface)
-      - [Main Menu](#main-menu)
-      - [Inventory](#inventory)
-      - [HUD](#hud)
-    - [Mechanics](#mechanics)
-      - [Movement](#movement)
-      - [Teleportation](#teleportation)
-      - [Vehicules](#vehicules)
+    - [Main Menu](#main-menu)
+    - [Inventory](#inventory)
+    - [HUD](#hud)
+  - [Commands](#commands)
+    - [Movement](#movement)
+    - [Teleportation](#teleportation)
+    - [Vehicules](#vehicules)
 - [Technical Sources](#technical-sources)
   - [Godot Engine](#godot-engine)
   - [Visual Studio](#visual-studio)
   - [Git](#git)
   - [3D Asserts Website](#3d-asserts-website)
   - [Sound bank](#sound-bank)
-- [Development Process](#development-process)
-  - [1. Set up the technical structure](#1-set-up-the-technical-structure)
-  - [2. Development of Zones and Environment](#2-development-of-zones-and-environment)
+- [Development Steps](#development-steps)
+  - [1. Environement setup](#1-environement-setup)
+  - [2. Development of the Map](#2-development-of-the-map)
   - [3. Game mechanics integration](#3-game-mechanics-integration)
   - [4. Gameplay Testing and Balancing](#4-gameplay-testing-and-balancing)
   - [5. Optimisation and Correction](#5-optimisation-and-correction)
   - [6. Implementing Educational and Narrative System](#6-implementing-educational-and-narrative-system)
   - [7. Final Phase and Launch](#7-final-phase-and-launch)
-- [System requirements](#system-requirements)
-    - [Desktop or laptop PC - Recommended (More here)](#desktop-or-laptop-pc---recommended-more-here)
 - [3D](#3d)
   - [3D tools](#3d-tools)
   - [3D geometry helper class.](#3d-geometry-helper-class)
@@ -101,9 +101,7 @@
 
 --- 
 
-# General
-
-## Introduction
+# Introduction
 
 The goal of this document is to define the technical specifications of the project.
 It will be used to define the requirements and the conventions of the project, as well as the tools we will use.
@@ -123,6 +121,7 @@ Secondary audiences
 - Program lead: to verify alignment with the functional specifications and ensure the project meets client expectations.*
   
 - Quality Assurance : to assist in preparing the testing strategy and using it as a reference to identify and validate issues.
+
   
 
 
@@ -152,16 +151,19 @@ ALGOSUP's school commissioned us to create a serious game on GODOT Game Engine.
 | **WIP**        | Work In Progress |
 
 
-## Requirements
+## Client Requirements
 
+### Objective :
+
+The aim of the game is to educate players about environmental and climate issues. The game aims to raise players' awareness of ecological issues and make them understand the impact of their actions on the planet.
 
 ### Game Engine :
 
 The game must be designed using the Godot Engine 4.3, relying on GDScript for optimum integration with Godot's native features. This will allow greater flexibility to create interactive and dynamic gameplay elements.
 
-### Objective :
+### Game theme :
 
-The aim of the game is to educate players about environmental and climate issues. The game aims to raise players' awareness of ecological issues and make them understand the impact of their actions on the planet.
+The central theme of the game is global warming, approached in a fun and educational way. This choice allows us to deal with contemporary issues and encourage players to think about climate change.
 
 ### Game Quality :
 
@@ -171,23 +173,14 @@ The game must be well finished, respecting the principles of game design and dev
 
 The final product must offer a pleasant and engaging experience for players. All essential elements must be included, the game must be bug-free for optimal playability and as full-featured as possible.
 
-
-### Game theme :
-
-The central theme of the game is global warming, approached in a fun and educational way. This choice allows us to deal with contemporary issues and encourage players to think about climate change.
-
 ---
 
-# Convention 
 
-Our project needs to respect several conditions, functionalities and conventions : 
+# Work Environement
 
-## Github
+## Github Conventions 
 
 - We must use Github to manage our project.
-
-
-## Github Guidelines
 
 ### 1. Branch 
 
@@ -219,13 +212,12 @@ Multiple commits within a single branch are acceptable to document progressive u
 - Include a clear, concise description of the issue to outline the problem (see [Issues](https://github.com/algosup/2024-2025-project-2-serious-game-team-1/issues)).
 
 
-## Naming
+## Code Conventions
 
-<br>
+### Naming 
 
 It is important to establish a naming convention for projects. This makes the source code easier to read and understand with less effort. There are many naming conventions :
 
-<br>
 
 - It has been decided to use the following convention nammings for this project : 
 
@@ -240,15 +232,21 @@ It is important to establish a naming convention for projects. This makes the so
 | files          | `snake_case`        |
 
 
-## Comments
+### Comments
 
-- Putting comments at the top of a 3-10 line section telling what it does
+- Use comments to explain the code
 
-```txt
-# Here is a texte which need to beed comment.
-```
+- The comments should be placed before the code they explain.
 
-## Folder structure
+- Use comments to explain the purpose of the code, not the code itself.
+
+- Use comments when declaring a variable or a parameter to explain its purpose and its value.
+
+- For each function, explain which paramters it takes and which output it returns as well as its global behavior.
+
+- In Godot comments are available by adding `#` in front of the line.
+
+### Repository architecture
 
 ```txt
 
@@ -322,9 +320,23 @@ This folder stores all the main scripts needed to make the game work. This inclu
 This folder contains all the files relating to the game's user interfaces and the way in which players interact visually with the game.
 
 
-## About Godot Engine 
+## System : 
 
-<br>
+#### Desktop or laptop PC - Recommended [(More here)](https://docs.godotengine.org/en/stable/about/system_requirements.html#id3 "Permalink to this headline")
+
+To edit and export to Godot Engine you need a desktop or laptop computer with the following minimum power : 
+
+
+| **CPU**              | - _Example: Intel Core i5-6600K, AMD Ryzen 5 1600, Apple M1_, Raspberry Pi 5 with overclocking |
+| -------------------- | ------------------------|
+| **GPU**              | - _Example: NVIDIA GeForce GTX 1050 (Pascal), AMD Radeon RX 460 (GCN 4.0)_ <br>|
+| **RAM**              | - **For native exports:** 4 GB  <br>  <br>- **For web exports:** 8 GB  |
+| **Storage**          | -  ~1GB (used for the executable, project files and cache)|
+| **Operating system** | - **For native exports:** Windows 10, macOS 10.15, Linux distribution released after 2020   <br> <br>- **For web exports:** Latest version of Firefox, Chrome, Edge, Safari, Opera |
+
+# Introduction to GODOT
+
+## About Godot Engine 
 
 Godot Engine is a free, open-source game engine for creating 2D and 3D games. 
 It offers comprehensive tools to facilitate development, and can be easily exported to multiple platforms (computers, mobiles, web, consoles). 
@@ -354,10 +366,9 @@ For example, you can create:
 - a scene for the user interface (UI).
 Each scene can be saved as a file and imported into other scenes. This system makes development modular and allows you to work on individual elements of the game without affecting the entire project.
 
+# Game Developement Steps
 
-## About Game 
-
-### Perspective
+## Perspective
 
 Godot Engine can create both 2D and 3D games. This flexibility is one of its standout features, as it allows developers to use a single tool to create a wide range of game experiences, from pixel art platformers to immersive 3D worlds.
 
@@ -365,15 +376,15 @@ In our case, we decided to use 3D, thinking that it was better suited to our gam
 
 ## User Interface
 
-#### Main Menu
+### Main Menu
 
 A menu will be available, accessible by pressing the `esc` "escape" key. It will allow you to access all the settings (audio, graphics, keys, etc.), or quit the game.
 
-#### Inventory
+### Inventory
 
 An inventory will keep track of all the player's items and allow them to navigate between the items in their bag by pressing the `e` key . A drag-and-drop system will be used to create this system.
 
-#### HUD
+### HUD
 
 From the main game screen, players can access a range of information : 
 
@@ -384,7 +395,7 @@ From the main game screen, players can access a range of information :
 - Quests : A list of quests will be placed below the player to inform them of the actions to be carried out.
 
 
-### Mechanics
+## Commands
 
 The following mechanisms will be included in the game:
 
@@ -394,7 +405,7 @@ Then all you have to do is add your keys and link them to their actions.
 
 ![alt text](./images/Godot_key.png)
 
-#### Movement
+### Movement
 
 Players can move in four directions (up, down, left, right), jump and sprint using the following key combinations:
 
@@ -407,18 +418,18 @@ Players can move in four directions (up, down, left, right), jump and sprint usi
 | `Space` | Jump      |
 | `Shift` | Sprint    |
 
-#### Teleportation
+### Teleportation
 
 The player can teleport around the island. This action will change the player's position  using the following key :
 | Key | Action    |
 | --- | ----------|
-| XXXXX | Teleportation |
+| XXX | Teleportation |
 
 
 The teleport action temporarily disables the player's movement for as long as this function is used.
 
 
-#### Vehicules
+### Vehicules
 
 The player can enter a vehicle and drive it. Once inside, they can move the vehicle in four directions using the same keys as for basic movement:
 
@@ -455,23 +466,21 @@ We will use Universal Soundbank and Zapsplat, to get free and royalty-free sound
 
 ---
 
-# Development Process
+# Development Steps
 
-## 1. Set up the technical structure
+## 1. Environement setup
 
 - Initialization in Godot : Create the basic scenes, configure the FPS controls.
 - Backup Systems : Program the progress backup systems;
-- Quests and Objectives System : Integrate a quest manager to track and display tasks in real time.
 
-## 2. Development of Zones and Environment 
+## 2. Development of the Map 
 
 - Zone : Model each zone (e.g. town, beach), integrating interactive elements specific to each environment.
-- Effects and Climatic Elements : Add visual and sound elements that change according to the actions of the player and the environment.
 
 ## 3. Game mechanics integration
 
 - Action mechanics : Program actions between quests and players.
-- Action Impact : Associate a measurable impact for each player action (e.g. reducing pollution by planting trees).
+- Quests and Objectives System : Integrate a quest manager to track and display tasks in real time.
 
 ## 4. Gameplay Testing and Balancing
 
@@ -493,24 +502,8 @@ We will use Universal Soundbank and Zapsplat, to get free and royalty-free sound
 ## 7. Final Phase and Launch
 
 - Testing : Carry out wider tests with a target audience to finalise adjustments.
-- Budget : Define a budget for the game and the marketing aspect. 
 - Launch : Put the game online and monitor feedback for post-launch updates.
 
----
-
-# System requirements
-
-### Desktop or laptop PC - Recommended [(More here)](https://docs.godotengine.org/en/stable/about/system_requirements.html#id3 "Permalink to this headline")
-
-To edit and export to Godot Engine you need a desktop or laptop computer with the following minimum power : 
-
-
-| **CPU**              | - _Example: Intel Core i5-6600K, AMD Ryzen 5 1600, Apple M1_, Raspberry Pi 5 with overclocking |
-| -------------------- | ------------------------|
-| **GPU**              | - _Example: NVIDIA GeForce GTX 1050 (Pascal), AMD Radeon RX 460 (GCN 4.0)_ <br>|
-| **RAM**              | - **For native exports:** 4 GB  <br>  <br>- **For web exports:** 8 GB  |
-| **Storage**          | -  ~1GB (used for the executable, project files and cache)|
-| **Operating system** | - **For native exports:** Windows 10, macOS 10.15, Linux distribution released after 2020   <br> <br>- **For web exports:** Latest version of Firefox, Chrome, Edge, Safari, Opera |
 
 ---
 
@@ -535,7 +528,7 @@ To edit and export to Godot Engine you need a desktop or laptop computer with th
 | Learning Curve | - More accessible for beginners | - Steeper learning curve to master 3D tools and workflows |
 | Bugs & Limitations | - Limited for complex simulations requiring multiple dimensions | - 3D performance in Godot is still less optimized than engines like Unreal or Unity  |
 
-After considering the advantages and disadvantages of 3D and 2D, the team decided to create our game in 3D to achieve the most realistic immersion with dynamic perspectives.
+After considering the advantages and disadvantages of 3D and 2D, the game will be create in 3D to achieve the most realistic immersion with dynamic perspectives.
 
 
 ## 3D tools 
