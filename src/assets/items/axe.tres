@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b6xvp6t7gowik"]
+
+[ext_resource type="Texture2D" uid="uid://duf3ag0r4dhda" path="res://assets/images/axe.png" id="1_ye6uw"]
+[ext_resource type="Script" path="res://scripts/item_class.gd" id="2_mvhwj"]
+
+[resource]
+script = ExtResource("2_mvhwj")
+title = "Axe"
+icon = ExtResource("1_ye6uw")
+description = "An axe is an implement that has been used for millennia to shape, split, and cut wood, to harvest timber, as a weapon, and as a ceremonial or heraldic symbol. "

@@ -1,0 +1,167 @@
+[gd_scene load_steps=12 format=3 uid="uid://f51858rkgwej"]
+
+[ext_resource type="Texture2D" uid="uid://bg85v4vpbk8n5" path="res://assets/images/WaintingBackground.jpg" id="1_81syd"]
+[ext_resource type="Script" path="res://scripts/inventory_gestion.gd" id="1_ya1uh"]
+[ext_resource type="PackedScene" uid="uid://cekaafpjb52lv" path="res://scenes/slot.tscn" id="3_5tgj7"]
+[ext_resource type="Texture2D" uid="uid://i2kndroy583y" path="res://assets/images/inventory_slot_background.png" id="3_vrw3m"]
+[ext_resource type="Resource" uid="uid://b6xvp6t7gowik" path="res://assets/items/axe.tres" id="4_1xes8"]
+[ext_resource type="Resource" uid="uid://fdrs5y1it3tr" path="res://assets/items/bin_bag.tres" id="5_dqjgy"]
+[ext_resource type="Resource" uid="uid://bg7ef4t3c3voa" path="res://assets/items/extinguisher.tres" id="6_xb1yn"]
+[ext_resource type="Resource" uid="uid://dm17egj505ih7" path="res://assets/items/planks.tres" id="7_kh6el"]
+[ext_resource type="Resource" uid="uid://br2gapumldt5t" path="res://assets/items/shovel.tres" id="8_824bn"]
+[ext_resource type="Resource" uid="uid://8rrukvxko552" path="res://assets/items/tree_shoots.tres" id="9_vintl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_saide"]
+font_size = 40
+
+[node name="Inventory_Gestion" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ya1uh")
+
+[node name="Inventory" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(335, 212)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -307.0
+offset_top = -187.5
+offset_right = 307.0
+offset_bottom = 187.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_81syd")
+metadata/_edit_lock_ = true
+
+[node name="GridInventory" type="GridContainer" parent="Inventory"]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 20.0
+offset_top = 23.0
+offset_right = 159.0
+offset_bottom = 306.0
+scale = Vector2(0.5, 0.5)
+columns = 4
+metadata/_edit_lock_ = true
+
+[node name="Slot1" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
+layout_mode = 2
+item = ExtResource("4_1xes8")
+
+[node name="Slot2" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
+layout_mode = 2
+item = ExtResource("5_dqjgy")
+
+[node name="Slot3" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
+layout_mode = 2
+item = ExtResource("6_xb1yn")
+
+[node name="Slot4" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
+layout_mode = 2
+item = ExtResource("7_kh6el")
+
+[node name="Slot5" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
+layout_mode = 2
+item = ExtResource("8_824bn")
+
+[node name="Slot6" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
+layout_mode = 2
+item = ExtResource("9_vintl")
+
+[node name="Slot7" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
+layout_mode = 2
+
+[node name="Slot8" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
+layout_mode = 2
+
+[node name="Slot9" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
+layout_mode = 2
+
+[node name="Slot10" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
+layout_mode = 2
+
+[node name="Slot11" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
+layout_mode = 2
+
+[node name="Slot12" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
+layout_mode = 2
+
+[node name="Slot13" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
+layout_mode = 2
+
+[node name="Slot14" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
+layout_mode = 2
+
+[node name="Slot15" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
+layout_mode = 2
+
+[node name="Slot16" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
+layout_mode = 2
+
+[node name="Slot17" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
+layout_mode = 2
+
+[node name="Slot18" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
+layout_mode = 2
+
+[node name="Slot19" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
+layout_mode = 2
+
+[node name="Slot20" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
+layout_mode = 2
+
+[node name="Description" type="NinePatchRect" parent="Inventory"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -277.0
+offset_top = 15.0
+offset_right = -14.0
+offset_bottom = 358.0
+grow_horizontal = 0
+texture = ExtResource("3_vrw3m")
+region_rect = Rect2(2.34615, 3.1778, 26.4982, 27.2089)
+metadata/_edit_lock_ = true
+
+[node name="DescriptionBox" type="VBoxContainer" parent="Inventory/Description"]
+layout_mode = 0
+offset_right = 526.0
+offset_bottom = 632.0
+scale = Vector2(0.5, 0.5)
+
+[node name="Header" type="HBoxContainer" parent="Inventory/Description/DescriptionBox"]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="Inventory/Description/DescriptionBox/Header"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+metadata/_edit_lock_ = true
+
+[node name="Name_Label" type="Label" parent="Inventory/Description/DescriptionBox/Header"]
+custom_minimum_size = Vector2(394, 128)
+layout_mode = 2
+size_flags_horizontal = 0
+label_settings = SubResource("LabelSettings_saide")
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="DescriptionLabel" type="RichTextLabel" parent="Inventory/Description/DescriptionBox"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+focus_mode = 2
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+selection_enabled = true
+metadata/_edit_lock_ = true

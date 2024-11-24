@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://btb6rqhhi27mx" path="res://addons/proton_scatter/icons/remove.svg" id="2_p04k2"]
 
 [sub_resource type="SystemFont" id="SystemFont_kgkwq"]
-subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_poli7"]
 font = SubResource("SystemFont_kgkwq")

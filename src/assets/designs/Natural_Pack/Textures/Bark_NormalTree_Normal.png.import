@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2re4wl8utu1w"
-path.s3tc="res://.godot/imported/Bark_NormalTree_Normal.png-5372c540372986e798e44262b42f6916.s3tc.ctex"
+path.s3tc="res://.godot/imported/Bark_NormalTree_Normal.png-77ab7c5f21ad99d55eeba12a23c3d864.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/designs/Natural_Pack/textures/Bark_NormalTree_Normal.png"
-dest_files=["res://.godot/imported/Bark_NormalTree_Normal.png-5372c540372986e798e44262b42f6916.s3tc.ctex"]
+source_file="res://assets/designs/Natural_Pack/Textures/Bark_NormalTree_Normal.png"
+dest_files=["res://.godot/imported/Bark_NormalTree_Normal.png-77ab7c5f21ad99d55eeba12a23c3d864.s3tc.ctex"]
 
 [params]
 

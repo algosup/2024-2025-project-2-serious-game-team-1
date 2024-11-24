@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://b773i7emdfrop"]
+
+[ext_resource type="Script" path="res://scripts/volume_manager.gd" id="1_34uj3"]
+
+[node name="VolumeManager" type="HBoxContainer"]
+custom_minimum_size = Vector2(1152, 40)
+offset_right = 1152.0
+offset_bottom = 40.0
+script = ExtResource("1_34uj3")
+
+[node name="TitleLabel" type="Label" parent="."]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+text = "     Title Music"
+vertical_alignment = 1
+
+[node name="VolumeSlider" type="HSlider" parent="."]
+custom_minimum_size = Vector2(890, 0)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="VolumePercentageLabel" type="Label" parent="."]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+text = "XX%"
+vertical_alignment = 1
