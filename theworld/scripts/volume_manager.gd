@@ -5,7 +5,7 @@ extends HBoxContainer
 @onready var volume_percentage_label: Label = $VolumePercentageLabel
 @export var volume_name : String = ""
 var idx_volume_server : int
-var PreviousVolume : int
+var PreviousVolume : float
 
 func _ready() -> void:
 	set_audio_server()

@@ -22,6 +22,7 @@ Variable="*res://scripts/Variable.gd"
 
 [display]
 
+window/stretch/mode="canvas_items"
 window/stretch/aspect="ignore"
 window/vsync/vsync_mode=0
 

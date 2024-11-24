@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://r4mh0k01hbms"]
+[gd_scene load_steps=3 format=3 uid="uid://r4mh0k01hbms"]
 
 [ext_resource type="Script" path="res://scripts/key_change.gd" id="1_t624p"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_suskf"]
+color = Color(0, 0, 0, 0)
 
 [node name="KeyChange" type="Control" groups=["key_group"]]
 layout_mode = 3
@@ -17,14 +20,19 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="HBoxContainer"]
-custom_minimum_size = Vector2(576, 30)
+custom_minimum_size = Vector2(500, 30)
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "ACTION"
 horizontal_alignment = 1
 
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 200
+theme_override_styles/separator = SubResource("StyleBoxLine_suskf")
+
 [node name="Button" type="Button" parent="HBoxContainer"]
-custom_minimum_size = Vector2(576, 0)
+custom_minimum_size = Vector2(350, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 27
 text = "ACTION_KEY"
