@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://noen0xr1vv1s"]
+
+[ext_resource type="PackedScene" uid="uid://butaofjuhk7t" path="res://assets/designs/CityPack/small_house.fbx" id="1_f6n32"]
+
+[node name="small_house" instance=ExtResource("1_f6n32")]

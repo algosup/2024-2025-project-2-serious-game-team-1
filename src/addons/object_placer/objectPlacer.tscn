@@ -1,0 +1,86 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctw2kyas3yml5"]
+
+[sub_resource type="GDScript" id="GDScript_5e3d3"]
+script/source = "@tool
+extends ItemList
+
+func can_drop_data(position, data):
+	return true
+
+func drop_data(position, data):
+	var file_paths = data[\"files\"]
+	for path in file_paths:
+		var item_len = get_item_count()
+		add_item(path.get_file().get_basename())
+		set_item_metadata(item_len, path)
+
+
+
+
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#extends Node3D
+#@export var marker:NodePath
+#@export var sceen:Resource
+#var dirty=false
+## Called when the node enters the scene tree for the first time.
+#func _ready():
+	#if Engine.is_editor_hint():
+		#if dirty:
+			#if sceen:
+				#var new=sceen.instantiate()
+				#add_child(new)
+		#
+	#pass # Replace with function body.
+#
+#
+## Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+	#if Engine.is_editor_hint():
+		#if not sceen:
+			##print('sceen is empty')
+			#dirty=true
+			##var new=sceen.instantiate()
+			##add_child(new)
+		#if dirty:
+			#if sceen:
+				#print(\"new scene is set\")
+				#var new=sceen.instantiate()
+				#add_child(new)
+				#dirty=false
+	#pass
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+"
+
+[node name="ObjectPlacer" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Itemlist" type="ItemList" parent="."]
+layout_mode = 0
+offset_right = 528.0
+offset_bottom = 363.0
+item_count = 1
+max_columns = 6
+script = SubResource("GDScript_5e3d3")

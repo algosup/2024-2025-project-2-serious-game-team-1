@@ -1,0 +1,8 @@
+# Godot 4+ specific ignores
+.tmp
+.import
+.godot/
+/android/
+wakatime*
+.DS_Store*
+./src/.import/

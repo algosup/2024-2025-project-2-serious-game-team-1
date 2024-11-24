@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv14y8ppy7jy5"]
+
+[ext_resource type="Script" path="res://scripts/trash.gd" id="1_82vgb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2ilfx"]
+
+[node name="trash" type="RigidBody3D" groups=["waste"]]
+script = ExtResource("1_82vgb")
+waste_name = "plastic wastes"
+prompt_message = "clean the plastic"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_2ilfx")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CollisionShape3D"]
