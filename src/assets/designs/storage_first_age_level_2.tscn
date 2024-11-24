@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bu6x7q2r0g6ra"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mkykp"]
+size = Vector3(0.0353584, 0.025116, 0.0100441)
+
+[node name="Storage_FirstAge_Level2"]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Storage_FirstAge_Level2/StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.93361, -0.358379, 0, 0.358379, 0.93361, 0, -0.0906063, 0.000675007)
+shape = SubResource("BoxShape3D_mkykp")

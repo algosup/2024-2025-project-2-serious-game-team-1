@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckathttcxx1me"]
-
-[ext_resource type="PackedScene" uid="uid://cluhe0cgolehg" path="res://assets/designs/LowpolyFarmV2_byAutomataWorkshop/Models/farm.fbx" id="1_pbshr"]
-
-[node name="farm" instance=ExtResource("1_pbshr")]

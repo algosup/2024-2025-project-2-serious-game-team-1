@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdbqit0smpqon"]
+
+[ext_resource type="PackedScene" uid="uid://b17cygvyc1x08" path="res://assets/designs/Dock_Stairs.fbx" id="1_bikdn"]
+
+[node name="Dock_Stairs" instance=ExtResource("1_bikdn")]
