@@ -7,9 +7,9 @@ var PlayMenuOpen = false
 var PreviousScene: String = ""
 var MouseCapture = false
 var current_scene = ""
-var MainMenu_path = "res://scenes/main_menu.tscn"
-var OptionMenu_path = "res://scenes/option_menu.tscn"
-var Gameplay_path = "res://assets/map/map.tscn"
+var MainMenu_path = "res://assets/ui/main_menu.tscn"
+var OptionMenu_path = "res://assets/ui/option_menu.tscn"
+var Gameplay_path = "res://gameplay.tscn"
 
 var VolumeList : Array = ["master", "music", "sound effect", "dialogue"]
 var ChangeVolume : bool = false
