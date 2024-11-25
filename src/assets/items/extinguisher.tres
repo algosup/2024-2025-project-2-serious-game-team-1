@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bg7ef4t3c3voa"]
+[gd_resource type="Resource" script_class="Item_Ressource" load_steps=3 format=3 uid="uid://bg7ef4t3c3voa"]
 
 [ext_resource type="Texture2D" uid="uid://5aha4pbu7lcb" path="res://assets/images/extinguisher.png" id="1_b6cq6"]
 [ext_resource type="Script" path="res://scripts/item_ressource.gd" id="2_kqv6q"]

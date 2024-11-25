@@ -11,14 +11,13 @@ config_version=5
 [application]
 
 config/name="Map"
-run/main_scene="res://main.tscn"
+run/main_scene="res://assets/ui/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-HEAD:c246aec03ed8fbcafb18b93cf7ccf4040a51ad21:src/project.godot
-Zones="*res://scripts/zones.gd"
+HEAD:c246aec03ed8fbcafb18b93cf7ccf4040a51ad21:src/project.godotZones="*res://scripts/zones.gd"
 EcoFollow="*res://scripts/eco_follow.gd"
 DialogManager="*res://scripts/dialog_manager.gd"
 QuestList="*res://scripts/quest_list.gd"

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b6xvp6t7gowik"]
+[gd_resource type="Resource" script_class="Item_Ressource" load_steps=3 format=3 uid="uid://b6xvp6t7gowik"]
 
 [ext_resource type="Texture2D" uid="uid://duf3ag0r4dhda" path="res://assets/images/axe.png" id="1_ye6uw"]
 [ext_resource type="Script" path="res://scripts/item_ressource.gd" id="2_mvhwj"]

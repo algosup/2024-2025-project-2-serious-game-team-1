@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://fdrs5y1it3tr"]
+[gd_resource type="Resource" script_class="Item_Ressource" load_steps=3 format=3 uid="uid://fdrs5y1it3tr"]
 
 [ext_resource type="Texture2D" uid="uid://j03ylp7rjwpp" path="res://assets/images/bin_bag.png" id="1_n55tf"]
 [ext_resource type="Script" path="res://scripts/item_ressource.gd" id="2_dmlpg"]
