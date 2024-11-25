@@ -5,11 +5,11 @@ extends Control
 @onready var name_label: Label = $Inventory/Description/DescriptionBox/Header/Name_Label
 
 @warning_ignore("shadowed_global_identifier")
-const Item = preload("res://scripts/item_class.gd")
+const Item = preload("res://scripts/item_ressource.gd")
 
 var inventorySize : int = 20
 
-var inventory : Array[Item] = [
+var inventory : Array[Item_Ressource] = [
 	preload("res://assets/items/axe.tres"),
 	preload("res://assets/items/bin_bag.tres"),
 	preload("res://assets/items/extinguisher.tres"),

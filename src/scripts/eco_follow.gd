@@ -15,7 +15,7 @@ func set_eco_forest(value):
 func set_eco_farm(value):
 	eco_farm = clamp(value, 0, 100)
 # Adds a simple string name of the item to the inventory if it's not already there
-func add_to_inventory(item: Item):
+func add_to_inventory(item: Item_Object):
 	if item.name not in inventory:
 		inventory.append(item.name)
 		print("Added ", item.name, " to inventory.")
