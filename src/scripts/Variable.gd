@@ -1,7 +1,6 @@
 extends Node
 
 var isPaused = true
-var PlayerIsPaused = true
 var InventoryOpen = false
 var PlayMenuOpen = false
 var PreviousScene: String = ""
@@ -17,29 +16,6 @@ var min_size = Vector2i(1152, 648)
 var current_size = DisplayServer.window_get_size()
 
 
-func CaptureMouseOn():
-	MouseCapture = true
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
-func CaptureMouseOff():
-	MouseCapture = false
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-
-
-func pause_character():
-	PlayerIsPaused = true
-
-
-func resume_character():
-	PlayerIsPaused = false
-
-func Pause():
-	isPaused = true
-	get_tree().paused = true
-
-func UnPause():
-	isPaused = false
-	get_tree().paused = false
 
 func GoBack():
 	if PreviousScene == Gameplay_path:

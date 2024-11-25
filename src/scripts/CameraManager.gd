@@ -24,7 +24,7 @@ func _input(p_event: InputEvent) -> void:
 
 
 func rotate_camera(p_relative:Vector2) -> void:
-	if not CameraLock :
+	if !CameraLock :
 		_camera_yaw.rotation.y -= p_relative.x * mouse_sensitivity
 		_camera_yaw.orthonormalize()
 		_camera_pitch.rotation.x += p_relative.y * mouse_sensitivity * CAMERA_RATIO * mouse_y_inversion 

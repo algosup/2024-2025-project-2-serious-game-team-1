@@ -31,4 +31,5 @@ object_scene = ExtResource("8_7tjyf")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 398.338, 45.0605, 563.756)
 
 [node name="Player" parent="Gameplay" instance=ExtResource("8_735e1")]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941, 394.357, 45.5094, 567.677)

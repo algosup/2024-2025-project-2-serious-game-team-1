@@ -2,7 +2,8 @@ extends Interactable
 
 class_name Pnj
 
-@onready var player: CharacterBody3D = $"../Player"
+@onready var player: CharacterBody3D = %Player
+
 
 @onready var dialogue_box: DialogueBox = $CanvasLayer/DialogueBox
 
@@ -16,7 +17,6 @@ func _ready() -> void:
 	queststarted = false
 
 func pnj_talk():
-
 	if talking == false :
 		talking = true
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
