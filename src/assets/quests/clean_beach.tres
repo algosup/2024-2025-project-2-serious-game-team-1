@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Quests_Resources" load_steps=2 format=3 uid="uid://c463r6lgbn0i8"]
+
+[ext_resource type="Script" path="res://scripts/quests_resource.gd" id="1_pif74"]
+
+[resource]
+script = ExtResource("1_pif74")
+quests_id = 1
+quests_name = "clean_beach"
+quests_ecopoint = 50
+quests_description = "Roger regret the beach status. He want to clean the beach but he cannot do that because he is a old person. Can you pick up 10 waste plastic ?"

@@ -10,7 +10,7 @@ const ItemPreview = preload("res://scripts/item_preview.gd")
 
 func _ready():
 	if item :  
-		texture = item.icon
+		texture = item.item_icon
 	else :
 		if item == null : 
 			print('is null')
@@ -19,7 +19,7 @@ func _ready():
 
 func set_item(value: Item):
 	item = value
-	texture = item.icon if item else null
+	texture = item.item_icon if item else null
 	print(item)
 
 func _on_mouse_entered():
@@ -41,6 +41,7 @@ func _get_drag_data(_at_position):
 	set_drag_preview(preview.preview_texture)
 	texture = null
 	item = null
+	print(item)
 
 	return preview
 
@@ -50,3 +51,4 @@ func _can_drop_data(_at_position, data):
 func _drop_data(_at_position, data):
 	texture = data.preview_texture.texture
 	item = data.item_placeholder
+	print(item)
