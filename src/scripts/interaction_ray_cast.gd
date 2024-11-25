@@ -4,7 +4,7 @@ extends RayCast3D
 
 @onready var prompt: Label = $Prompt
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if is_colliding():
 		var collider = get_collider()
 		
