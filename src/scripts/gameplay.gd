@@ -8,11 +8,12 @@ extends Node
 #Game Play
 @onready var gameplay: Node = $Gameplay
 #Game Play Loading nodes
-@onready var map: Node3D = $Map
-@onready var player: CharacterBody3D = %Player
-@onready var roger: Pnj = $Roger
-@onready var spawn_area: Node3D = $"spawn area"
-@onready var bin_bag: Item_Object = $"bin bag"
+@onready var map: Node3D = $Gameplay/Map
+@onready var roger: Pnj = $Gameplay/Roger
+@onready var spawn_area: Node3D = $"Gameplay/spawn area"
+@onready var bin_bag: Item_Object = $"Gameplay/bin bag"
+@onready var player: CharacterBody3D = $Gameplay/Player
+
 
 func _ready() -> void:
 	inventory_gestion.hide()

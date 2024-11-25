@@ -2,7 +2,7 @@ extends Interactable
 
 class_name Pnj
 
-@onready var player: CharacterBody3D = %Player
+@onready var player: CharacterBody3D = $"../Player"
 
 @onready var dialogue_box: DialogueBox = $CanvasLayer/DialogueBox
 
