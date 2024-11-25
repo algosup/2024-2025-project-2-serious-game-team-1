@@ -32,3 +32,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 398.338, 45.0605, 563.756)
 
 [node name="Player" parent="Gameplay" instance=ExtResource("8_81w0k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 391.271, 45.5025, 568.281)
+MOVE_SPEED = null
+JUMP_SPEED = null
+first_person = null
+gravity_enabled = null
+collision_enabled = null

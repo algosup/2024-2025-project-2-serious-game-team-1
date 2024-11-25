@@ -3,8 +3,8 @@ extends CharacterBody3D
 @onready var camera_manager: Node3D = $CameraManager
 
 @export var MOVE_SPEED: float = 5.0
-@export var JUMP_SPEED: float = 15.0
-@export var first_person: bool = false:
+@export var JUMP_SPEED: float = 3.0
+@export var first_person: bool = true:
 	set(p_value):
 		first_person = p_value
 		if first_person:
