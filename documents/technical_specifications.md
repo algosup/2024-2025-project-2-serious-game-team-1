@@ -52,6 +52,7 @@
       - [Music](#music)
       - [Texture](#texture)
       - [Object](#object)
+      - [Dialogue](#dialogue)
     - [Script](#script)
     - [Interfaces](#interfaces)
   - [System :](#system-)
@@ -68,31 +69,33 @@
       - [Collision detection:](#collision-detection)
   - [Scripting](#scripting)
     - [GDScript:](#gdscript)
-    - [Methods](#methods)
-- [Technical Sources](#technical-sources)
-  - [Godot Engine](#godot-engine)
-  - [Visual Studio](#visual-studio)
-  - [Git](#git)
-  - [3D Asserts Website](#3d-asserts-website)
-  - [Sound bank](#sound-bank)
+      - [Methods](#methods)
+      - [Annotations](#annotations)
 - [Development Steps](#development-steps)
   - [1. Environement setup](#1-environement-setup)
+    - [Godot architecture](#godot-architecture)
+    - [Perspective](#perspective)
+    - [Game aspects](#game-aspects)
+      - [Movements](#movements)
   - [2. Development of the Map](#2-development-of-the-map)
+    - [The base of Map](#the-base-of-map)
+    - [Texture for each zone](#texture-for-each-zone)
+    - [Zone delimitation](#zone-delimitation)
+    - [Add assets](#add-assets)
   - [3. Game mechanics integration](#3-game-mechanics-integration)
+    - [User interface](#user-interface)
+      - [Main menu](#main-menu)
+    - [Inventory](#inventory)
+    - [HUD](#hud)
+      - [Mini Maps](#mini-maps)
+      - [Time](#time)
+      - [Reputation](#reputation)
+      - [Quests](#quests)
+    - [Audio](#audio)
   - [4. Gameplay Testing and Balancing](#4-gameplay-testing-and-balancing)
   - [5. Optimisation and Correction](#5-optimisation-and-correction)
   - [6. Implementing Educational and Narrative System](#6-implementing-educational-and-narrative-system)
   - [7. Final Phase and Launch](#7-final-phase-and-launch)
-- [Game Aspects](#game-aspects)
-  - [Perspective](#perspective)
-  - [User Interface](#user-interface)
-    - [Main Menu](#main-menu)
-    - [Inventory](#inventory)
-    - [HUD](#hud)
-  - [Commands](#commands)
-    - [Movement](#movement)
-    - [Teleportation](#teleportation)
-    - [Vehicules](#vehicules)
 
 
 </details>
@@ -312,6 +315,9 @@ This folder contains all the textures and images used in the game. This includes
 
 This folder contains all the interactive and visual objects in the game, including those that the player can interact with and the scenery elements.
 
+#### Dialogue 
+
+This folder contains all the dialogue used in the game, including text files for character conversations. It organises all the content for interactions with NPCs and mission instructions.
 
 ### Script
 
@@ -335,6 +341,8 @@ To edit and export to Godot Engine you need a desktop or laptop computer with th
 | **RAM**              | - **For native exports:** 4 GB  <br>  <br>- **For web exports:** 8 GB  |
 | **Storage**          | -  ~1GB (used for the executable, project files and cache)|
 | **Operating system** | - **For native exports:** Windows 10, macOS 10.15, Linux distribution released after 2020   <br> <br>- **For web exports:** Latest version of Firefox, Chrome, Edge, Safari, Opera |
+
+---
 
 # Introduction to GODOT
 
@@ -373,24 +381,6 @@ Each scene can be saved as a file and imported into other scenes. This system ma
 ## 3D
 
 Godot Engine can create both 2D and 3D games. This flexibility is one of its standout features, as it allows developers to use a single tool to create a wide range of game experiences, from pixel art platformers to immersive 3D worlds. 
-
-| **Aspect** | **2D (Godot)**   | **3D (Godot)** |
-|------------|------------------|----------------|
-|**Advantages**          | | |
-| Simplicity  | - Easier to learn, especially for beginners  | - Enables complex mechanics thanks to depth and perspective                     
-| Performance | - Less resource-intensive, ideal for lightweight projects  | - Optimized with Vulkan to handle complex environments  |
-| Development Time | - Faster development with dedicated tools (e.g., TileMap, AnimationTree 2D) | - Flexible node system for managing 3D objects, lighting, and cameras  |
-| Immersion  | - Sufficient for traditional or stylized gameplay | - Offers realistic immersion with dynamic perspectives |
-| Art Style Flexibility | - Perfect for minimalist or retro styles (pixel art, flat design, etc.)  | - Supports realistic or stylized 3D visuals |
-| Specific Tools  | - Rich library for handling 2D collisions and animations  | - Compatible with standard 3D assets (.glTF, .obj), advanced shaders  |
-| Community & Resources | - Wide range of resources to quickly create 2D games | - Growing library of resources and assets for 3D, especially with Godot 4 |
-|  **Disadvantages**    | | |
-| Artistic Limitations  | - Less immersive than a 3D environment  | - Requires knowledge of 3D modeling and texturing  |
-| Gameplay Limitations  | - Poorly suited for games requiring depth or complex navigation | - Complex gameplay can significantly increase development time |
-| Performance | - Can struggle with highly animation-rich or interactive scenes  | - More resource-intensive, requiring rigorous optimization  |
-| Development Time | - May lack potential for highly ambitious concepts  | - Longer creation and iteration cycles, especially for 3D assets |
-| Learning Curve | - More accessible for beginners | - Steeper learning curve to master 3D tools and workflows |
-| Bugs & Limitations | - Limited for complex simulations requiring multiple dimensions | - 3D performance in Godot is still less optimized than engines like Unreal or Unity  |
 
 
 ### 3D tools 
@@ -449,9 +439,9 @@ Support for exporting the current scene as a glTF 2.0 file, both from the editor
 
 ### GDScript:
 
-- High-level interpreted language.
+GDScript is a high-level, object-oriented programming language designed for Godot. It uses a syntax based on indentation, similar to languages such as Python. Its purpose is to be optimised and tightly integrated with Godot Engine, allowing great flexibility for content creation and integration.
 
-- Syntax inspired by Python. However, GDScript is not based on Python.
+GDScript is entirely independent of Python and is not based on it.
 
 Example : 
 
@@ -460,7 +450,7 @@ func _ready():
 	print("Hello world!")
 ```
 
-### Methods
+#### Methods
 
 In GDScript, methods are functions that belong to a class. They are used to define actions that an object can perform. Methods can be used to manipulate data, interact with other objects, or perform calculations.
 
@@ -492,30 +482,27 @@ The methods that can be used in Godot :
 | **[Array](https://docs.godotengine.org/en/stable/classes/class_array.html)** | - [range(...) vararg](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-range) |
 | **[Boolean](https://docs.godotengine.org/en/stable/classes/class_bool.html)** | - [type_exists(type: StringName)](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-type-exists)|
 
----
+#### Annotations
 
-# Technical Sources
+Annotations in Godot allow to enhance the functionality of your scripts by exposing properties to the editor, managing initialization, or customizing class behaviors. Here's a table summarizing the key annotations:
+
+| **Annotation**      | **Description**  |
+|---------------------|------------------|
+| `@export` | Makes a property visible and editable in the Inspector. |
+| `@export_range` | Constrains a property's value to a specific range. |
+| `@export_file` | Allows selecting a specific file type in the Inspector. |
+| `@export_enum` | Lets you select from a predefined list of options. |
+| `@onready`| Initializes a variable after the node is ready. |
+| `@tool` | Enables the script to run in the editor (active outside of gameplay). |
+| `@class_name` | Assigns a custom name to the class, making it reusable as a new resource. |
+| `@signal`  | Declares a signal the script can emit. |
+| `@gadget`  | Used for creating custom tools for the editor (advanced use). |
+| `@position` | Defines the order of appearance in the Inspector (with GDScript 2.0). |
+| `@global_class`| Similar to `@class_name`, but makes the class globally accessible. |
+| `@export_group` | Groups properties under a header in the Inspector.  |
+| `@export_subgroup`| Creates subsections under a grouped property in the Inspector. |
 
 
-## Godot Engine 
-
-We will use Godot Engine 4.3 It is available [here](https://godotengine.org/download/windows/).
-
-## Visual Studio
-
-We will use Visual Studio 2019. It is available [here](https://visualstudio.microsoft.com/fr/downloads/).
-
-## Git
-
-We will use Git combined with GitHub Desktop. It is available [here](https://desktop.github.com/).
-
-## 3D Asserts Website
-
-We will use Itch.io and Poly Pizza, to get free assets. They are available [Itch.io](https://itch.io/) and [Poly Pizza](https://poly.pizza/).
-
-## Sound bank
-
-We will use Universal Soundbank and Zapsplat, to get free and royalty-free sounds. They are available [Universal Soundbank](https://universal-soundbank.com/) and [Zapsplat](https://www.zapsplat.com/).
 
 ---
 
@@ -524,79 +511,31 @@ We will use Universal Soundbank and Zapsplat, to get free and royalty-free sound
 ## 1. Environement setup
 
 - Initialization in Godot : Create the basic scenes, configure the FPS controls.
-- Backup Systems : Program the progress backup systems;
 
-## 2. Development of the Map 
+### Godot architecture 
 
-- Zone : Model each zone (e.g. town, beach), integrating interactive elements specific to each environment.
+To get started, you need to create a set of nodes. They are the basic building blocks of the game in Godot, and their hierarchical organisation allows you to create a complex project in a simple and modular way.
 
-## 3. Game mechanics integration
+So you need to create all the nodes needed for the game: a main node that will host the game, sub-nodes that will classify all the nodes, and finally nodes such as the game inventory.
 
-- Action mechanics : Program actions between quests and players.
-- Quests and Objectives System : Integrate a quest manager to track and display tasks in real time.
-
-## 4. Gameplay Testing and Balancing
-
-- Testing : Check the fluidity of the game, test basic interactions and the task system.
-- User feedback : Gather feedback from testers on the understanding and difficulty of the educational tasks.
-- Balancing : Adjust the difficulty of the quests.
-
-## 5. Optimisation and Correction 
-
-- Performance : Optimise graphics, physics and interactions to ensure optimum fluidity.
-- Debugging : Fix bugs and improve game stability.
+![alt text](./images/node_architecture1.png)
 
 
-## 6. Implementing Educational and Narrative System 
-
-- Learning Scenarios : Add relevant educational information integrated into the tasks.
-- Dynamic Storytelling : Include narrative elements such as dialogues or significant events to reinforce the message of the game.
-
-## 7. Final Phase and Launch
-
-- Testing : Carry out wider tests with a target audience to finalise adjustments.
-- Launch : Put the game online and monitor feedback for post-launch updates.
-
----
-
-# Game Aspects
-
-## Perspective
+### Perspective
 
 The game is in 3D, as we felt it was better suited to our case and our atmosphere. This will allow greater flexibility in creating interactive and dynamic game elements.
 
-## User Interface
+### Game aspects
 
-### Main Menu
+#### Movements
 
-A menu will be available, accessible by pressing the `esc` "escape" key. It will allow you to access all the settings (audio, graphics, keys, etc.), or quit the game.
-
-### Inventory
-
-An inventory will keep track of all the player's items and allow them to navigate between the items in their bag by pressing the `e` key . A drag-and-drop system will be used to create this system.
-
-### HUD
-
-From the main game screen, players can access a range of information : 
-
-- Maps : a mini-map will be displayed in the top right-hand corner of the screen to help players find their way around.
-- Time : the time will be displayed below the mini-map, allowing the player to keep track of the time.
-- Control : the control description will be placed at the bottom left of the screen, giving players quick access to the buttons they can use.
-- Reputation : A progress bar showing the reputation of the location the player is in will be placed at the top left.
-- Quests : A list of quests will be placed below the player to inform them of the actions to be carried out.
-
-
-## Commands
-
-The following mechanisms will be included in the game:
+The following movements will be included in the game:
 
 To assign keys, it's simple in Godot, you need to in the general panel go to Project -> Project Settings -> Input Map. 
 
 Then all you have to do is add your keys and link them to their actions.
 
 ![alt text](./images/Godot_key.png)
-
-### Movement
 
 Players can move in four directions (up, down, left, right), jump and sprint using the following key combinations:
 
@@ -609,25 +548,106 @@ Players can move in four directions (up, down, left, right), jump and sprint usi
 | `Space` | Jump      |
 | `Shift` | Sprint    |
 
-### Teleportation
 
-The player can teleport around the island. This action will change the player's position  using the following key :
-| Key | Action    |
-| --- | ----------|
-| XXX | Teleportation |
+## 2. Development of the Map 
+
+- Zone : Model each zone (town, beach), delimit zone, add textures and assets.
 
 
-The teleport action temporarily disables the player's movement for as long as this function is used.
+### The base of Map
+
+First of all, to create the map we need to add the foundations, the base. The 3D terrain should include a raised area representing the mountain, a slope down to the water representing the beach and four other flatter areas representing the farm, the town, the forest and the port. 
+
+To create the terrain we will use these videos in which all the characteristics for [the formation of the relief](https://www.youtube.com/watch?v=oV8c9alXVwU&t=68s), [the addition of water](https://www.youtube.com/watch?v=jYVO0-_sXZs&t=603s).
 
 
-### Vehicules
+### Texture for each zone 
 
-The player can enter a vehicle and drive it. Once inside, they can move the vehicle in four directions using the same keys as for basic movement:
+Each zone will have different textures to distinguish it from the others. We'll use the textures available [here](https://ambientcg.com/). To use them in godot, import them and then go to the middle panel, then 3D Terrain and finally Texture.
 
-| Key | Action            |
-| --- | ------------------|
-| `F`   | Enter/Exit Vehicle |
+![alt text](./images/texture.png)
 
-When inside the vehicle, the player's standard movement controls are disabled until they exit/enter the vehicle using the `F`  key.
+### Zone delimitation
+
+Each zone needs to be delimited as it will be necessary to reuse this later in the game. Indeed, quests and reputations will be assigned to each zone.To do this, you need to create nodes for each zone and delimit them.
+
+
+![alt text](./images/node_zone.png)
+![alt text](./images/beach_area.png)
+
+### Add assets
+
+Each zone will have different assets (farms, houses, trees, etc.). All assets come from the same [source](https://poly.pizza/u/Quaternius). Import them into the "assets" folder and place them in the zone you want. 
+
+## 3. Game mechanics integration
+
+- Create the User Interface
+- Action mechanics : Program actions between quests and players.
+- Quests and Objectives System : Integrate a quest manager to track and display tasks in real time.
+
+### User interface
+
+#### Main menu
+
+A menu will be available, accessible by pressing the `esc` "escape" key. It will allow you to access all the settings (audio, graphics, keys, etc.), or quit the game.
+
+
+DESCRIPTION MAIN MENU 
+
+
+### Inventory
+
+An inventory will keep track of all the player's items and allow them to navigate between the items in their bag by pressing the `e` key . A drag-and-drop system will be used to create this system.
+
+### HUD
+
+From the main game screen, players can access a range of information : 
+
+- Maps : a mini-map will be displayed in the top right-hand corner of the screen to help players find their way around.
+  
+- Time : the time will be displayed below the mini-map, allowing the player to keep track of the time.
+  
+- Reputation : A progress bar showing the reputation of the location the player is in will be placed at the top left.
+  
+- Quests : A list of quests will be placed below the player to inform them of the actions to be carried out.
+
+#### Mini Maps
+#### Time
+#### Reputation
+#### Quests 
+
+### Audio 
+
+
+
+
+## 4. Gameplay Testing and Balancing
+
+- Testing : Check the fluidity of the game, test basic interactions and the task system.
+  
+- User feedback : Gather feedback from testers on the understanding and difficulty of the educational tasks.
+  
+- Balancing: Adjust the difficulty of quests and the reputation of zones.
+
+## 5. Optimisation and Correction 
+
+- Performance : Optimise graphics, physics and interactions to ensure optimum fluidity.
+
+- Debugging : Fix bugs and improve game stability.
+
+
+## 6. Implementing Educational and Narrative System 
+
+- Learning Scenarios : Add relevant educational information integrated into the tasks.
+
+- Dynamic Storytelling : Include narrative elements such as dialogues or significant events to reinforce the message of the game.
+
+## 7. Final Phase and Launch
+
+- Export : Bring the game to life by creating its executable file.
+  
+- Launch : Put the game online and monitor feedback for post-launch updates.
 
 ---
+
+
