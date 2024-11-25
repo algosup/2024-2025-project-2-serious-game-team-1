@@ -5,18 +5,13 @@ extends Control
 @onready var name_label: Label = $Inventory/Description/DescriptionBox/Header/Name_Label
 
 @warning_ignore("shadowed_global_identifier")
-const Item = preload("res://scripts/item_ressource.gd")
+var Item : Item_Ressource
 
 var inventorySize : int = 20
 
 var inventory : Array[Item_Ressource] = [
-	preload("res://assets/items/axe.tres"),
-	preload("res://assets/items/bin_bag.tres"),
-	preload("res://assets/items/extinguisher.tres"),
-	preload("res://assets/items/planks.tres"),
-	preload("res://assets/items/shovel.tres"),
-	preload("res://assets/items/tree_shoots.tres"),
-	null, null, null, null,
+	null, null, null, null, null,
+	null, null, null, null, null,
 	null, null, null, null, null,
 	null, null, null, null, null
 ]
@@ -71,7 +66,7 @@ func CloseInventory():
 	$".".hide()
 	Variable.resume_character()
 
-func set_description(item : Item):
+func set_description(item : Item_Ressource):
 	if name_label != null:
 		name_label.text = item.title
 	else:
