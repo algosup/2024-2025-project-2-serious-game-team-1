@@ -4,8 +4,14 @@ extends CharacterBody3D
 
 @export var MOVE_SPEED: float = 5.0
 @export var JUMP_SPEED: float = 15.0
-	
-		
+@export var first_person: bool = false:
+	set(p_value):
+		first_person = p_value
+		if first_person:
+			create_tween().tween_property($CameraManager/Arm, "spring_length", 0.0, 0.33).tween_callback($Body.set_visible.bind(false))
+		else:
+			$Body.visible = true
+			create_tween().tween_property($CameraManager/Arm, "spring_length", 6.0, 0.33)
 
 @export var gravity_enabled: bool = true:
 	set(p_value):
@@ -55,7 +61,9 @@ func _input(event: InputEvent) -> void:
 
 	elif event is InputEventKey:
 		if event.pressed:
-			if event.keycode == KEY_G:
+			if event.keycode == KEY_V:
+				first_person = !first_person
+			elif event.keycode == KEY_G:
 				gravity_enabled = !gravity_enabled
 			elif event.keycode == KEY_C:
 				collision_enabled = !collision_enabled
