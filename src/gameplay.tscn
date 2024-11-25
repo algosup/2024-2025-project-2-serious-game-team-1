@@ -3,10 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://lrfexx8s0e13" path="res://assets/map/map.tscn" id="1_7b4si"]
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_hjvrf"]
 [ext_resource type="PackedScene" uid="uid://f51858rkgwej" path="res://assets/ui/inventory.tscn" id="3_grpvx"]
-[ext_resource type="PackedScene" uid="uid://domhm87hbhbg1" path="res://demo/components/Player.tscn" id="5_e0f0u"]
 [ext_resource type="PackedScene" uid="uid://bchj68adctaws" path="res://assets/models/roger.tscn" id="6_52vwr"]
 [ext_resource type="PackedScene" uid="uid://umm5fxua0dmn" path="res://assets/models/spawn_area.tscn" id="7_s8y11"]
 [ext_resource type="PackedScene" uid="uid://dv14y8ppy7jy5" path="res://assets/models/trash.tscn" id="8_7tjyf"]
+[ext_resource type="PackedScene" uid="uid://domhm87hbhbg1" path="res://assets/models/Player.tscn" id="8_81w0k"]
 [ext_resource type="PackedScene" uid="uid://6c6uwu7ip5h" path="res://assets/models/bin_bag.tscn" id="9_0mf82"]
 
 [node name="gameplay" type="Node"]
@@ -20,10 +20,6 @@ script = ExtResource("1_hjvrf")
 
 [node name="Map" parent="Gameplay" instance=ExtResource("1_7b4si")]
 
-[node name="Player" parent="Gameplay" instance=ExtResource("5_e0f0u")]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 396.144, 44.3898, 564.566)
-
 [node name="Roger" parent="Gameplay" instance=ExtResource("6_52vwr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 399.3, 45.3941, 565.188)
 
@@ -33,3 +29,6 @@ object_scene = ExtResource("8_7tjyf")
 
 [node name="bin bag" parent="Gameplay" instance=ExtResource("9_0mf82")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 398.338, 45.0605, 563.756)
+
+[node name="Player" parent="Gameplay" instance=ExtResource("8_81w0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 391.271, 45.5025, 568.281)
