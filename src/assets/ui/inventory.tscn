@@ -1,15 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://f51858rkgwej"]
+[gd_scene load_steps=6 format=3 uid="uid://f51858rkgwej"]
 
 [ext_resource type="Texture2D" uid="uid://bg85v4vpbk8n5" path="res://assets/images/WaintingBackground.jpg" id="1_81syd"]
 [ext_resource type="Script" path="res://scripts/inventory_gestion.gd" id="1_ya1uh"]
 [ext_resource type="PackedScene" uid="uid://cekaafpjb52lv" path="res://assets/ui/slot.tscn" id="3_5tgj7"]
 [ext_resource type="Texture2D" uid="uid://i2kndroy583y" path="res://assets/images/inventory_slot_background.png" id="3_vrw3m"]
-[ext_resource type="Resource" uid="uid://b6xvp6t7gowik" path="res://assets/items/axe.tres" id="4_1xes8"]
-[ext_resource type="Resource" uid="uid://fdrs5y1it3tr" path="res://assets/items/bin_bag.tres" id="5_dqjgy"]
-[ext_resource type="Resource" uid="uid://bg7ef4t3c3voa" path="res://assets/items/extinguisher.tres" id="6_xb1yn"]
-[ext_resource type="Resource" uid="uid://dm17egj505ih7" path="res://assets/items/planks.tres" id="7_kh6el"]
-[ext_resource type="Resource" uid="uid://br2gapumldt5t" path="res://assets/items/shovel.tres" id="8_824bn"]
-[ext_resource type="Resource" uid="uid://8rrukvxko552" path="res://assets/items/tree_shoots.tres" id="9_vintl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_saide"]
 font_size = 40
@@ -53,27 +47,21 @@ metadata/_edit_lock_ = true
 
 [node name="Slot1" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
-item = ExtResource("4_1xes8")
 
 [node name="Slot2" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
-item = ExtResource("5_dqjgy")
 
 [node name="Slot3" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
-item = ExtResource("6_xb1yn")
 
 [node name="Slot4" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
-item = ExtResource("7_kh6el")
 
 [node name="Slot5" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
-item = ExtResource("8_824bn")
 
 [node name="Slot6" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
-item = ExtResource("9_vintl")
 
 [node name="Slot7" parent="Inventory/GridInventory" instance=ExtResource("3_5tgj7")]
 layout_mode = 2
