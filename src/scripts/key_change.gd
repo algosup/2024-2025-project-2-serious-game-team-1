@@ -21,12 +21,10 @@ func set_action_name() -> void:
 			label.text = "Move Left"
 		"move_right":
 			label.text = "Move Right"
-		"move_up":
-			label.text = "Move Up"
-		"move_down":
-			label.text = "Move Down"
-		"escape":
-			label.text = "Escape"
+		"move_forward":
+			label.text = "Move Forward"
+		"move_backward":
+			label.text = "Move Backward"
 		"jump":
 			label.text = "Jump"
 		"interaction":

@@ -141,11 +141,11 @@ layout_mode = 2
 
 [node name="KeyChange" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer" instance=ExtResource("2_ufot1")]
 layout_mode = 2
-action_name = "move_up"
+action_name = "move_forward"
 
 [node name="KeyChange2" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer" instance=ExtResource("2_ufot1")]
 layout_mode = 2
-action_name = "move_down"
+action_name = "move_backward"
 
 [node name="KeyChange3" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer" instance=ExtResource("2_ufot1")]
 layout_mode = 2
@@ -162,10 +162,6 @@ action_name = "sprint"
 [node name="KeyChange9" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer" instance=ExtResource("2_ufot1")]
 layout_mode = 2
 action_name = "jump"
-
-[node name="KeyChange6" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer" instance=ExtResource("2_ufot1")]
-layout_mode = 2
-action_name = "escape"
 
 [node name="KeyChange7" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer" instance=ExtResource("2_ufot1")]
 layout_mode = 2
