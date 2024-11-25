@@ -11,18 +11,18 @@ config_version=5
 [application]
 
 config/name="Map"
-run/main_scene="res://assets/map/map.tscn"
+run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-HEAD:c246aec03ed8fbcafb18b93cf7ccf4040a51ad21:src/project.godot
-Variable="*res://scripts/Variable.gd"
+HEAD:c246aec03ed8fbcafb18b93cf7ccf4040a51ad21:src/project.godotVariable="*res://scripts/Variable.gd"
 Zones="*res://scripts/zones.gd"
 EcoFollow="*res://scripts/eco_follow.gd"
 DialogManager="*res://scripts/dialog_manager.gd"
 QuestList="*res://scripts/quest_list.gd"
+Variable="*res://scripts/Variable.gd"
 
 [display]
 
@@ -36,7 +36,7 @@ import/reimport_missing_imported_files=false
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_nodes/plugin.cfg", "res://addons/proton_scatter/plugin.cfg", "res://addons/terrain_3d/plugin.cfg", "res://addons/wakatime/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogue_nodes/plugin.cfg", "res://addons/object_placer/plugin.cfg", "res://addons/proton_scatter/plugin.cfg", "res://addons/terrain_3d/plugin.cfg", "res://addons/wakatime/plugin.cfg")
 
 [file_customization]
 

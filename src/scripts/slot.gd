@@ -1,9 +1,9 @@
 extends PanelContainer
 
 @warning_ignore("shadowed_global_identifier")
-const Item = preload("res://scripts/item_class.gd")
+const Item = preload("res://scripts/item_ressource.gd")
 
-@export var item : Item :
+@export var item : Item_Ressource :
 	set(value):
 		item = value
 		$Icon.texture = item.icon

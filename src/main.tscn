@@ -1,0 +1,36 @@
+[gd_scene load_steps=10 format=3 uid="uid://chxfeda425gsu"]
+
+[ext_resource type="PackedScene" uid="uid://lrfexx8s0e13" path="res://assets/map/map.tscn" id="1_7b4si"]
+[ext_resource type="PackedScene" uid="uid://c7grp6rev45qv" path="res://assets/ui/main_menu.tscn" id="1_p3mxv"]
+[ext_resource type="PackedScene" uid="uid://b31wjwnn4gip3" path="res://assets/ui/option_menu.tscn" id="2_s0e3b"]
+[ext_resource type="PackedScene" uid="uid://f51858rkgwej" path="res://assets/ui/inventory.tscn" id="3_grpvx"]
+[ext_resource type="PackedScene" uid="uid://domhm87hbhbg1" path="res://assets/models/Player.tscn" id="5_e0f0u"]
+[ext_resource type="PackedScene" uid="uid://bchj68adctaws" path="res://assets/models/roger.tscn" id="6_52vwr"]
+[ext_resource type="PackedScene" uid="uid://umm5fxua0dmn" path="res://assets/models/spawn_area.tscn" id="7_s8y11"]
+[ext_resource type="PackedScene" uid="uid://dv14y8ppy7jy5" path="res://assets/models/trash.tscn" id="8_7tjyf"]
+[ext_resource type="PackedScene" uid="uid://6c6uwu7ip5h" path="res://assets/models/bin_bag.tscn" id="9_0mf82"]
+
+[node name="Main" type="Node"]
+
+[node name="Menus" type="Node" parent="."]
+
+[node name="MainMenu" parent="Menus" instance=ExtResource("1_p3mxv")]
+
+[node name="OptionMenu" parent="Menus" instance=ExtResource("2_s0e3b")]
+
+[node name="Inventory_Gestion" parent="Menus" instance=ExtResource("3_grpvx")]
+
+[node name="Map" parent="." instance=ExtResource("1_7b4si")]
+
+[node name="Player" parent="." instance=ExtResource("5_e0f0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 396.144, 44.3898, 564.566)
+
+[node name="Roger" parent="." instance=ExtResource("6_52vwr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 399.3, 45.3941, 565.188)
+
+[node name="spawn area" parent="." instance=ExtResource("7_s8y11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 397.872, 48.9066, 562.977)
+object_scene = ExtResource("8_7tjyf")
+
+[node name="bin bag" parent="." instance=ExtResource("9_0mf82")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 398.338, 45.0605, 563.756)
