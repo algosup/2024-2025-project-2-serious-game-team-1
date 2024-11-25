@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8ca0tb6jpb1b"]
+
+[ext_resource type="PackedScene" uid="uid://cltihntra8rax" path="res://assets/designs/UTM Fantasy/Logs.fbx" id="1_8hew8"]
+
+[node name="Logs" instance=ExtResource("1_8hew8")]

@@ -30,9 +30,11 @@ enabled=PackedStringArray("res://addons/dialogue_nodes/plugin.cfg", "res://addon
 
 folder_colors={
 "res://assets/designs/Farm Buildings by Quaternius/": "purple",
-"res://assets/designs/Free Shrubs Flowers and Mushrooms 3D Low Poly Pack-2/": "green",
+"res://assets/designs/Free Shrubs Flowers and Mushrooms 3D Low Poly Pack-2/": "red",
 "res://assets/designs/LowPolyNaturePackLite_FBX/": "yellow",
-"res://assets/designs/UTM Fantasy/": "teal"
+"res://assets/designs/Stylized_Nature/": "teal",
+"res://assets/designs/UTM Fantasy/": "teal",
+"res://assets/designs/tscn_design/": "pink"
 }
 
 [input]

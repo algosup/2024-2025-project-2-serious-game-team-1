@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://do8i0p2moxir8"]
-
-[ext_resource type="PackedScene" uid="uid://bs4onaa2tlfx0" path="res://assets/designs/House.glb" id="1_mb1tm"]
-
-[node name="Root Scene" instance=ExtResource("1_mb1tm")]

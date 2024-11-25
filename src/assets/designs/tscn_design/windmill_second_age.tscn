@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://et2daytmjp35"]
+
+[ext_resource type="PackedScene" uid="uid://dpd6na3fqf7ct" path="res://assets/designs/UTM Fantasy/Windmill_SecondAge.fbx" id="1_toyq5"]
+
+[node name="Windmill_SecondAge" instance=ExtResource("1_toyq5")]

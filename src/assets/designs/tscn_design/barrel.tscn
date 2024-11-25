@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://blrkwih1bjjib"]
+
+[ext_resource type="PackedScene" uid="uid://bestm0lp4fncb" path="res://assets/designs/UTM Fantasy/Barrel.fbx" id="1_di1hv"]
+
+[node name="Barrel" instance=ExtResource("1_di1hv")]

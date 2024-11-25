@@ -10,7 +10,7 @@ extends EditorPlugin
 ##var editorAddon=preload("res://addons/testplugin/objectPlacer.tscn")
 #var dockedScene
 @onready var list_of_Resources:ItemList
-@onready var directoryPath = "res://assets/designs/UTM Fantasy/"
+@onready var directoryPath = "res://assets/designs/tscn_design/"
 @onready var extension_tscn = "tscn"
 @onready var extension_blend= "blend"
 @onready var sceens_tscn=[]

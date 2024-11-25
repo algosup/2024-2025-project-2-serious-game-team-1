@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bucucs4stggt8"]
+
+[ext_resource type="PackedScene" uid="uid://c5reuy4d60n61" path="res://assets/designs/UTM Fantasy/Market_SecondAge_Level1.fbx" id="1_fodyd"]
+
+[node name="Market_SecondAge_Level1" instance=ExtResource("1_fodyd")]

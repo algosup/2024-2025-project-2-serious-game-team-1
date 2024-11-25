@@ -16,6 +16,7 @@ radius = 0.2
 height = 0.5
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_lsqiy"]
+radius = 0.3
 height = 1.5
 
 [node name="Player" type="CharacterBody3D"]
@@ -23,12 +24,11 @@ collision_layer = 2
 script = ExtResource("1_kxglq")
 
 [node name="CameraManager" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.345658, 0)
 script = ExtResource("2_xl5pu")
 
 [node name="Arm" type="SpringArm3D" parent="CameraManager"]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 1.78897, -0.296767)
+transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 0.789, -0.297)
 shape = SubResource("SphereShape3D_smq6u")
 spring_length = 0.0
 
@@ -41,21 +41,19 @@ far = 16384.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 2.98023e-08, 1, 0, 0, 0)
 
 [node name="CollisionShapeBody" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_lwhhq")
 
 [node name="CollisionShapeRay" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 shape = SubResource("SeparationRayShape3D_twc2s")
 
 [node name="Body" type="Node3D" parent="."]
 
 [node name="Head" type="MeshInstance3D" parent="Body"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.94512, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.945, 0)
 mesh = SubResource("SphereMesh_grsci")
 skeleton = NodePath("../Body")
 
 [node name="Body" type="MeshInstance3D" parent="Body"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_lsqiy")
 skeleton = NodePath("../..")
