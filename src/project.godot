@@ -17,11 +17,11 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Zones="*res://scripts/zones.gd"
 EcoFollow="*res://scripts/eco_follow.gd"
 DialogManager="*res://scripts/dialog_manager.gd"
 QuestList="*res://scripts/quest_list.gd"
 Variable="*res://scripts/Variable.gd"
+Zones="*res://scripts/zones.gd"
 
 [display]
 
