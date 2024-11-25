@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c7grp6rev45qv" path="res://assets/ui/main_menu.tscn" id="1_p3mxv"]
 [ext_resource type="PackedScene" uid="uid://b31wjwnn4gip3" path="res://assets/ui/option_menu.tscn" id="2_s0e3b"]
 [ext_resource type="PackedScene" uid="uid://f51858rkgwej" path="res://assets/ui/inventory.tscn" id="3_grpvx"]
-[ext_resource type="PackedScene" uid="uid://domhm87hbhbg1" path="res://assets/models/Player.tscn" id="5_e0f0u"]
+[ext_resource type="PackedScene" uid="uid://domhm87hbhbg1" path="res://demo/components/Player.tscn" id="5_e0f0u"]
 [ext_resource type="PackedScene" uid="uid://bchj68adctaws" path="res://assets/models/roger.tscn" id="6_52vwr"]
 [ext_resource type="PackedScene" uid="uid://umm5fxua0dmn" path="res://assets/models/spawn_area.tscn" id="7_s8y11"]
 [ext_resource type="PackedScene" uid="uid://dv14y8ppy7jy5" path="res://assets/models/trash.tscn" id="8_7tjyf"]
@@ -23,6 +23,7 @@
 [node name="Map" parent="." instance=ExtResource("1_7b4si")]
 
 [node name="Player" parent="." instance=ExtResource("5_e0f0u")]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 396.144, 44.3898, 564.566)
 
 [node name="Roger" parent="." instance=ExtResource("6_52vwr")]
