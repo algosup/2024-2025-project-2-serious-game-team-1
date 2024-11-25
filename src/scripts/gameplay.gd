@@ -13,6 +13,7 @@ extends Node
 @onready var spawn_area: Node3D = $"Gameplay/spawn area"
 @onready var bin_bag: Item_Object = $"Gameplay/bin bag"
 @onready var player: CharacterBody3D = $Gameplay/Player
+@onready var pause_menu: Control = $Menus/pause_menu
 
 
 func _ready() -> void:
@@ -32,3 +33,11 @@ func _process(_delta):
 			inventory_gestion.CloseInventory()
 		else:
 			inventory_gestion.OpenInventory()
+	if Input.is_action_just_pressed("escape"):
+		if Variable.InventoryOpen:
+			inventory_gestion.CloseInventory()
+		else:
+			if Variable.PlayMenuOpen:
+				pause_menu.resume_game()
+			else:
+				pause_menu.pause_game()
