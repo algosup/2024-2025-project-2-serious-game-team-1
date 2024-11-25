@@ -9,7 +9,7 @@ var MouseCapture = false
 var current_scene = ""
 var MainMenu_path = "res://scenes/main_menu.tscn"
 var OptionMenu_path = "res://scenes/option_menu.tscn"
-var Gameplay_path = "res://scenes/game_play.tscn"
+var Gameplay_path = "res://assets/map/map.tscn"
 
 var VolumeList : Array = ["master", "music", "sound effect", "dialogue"]
 var ChangeVolume : bool = false
