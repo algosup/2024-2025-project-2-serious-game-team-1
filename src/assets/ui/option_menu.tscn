@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://b31wjwnn4gip3"]
 
 [ext_resource type="Script" path="res://scripts/option_menu.gd" id="1_4tu4t"]
-[ext_resource type="PackedScene" uid="uid://b773i7emdfrop" path="res://scenes/volume_manager.tscn" id="2_4vjif"]
-[ext_resource type="PackedScene" uid="uid://r4mh0k01hbms" path="res://scenes/key_change.tscn" id="2_ufot1"]
+[ext_resource type="PackedScene" uid="uid://b773i7emdfrop" path="res://assets/ui/volume_manager.tscn" id="2_4vjif"]
+[ext_resource type="PackedScene" uid="uid://r4mh0k01hbms" path="res://assets/ui/key_change.tscn" id="2_ufot1"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_r27m1"]
 color = Color(0, 0, 0, 0)
