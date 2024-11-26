@@ -10,6 +10,7 @@ script = ExtResource("1_h7cgk")
 [node name="TitleLabel" type="Label" parent="."]
 custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
+theme_override_font_sizes/font_size = 20
 text = "     Camera speed"
 vertical_alignment = 1
 
