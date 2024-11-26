@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b31wjwnn4gip3"]
+[gd_scene load_steps=6 format=3 uid="uid://b31wjwnn4gip3"]
 
 [ext_resource type="Script" path="res://scripts/option_menu.gd" id="1_4tu4t"]
 [ext_resource type="PackedScene" uid="uid://b773i7emdfrop" path="res://assets/ui/volume_manager.tscn" id="2_4vjif"]
 [ext_resource type="PackedScene" uid="uid://r4mh0k01hbms" path="res://assets/ui/key_change.tscn" id="2_ufot1"]
+[ext_resource type="PackedScene" uid="uid://66c53np0o6ct" path="res://assets/ui/mouse_sensitivity.tscn" id="3_ugiug"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_r27m1"]
 color = Color(0, 0, 0, 0)
@@ -62,9 +63,10 @@ text = "Go Back"
 
 [node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-current_tab = 0
+current_tab = 2
 
 [node name="Sound" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
+visible = false
 custom_minimum_size = Vector2(0, 500)
 layout_mode = 2
 metadata/_tab_index = 0
@@ -122,7 +124,6 @@ text = "Scale :"
 layout_mode = 2
 
 [node name="Controls" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
-visible = false
 custom_minimum_size = Vector2(0, 600)
 layout_mode = 2
 metadata/_tab_index = 2
@@ -137,6 +138,9 @@ layout_mode = 2
 theme_override_constants/separation = 60
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Mouse_sensitivity" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer" instance=ExtResource("3_ugiug")]
 layout_mode = 2
 
 [node name="KeyChange" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer" instance=ExtResource("2_ufot1")]

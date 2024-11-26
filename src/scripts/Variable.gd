@@ -14,7 +14,7 @@ var VolumeList : Array = ["master", "music", "sound effect", "dialogue"]
 var ChangeVolume : bool = false
 var min_size = Vector2i(1152, 648)
 var current_size = DisplayServer.window_get_size()
-
+var speed_multiplicator = 1
 
 
 func GoBack():

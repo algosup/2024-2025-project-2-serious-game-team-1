@@ -22,6 +22,7 @@ func pnj_talk():
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		player.movelock = true
 		player.camera_manager.CameraLock = true
+		
 		print(player.camera_manager.CameraLock)
 		$CanvasLayer/DialogueBox.start()
 		
