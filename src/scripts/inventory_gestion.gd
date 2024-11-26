@@ -54,16 +54,16 @@ func OpenInventory():
 	print("Open Inventory")
 	Variable.InventoryOpen = !Variable.InventoryOpen
 	$".".show()
-	player.movelock = true
-	player.camera_manager.CameraLock = true
+	Variable.movelock = true
+	Variable.cameralock = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func CloseInventory():
 	print("Close Inventory")
 	Variable.InventoryOpen = !Variable.InventoryOpen
 	$".".hide()
-	player.movelock = false
-	player.camera_manager.CameraLock = false
+	Variable.movelock = false
+	Variable.cameralock = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func set_description(item : Item_Ressource):

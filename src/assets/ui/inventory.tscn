@@ -1,10 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://f51858rkgwej"]
+[gd_scene load_steps=9 format=3 uid="uid://f51858rkgwej"]
 
 [ext_resource type="Texture2D" uid="uid://bg85v4vpbk8n5" path="res://assets/images/WaintingBackground.jpg" id="1_81syd"]
 [ext_resource type="Script" path="res://scripts/inventory_gestion.gd" id="1_ya1uh"]
+[ext_resource type="Shader" path="res://assets/ui/shaders/ui_back_shader.gdshader" id="2_mbe0i"]
 [ext_resource type="PackedScene" uid="uid://cekaafpjb52lv" path="res://assets/ui/slot.tscn" id="3_5tgj7"]
 [ext_resource type="Texture2D" uid="uid://i2kndroy583y" path="res://assets/images/inventory_slot_background.png" id="3_vrw3m"]
 [ext_resource type="Resource" uid="uid://c1flp4su10cpp" path="res://assets/items/bin_bag.tres" id="4_m3tql"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k8wb5"]
+shader = ExtResource("2_mbe0i")
+shader_parameter/blur_radius = 4.0
+shader_parameter/samples = 8
+shader_parameter/darken_factor = 0.75
 
 [sub_resource type="LabelSettings" id="LabelSettings_saide"]
 font_size = 40
@@ -17,6 +24,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ya1uh")
+
+[node name="Panel" type="Panel" parent="."]
+material = SubResource("ShaderMaterial_k8wb5")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Inventory" type="NinePatchRect" parent="."]
 custom_minimum_size = Vector2(335, 212)

@@ -1,6 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwnfc1y2ijtef"]
+[gd_scene load_steps=6 format=3 uid="uid://bwnfc1y2ijtef"]
 
 [ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_fvwsy"]
+[ext_resource type="Shader" path="res://assets/ui/shaders/ui_back_shader.gdshader" id="2_5uufm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ecu4a"]
+shader = ExtResource("2_5uufm")
+shader_parameter/blur_radius = 4.0
+shader_parameter/samples = 8
+shader_parameter/darken_factor = 0.75
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_75bas"]
 color = Color(0, 0, 0, 0)
@@ -17,45 +24,55 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fvwsy")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_ecu4a")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -44.0
-offset_top = -24.0
-offset_right = 44.0
-offset_bottom = 24.0
+offset_left = -71.0
+offset_top = -113.0
+offset_right = 71.0
+offset_bottom = 113.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="resume_button" type="Button" parent="VBoxContainer"]
+[node name="resume_button" type="Button" parent="CanvasLayer/VBoxContainer"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 text = "Resume Game"
 
-[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 30
 theme_override_styles/separator = SubResource("StyleBoxLine_75bas")
 
-[node name="option_menu" type="Button" parent="VBoxContainer"]
+[node name="option_menu" type="Button" parent="CanvasLayer/VBoxContainer"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 text = "Option Menu"
 
-[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+[node name="HSeparator2" type="HSeparator" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 30
 theme_override_styles/separator = SubResource("StyleBoxLine_5w8xc")
 
-[node name="back_button" type="Button" parent="VBoxContainer"]
+[node name="back_button" type="Button" parent="CanvasLayer/VBoxContainer"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 text = "Go Back To Menu"
 
-[connection signal="pressed" from="VBoxContainer/resume_button" to="." method="_on_resume_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/option_menu" to="." method="_on_option_menu_pressed"]
-[connection signal="pressed" from="VBoxContainer/back_button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/resume_button" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/option_menu" to="." method="_on_option_menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/back_button" to="." method="_on_back_button_pressed"]
