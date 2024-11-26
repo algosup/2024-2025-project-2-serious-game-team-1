@@ -1,6 +1,5 @@
 extends Node
 
-var isPaused = true
 var InventoryOpen = false
 var PlayMenuOpen = false
 var PreviousScene: String = ""
