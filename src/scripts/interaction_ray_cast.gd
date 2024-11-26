@@ -28,3 +28,5 @@ func _physics_process(_delta: float) -> void:
 					prompt.text = collider.prompt_message  # Show the prompt message
 		else:
 			prompt.text = "    "
+	else:
+		prompt.text = "    "
