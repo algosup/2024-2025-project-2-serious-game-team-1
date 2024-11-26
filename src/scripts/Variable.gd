@@ -15,6 +15,8 @@ var ChangeVolume : bool = false
 var min_size = Vector2i(1152, 648)
 var current_size = DisplayServer.window_get_size()
 var speed_multiplicator = 1
+var cameralock = false
+var movelock = false
 
 
 func GoBack():
