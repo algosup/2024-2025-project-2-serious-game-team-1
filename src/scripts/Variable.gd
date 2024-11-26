@@ -23,7 +23,5 @@ func GoBack():
 	if PreviousScene == Gameplay_path:
 		PlayMenuOpen = true
 		InventoryOpen = false
-	get_tree().change_scene_to_file(PreviousScene)
-
-func option_game():
-	get_tree().change_scene_to_file(OptionMenu_path)
+		get_tree().change_scene_to_file("res://gameplay.tscn")
+	get_tree().change_scene_to_file("res://assets/ui/main_menu.tscn")
