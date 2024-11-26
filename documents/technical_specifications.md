@@ -463,7 +463,7 @@ func my_method():
     print("Length of the array: ", array_length)  # Display "5"
 ```
 
-The methods that can be used in Godot :
+Here are a few methods that can be used in Godot, you can see more [here](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html) :
 
 
 | **Type**  | **Method**  | 
@@ -573,6 +573,7 @@ Each zone needs to be delimited as it will be necessary to reuse this later in t
 
 
 ![alt text](./images/node_zone.png)
+
 ![alt text](./images/beach_area.png)
 
 ### Add assets
@@ -591,8 +592,7 @@ Each zone will have different assets (farms, houses, trees, etc.). All assets co
 
 A menu will be available, accessible by pressing the `esc` "escape" key. It will allow you to access all the settings (audio, graphics, keys, etc.), or quit the game.
 
-
-DESCRIPTION MAIN MENU 
+To create the menu we will use [this videos](https://www.youtube.com/watch?v=Z8jcjy_jZyk) in which we have all the characteristics.
 
 
 ### Inventory
@@ -604,12 +604,20 @@ An inventory will keep track of all the player's items and allow them to navigat
 From the main game screen, players can access a range of information : 
 
 - Maps : a mini-map will be displayed in the top right-hand corner of the screen to help players find their way around.
-  
+
+view point
+
 - Time : the time will be displayed below the mini-map, allowing the player to keep track of the time.
   
+24-minute timer equivalent to 24 hours
+
 - Reputation : A progress bar showing the reputation of the location the player is in will be placed at the top left.
   
+each quest takes xp
+
 - Quests : A list of quests will be placed below the player to inform them of the actions to be carried out.
+
+present the system
 
 #### Mini Maps
 #### Time
@@ -619,7 +627,7 @@ From the main game screen, players can access a range of information :
 ### Audio 
 
 
-
+future approvement 
 
 ## 4. Gameplay Testing and Balancing
 
