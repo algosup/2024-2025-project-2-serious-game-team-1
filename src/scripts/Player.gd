@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 	# Handle gravity
 	if gravity_enabled and not is_on_floor():
 		velocity.y -= 40 * delta
-	if !movelock:
+	if !Variable.movelock:
 		# Get input direction relative to the camera
 		var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 		var direction := (camera_manager.global_transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()

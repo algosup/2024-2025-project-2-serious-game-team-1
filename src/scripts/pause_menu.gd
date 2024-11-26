@@ -8,12 +8,9 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Variable.PlayMenuOpen:
 		$".".show()
-		if Variable.MouseCapture:
-			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	else:
 		$".".hide()
-		if not Variable.MouseCapture:
-			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		
 func OpenPlayMenu():
 	Variable.PlayMenuOpen = true
 func ClosePlayMenu():

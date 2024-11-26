@@ -19,11 +19,8 @@ func _ready() -> void:
 func pnj_talk():
 	if talking == false :
 		talking = true
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		player.movelock = true
-		player.camera_manager.CameraLock = true
-		
-		print(player.camera_manager.CameraLock)
+		Variable.movelock = true
+		Variable.cameralock = true
 		$CanvasLayer/DialogueBox.start()
 		
 
@@ -33,8 +30,8 @@ func _on_dialogue_box_dialogue_signal(value):
 		QuestList.add_to_questlog(self, name)
 	if value == 'end':
 		print('end')
-		player.movelock = false
-		player.camera_manager.CameraLock = false
+		Variable.movelock = false
+		Variable.cameralock = false
 		talking = false
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	print(str(value))
