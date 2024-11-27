@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0m3dsv7tsl6p"]
+
+[ext_resource type="PackedScene" uid="uid://ncgpwx12wwcp" path="res://assets/designs/Stylized_Nature/FBX/RockPath_Square_Small_1.fbx" id="1_41sy1"]
+
+[node name="RockPath_Square_Small_1" instance=ExtResource("1_41sy1")]
