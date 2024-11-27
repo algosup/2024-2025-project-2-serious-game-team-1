@@ -3,7 +3,7 @@ extends Control
 @onready var icon: TextureRect = $Inventory/Description/DescriptionBox/Header/Icon
 @onready var description_label: RichTextLabel = $Inventory/Description/DescriptionBox/DescriptionLabel
 @onready var name_label: Label = $Inventory/Description/DescriptionBox/Header/Name_Label
-@onready var player: CharacterBody3D = %Player
+
 
 @warning_ignore("shadowed_global_identifier")
 var Item : Item_Ressource
@@ -65,7 +65,9 @@ func CloseInventory():
 	Variable.movelock = false
 	Variable.cameralock = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
 
+	
 func set_description(item : Item_Ressource):
 	if name_label != null:
 		name_label.text = item.item_title

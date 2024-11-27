@@ -23,13 +23,12 @@ func set_item(value: Item):
 	print(item)
 
 func _on_mouse_entered():
+	print("Mouse entered slot 1")
 	if item != null:
 		base.set_description(item)
 
 func _get_drag_data(_at_position):
-
 	var preview_texture = TextureRect.new()
-
 	preview_texture.texture = texture
 	preview_texture.expand_mode = 1
 	preview_texture.size = Vector2(64,64)
@@ -38,17 +37,22 @@ func _get_drag_data(_at_position):
 	preview.preview_texture = preview_texture
 	preview.item_placeholder = item
 
+	print("Drag started with item: ", item)
+
 	set_drag_preview(preview.preview_texture)
 	texture = null
 	item = null
-	print(item)
-
 	return preview
 
 func _can_drop_data(_at_position, data):
+	print("Can drop data? ", data)
 	return data is ItemPreview
 
 func _drop_data(_at_position, data):
-	texture = data.preview_texture.texture
-	item = data.item_placeholder
-	print(item)
+	print("Dropped data: ", data)
+	if data is ItemPreview:
+		texture = data.preview_texture.texture
+		item = data.item_placeholder
+		print("Drop success! New item: ", item)
+	else:
+		print("Drop failed! Invalid data.")

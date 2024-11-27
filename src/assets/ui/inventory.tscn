@@ -17,6 +17,7 @@ shader_parameter/darken_factor = 0.75
 font_size = 40
 
 [node name="Inventory_Gestion" type="Control"]
+process_mode = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

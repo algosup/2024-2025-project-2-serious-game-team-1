@@ -16,14 +16,16 @@ func _ready() -> void:
 
 
 func _input(p_event: InputEvent) -> void:
-		if p_event is InputEventMouseMotion and Input.MOUSE_MODE_CAPTURED:
+	# Check if inventory is open before processing camera input
+	if not Variable.InventoryOpen: 
+		if p_event is InputEventMouseMotion and Input.MOUSE_MODE_CAPTURED and not Variable.InventoryOpen:
 			rotate_camera(p_event.relative)
 			get_viewport().set_input_as_handled()
-			return
+
 
 
 func rotate_camera(p_relative:Vector2) -> void:
-	if !Variable.cameralock :
+	if not Variable.cameralock :
 		_camera_yaw.rotation.y -= p_relative.x * (mouse_sensitivity * Variable.speed_multiplicator)
 		_camera_yaw.orthonormalize()
 		_camera_pitch.rotation.x += p_relative.y * (mouse_sensitivity * Variable.speed_multiplicator) * CAMERA_RATIO * mouse_y_inversion 

@@ -47,21 +47,3 @@ func _physics_process(delta: float) -> void:
 
 	# Movement
 	move_and_slide()
-
-func _input(event: InputEvent) -> void:
-	if !movelock:
-		if event is InputEventMouseMotion: 
-				rotation.y -= event.relative.x * ROTATION_SPEED
-				rotation.x -= event.relative.y * ROTATION_SPEED
-		if event is InputEventMouseButton and event.pressed:
-			if event.button_index == MOUSE_BUTTON_WHEEL_UP:
-				MOVE_SPEED = clamp(MOVE_SPEED + 5, 5, 9999)
-			elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-				MOVE_SPEED = clamp(MOVE_SPEED - 5, 5, 9999)
-
-	elif event is InputEventKey:
-		if event.pressed:
-			if event.keycode == KEY_G:
-				gravity_enabled = !gravity_enabled
-			elif event.keycode == KEY_C:
-				collision_enabled = !collision_enabled

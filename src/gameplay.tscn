@@ -13,14 +13,6 @@
 [node name="gameplay" type="Node"]
 script = ExtResource("1_hjvrf")
 
-[node name="Menus" type="Node" parent="."]
-
-[node name="Inventory_Gestion" parent="Menus" instance=ExtResource("3_grpvx")]
-process_mode = 1
-
-[node name="pause_menu" parent="Menus" instance=ExtResource("3_75tor")]
-process_mode = 3
-
 [node name="Gameplay" type="Node" parent="."]
 process_mode = 1
 
@@ -40,3 +32,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 398.338, 45.0605, 563.756)
 unique_name_in_owner = true
 process_mode = 1
 transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941, 394.357, 45.5094, 567.677)
+
+[node name="Menus" type="Node" parent="."]
+
+[node name="pause_menu" parent="Menus" instance=ExtResource("3_75tor")]
+process_mode = 3
+
+[node name="Inventory_Gestion" parent="Menus" instance=ExtResource("3_grpvx")]
+unique_name_in_owner = true

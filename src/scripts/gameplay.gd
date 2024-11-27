@@ -3,7 +3,7 @@ extends Node
 #Menus
 @onready var menus: Node = $Menus
 #Menus & UI Loading nodes
-@onready var inventory_gestion: Control = $Menus/Inventory_Gestion
+@onready var inventory_gestion: Control = %Inventory_Gestion
 
 #Game Play
 @onready var gameplay: Node = $Gameplay
@@ -12,7 +12,8 @@ extends Node
 @onready var roger: Pnj = $Gameplay/Roger
 @onready var spawn_area: Node3D = $"Gameplay/spawn area"
 @onready var bin_bag: Item_Object = $"Gameplay/bin bag"
-@onready var player: CharacterBody3D = $Gameplay/Player
+@onready var player: CharacterBody3D = %Player
+
 @onready var pause_menu: Control = $Menus/pause_menu
 
 
