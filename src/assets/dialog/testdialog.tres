@@ -64,7 +64,7 @@ Trying to lay down on our humble beach?",
 "options": {
 0: {
 "condition": {},
-"link": &"3_1",
+"link": &"3_4",
 "text": ""
 }
 },
@@ -73,18 +73,23 @@ Trying to lay down on our humble beach?",
 },
 "3_1": {
 "link": &"3_2",
-"offset": Vector2(1869.12, -301.04),
+"offset": Vector2(2100, -380),
 "signalValue": "quest"
 },
 "3_2": {
 "link": "END",
-"offset": Vector2(2276.2, -198.24),
+"offset": Vector2(2340, -260),
 "signalValue": "end"
 },
 "3_3": {
 "link": "END",
 "offset": Vector2(846.897, 266.619),
 "signalValue": "end"
+},
+"3_4": {
+"link": &"3_1",
+"offset": Vector2(1760, -360),
+"signalValue": "1"
 },
 "5_1": {
 "false": "END",

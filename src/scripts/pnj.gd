@@ -25,13 +25,19 @@ func pnj_talk():
 		
 
 func _on_dialogue_box_dialogue_signal(value):
+	var quest_id : String
 	if value == 'quest':
 		queststarted = true
-		QuestList.add_to_questlog(self, name)
+		if len(AllDictionary.Quest_Log["active_quests"])<3:
+			AllDictionary.Quest_Log["active_quests"].append(AllDictionary.Quest_List[quest_id])
+		else:
+			print("You cannot have more quests")
 	if value == 'end':
 		print('end')
 		Variable.movelock = false
 		Variable.cameralock = false
 		talking = false
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	else:
+		quest_id = value
 	print(str(value))

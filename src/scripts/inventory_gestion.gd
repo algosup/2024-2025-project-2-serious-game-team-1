@@ -10,13 +10,6 @@ var Item : Item_Ressource
 
 var inventorySize : int = 20
 
-var inventory : Array[Item_Ressource] = [
-	AllDictionary.Item_List["1"], null, null, null, null,
-	null, null, null, null, null,
-	null, null, null, null, null,
-	null, null, null, null, null
-]
-
 @onready var slot_01: TextureRect = $Inventory/GridInventory/Slot1
 @onready var slot_02: TextureRect = $Inventory/GridInventory/Slot2
 @onready var slot_03: TextureRect = $Inventory/GridInventory/Slot3
@@ -45,11 +38,6 @@ var inventory : Array[Item_Ressource] = [
 	slot_16, slot_17, slot_18, slot_19, slot_20,
 ]
 
-func _process(_delta):
-	for i in range(inventorySize):
-		slots[i] = inventory[i]
-
-
 func OpenInventory():
 	print("Open Inventory")
 	Variable.InventoryOpen = !Variable.InventoryOpen
@@ -65,9 +53,7 @@ func CloseInventory():
 	Variable.movelock = false
 	Variable.cameralock = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	
 
-	
 func set_description(item : Item_Ressource):
 	if name_label != null:
 		name_label.text = item.item_title
