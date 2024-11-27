@@ -14,7 +14,7 @@
 
 ---
 
-### *Last Update on November 22th, 2024*
+### *Last Update on November 28th, 2024*
 
 ![alt text](./images/Godot_Logo-1.png)
 
@@ -23,7 +23,7 @@
 <summary><h3> Table of Contents </h3></summary>
 
 - [**Technical Specifications - 2024-2025-project-2-serious-game-team-1**](#technical-specifications---2024-2025-project-2-serious-game-team-1)
-    - [*Last Update on November 22th, 2024*](#last-update-on-november-22th-2024)
+    - [*Last Update on November 28th, 2024*](#last-update-on-november-28th-2024)
 - [Introduction](#introduction)
   - [Audience](#audience)
   - [Overview](#overview)
@@ -90,13 +90,12 @@
       - [Mini Maps](#mini-maps)
       - [Time](#time)
       - [Reputation](#reputation)
-    - [Quests](#quests)
+      - [Quests Panel](#quests-panel)
   - [4. Others features](#4-others-features)
     - [Audio](#audio)
     - [Dialogue](#dialogue-1)
-    - [Quest Menu](#quest-menu)
     - [Interaction Quest \& Player](#interaction-quest--player)
-  - [5. Gameplay testing and correction](#5-gameplay-testing-and-correction)
+  - [5. Gameplay testing](#5-gameplay-testing)
   - [6. Final phase and launch](#6-final-phase-and-launch)
 
 
@@ -152,6 +151,7 @@ ALGOSUP's school commissioned us to create a serious game on GODOT Game Engine.
 | **UI**         | A User Interface is the set of visual elements that enable the user to interact with an application or game |
 | **WIP**        | Work In Progress |
 | **.glTF**        | The .glTF format is an open, standardised file format designed for the efficient and compact exchange of 3D models |
+| **.json**        | A .json file is a lightweight, human-readable data format used to store and exchange information |
 
 
 
@@ -334,7 +334,7 @@ This folder contains all the files relating to the game's user interfaces and th
 
 #### Desktop or laptop PC - Recommended [(More here)](https://docs.godotengine.org/en/stable/about/system_requirements.html#id3 "Permalink to this headline")
 
-To edit and export to Godot Engine you need a desktop or laptop computer with the following minimum power : 
+To edit and export to Godot Engine we need a desktop or laptop computer with the following minimum power : 
 
 
 | **CPU**              | - _Example: Intel Core i5-6600K, AMD Ryzen 5 1600, Apple M1_, Raspberry Pi 5 with overclocking |
@@ -371,12 +371,12 @@ Nodes can be organized in a hierarchical structure as children of other nodes, c
 
 A Scene is a group of nodes organized to create a functional game element, such as a character, a user interface, or a complete level. A scene can contain multiple nodes, arranged in a hierarchy to form a logical structure. The advantage of this system is that each scene can be reused, combined with others, or instantiated multiple times to create repetitive or modular elements in the game.
 
-For example, you can create:
+For example, we can create:
 
 - a scene for a level,
 - a scene for a player character (with nodes for the sprite, animations, collisions, etc.),
 - a scene for the user interface (UI).
-Each scene can be saved as a file and imported into other scenes. This system makes development modular and allows you to work on individual elements of the game without affecting the entire project.
+Each scene can be saved as a file and imported into other scenes. This system makes development modular and allows us to work on individual elements of the game without affecting the entire project.
 
 
 
@@ -516,16 +516,16 @@ Annotations in Godot allow to enhance the functionality of your scripts by expos
 
 ### Godot architecture 
 
-To get started, you need to create a set of nodes. They are the basic building blocks of the game in Godot, and their hierarchical organisation allows you to create a complex project in a simple and modular way.
+To get started, we need to create a set of nodes. They are the basic building blocks of the game in Godot, and their hierarchical organisation allows us to create a complex project in a simple and modular way.
 
-So you need to create all the nodes needed for the game: a main node that will host the game, sub-nodes that will classify all the nodes, and finally nodes such as the game inventory.
+So we need to create all the nodes needed for the game: a main node that will host the game, sub-nodes that will classify all the nodes, and finally nodes such as the game inventory.
 
 ![alt text](./images/node_architecture1.png)
 
 
 ### Perspective
 
-The game is in 3D, as we felt it was better suited to our case and our atmosphere. This will allow greater flexibility in creating interactive and dynamic game elements.
+The game is in 3D, as we felt it was better suited to our case and our atmosphere. This will allow greater flexibility in creating interactive and dynamic game elements. So we will use 3D node and work in 3 dimensions.
 
 ### Game aspects
 
@@ -533,9 +533,9 @@ The game is in 3D, as we felt it was better suited to our case and our atmospher
 
 The following movements will be included in the game:
 
-To assign keys, it's simple in Godot, you need to in the general panel go to Project -> Project Settings -> Input Map. 
+To assign keys, it's simple in Godot, we need to in the general panel go to Project -> Project Settings -> Input Map. 
 
-Then all you have to do is add your keys and link them to their actions.
+Then all we have to do is add your keys and link them to their actions.
 
 ![alt text](./images/Godot_key.png)
 
@@ -589,7 +589,7 @@ Each zone will have different assets (farms, houses, trees, etc.). All assets co
 
 #### Main Menu
 
-A menu will be available, accessible by pressing the `esc` "escape" key. It will allow you to access all the settings (audio, graphics, keys, etc.), or quit the game.
+A menu will be available, accessible by pressing the `esc` "escape" key. It will allow us to access all the settings (audio, graphics, keys, etc.), or quit the game.
 
 To create the menu we will use [this videos](https://www.youtube.com/watch?v=Z8jcjy_jZyk) in which we have all the characteristics.
 
@@ -622,70 +622,165 @@ To create the mini The mini maps consist of creating another point of life for t
 
 The time will be displayed below the mini-map, allowing the player to keep track of the time.
   
-24-minute timer equivalent to 24 hours
+The timer will be based on a clock of 24 minutes equivalent to 24 hours and will represent the real life cycle.
 
+```
+extends Node
 
+# Variables for the clock
+var hours = 0        # Initial hours (0-23)
+var minutes = 0      # Initial minutes (0-59)
+var seconds = 0      # Seconds (optional)
+
+const GAME_SECONDS_PER_REAL_SECOND = 60  # 1 real-world second = 1 in-game minute
+
+var elapsed_time = 0.0  # Time elapsed since the start
+
+func _process(delta):
+    # Add the elapsed time
+    elapsed_time += delta * GAME_SECONDS_PER_REAL_SECOND
+
+    # Convert to hours, minutes, and seconds
+    seconds = int(elapsed_time) % 60
+    minutes = int(elapsed_time / 60) % 60
+    hours = int(elapsed_time / 3600) % 24
+
+    # Debug print to display the time
+    print("Clock: %02d:%02d:%02d" % [hours, minutes, seconds])
+
+```
 #### Reputation
 
 A progress bar showing the reputation of the location the player is in will be placed at the top left.
   
-each quest takes xp
+Reputation will grow as the player gains xp for each quest. It also decreases if there is a period of inactivity.
+
+| **XP gained** (per completed task) | **Reputation Gain** | **Reputation Loss** (per period of inactivity) | **Inactivity period before loss** | **Max Reputation** | **Min Reputation** |
+|----|----|-----|--------------|-----|---|
+| 10 | +2 | -1  | 120 seconds  | 100 | 0 |
+
   
-### Quests 
-
-present the system to create a quests
-
-## 4. Others features 
-
-quests log, interaction between quests and player, audio dialogue 
-
-### Audio 
-
-![alt text](./images/Audio_panel.png)
-
-### Dialogue
-
-future approvement 
-
-![alt text](./images/Quests_interaction.png)
-
-### Quest Menu 
+#### Quests Panel 
 
 A list of quests will be placed below the player to inform them of the actions to be carried out.
 
+We need to create a quest dictionary where all the names and actions are listed for each quest. 
+
+![alt text](./images/Quest_scheme.png)
+
+```
+extends Panel
+
+onready var quest_container = $VBoxContainer
+
+var quests = []  # List of quests
+
+func _ready():
+    load_quests()
+    display_quests()
+
+func load_quests():
+    # Load quests from a JSON file or another source
+    var file = File.new()
+    if file.open("res://quests.json", File.READ) == OK:
+        quests = JSON.parse(file.get_as_text()).result
+        file.close()
+
+func display_quests():
+    # Clear existing quests in the UI
+    quest_container.clear_children()
+    
+    # Add each quest to the list
+    for quest in quests:
+        var quest_label = Label.new()
+        quest_label.text = "[b]" + quest["title"] + "[/b]\n" + quest["description"]
+        quest_label.bbcode_enabled = true
+        quest_container.add_child(quest_label)
+
+# Add a quest (to be called when the player accepts a new quest)
+func add_quest(title, description):
+    quests.append({"title": title, "description": description})
+    display_quests()
+
+# Mark a quest as completed
+func complete_quest(title):
+    quests = quests.filter(func(q): return q.title != title)
+    display_quests()
+```
+
+## 4. Others features 
+
+- Add interaction between quests and the player,  all audio and dialogue. 
+
+### Audio 
+
+Audio is essential to the game's appeal, whether as background sounds or in connection with interactions.
+
+Then we can mix the audio using a control panel in the middle of the main Godot interface and select "Audio".
+
+![alt text](./images/Audio_panel.png)
+
+Finally we can play the sound as follows : 
+
+```
+var sound = preload("res://sounds/your_sound.ogg")
+$AudioStreamPlayer.stream = sound
+
+```
+
+
+### Dialogue
+
+Dialogue is important for creating more immersion for players. 
+
+
+First of all, we need to add a new node to house all the dialogue. Then we need to put all the fihciers in a .json file. 
+
+Finally, we can play the dialogues as follows : 
+
+```
+extends Control
+
+var dialogues = []
+var current_index = 0
+
+onready var dialogue_label = $CanvasLayer/Panel/DialogueLabel
+
+func _ready():
+    # Load dialogues from a JSON file
+    var file = File.new()
+    // Importing JSON into the game
+    if file.open("res://dialogues.json", File.READ) == OK:
+        dialogues = JSON.parse(file.get_as_text()).result
+        file.close()
+    
+    # Start the dialogue
+    show_dialogue()
+
+func show_dialogue():
+    if current_index < dialogues.size():
+        var current_dialogue = dialogues[current_index]
+        dialogue_label.text = current_dialogue["character"] + ": " + current_dialogue["text"]
+        
+        # Play associated audio (if present)
+        if current_dialogue.has("audio"):
+            var audio_player = $AudioStreamPlayer
+            audio_player.stream = load(current_dialogue["audio"])
+            audio_player.play()
+    else:
+        # End of dialogue
+        hide_dialogue()
+
+func next_dialogue():
+    current_index += 1
+    show_dialogue()
+
+func hide_dialogue():
+    $CanvasLayer/Panel.visible = false
+```
+
 
 ### Interaction Quest & Player
-
-
-[create interaction](https://www.youtube.com/watch?v=QKdyUBjzPmk)
-
-## 5. Gameplay testing and correction
-
-- Testing : Check the fluidity of the game, test basic interactions and the task system.
-
-run game, excecute qa test 
-
-  
-- User feedback : Gather feedback from testers on the understanding and difficulty of the educational tasks.
-
-use feedback to resolve issues 
-
-- Debugging : Fix bugs and improve game stability.
-
-use consol to debug problems
-
-![alt text](./images/terminal_godot.png)
-
-## 6. Final phase and launch
-
-- Export : Bring the game to life by creating its executable file.
-
-![alt text](./images/export.png)
-![alt text](./images/export_2.png)
-
----
-
-
 
 ```GDScript
 extends CollisionObject3D
@@ -703,39 +798,31 @@ func interact(body):
 	print(body.name, " interacted with ", name)
 ```
 
+[create interaction](https://www.youtube.com/watch?v=QKdyUBjzPmk)
 
-```GDScript
-extends RayCast3D
-@onready var prompt: Label = $Prompt
-func _physics_process(_delta: float) -> void:
-	if is_colliding():
-		var collider = get_collider()
-		
-		if collider is Interactable:
-			prompt.text = collider.get_prompt()
-			
-			if Input.is_action_just_pressed("interaction"):
-				print("Interacted with:", collider)
-				
-				if collider.is_in_group("item") and collider is Item_Object:
-					# Add item to inventory if necessary
-					collider.interact(owner)
-				if collider.is_in_group("pnj") and collider is Pnj:
-					if DialogManager.dialog(collider):
-						print("Entered dialog with " + str(collider))
-					collider.interact(owner)
-					
-				if collider.is_in_group("waste"):
-					print("Waste object detected.")  # Debug: Waste object is detected
-					collider.cleanup()  # Call cleanup if Waste
-					prompt.text = collider.prompt_message  # Show the prompt message
-		else:
-			prompt.text = "    "
-	else:
-		prompt.text = "    "
-```
+## 5. Gameplay testing 
 
-extends Interactable <------------ Extends become class
+- Debugging : Fix bugs and improve game stability.
 
-class_name Pnj <------- child class to identify NPCs
+To resolve problems and bugs, we can use Godot's terminal. The terminal displays debugging logs, which can help us spot errors or unexpected behaviour in your game. It also displays syntax errors, warnings and other useful information during development.
+
+![alt text](./images/terminal_godot.png)
+
+
+## 6. Final phase and launch
+
+- Export : Bring the game to life by creating its executable file.
+
+Once the game is finished, it's time to export it. 
+
+We simply need to go to the menu: Project -> Export -> Add (choose the platform we want to use here Windows Desktop or macOS), then add all the necessary parameters and export the project.
+
+![alt text](./images/export.png)
+![alt text](./images/export_2.png)
+
+---
+
+
+
+
 
