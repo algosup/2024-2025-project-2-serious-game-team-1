@@ -78,24 +78,26 @@
     - [Game aspects](#game-aspects)
       - [Movements](#movements)
   - [2. Development of the Map](#2-development-of-the-map)
-    - [The base of Map](#the-base-of-map)
-    - [Texture for each zone](#texture-for-each-zone)
-    - [Zone delimitation](#zone-delimitation)
-    - [Add assets](#add-assets)
+    - [Map Foundation](#map-foundation)
+    - [Zone Texture](#zone-texture)
+    - [Zone Delimitation](#zone-delimitation)
+    - [Add Assets](#add-assets)
   - [3. Game mechanics integration](#3-game-mechanics-integration)
-    - [User interface](#user-interface)
-      - [Main menu](#main-menu)
+    - [User Interface](#user-interface)
+      - [Main Menu](#main-menu)
     - [Inventory](#inventory)
     - [HUD](#hud)
       - [Mini Maps](#mini-maps)
       - [Time](#time)
       - [Reputation](#reputation)
-      - [Quests](#quests)
+    - [Quests](#quests)
+  - [4. Others features](#4-others-features)
     - [Audio](#audio)
-  - [4. Gameplay Testing and Balancing](#4-gameplay-testing-and-balancing)
-  - [5. Optimisation and Correction](#5-optimisation-and-correction)
-  - [6. Implementing Educational and Narrative System](#6-implementing-educational-and-narrative-system)
-  - [7. Final Phase and Launch](#7-final-phase-and-launch)
+    - [Dialogue](#dialogue-1)
+    - [Quest Menu](#quest-menu)
+    - [Interaction Quest \& Player](#interaction-quest--player)
+  - [5. Gameplay testing and correction](#5-gameplay-testing-and-correction)
+  - [6. Final phase and launch](#6-final-phase-and-launch)
 
 
 </details>
@@ -553,21 +555,20 @@ Players can move in four directions (up, down, left, right), jump and sprint usi
 
 - Zone : Model each zone (town, beach), delimit zone, add textures and assets.
 
-
-### The base of Map
+### Map Foundation
 
 First of all, to create the map we need to add the foundations, the base. The 3D terrain should include a raised area representing the mountain, a slope down to the water representing the beach and four other flatter areas representing the farm, the town, the forest and the port. 
 
 To create the terrain we will use these videos in which all the characteristics for [the formation of the relief](https://www.youtube.com/watch?v=oV8c9alXVwU&t=68s), [the addition of water](https://www.youtube.com/watch?v=jYVO0-_sXZs&t=603s).
 
 
-### Texture for each zone 
+### Zone Texture
 
 Each zone will have different textures to distinguish it from the others. We'll use the textures available [here](https://ambientcg.com/). To use them in godot, import them and then go to the middle panel, then 3D Terrain and finally Texture.
 
 ![alt text](./images/texture.png)
 
-### Zone delimitation
+### Zone Delimitation
 
 Each zone needs to be delimited as it will be necessary to reuse this later in the game. Indeed, quests and reputations will be assigned to each zone.To do this, you need to create nodes for each zone and delimit them.
 
@@ -576,86 +577,165 @@ Each zone needs to be delimited as it will be necessary to reuse this later in t
 
 ![alt text](./images/beach_area.png)
 
-### Add assets
+### Add Assets
 
 Each zone will have different assets (farms, houses, trees, etc.). All assets come from the same [source](https://poly.pizza/u/Quaternius). Import them into the "assets" folder and place them in the zone you want. 
 
 ## 3. Game mechanics integration
 
-- Create the User Interface
-- Action mechanics : Program actions between quests and players.
-- Quests and Objectives System : Integrate a quest manager to track and display tasks in real time.
+- Create the User Interface, add the HUD (Quests, Mini-Map, Time,...).
 
-### User interface
+### User Interface
 
-#### Main menu
+#### Main Menu
 
 A menu will be available, accessible by pressing the `esc` "escape" key. It will allow you to access all the settings (audio, graphics, keys, etc.), or quit the game.
 
 To create the menu we will use [this videos](https://www.youtube.com/watch?v=Z8jcjy_jZyk) in which we have all the characteristics.
 
+![alt text](./images/Main_menu.png)
+
+![alt text](./images/Menu_settings.png)
 
 ### Inventory
 
 An inventory will keep track of all the player's items and allow them to navigate between the items in their bag by pressing the `e` key . A drag-and-drop system will be used to create this system.
 
+To create the menu we will use these videos : [inventory](https://www.youtube.com/watch?v=7RXm0-TSJMw&t=764s&pp=ygUSZ29kb3Qga2V5IGJpbmRpbmdz) and [drag&drop](https://www.youtube.com/watch?v=8cV-5ByZLOE)  in which we have all the characteristics.
+
+
+![alt text](./images/Inventory_screen.png)
+
+
 ### HUD
 
 From the main game screen, players can access a range of information : 
 
-- Maps : a mini-map will be displayed in the top right-hand corner of the screen to help players find their way around.
 
-view point
+#### Mini Maps
 
-- Time : the time will be displayed below the mini-map, allowing the player to keep track of the time.
+A mini-map will be displayed in the top right-hand corner of the screen to help players find their way around.
+
+To create the mini The mini maps consist of creating another point of life for the player, but from above. 
+
+#### Time
+
+The time will be displayed below the mini-map, allowing the player to keep track of the time.
   
 24-minute timer equivalent to 24 hours
 
-- Reputation : A progress bar showing the reputation of the location the player is in will be placed at the top left.
+
+#### Reputation
+
+A progress bar showing the reputation of the location the player is in will be placed at the top left.
   
 each quest takes xp
+  
+### Quests 
 
-- Quests : A list of quests will be placed below the player to inform them of the actions to be carried out.
+present the system to create a quests
 
-present the system
+## 4. Others features 
 
-#### Mini Maps
-#### Time
-#### Reputation
-#### Quests 
+quests log, interaction between quests and player, audio dialogue 
 
 ### Audio 
 
+![alt text](./images/Audio_panel.png)
+
+### Dialogue
 
 future approvement 
 
-## 4. Gameplay Testing and Balancing
+![alt text](./images/Quests_interaction.png)
+
+### Quest Menu 
+
+A list of quests will be placed below the player to inform them of the actions to be carried out.
+
+
+### Interaction Quest & Player
+
+
+[create interaction](https://www.youtube.com/watch?v=QKdyUBjzPmk)
+
+## 5. Gameplay testing and correction
 
 - Testing : Check the fluidity of the game, test basic interactions and the task system.
+
+run game, excecute qa test 
+
   
 - User feedback : Gather feedback from testers on the understanding and difficulty of the educational tasks.
-  
-- Balancing: Adjust the difficulty of quests and the reputation of zones.
 
-## 5. Optimisation and Correction 
-
-- Performance : Optimise graphics, physics and interactions to ensure optimum fluidity.
+use feedback to resolve issues 
 
 - Debugging : Fix bugs and improve game stability.
 
+use consol to debug problems
 
-## 6. Implementing Educational and Narrative System 
+![alt text](./images/terminal_godot.png)
 
-- Learning Scenarios : Add relevant educational information integrated into the tasks.
-
-- Dynamic Storytelling : Include narrative elements such as dialogues or significant events to reinforce the message of the game.
-
-## 7. Final Phase and Launch
+## 6. Final phase and launch
 
 - Export : Bring the game to life by creating its executable file.
-  
-- Launch : Put the game online and monitor feedback for post-launch updates.
+
+![alt text](./images/export.png)
+![alt text](./images/export_2.png)
 
 ---
 
+
+
+```GDScript
+extends CollisionObject3D
+class_name Interactable
+@export var prompt_message = "Interact"
+func get_prompt():
+	var key_name = " "
+	for action in InputMap.action_get_events("interaction"):
+		if action is InputEventKey:
+			key_name = action.as_text_physical_keycode()
+			break
+			
+	return prompt_message + "\n[" + key_name + "]"
+func interact(body):
+	print(body.name, " interacted with ", name)
+```
+
+
+```GDScript
+extends RayCast3D
+@onready var prompt: Label = $Prompt
+func _physics_process(_delta: float) -> void:
+	if is_colliding():
+		var collider = get_collider()
+		
+		if collider is Interactable:
+			prompt.text = collider.get_prompt()
+			
+			if Input.is_action_just_pressed("interaction"):
+				print("Interacted with:", collider)
+				
+				if collider.is_in_group("item") and collider is Item_Object:
+					# Add item to inventory if necessary
+					collider.interact(owner)
+				if collider.is_in_group("pnj") and collider is Pnj:
+					if DialogManager.dialog(collider):
+						print("Entered dialog with " + str(collider))
+					collider.interact(owner)
+					
+				if collider.is_in_group("waste"):
+					print("Waste object detected.")  # Debug: Waste object is detected
+					collider.cleanup()  # Call cleanup if Waste
+					prompt.text = collider.prompt_message  # Show the prompt message
+		else:
+			prompt.text = "    "
+	else:
+		prompt.text = "    "
+```
+
+extends Interactable <------------ Extends become class
+
+class_name Pnj <------- child class to identify NPCs
 
