@@ -3,7 +3,7 @@ extends Node
 #Menus
 @onready var menus: Node = $Menus
 #Menus & UI Loading nodes
-@onready var inventory_gestion: Control = %Inventory_Gestion
+
 
 #Game Play
 @onready var gameplay: Node = $Gameplay
@@ -14,11 +14,14 @@ extends Node
 @onready var bin_bag: Item_Object = $"Gameplay/bin bag"
 @onready var player: CharacterBody3D = %Player
 
-@onready var pause_menu: Control = $Menus/pause_menu
+@onready var pause_menu: Control = %pause_menu
+@onready var inventory_gestion: Control = %Inventory_Gestion
+@onready var quest_menu: Control = %quest_menu
 
 
 func _ready() -> void:
 	inventory_gestion.hide()
+	quest_menu.hide()
 	# Set the minimum size in project settings
 	ProjectSettings.set_setting("display/window/size/min_width", Variable.min_size.x)
 	ProjectSettings.set_setting("display/window/size/min_height", Variable.min_size.y)
@@ -34,9 +37,16 @@ func _process(_delta):
 			inventory_gestion.CloseInventory()
 		else:
 			inventory_gestion.OpenInventory()
+	if Input.is_action_just_pressed("quest_menu"):
+		if Variable.QuestMenuOpen:
+			quest_menu.CloseQuestMenu()
+		else:
+			quest_menu.OpenQuestMenu()
 	if Input.is_action_just_pressed("escape"):
 		if Variable.InventoryOpen:
 			inventory_gestion.CloseInventory()
+		elif Variable.QuestMenuOpen:
+			quest_menu.CloseQuestMenu()
 		else:
 			if Variable.PlayMenuOpen:
 				pause_menu.resume_game()

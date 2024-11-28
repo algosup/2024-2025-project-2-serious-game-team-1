@@ -1,0 +1,131 @@
+[gd_scene load_steps=7 format=3 uid="uid://c727nv4eoacdf"]
+
+[ext_resource type="Script" path="res://scripts/quest_menu.gd" id="1_sqmio"]
+[ext_resource type="Shader" path="res://assets/ui/shaders/ui_back_shader.gdshader" id="1_u3agi"]
+[ext_resource type="Texture2D" uid="uid://bg85v4vpbk8n5" path="res://assets/images/WaintingBackground.jpg" id="2_hewac"]
+[ext_resource type="PackedScene" uid="uid://cqd0i6thcpy2k" path="res://assets/ui/quests_panel.tscn" id="3_kgxg5"]
+[ext_resource type="Texture2D" uid="uid://i2kndroy583y" path="res://assets/images/inventory_slot_background.png" id="3_p1k0r"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_20ina"]
+shader = ExtResource("1_u3agi")
+shader_parameter/blur_radius = 4.0
+shader_parameter/samples = 8
+shader_parameter/darken_factor = 0.75
+
+[node name="quest_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sqmio")
+
+[node name="Panel" type="Panel" parent="."]
+material = SubResource("ShaderMaterial_20ina")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Quest_Panel" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(335, 212)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -307.0
+offset_top = -187.5
+offset_right = 307.0
+offset_bottom = 187.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_hewac")
+metadata/_edit_lock_ = true
+
+[node name="GridQuest" type="GridContainer" parent="Quest_Panel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 32.0
+offset_top = 69.0
+offset_right = 556.0
+offset_bottom = 527.0
+scale = Vector2(0.5, 0.5)
+
+[node name="quests_panel1" parent="Quest_Panel/GridQuest" instance=ExtResource("3_kgxg5")]
+layout_mode = 2
+
+[node name="quests_panel2" parent="Quest_Panel/GridQuest" instance=ExtResource("3_kgxg5")]
+layout_mode = 2
+
+[node name="quests_panel3" parent="Quest_Panel/GridQuest" instance=ExtResource("3_kgxg5")]
+layout_mode = 2
+
+[node name="Description" type="NinePatchRect" parent="Quest_Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -277.0
+offset_top = 15.0
+offset_right = -14.0
+offset_bottom = 358.0
+grow_horizontal = 0
+texture = ExtResource("3_p1k0r")
+region_rect = Rect2(2.34615, 3.1778, 26.4982, 27.2089)
+
+[node name="DescriptionBox" type="VBoxContainer" parent="Quest_Panel/Description"]
+layout_mode = 0
+offset_right = 526.0
+offset_bottom = 632.0
+scale = Vector2(0.5, 0.5)
+
+[node name="NameLabel" type="Label" parent="Quest_Panel/Description/DescriptionBox"]
+custom_minimum_size = Vector2(526, 80)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 40
+text = "Quest Name"
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Quest_Panel/Description/DescriptionBox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="ZoneLabel" type="Label" parent="Quest_Panel/Description/DescriptionBox/HBoxContainer"]
+custom_minimum_size = Vector2(262, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Zone : "
+metadata/_edit_lock_ = true
+
+[node name="GiverLabel" type="Label" parent="Quest_Panel/Description/DescriptionBox/HBoxContainer"]
+custom_minimum_size = Vector2(262, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Giver : "
+metadata/_edit_lock_ = true
+
+[node name="GoalLabel" type="Label" parent="Quest_Panel/Description/DescriptionBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Goal :"
+autowrap_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="DescriptionLabel" type="RichTextLabel" parent="Quest_Panel/Description/DescriptionBox"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+focus_mode = 2
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+selection_enabled = true
+metadata/_edit_lock_ = true

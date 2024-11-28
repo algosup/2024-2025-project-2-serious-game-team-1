@@ -2,6 +2,7 @@ extends Node
 
 var InventoryOpen = false
 var PlayMenuOpen = false
+var QuestMenuOpen = false
 var PreviousScene: String = ""
 var MouseCapture = false
 var current_scene = ""

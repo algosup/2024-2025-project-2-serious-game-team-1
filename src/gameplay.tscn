@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://chxfeda425gsu"]
+[gd_scene load_steps=11 format=3 uid="uid://chxfeda425gsu"]
 
 [ext_resource type="PackedScene" uid="uid://lrfexx8s0e13" path="res://assets/map/map.tscn" id="1_7b4si"]
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_hjvrf"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dv14y8ppy7jy5" path="res://assets/models/trash.tscn" id="8_7tjyf"]
 [ext_resource type="PackedScene" uid="uid://domhm87hbhbg1" path="res://assets/models/Player.tscn" id="8_735e1"]
 [ext_resource type="PackedScene" uid="uid://6c6uwu7ip5h" path="res://assets/models/bin_bag.tscn" id="9_0mf82"]
+[ext_resource type="PackedScene" uid="uid://c727nv4eoacdf" path="res://assets/ui/quest_menu.tscn" id="10_hcxs7"]
 
 [node name="gameplay" type="Node"]
 script = ExtResource("1_hjvrf")
@@ -36,7 +37,11 @@ transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941
 [node name="Menus" type="Node" parent="."]
 
 [node name="pause_menu" parent="Menus" instance=ExtResource("3_75tor")]
+unique_name_in_owner = true
 process_mode = 3
 
 [node name="Inventory_Gestion" parent="Menus" instance=ExtResource("3_grpvx")]
+unique_name_in_owner = true
+
+[node name="quest_menu" parent="Menus" instance=ExtResource("10_hcxs7")]
 unique_name_in_owner = true

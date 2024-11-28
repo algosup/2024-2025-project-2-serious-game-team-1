@@ -38,6 +38,13 @@ var inventorySize : int = 20
 	slot_16, slot_17, slot_18, slot_19, slot_20,
 ]
 
+func add_item(item : Item_Ressource):
+	for i in range(inventorySize):
+		if slots[i].item == null:
+			slots[i].item = item
+			
+
+
 func OpenInventory():
 	print("Open Inventory")
 	Variable.InventoryOpen = !Variable.InventoryOpen
