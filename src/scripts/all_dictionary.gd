@@ -2,30 +2,42 @@ extends Node
 
 # Dictionary to store items with preloaded resources
 var Item_List: Dictionary = {
-	"1" : preload("res://assets/items/bin_bag.tres")
+	"1" : "res://assets/items/bin_bag.tres"
 }
 
 # Dictionary to store quests with preloaded resources
 var Quest_List: Dictionary = {
-	"1": preload("res://assets/quests/clean_beach.tres"),
-	#creer une ressource avec a l'interieur la condition de victoire qui seras : ramasser 10 plastiques
+	"test" : "res://assets/quests/clean_beach.tres",
 }
 
-# Dictionary to log quest progress
-var Quest_Log: Dictionary = {
-	"completed_quests": [],
-	"active_quests": []
-}
+
+var completed_quests : Array = []
+var active_quests : Array = [null, null, null]
+
+func get_resource_path_quest_list(quest_id: String) -> String:
+	if Quest_List.has(quest_id):
+		return Quest_List[quest_id]
+	else:
+		push_error("Resource not found: " + quest_id)
+		return ""
+
+func load_resource_quest_list(quest_id: String):
+	var path = get_resource_path_quest_list(quest_id)
+	if path != "":
+		return load(path)
+	else:
+		return null
 
 # Log quest progress
 func log_quest(quest_id: String, status: String) -> void:
 	if status == "complete":
-		Quest_Log["completed_quests"].append(quest_id)
+		completed_quests.append(quest_id)
 	elif status == "active":
-		Quest_Log["active_quests"].append(quest_id)
+		active_quests.append(quest_id)
 
 # Debug print to check dictionaries
 func debug_print() -> void:
 	print("Item Dictionary:", Item_List)
 	print("Quest List Dictionary:", Quest_List)
-	print("Quest Log Dictionary:", Quest_Log)
+	print("Complete Quests :", completed_quests)
+	print("Active Quests :", active_quests)

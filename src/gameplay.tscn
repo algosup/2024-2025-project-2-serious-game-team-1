@@ -9,9 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://dv14y8ppy7jy5" path="res://assets/models/trash.tscn" id="8_7tjyf"]
 [ext_resource type="PackedScene" uid="uid://domhm87hbhbg1" path="res://assets/models/Player.tscn" id="8_735e1"]
 [ext_resource type="PackedScene" uid="uid://6c6uwu7ip5h" path="res://assets/models/bin_bag.tscn" id="9_0mf82"]
-[ext_resource type="PackedScene" uid="uid://c727nv4eoacdf" path="res://assets/ui/quest_menu.tscn" id="10_hcxs7"]
+[ext_resource type="PackedScene" uid="uid://40vvrysqespg" path="res://assets/ui/quest_menu.tscn" id="10_hcxs7"]
 
 [node name="gameplay" type="Node"]
+process_mode = 3
 script = ExtResource("1_hjvrf")
 
 [node name="Gameplay" type="Node" parent="."]

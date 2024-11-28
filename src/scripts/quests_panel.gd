@@ -16,6 +16,10 @@ func _process(_delta):
 		zone_label.text = zone_text
 		var giver_text = "Giver : %s" % quests.quests_giver
 		pnj_giver_label.text = giver_text
+	else:
+		quest_label.text = "Empty Quest Slot"
+		zone_label.text = "Zone : Unknown"
+		pnj_giver_label.text = "Giver : Unknown"
 
 
 func _on_quests_button_pressed() -> void:

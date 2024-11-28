@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c727nv4eoacdf"]
+[gd_scene load_steps=7 format=3 uid="uid://40vvrysqespg"]
 
 [ext_resource type="Script" path="res://scripts/quest_menu.gd" id="1_sqmio"]
 [ext_resource type="Shader" path="res://assets/ui/shaders/ui_back_shader.gdshader" id="1_u3agi"]
@@ -45,25 +45,38 @@ offset_bottom = 187.5
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_hewac")
-metadata/_edit_lock_ = true
 
-[node name="GridQuest" type="GridContainer" parent="Quest_Panel"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 32.0
-offset_top = 69.0
-offset_right = 556.0
-offset_bottom = 527.0
+[node name="TabContainer" type="TabContainer" parent="Quest_Panel"]
+custom_minimum_size = Vector2(528, 500)
+layout_mode = 1
+offset_left = 39.0
+offset_top = 17.0
+offset_right = 567.0
+offset_bottom = 702.0
 scale = Vector2(0.5, 0.5)
+current_tab = 0
 
-[node name="quests_panel1" parent="Quest_Panel/GridQuest" instance=ExtResource("3_kgxg5")]
+[node name="Current Quests" type="ScrollContainer" parent="Quest_Panel/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Currents Quests" type="VBoxContainer" parent="Quest_Panel/TabContainer/Current Quests"]
 layout_mode = 2
 
-[node name="quests_panel2" parent="Quest_Panel/GridQuest" instance=ExtResource("3_kgxg5")]
+[node name="quests_panel1" parent="Quest_Panel/TabContainer/Current Quests/Currents Quests" instance=ExtResource("3_kgxg5")]
+custom_minimum_size = Vector2(262, 150)
 layout_mode = 2
 
-[node name="quests_panel3" parent="Quest_Panel/GridQuest" instance=ExtResource("3_kgxg5")]
+[node name="quests_panel2" parent="Quest_Panel/TabContainer/Current Quests/Currents Quests" instance=ExtResource("3_kgxg5")]
 layout_mode = 2
+
+[node name="quests_panel3" parent="Quest_Panel/TabContainer/Current Quests/Currents Quests" instance=ExtResource("3_kgxg5")]
+layout_mode = 2
+
+[node name="Complete Quests" type="ScrollContainer" parent="Quest_Panel/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
 
 [node name="Description" type="NinePatchRect" parent="Quest_Panel"]
 layout_mode = 1
