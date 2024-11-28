@@ -486,7 +486,7 @@ Here are a few methods that can be used in Godot, you can see more [here](https:
 
 #### Annotations
 
-Annotations in Godot allow to enhance the functionality of your scripts by exposing properties to the editor, managing initialization, or customizing class behaviors. Here's a table summarizing the key annotations:
+Annotations in Godot allow to enhance the functionality of your scripts by exposing properties to the editor, managing initialization, or customizing class behaviors. Here's a table summarizing the key annotations :
 
 | **Annotation**      | **Description**  |
 |---------------------|------------------|
@@ -525,7 +525,7 @@ So we need to create all the nodes needed for the game: a main node that will ho
 
 ### Perspective
 
-The game is in 3D, as we felt it was better suited to our case and our atmosphere. This will allow greater flexibility in creating interactive and dynamic game elements. So we will use 3D node and work in 3 dimensions.
+The game is in 3D, because we felt it was better suited to our case and our atmosphere. This will allow greater flexibility in the creation of interactive and dynamic game elements. We will therefore use a 3D node and work in 3 dimensions for all the animations, and in 2D for the interface.   
 
 ### Game aspects
 
@@ -572,6 +572,20 @@ Each zone will have different textures to distinguish it from the others. We'll 
 
 Each zone needs to be delimited as it will be necessary to reuse this later in the game. Indeed, quests and reputations will be assigned to each zone.To do this, you need to create nodes for each zone and delimit them.
 
+A child node of type CollisionShape3D has been added to a specific node to define the shape of the zone. 
+
+Next we need to configure the detection between zones in the player, which will be used later for queries.  
+
+```
+extends Area3D
+
+func _on_body_entered(body):
+    if body.name == "Player":
+        print("Le joueur est entré dans la zone.")
+        # Déclencher un événement ou une action
+
+```
+
 
 ![alt text](./images/node_zone.png)
 
@@ -580,6 +594,10 @@ Each zone needs to be delimited as it will be necessary to reuse this later in t
 ### Add Assets
 
 Each zone will have different assets (farms, houses, trees, etc.). All assets come from the same [source](https://poly.pizza/u/Quaternius). Import them into the "assets" folder and place them in the zone you want. 
+
+To simplify the positioning of assets, we can use an addon called: [Object Placer](https://github.com/Fleischkuechle/Godot-object-placer)
+
+
 
 ## 3. Game mechanics integration
 
@@ -592,6 +610,26 @@ Each zone will have different assets (farms, houses, trees, etc.). All assets co
 A menu will be available, accessible by pressing the `esc` "escape" key. It will allow us to access all the settings (audio, graphics, keys, etc.), or quit the game.
 
 To create the menu we will use [this videos](https://www.youtube.com/watch?v=Z8jcjy_jZyk) in which we have all the characteristics.
+
+We you need to add a Button node for each menu option. Next, we need to connect the pressed signal from the buttons to the menu script to execute the corresponding actions.
+
+```
+extends Control
+
+func _on_StartButton_pressed():
+    print("Start game")
+    # Load the main game scene
+    get_tree().change_scene("res://scenes/MainGame.tscn")
+
+func _on_OptionsButton_pressed():
+    print("Open options menu")
+    # Display a submenu for options
+
+func _on_QuitButton_pressed():
+    print("Quit game")
+    get_tree().quit()
+
+```
 
 ![alt text](./images/Main_menu.png)
 
@@ -617,6 +655,8 @@ From the main game screen, players can access a range of information :
 A mini-map will be displayed in the top right-hand corner of the screen to help players find their way around.
 
 To create the mini The mini maps consist of creating another point of life for the player, but from above. 
+
+First of all we need to add a Camera3D node dedicated to the mini-map in our scene, then we just need to configure it the way we want and add the visual features.
 
 #### Time
 
@@ -734,51 +774,11 @@ $AudioStreamPlayer.stream = sound
 Dialogue is important for creating more immersion for players. 
 
 
-First of all, we need to add a new node to house all the dialogue. Then we need to put all the fihciers in a .json file. 
+First of all, we need to add a new node to house all the dialogue. Then we can use an addon available from the ‘AssetLib’ in Godot : "dialogue_node". 
 
-Finally, we can play the dialogues as follows : 
+Finally, we can set the dialogues as follows : 
 
-```
-extends Control
-
-var dialogues = []
-var current_index = 0
-
-onready var dialogue_label = $CanvasLayer/Panel/DialogueLabel
-
-func _ready():
-    # Load dialogues from a JSON file
-    var file = File.new()
-    // Importing JSON into the game
-    if file.open("res://dialogues.json", File.READ) == OK:
-        dialogues = JSON.parse(file.get_as_text()).result
-        file.close()
-    
-    # Start the dialogue
-    show_dialogue()
-
-func show_dialogue():
-    if current_index < dialogues.size():
-        var current_dialogue = dialogues[current_index]
-        dialogue_label.text = current_dialogue["character"] + ": " + current_dialogue["text"]
-        
-        # Play associated audio (if present)
-        if current_dialogue.has("audio"):
-            var audio_player = $AudioStreamPlayer
-            audio_player.stream = load(current_dialogue["audio"])
-            audio_player.play()
-    else:
-        # End of dialogue
-        hide_dialogue()
-
-func next_dialogue():
-    current_index += 1
-    show_dialogue()
-
-func hide_dialogue():
-    $CanvasLayer/Panel.visible = false
-```
-
+![alt text](./images/example_dialogue.png)
 
 ### Interaction Quest & Player
 
