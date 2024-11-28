@@ -562,9 +562,14 @@ First of all, to create the map we need to add the foundations, the base. The 3D
 To create the terrain we will use these videos in which all the characteristics for [the formation of the relief](https://www.youtube.com/watch?v=oV8c9alXVwU&t=68s), [the addition of water](https://www.youtube.com/watch?v=jYVO0-_sXZs&t=603s).
 
 
+We need to use a node: 3D Terrain. Then use the tools to create the relief and the different areas of the map.
+
+![alt text](./images/greenfield.png)
+
 ### Zone Texture
 
 Each zone will have different textures to distinguish it from the others. We'll use the textures available [here](https://ambientcg.com/). To use them in godot, import them and then go to the middle panel, then 3D Terrain and finally Texture.
+
 
 ![alt text](./images/texture.png)
 
@@ -782,6 +787,11 @@ Finally, we can set the dialogues as follows :
 
 ### Interaction Quest & Player
 
+We then need to include the interaction between the quests and the player, and we'll use [this video](https://www.youtube.com/watch?v=QKdyUBjzPmk) as inspiration for our code. 
+
+So we have the following example, which represents a class of interactive objects with a customisable prompt message, displaying the key assigned to the interaction. When an object interacts, a message identifying the two parties is printed.
+
+
 ```GDScript
 extends CollisionObject3D
 class_name Interactable
@@ -798,7 +808,7 @@ func interact(body):
 	print(body.name, " interacted with ", name)
 ```
 
-[create interaction](https://www.youtube.com/watch?v=QKdyUBjzPmk)
+
 
 ## 5. Gameplay testing 
 
@@ -815,7 +825,10 @@ To resolve problems and bugs, we can use Godot's terminal. The terminal displays
 
 Once the game is finished, it's time to export it. 
 
-We simply need to go to the menu: Project -> Export -> Add (choose the platform we want to use here Windows Desktop or macOS), then add all the necessary parameters and export the project.
+First we need to add the export templates for our version of Godot. You can download them directly from the Godot interface: Go to Editor -> Manage Export Templates.
+Click on Download and Install.
+
+Then we need to go to the menu: Project -> Export -> Add (choose the platform we want to use here Windows Desktop or macOS), add all the necessary parameters and finally export the project.
 
 ![alt text](./images/export.png)
 ![alt text](./images/export_2.png)
