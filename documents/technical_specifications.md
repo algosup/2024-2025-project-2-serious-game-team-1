@@ -589,13 +589,18 @@ A child node of type CollisionShape3D has been added to a specific node to defin
 Next we need to configure the detection between zones in the player, which will be used later for queries.  
 
 ```
-extends Area3D
+extends StaticBody3D
 
-func _on_body_entered(body):
-    if body.name == "Player":
-        print("Le joueur est entré dans la zone.")
-        # Déclencher un événement ou une action
+@export_category("Current_Zone")
+@export var zone_name: String
 
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	zone_name = $".".name
+	print(body.name + " entered in " + zone_name)	
+	
+func _on_area_3d_body_exited(body: Node3D) -> void:
+	print(body.name + " leaved " + zone_name)
+	zone_name = ""
 ```
 
 
@@ -623,23 +628,41 @@ A menu will be available, accessible by pressing the `esc` "escape" key. It will
 
 To create the menu, we'll take inspiration from this video [this video](https://www.youtube.com/watch?v=Z8jcjy_jZyk).
 
-We you need to add a Button node for each menu option. Next, we need to connect the pressed signal from the buttons to the menu script to execute the corresponding actions.
+First we need to add a Control node and then a Button node for each menu option. And finally, we need to connect the button press signal to the menu script to execute the corresponding actions.
 
 ```
 extends Control
 
-func _on_StartButton_pressed():
-    print("Start game")
-    # Load the main game scene
-    get_tree().change_scene("res://scenes/MainGame.tscn")
 
-func _on_OptionsButton_pressed():
-    print("Open options menu")
-    # Display a submenu for options
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	# Set the minimum size in project settings
+	ProjectSettings.set_setting("display/window/size/min_width", Variable.min_size.x)
+	ProjectSettings.set_setting("display/window/size/min_height", Variable.min_size.y)
+	
+	# Enforce the minimum window size using DisplayServer
+	DisplayServer.window_set_min_size(Variable.min_size)
+	
+	
+	Variable.current_scene = Variable.MainMenu_path
 
-func _on_QuitButton_pressed():
-    print("Quit game")
-    get_tree().quit()
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	if Variable.current_size.x < Variable.min_size.x or Variable.current_size.y < Variable.min_size.y:
+		DisplayServer.window_set_size(Vector2i(max(Variable.current_size.x, Variable.min_size.x), max(Variable.current_size.y, Variable.min_size.y)))
+
+
+func _on_play_button_pressed() -> void:
+	get_tree().change_scene_to_file(Variable.Gameplay_path)
+
+func _on_quit_button_pressed() -> void:
+	get_tree().quit() 
+
+func _on_option_button_pressed() -> void:
+	Variable.PreviousScene = Variable.current_scene
+	get_tree().change_scene_to_file(Variable.OptionMenu_path)
+
 
 ```
 
@@ -647,8 +670,95 @@ func _on_QuitButton_pressed():
 
 An inventory will keep track of all the player's items and allow them to navigate between the items in their bag by pressing the `e` key . A drag-and-drop system will be used to create this system.
 
-To create the inventor, we'll take inspiration from this video : [inventory](https://www.youtube.com/watch?v=7RXm0-TSJMw&t=764s&pp=ygUSZ29kb3Qga2V5IGJpbmRpbmdz) and [drag&drop](https://www.youtube.com/watch?v=8cV-5ByZLOE)  in which we have all the characteristics.
+To create the inventor, we'll take inspiration from this video : [inventory](https://www.youtube.com/watch?v=7RXm0-TSJMw&t=764s&pp=ygUSZ29kb3Qga2V5IGJpbmRpbmdz) and [drag&drop](https://www.youtube.com/watch?v=8cV-5ByZLOE). Texture React nodes need to be created for each slot in the inventory panel.
 
+```
+extends Control
+
+@onready var icon: TextureRect = $Inventory/Description/DescriptionBox/Header/Icon
+@onready var description_label: RichTextLabel = $Inventory/Description/DescriptionBox/DescriptionLabel
+@onready var name_label: Label = $Inventory/Description/DescriptionBox/Header/Name_Label
+
+
+@warning_ignore("shadowed_global_identifier")
+var Item : Item_Ressource
+
+var inventorySize : int = 20
+
+@onready var slot_01: TextureRect = $Inventory/GridInventory/Slot1
+@onready var slot_02: TextureRect = $Inventory/GridInventory/Slot2
+@onready var slot_03: TextureRect = $Inventory/GridInventory/Slot3
+@onready var slot_04: TextureRect = $Inventory/GridInventory/Slot4
+@onready var slot_05: TextureRect = $Inventory/GridInventory/Slot5
+@onready var slot_06: TextureRect = $Inventory/GridInventory/Slot6
+@onready var slot_07: TextureRect = $Inventory/GridInventory/Slot7
+@onready var slot_08: TextureRect = $Inventory/GridInventory/Slot8
+@onready var slot_09: TextureRect = $Inventory/GridInventory/Slot9
+@onready var slot_10: TextureRect = $Inventory/GridInventory/Slot10
+@onready var slot_11: TextureRect = $Inventory/GridInventory/Slot11
+@onready var slot_12: TextureRect = $Inventory/GridInventory/Slot12
+@onready var slot_13: TextureRect = $Inventory/GridInventory/Slot13
+@onready var slot_14: TextureRect = $Inventory/GridInventory/Slot14
+@onready var slot_15: TextureRect = $Inventory/GridInventory/Slot15
+@onready var slot_16: TextureRect = $Inventory/GridInventory/Slot16
+@onready var slot_17: TextureRect = $Inventory/GridInventory/Slot17
+@onready var slot_18: TextureRect = $Inventory/GridInventory/Slot18
+@onready var slot_19: TextureRect = $Inventory/GridInventory/Slot19
+@onready var slot_20: TextureRect = $Inventory/GridInventory/Slot20
+
+@onready var slots : Array = [
+	slot_01, slot_02, slot_03, slot_04, slot_05,
+	slot_06, slot_07, slot_08, slot_09, slot_10,
+	slot_11, slot_12, slot_13, slot_14, slot_15,
+	slot_16, slot_17, slot_18, slot_19, slot_20,
+]
+
+			
+func add_item(item: Item_Ressource):
+	var item_id_as_string = str(item.item_ID)
+	
+	if AllDictionary.Item_List.has(item_id_as_string):  # Check if the item exists
+		for i in range(inventorySize):
+			if slots[i] == null:  # Ensure the slot is empty
+				slots[i] = AllDictionary.Item_List[item_id_as_string]  # Add item to the slot
+				print(item.item_title, "added to slot", i)
+				return
+		print("Inventory full!")
+	else:
+		print("Error: Item not found in Item_List:", item_id_as_string)
+
+
+func OpenInventory():
+	print("Open Inventory")
+	Variable.InventoryOpen = !Variable.InventoryOpen
+	$".".show()
+	Variable.movelock = true
+	Variable.cameralock = true
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+func CloseInventory():
+	print("Close Inventory")
+	Variable.InventoryOpen = !Variable.InventoryOpen
+	$".".hide()
+	Variable.movelock = false
+	Variable.cameralock = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func set_description(item : Item_Ressource):
+	if name_label != null:
+		name_label.text = item.item_title
+	else:
+		print("null name_label")
+	if icon != null:
+		icon.texture = item.item_icon
+	else:
+		print("null icon")
+	if description_label != null:
+		description_label.text = item.item_description
+	else:
+		print("null description_label")
+
+```
 
 ![alt text](./images/Inventory_screen.png)
 
