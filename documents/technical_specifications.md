@@ -14,203 +14,209 @@
 
 ---
 
+### *Last Update on November 29th, 2024*
+
 ![alt text](./images/Godot_Logo-1.png)
-
-#### *Last Update on November 19th, 2024*
-
 
 <details>
 
 <summary>Table of Contents</summary>
 
 - [**Technical Specifications - 2024-2025-project-2-serious-game-team-1**](#technical-specifications---2024-2025-project-2-serious-game-team-1)
-      - [*Last Update on November 8th, 2024*](#last-update-on-november-8th-2024)
-- [General](#general)
-  - [Introduction](#introduction)
+    - [*Last Update on November 29th, 2024*](#last-update-on-november-29th-2024)
+- [I - Introduction](#i---introduction)
   - [Audience](#audience)
   - [Overview](#overview)
   - [Glossary](#glossary)
-  - [Requirements](#requirements)
-    - [Game Engine :](#game-engine-)
-    - [Objective :](#objective-)
-    - [Game Quality :](#game-quality-)
-    - [Deliverable Requirements :](#deliverable-requirements-)
-    - [Game theme :](#game-theme-)
-- [Convention](#convention)
-  - [Github](#github)
-  - [Github Guidelines](#github-guidelines)
+  - [Client Requirements](#client-requirements)
+    - [1. Objective](#1-objective)
+    - [2. Game Engine](#2-game-engine)
+    - [3. Game theme](#3-game-theme)
+    - [4. Game Quality](#4-game-quality)
+    - [5. Deliverable Requirements](#5-deliverable-requirements)
+- [II - Work Environment](#ii---work-environment)
+  - [Github Conventions](#github-conventions)
     - [1. Branch](#1-branch)
     - [2. Commit](#2-commit)
     - [3. Pull Request](#3-pull-request)
     - [4. Issue](#4-issue)
-  - [Naming](#naming)
-  - [Comments](#comments)
-  - [Folder structure](#folder-structure)
+  - [Code Conventions](#code-conventions)
+    - [Naming](#naming)
+    - [Comments](#comments)
+    - [Repository architecture](#repository-architecture)
   - [Source Folder](#source-folder)
-    - [Assets](#-assets)
-      - [Characters](#--characters)
-      - [Sounds](#--sounds)
-      - [Fonts](#--fonts)
-      - [Music](#--music)
-      - [Texture](#--texture)
-      - [Object](#--object)
-    - [Script](#-script)
-    - [Interfaces](#-interfaces)
+    - [Assets](#assets)
+      - [Characters](#characters)
+      - [Sounds](#sounds)
+      - [Fonts](#fonts)
+      - [Music](#music)
+      - [Texture](#texture)
+      - [Object](#object)
+      - [Dialogue](#dialogue)
+    - [Script](#script)
+    - [Interfaces](#interfaces)
+  - [System :](#system-)
+      - [Desktop or laptop PC - Recommended (More here)](#desktop-or-laptop-pc---recommended-more-here)
+- [III - Introduction to GODOT](#iii---introduction-to-godot)
   - [About Godot Engine](#about-godot-engine)
     - [Node](#node)
   - [Scene](#scene)
-  - [About Game](#about-game)
+  - [3D](#3d)
+    - [3D tools](#3d-tools)
+    - [3D geometry helper class.](#3d-geometry-helper-class)
+    - [3D physics](#3d-physics)
+      - [Physics bodies:](#physics-bodies)
+      - [Collision detection:](#collision-detection)
+  - [Scripting](#scripting)
+    - [GDScript:](#gdscript)
+      - [Methods](#methods)
+      - [Annotations](#annotations)
+- [IV - Development Steps](#iv---development-steps)
+  - [1. Environment setup](#1-environment-setup)
+    - [Godot architecture](#godot-architecture)
     - [Perspective](#perspective)
-  - [User Interface](#user-interface)
+    - [Game aspects](#game-aspects)
+      - [Movements](#movements)
+  - [2. Development of the Map](#2-development-of-the-map)
+    - [Map Foundation](#map-foundation)
+    - [Zone Texture](#zone-texture)
+    - [Zone Delimitation](#zone-delimitation)
+    - [Add Assets](#add-assets)
+  - [3. Game mechanics integration](#3-game-mechanics-integration)
+    - [User Interface](#user-interface)
       - [Main Menu](#main-menu)
       - [Inventory](#inventory)
       - [HUD](#hud)
-    - [Mechanics](#mechanics)
-      - [Movement](#movement)
-      - [Inspection](#inspection)
-      - [Vehicules](#vehicules)
-- [Technical Sources](#technical-sources)
-  - [Godot Engine](#godot-engine)
-  - [Visual Studio](#visual-studio)
-  - [Git](#git)
-  - [3D Asserts Website](#3d-asserts-website)
-  - [Sound bank](#sound-bank)
-- [Development Process](#development-process)
-  - [1. Set up the technical structure](#1-set-up-the-technical-structure)
-  - [2. Development of Zones and Environment](#2-development-of-zones-and-environment)
-  - [3. Game mechanics integration](#3-game-mechanics-integration)
-  - [4. Gameplay Testing and Balancing](#4-gameplay-testing-and-balancing)
-  - [5. Optimisation and Correction](#5-optimisation-and-correction)
-  - [6. Implementing Educational and Narrative System](#6-implementing-educational-and-narrative-system)
-  - [7. Final Phase and Launch](#7-final-phase-and-launch)
-- [System requirements](#system-requirements)
-    - [Desktop or laptop PC - Recommended (More here)](#desktop-or-laptop-pc---recommended-more-here)
-- [3D](#3d)
-  - [3D tools](#3d-tools)
-  - [3D geometry helper class.](#3d-geometry-helper-class)
-  - [3D physics](#3d-physics)
-    - [Physics bodies:](#physics-bodies)
-    - [Collision detection:](#collision-detection)
-- [Scripting](#scripting)
-  - [General :](#general-)
-  - [GDScript:](#gdscript)
-    - [Methods](#methods)
+        - [Mini Maps](#mini-maps)
+        - [Time](#time)
+        - [Reputation](#reputation)
+        - [Quests Panel](#quests-panel)
+  - [4. Others features](#4-others-features)
+    - [Audio](#audio)
+    - [Dialogue](#dialogue-1)
+    - [Interaction Quest \& Player](#interaction-quest--player)
+  - [5. Gameplay testing](#5-gameplay-testing)
+  - [6. Final phase and launch](#6-final-phase-and-launch)
 
 </details>
 
 
 --- 
 
-# General
-
-## Introduction
+# I - Introduction
 
 The goal of this document is to define the technical specifications of the project.
-It will be used to define the requirements and the conventions of the project, as well as the tools we will use.
+It will be used to define the technical requirements and conventions of the project, as well as the tools we will be using.
 
 ## Audience 
 
-This document intended for all the team:
+This document is intended for the team:
 
 Main audiences
 
-- Software engineers: to help them grasp user and technical requirements and support informed decision-making during project planning. It provides insights into client expectations, potential risks and challenges, as well as the technical choices made.
+- Software engineers: to help them grasp user and technical requirements and support informed decision-making during project planning. It provides insights into client expectations, potential risks, and challenges, as well as the technical choices made.
   
 Secondary audiences
 
-- Project manager: to pinpoint risks and help him to take decision.
+- Project manager: to pinpoint risks and help him to make decisions.
 
-- Program lead: to verify alignment with the functional specifications and ensure the project meets client expectations.*
+- Program lead: to verify alignment with the functional specifications and ensure the project meets client expectations.
   
-- Quality Assurance : to assist in preparing the testing strategy and using it as a reference to identify and validate issues.
+- Quality Assurance: to assist in preparing the testing strategy and using it as a reference to identify and validate issues.
   
-
-
 ## Overview
 
 ALGOSUP's school commissioned us to create a serious game on GODOT Game Engine. 
 
 
 ## Glossary
-| Term           | Definition  |
-|----------------|-------------|
-| **Animation**  | A file used to define the movement of 3D objects in Unreal Engine |
-| **Asset**      | A file that can be imported into Godot Engine |
-| **Dialogue**   | Text that appears on the screen |
-| **FPS**        | First-person View |
-| **Game Engine**| A Game Engine is software that provides the tools needed to create video games, such as graphics, physics, audio, and interaction management |
-| **GitHub**     | A version control system |
-| **HUD**        | Heads-Up Display, a graphical interface that displays essential information to the player in real time, such as health, score, resources... |
-| **MIT**        | The MIT licence is a permissive open-source licence that allows developers to use, copy, modify, and distribute the software, even in commercial projects, without paying royalties |
-| **Lore**       | A story that is not directly related to the gameplay |
-| **NPC**        | Non-Playable Character |
-| **Path**       | A path is a sequence of points in space that defines a route for objects to move along |
-| **Path3D**     | A Path3D defines a 3D path for objects to follow.|
-| **Ragdolls**   | A Physical structures used to simulate the realistic movement of an articulated body |
-| **Texture**    | A file used to define the surface properties of 3D objects in Unreal Engine |
-| **UI**         | AUser Interface is the set of visual elements that enable the user to interact with an application or game |
-| **WIP**        | Work In Progress |
+| Term               | Definition  |
+|--------------------|-------------|
+| **.glTF**          | The .glTF format is an open, standardized file format designed for the efficient and compact exchange of 3D models. |
+| **.json**          | A .json file is a lightweight, human-readable data format used to store and exchange information. |
+| **AI**             | Artificial Intelligence, used to simulate human-like behavior in games or applications. |
+| **Animation**      | A file used to define the movement of 3D objects in Unreal Engine. |
+| **Asset**          | A file that can be imported into Godot Engine. |
+| **Autoload**       | Scripts or scenes that Godot loads automatically when the game starts up and that remain globally accessible throughout the runtime. They are used for global variables or functions such as the score, game parameters or database management. |
+| **Collision Shape**| A geometric shape used to define the area for detecting collisions in a game engine. |
+| **CSG**            | Constructive Solid Geometry, a method for creating complex 3D shapes by combining or subtracting simpler ones. |
+| **Dialogue**       | Text that appears on the screen, often as part of a character interaction or storytelling. |
+| **FPS**            | First-Person Shooter or First-Person View. |
+| **Game Engine**    | A Game Engine is a software that provides the tools needed to create video games, such as graphics, physics, audio, and interaction management. |
+| **GitHub**         | A version control platform used to host, review, and manage code collaboratively. |
+| **Groups**         | Used to organize nodes that share similar behavior or properties. This simplifies their collective management and improves code visibility. |
+| **HUD**            | Heads-Up Display, a graphical interface that displays essential information to the player in real-time, such as health, score, resources, etc. |
+| **InputMap**       | A feature in Godot that lets you manage user inputs (keyboard, mouse, etc.). It is possible to associate custom actions with keys or buttons, which makes the code more readable and adaptable. |
+| **Lore**           | The backstory, world-building, or narrative that provides depth to a game’s universe. |
+| **MIT License**    | The MIT license is a permissive open-source license that allows developers to use, copy, modify, and distribute software, even in commercial projects, without paying royalties. |
+| **NPC**            | Non-Playable Character, a character controlled by the game rather than the player. |
+| **Path**           | A sequence of points in space that defines a route for objects to move along. |
+| **Path3D**         | A 3D path for objects to follow in a game engine. |
+| **Procedural Geometry** | Geometry dynamically generated through code, often used for creating environments or objects that change over time. |
+| **Ragdolls**       | Physical structures used to simulate realistic movement of an articulated body. |
+| **Static Body**    | A non-moving object used for collisions or obstacles in a physics-based game engine. |
+| **Texture**        | A file used to define the surface properties of 3D objects, including colors, patterns, and details. |
+| **UI**             | User Interface, the set of visual elements that enable the user to interact with an application or game. |
+| **Vehicle Body**   | A physics body type specifically designed to simulate vehicles in a game engine. |
+| **WIP**            | Work In Progress, indicating that something is not yet finalized or completed. |
 
 
-## Requirements
+## Client Requirements
 
+### 1. Objective
 
-### Game Engine :
+The game aims to educate players about environmental and climate issues. The game aims to raise players' awareness of ecological issues and make them understand the impact of their actions on the planet.
 
-The game must be designed using the Godot Engine 4.3, relying on GDScript for optimum integration with Godot's native features. This will allow greater flexibility to create interactive and dynamic gameplay elements.
+### 2. Game Engine
 
-### Objective :
+The game must be designed using the Godot Engine 4.3, relying on GDScript. 
 
-The aim of the game is to educate players about environmental and climate issues. The game aims to raise players' awareness of ecological issues and make them understand the impact of their actions on the planet.
+### 3. Game theme
 
-### Game Quality :
+The central theme of the game is climate change, approached in a fun and educational way.
+
+### 4. Game Quality
 
 The game must be well finished, respecting the principles of game design and development. Regular and rigorous testing throughout the development process is necessary to ensure a smooth and enjoyable gaming experience.
   
-### Deliverable Requirements :
+### 5. Deliverable Requirements
 
 The final product must offer a pleasant and engaging experience for players. All essential elements must be included, the game must be bug-free for optimal playability and as full-featured as possible.
 
-
-### Game theme :
-
-The central theme of the game is global warming, approached in a fun and educational way. This choice allows us to deal with contemporary issues and encourage players to think about climate change.
-
 ---
 
-# Convention 
 
+# II - Work Environment
 
-Our project needs to respect several conditions, functionalities and conventions : 
+## Github Conventions 
 
-## Github
-
-- We must use Github to manage our project.
-
-
-## Github Guidelines
+- We must use GitHub to manage our project.
 
 ### 1. Branch 
 
-- Each branch should be named in English and given a clear, descriptive name to represent its purpose.
-Branches are used to isolate work on a specific feature, bug fix, or task without affecting the main codebase.
+- Each branch should be named in English and given a clear, descriptive name to represent its purpose, ideally indicating the specific feature, issue, or task it addresses.
+
+- Branches are used to isolate work on a specific feature, bug fix, or task without affecting the main codebase.
 
 - By using branches, developers can experiment, make changes, and test code independently before integrating it with the main branch.
 
-- Branch names should be concise but informative, ideally indicating the specific feature, issue, or task they address.
 
 ### 2. Commit 
 
 - Each commit should be named in English and carry a descriptive title to clarify its purpose.
+  
 - Frequent commits are encouraged to provide a detailed record of all changes.
-- Work-in-progress (WIP) code can be committed, provided it is not merged into the main branch.
-Multiple commits within a single branch are acceptable to document progressive updates.
+  
+- Work-in-progress (WIP) code can be committed, provided it is not merged into the main branch. Multiple commits within a single branch are acceptable to document progressive updates.
 
 ### 3. Pull Request 
 
 - Pull requests must have a clear, descriptive title in English, accurately reflecting the changes.
-- A pull request requires approval from at least one other team member before merging.
-- The author or a designated project maintainer should be responsible for merging the pull request.
+  
+- A pull request requires approval from at least two other team members before it is merged.
+  
+- The author or a designated project manager should be responsible for merging the pull request.
+  
 - A detailed summary of the changes made should accompany each pull request for reference.
 
 ### 4. Issue 
@@ -220,38 +226,39 @@ Multiple commits within a single branch are acceptable to document progressive u
 - Include a clear, concise description of the issue to outline the problem (see [Issues](https://github.com/algosup/2024-2025-project-2-serious-game-team-1/issues)).
 
 
-## Naming
+## Code Conventions
 
-<br>
+### Naming 
 
-It is important to establish a naming convention for projects. This makes the source code easier to read and understand with less effort. There are many naming conventions :
-
-<br>
-
-- It has been decided to use the following convention nammings for this project : 
-
+It is important to establish a naming convention for projects. This makes the source code easier to read and understand with less effort. For this project, we will use the following convention namings :
 
 
 | Naming Context | Naming Convention |
 |----------------|-------------------|
-| InputMap       | `flatcase`         |
-| Autoload       | `PascalCase`        |
-| function       | `camel_Snake_case`  |
-| variable       | `kebab-case`        |
-| groups         | `camelCase`         |
-| folder         | `Train-Case`        |
-| files          | `snake_case`        |
+| InputMap       | `flatcase`        |
+| Autoload       | `PascalCase`      |
+| function       | `camel_Snake_case`|
+| variable       | `kebab-case`      |
+| groups         | `camelCase`       |
+| folder         | `Train-Case`      |
+| files          | `snake_case`      |
 
 
-## Comments
+### Comments
 
-- Putting comments at the top of a 3-10 line section telling what it does
+- Use comments to explain the code
 
-```txt
-# Here is a texte which need to beed comment.
-```
+- The comments should be placed before the code they explain.
 
-## Folder structure
+- Use comments to explain the purpose of the code, not the code itself.
+
+- Use comments when declaring a variable or a parameter to explain its purpose and its value.
+
+- For each function, explain which parameters it takes and which output it returns as well as its global behavior.
+
+- In Godot, comments are available by adding `#` in front of the line.
+
+### Repository architecture
 
 ```txt
 
@@ -276,6 +283,7 @@ It is important to establish a naming convention for projects. This makes the so
 |    |   └── 📁 music
 |    |   └── 📁 texture
 |    |   └── 📁 object
+|    |   └── 📁 dialogue
 |    └── 📁 interfaces
 |    └── 📁 scripts
 |    └── 📝 main
@@ -301,11 +309,11 @@ This folder contains all the sound effects used in the game, such as sounds for 
 
 #### Fonts
 
-This folder contains all the fonts used in the game, including user interface display fonts, in-game text fonts and any other design elements involving typography.
+This folder contains all the fonts used in the game, including user interface display fonts, in-game text fonts, and any other design elements involving typography.
 
 #### Music
 
-This folder contains all the music tracks used in the game, including background music, ambient sounds and any other tracks that accompany gameplay.
+This folder contains all the music tracks used in the game, including background music, ambient sounds, and any other tracks that accompany gameplay.
 
 #### Texture
 
@@ -315,25 +323,46 @@ This folder contains all the textures and images used in the game. This includes
 
 This folder contains all the interactive and visual objects in the game, including those that the player can interact with and the scenery elements.
 
+#### Dialogue 
+
+This folder contains all the dialogue used in the game, including text files for character conversations. It organizes all the content for interactions with NPCs and mission instructions.
 
 ### Script
 
-This folder stores all the main scripts needed to make the game work. This includes gameplay logic, player controls and all the essential functions for managing the player's interaction with the game.
+This folder stores all the main scripts needed to make the game work. This includes gameplay logic, player controls, and all the essential functions for managing the player's interaction with the game.
 
 ### Interfaces
 
 This folder contains all the files relating to the game's user interfaces and the way in which players interact visually with the game.
 
 
-## About Godot Engine 
+## System : 
 
-<br>
+#### Desktop or laptop PC - Recommended [(More here)](https://docs.godotengine.org/en/stable/about/system_requirements.html#id3 "Permalink to this headline")
+
+To edit and export to Godot Engine we need a desktop or laptop computer with the following minimum power : 
+
+
+| | |
+| :- | :- |
+| **CPU**              | - _Example: Intel Core i5-6600K, AMD Ryzen 5 1600, Apple M1_, Raspberry Pi 5 with overclocking |
+| **GPU**              | - _Example: NVIDIA GeForce GTX 1050, AMD Radeon RX 460|
+| **RAM**              | - **For native exports:** 4 GB  <br>  <br>- **For web exports:** 8 GB  |
+| **Storage**          | -  ~1GB (used for the executable, project files , and cache)|
+| **Operating system** | - **For native exports:** Windows 10, macOS 10.15, Linux distribution released after 2020   <br> <br>- **For web exports:** Latest version of Firefox, Chrome, Edge, Safari, Opera |
+| | |
+
+---
+
+# III - Introduction to GODOT
+
+## About Godot Engine 
 
 Godot Engine is a free, open-source game engine for creating 2D and 3D games. 
 It offers comprehensive tools to facilitate development, and can be easily exported to multiple platforms (computers, mobiles, web, consoles). 
 
 Entirely licensed by MIT, it gives developers a great deal of freedom and control over their creations. 
-A library of asserts is also included in the software.
+A library of assets is also included in the software.
 
 ### Node
 
@@ -350,174 +379,21 @@ Nodes can be organized in a hierarchical structure as children of other nodes, c
 
 A Scene is a group of nodes organized to create a functional game element, such as a character, a user interface, or a complete level. A scene can contain multiple nodes, arranged in a hierarchy to form a logical structure. The advantage of this system is that each scene can be reused, combined with others, or instantiated multiple times to create repetitive or modular elements in the game.
 
-For example, you can create:
+For example, we can create:
 
 - a scene for a level,
 - a scene for a player character (with nodes for the sprite, animations, collisions, etc.),
 - a scene for the user interface (UI).
-Each scene can be saved as a file and imported into other scenes. This system makes development modular and allows you to work on individual elements of the game without affecting the entire project.
+Each scene can be saved as a file and imported into other scenes. This system makes development modular and allows us to work on individual elements of the game without affecting the entire project.
 
 
-## About Game 
 
-### Perspective
+## 3D
 
-Godot Engine can create both 2D and 3D games. This flexibility is one of its standout features, as it allows developers to use a single tool to create a wide range of game experiences, from pixel art platformers to immersive 3D worlds.
+Godot Engine can create both 2D and 3D games. This flexibility is one of its standout features, as it allows developers to use a single tool to create a wide range of game experiences, from pixel art platformers to immersive 3D worlds. 
 
-In our case, we decided to use 3D, thinking that it was better suited to our game and ambiation.
 
-## User Interface
-
-#### Main Menu
-
-A menu will be available, accessible by pressing the `esc` "escape" key. It will allow you to access all the settings (audio, graphics, keys, etc.), or quit the game.
-
-#### Inventory
-
-An inventory will keep track of all the player's items and allow them to navigate between the items in their bag by pressing the `e` key . A drag-and-drop system will be used to create this system.
-
-#### HUD
-
-From the main game screen, players can access a range of information : 
-
-- Maps : a mini-map will be displayed in the top right-hand corner of the screen to help players find their way around.
-- Time : the time will be displayed below the mini-map, allowing the player to keep track of the time.
-- Control : the control description will be placed at the bottom left of the screen, giving players quick access to the buttons they can use.
-- Reputation : A progress bar showing the reputation of the location the player is in will be placed at the top left.
-- Quests : A list of quests will be placed below the player to inform them of the actions to be carried out.
-
-
-### Mechanics
-
-The following mechanics will be included in the game:
-
-#### Movement
-
-Players can move in four directions (up, down, left, right), jump and sprint using the following key combinations:
-
-| Key     | Direction |
-| --------| --------- |
-| `Z`     | Forward   |
-| `S`     | Backward  |
-| `Q`     | Left      |
-| `D`     | Right     |
-| `Space` | Jump      |
-| `Shift` | Sprint    |
-
-#### Teleportation
-
-The player can teleport around the island. This action will change the player's position  using the following key :
-| Key | Action    |
-| --- | ----------|
-| XXXXX | Teleportation |
-
-
-The teleport action temporarily disables the player's movement for as long as this function is used.
-
-
-#### Vehicules
-
-The player can enter and drive a vehicle. Once inside, they can move the vehicle in four directions using the following key combinations:
-
-| Key | Action            |
-| --- | ------------------ |
-| `Z`   | Move Forward      |
-| `S`   | Move Backward     |
-| `Q`   | Turn Left         |
-| `D`   | Turn Right        |
-| `F`   | Enter/Exit Vehicle |
-
-When inside the vehicle, the player's standard movement controls are disabled until they exit the vehicle using the `F`  key.
-
----
-
-# Technical Sources
-
-
-## Godot Engine 
-
-We will use Godot Engine 4.3 It is available [here](https://godotengine.org/download/windows/).
-
-## Visual Studio
-
-We will use Visual Studio 2019. It is available [here](https://visualstudio.microsoft.com/fr/downloads/).
-
-## Git
-
-We will use Git combined with GitHub Desktop. It is available [here](https://desktop.github.com/).
-
-## 3D Asserts Website
-
-We will use Itch.io,  to get free assets. It is available [here](https://itch.io/).
-
-## Sound bank
-
-We will use Universal Soundbank and Zapsplat, to get free and royalty-free sounds. It is available [Universal Soundbank](https://universal-soundbank.com/) and [Zapsplat](https://www.zapsplat.com/).
-
----
-
-# Development Process
-
-## 1. Set up the technical structure
-
-- Initialization in Godot : Create the basic scenes, configure the FPS controls.
-- Backup Systems : Program the progress backup systems;
-- Quests and Objectives System : Integrate a quest manager to track and display tasks in real time.
-
-## 2. Development of Zones and Environment 
-
-- Zone : Model each zone (e.g. town, beach), integrating interactive elements specific to each environment.
-- Effects and Climatic Elements : Add visual and sound elements that change according to the actions of the player and the environment.
-
-## 3. Game mechanics integration
-
-- Action mechanics : Program actions between quests and players.
-- Action Impact : Associate a measurable impact for each player action (e.g. reducing pollution by planting trees).
-
-## 4. Gameplay Testing and Balancing
-
-- Testing : Check the fluidity of the game, test basic interactions and the task system.
-- User feedback : Gather feedback from testers on the understanding and difficulty of the educational tasks.
-- Balancing : Adjust the difficulty of the quests.
-
-## 5. Optimisation and Correction 
-
-- Performance : Optimise graphics, physics and interactions to ensure optimum fluidity.
-- Debugging : Fix bugs and improve game stability.
-
-
-## 6. Implementing Educational and Narrative System 
-
-- Learning Scenarios : Add relevant educational information integrated into the tasks.
-- Dynamic Storytelling : Include narrative elements such as dialogues or significant events to reinforce the message of the game.
-
-## 7. Final Phase and Launch
-
-- Testing : Carry out wider tests with a target audience to finalise adjustments.
-- Budget : Define a budget for the game and the marketing aspect. 
-- Launch : Put the game online and monitor feedback for post-launch updates.
-
----
-
-# System requirements
-
-### Desktop or laptop PC - Recommended [(More here)](https://docs.godotengine.org/en/stable/about/system_requirements.html#id3 "Permalink to this headline")
-
-To edit and export to Godot Engine you need a desktop or laptop computer with the following minimum power : 
-
-
-| **CPU**              | - _Example: Intel Core i5-6600K, AMD Ryzen 5 1600, Apple M1_, Raspberry Pi 5 with overclocking |
-| -------------------- | ------------------------|
-| **GPU**              | - _Example: NVIDIA GeForce GTX 1050 (Pascal), AMD Radeon RX 460 (GCN 4.0)_ <br>|
-| **RAM**              | - **For native exports:** 4 GB  <br>  <br>- **For web exports:** 8 GB  |
-| **Storage**          | -  ~1GB (used for the executable, project files and cache)|
-| **Operating system** | - **For native exports:** Windows 10, macOS 10.15, Linux distribution released after 2020   <br> <br>- **For web exports:** Latest version of Firefox, Chrome, Edge, Safari, Opera |
-
----
-
-# 3D
-
-## 3D tools 
+### 3D tools 
 
 - Built-in meshes: cube, cylinder, cone, sphere, prism, plane, quad, torus, ribbon, tube.
 
@@ -533,13 +409,13 @@ To edit and export to Godot Engine you need a desktop or laptop computer with th
 
 - PathFollow3D node to make nodes follow a Path3D.
 
-## 3D geometry helper class.
+### 3D geometry helper class.
 
 Support for exporting the current scene as a glTF 2.0 file, both from the editor and at run-time from an exported project.
 
-## 3D physics
+### 3D physics
 
-### Physics bodies:
+#### Physics bodies:
 
 - Static bodies.
 
@@ -559,7 +435,7 @@ Support for exporting the current scene as a glTF 2.0 file, both from the editor
 
 - Areas to detect bodies entering or leaving it.
 
-### Collision detection:
+#### Collision detection:
 
 - Built-in shapes: sphere, capsule, cylinder,...
 
@@ -567,40 +443,24 @@ Support for exporting the current scene as a glTF 2.0 file, both from the editor
 
 - Generate one or several convex collision shapes for any mesh from the editor.
 
----
 
-# Scripting
+## Scripting
 
-## General :
 
-- Object-oriented design pattern with scripts extending nodes.
+### GDScript:
 
-- Signals and groups for communicating between scripts.
+GDScript is a high-level, object-oriented programming language designed for Godot. It uses a syntax based on indentation, similar to languages such as Python. Its purpose is to be optimized and tightly integrated with Godot Engine, allowing great flexibility for content creation and integration.
 
-- Support for cross-language scripting.
-
-- Many 2D, 3D and 4D linear algebra data types such as vectors and transforms.
-
-## GDScript:
-
-- High-level interpreted language with optional static typing.
-
-- Syntax inspired by Python. However, GDScript is not based on Python.
-
-- Syntax highlighting is provided on GitHub.
-
-- Use threads to perform asynchronous actions or make use of multiple processor cores.
+GDScript is entirely independent of Python and is not based on it.
 
 Example : 
 
 ```txt
 func _ready():
-
 	print("Hello world!")
-
 ```
 
-### Methods
+#### Methods
 
 In GDScript, methods are functions that belong to a class. They are used to define actions that an object can perform. Methods can be used to manipulate data, interact with other objects, or perform calculations.
 
@@ -608,14 +468,12 @@ Example :
 
 ```
 func my_method():
- 
   var my_array = [1, 2, 3, 4, 5]
   var array_length = len(my_array)
     print("Length of the array: ", array_length)  # Display "5"
-    
 ```
 
-The methods that can be used in Godot :
+Here are a few methods that can be used in Godot, you can see more [here](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html) :
 
 
 | **Type**  | **Method**  | 
@@ -633,6 +491,465 @@ The methods that can be used in Godot :
 | **[Void](https://docs.godotengine.org/en/stable/classes/class_void.html)** | - [print_stack()](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-print-stack) |
 | **[Array](https://docs.godotengine.org/en/stable/classes/class_array.html)** | - [range(...) vararg](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-range) |
 | **[Boolean](https://docs.godotengine.org/en/stable/classes/class_bool.html)** | - [type_exists(type: StringName)](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-type-exists)|
+
+#### Annotations
+
+Annotations in Godot allow you to enhance the functionality of your scripts by exposing properties to the editor, managing initialization, or customizing class behaviors. Here's a table summarizing the key annotations :
+
+| **Annotation**      | **Description**  |
+|---------------------|------------------|
+| `@export` | Makes a property visible and editable in the Inspector. |
+| `@export_range` | Constrains a property's value to a specific range. |
+| `@export_file` | Allows selecting a specific file type in the Inspector. |
+| `@export_enum` | Lets you select from a predefined list of options. |
+| `@onready`| Initializes a variable after the node is ready. |
+| `@tool` | Enables the script to run in the editor (active outside of gameplay). |
+| `@class_name` | Assigns a custom name to the class, making it reusable as a new resource. |
+| `@signal`  | Declares a signal the script can emit. |
+| `@gadget`  | Used for creating custom tools for the editor (advanced use). |
+| `@position` | Defines the order of appearance in the Inspector (with GDScript 2.0). |
+| `@global_class`| Similar to `@class_name`, but makes the class globally accessible. |
+| `@export_group` | Groups properties under a header in the Inspector.  |
+| `@export_subgroup`| Creates subsections under a grouped property in the Inspector. |
+
+
+
+---
+
+# IV - Development Steps
+
+## 1. Environment setup
+
+- Initialization in Godot: Create the basic scenes, and configure the FPS controls.
+
+### Godot architecture 
+
+To get started, we need to create a set of nodes. They are the basic building blocks of the game in Godot, and their hierarchical organization allows us to create a complex project in a simple and modular way.
+
+So we need to create all the nodes needed for the game: a main node that will host the game, sub-nodes that will classify all the nodes, and finally nodes such as the game inventory.
+
+![alt text](./images/node_architecture1.png)
+
+
+### Perspective
+
+The game is in 3D because we felt it was better suited to our case and our atmosphere. This will allow greater flexibility in the creation of interactive and dynamic game elements. We will therefore use a 3D node and work in 3 dimensions for all the animations, and in 2D for the interface.   
+
+### Game aspects
+
+#### Movements
+
+The following movements will be included in the game:
+
+To assign keys, it's simple in Godot, we need to in the general panel and go to Project -> Project Settings -> Input Map.
+
+Then all we have to do is add your keys and link them to their actions.
+
+![alt text](./images/Godot_key.png)
+
+Players can move in four directions (up, down, left, right), jump, and sprint using the following key combinations:
+
+| Key     | Direction |
+| --------| --------- |
+| `w`     | Forward   |
+| `S`     | Backward  |
+| `A`     | Left      |
+| `D`     | Right     |
+| `Space` | Jump      |
+| `Shift` | Sprint    |
+
+
+## 2. Development of the Map 
+
+- Zone: Model each zone (town, beach), delimit the zone, add textures and assets.
+
+### Map Foundation
+
+First of all, to create the map we need to add the foundations, the base. The 3D terrain should include a raised area representing the mountain, a slope down to the water representing the beach, and four other flatter areas representing the farm, the town, the forest, and the port.
+
+To create the terrain we will use these videos in which all the characteristics for [the formation of the relief](https://www.youtube.com/watch?v=oV8c9alXVwU&t=68s), [the addition of water](https://www.youtube.com/watch?v=jYVO0-_sXZs&t=603s).
+
+
+We need to use a node: 3D Terrain. Then use the tools to create the relief and the different areas of the map.
+
+![alt text](./images/greenfield.png)
+
+### Zone Texture
+
+Each zone will have different textures to distinguish it from the others. We'll use the textures available [here](https://ambientcg.com/). To use them in Godot, import them and then go to the middle panel, then 3D Terrain and finally Texture.
+
+
+![alt text](./images/texture.png)
+
+### Zone Delimitation
+
+Each zone needs to be delimited as it will be necessary to reuse this later in the game. Indeed, quests and reputations will be assigned to each zone.To do this, you need to create nodes for each zone and delimit them.
+
+A child node of type CollisionShape3D has been added to a specific node to define the shape of the zone. 
+
+Next, we need to configure the detection between zones in the player, which will be used later for queries.
+
+```
+extends StaticBody3D
+
+@export_category("Current_Zone")
+@export var zone_name: String
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	zone_name = $".".name
+	print(body.name + " entered in " + zone_name)	
+	
+func _on_area_3d_body_exited(body: Node3D) -> void:
+	print(body.name + " leaved " + zone_name)
+	zone_name = ""
+```
+
+
+![alt text](./images/node_zone.png)
+
+![alt text](./images/beach_area.png)
+
+### Add Assets
+
+Each zone will have different assets (farms, houses, trees, etc.). All assets come from the same [source](https://poly.pizza/u/Quaternius). Import them into the "assets" folder and place them in the zone you want. 
+
+To simplify the positioning of assets, we can use an addon called: [Object Placer](https://github.com/Fleischkuechle/Godot-object-placer)
+
+
+
+## 3. Game mechanics integration
+
+- Create the User Interface, and add the HUD (Quests, Mini-Map, Time,...).
+
+### User Interface
+
+#### Main Menu
+
+A menu will be available, accessible by pressing the `esc` "escape" key. It will allow us to access all the settings (audio, graphics, keys, etc.), or quit the game.
+
+To create the menu, we'll take inspiration from [this video](https://www.youtube.com/watch?v=Z8jcjy_jZyk).
+
+First we need to add a Control node and then a Button node for each menu option. And finally, we need to add a Button node for each menu option. Next, we need to connect the pressed signal from the buttons to the menu script to execute the corresponding actions.
+
+```
+extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	# Set the minimum size in project settings
+	ProjectSettings.set_setting("display/window/size/min_width", Variable.min_size.x)
+	ProjectSettings.set_setting("display/window/size/min_height", Variable.min_size.y)
+	
+	# Enforce the minimum window size using DisplayServer
+	DisplayServer.window_set_min_size(Variable.min_size)
+	
+	
+	Variable.current_scene = Variable.MainMenu_path
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	if Variable.current_size.x < Variable.min_size.x or Variable.current_size.y < Variable.min_size.y:
+		DisplayServer.window_set_size(Vector2i(max(Variable.current_size.x, Variable.min_size.x), max(Variable.current_size.y, Variable.min_size.y)))
+
+
+func _on_play_button_pressed() -> void:
+	get_tree().change_scene_to_file(Variable.Gameplay_path)
+
+func _on_quit_button_pressed() -> void:
+	get_tree().quit() 
+
+func _on_option_button_pressed() -> void:
+	Variable.PreviousScene = Variable.current_scene
+	get_tree().change_scene_to_file(Variable.OptionMenu_path)
+
+
+```
+
+#### Inventory
+
+An inventory will keep track of all the player's items and allow them to navigate between the items in their bag by pressing the `e` key . A drag-and-drop system will be used to create this system.
+
+To create the inventor, we'll take inspiration from this video : [inventory](https://www.youtube.com/watch?v=7RXm0-TSJMw&t=764s&pp=ygUSZ29kb3Qga2V5IGJpbmRpbmdz) and [drag&drop](https://www.youtube.com/watch?v=8cV-5ByZLOE). Texture React nodes need to be created for each slot in the inventory panel.
+
+```
+extends Control
+
+@onready var icon: TextureRect = $Inventory/Description/DescriptionBox/Header/Icon
+@onready var description_label: RichTextLabel = $Inventory/Description/DescriptionBox/DescriptionLabel
+@onready var name_label: Label = $Inventory/Description/DescriptionBox/Header/Name_Label
+
+
+@warning_ignore("shadowed_global_identifier")
+var Item : Item_Ressource
+
+var inventorySize : int = 20
+
+@onready var slot_01: TextureRect = $Inventory/GridInventory/Slot1
+@onready var slot_02: TextureRect = $Inventory/GridInventory/Slot2
+@onready var slot_03: TextureRect = $Inventory/GridInventory/Slot3
+@onready var slot_04: TextureRect = $Inventory/GridInventory/Slot4
+@onready var slot_05: TextureRect = $Inventory/GridInventory/Slot5
+@onready var slot_06: TextureRect = $Inventory/GridInventory/Slot6
+@onready var slot_07: TextureRect = $Inventory/GridInventory/Slot7
+@onready var slot_08: TextureRect = $Inventory/GridInventory/Slot8
+@onready var slot_09: TextureRect = $Inventory/GridInventory/Slot9
+@onready var slot_10: TextureRect = $Inventory/GridInventory/Slot10
+@onready var slot_11: TextureRect = $Inventory/GridInventory/Slot11
+@onready var slot_12: TextureRect = $Inventory/GridInventory/Slot12
+@onready var slot_13: TextureRect = $Inventory/GridInventory/Slot13
+@onready var slot_14: TextureRect = $Inventory/GridInventory/Slot14
+@onready var slot_15: TextureRect = $Inventory/GridInventory/Slot15
+@onready var slot_16: TextureRect = $Inventory/GridInventory/Slot16
+@onready var slot_17: TextureRect = $Inventory/GridInventory/Slot17
+@onready var slot_18: TextureRect = $Inventory/GridInventory/Slot18
+@onready var slot_19: TextureRect = $Inventory/GridInventory/Slot19
+@onready var slot_20: TextureRect = $Inventory/GridInventory/Slot20
+
+@onready var slots : Array = [
+	slot_01, slot_02, slot_03, slot_04, slot_05,
+	slot_06, slot_07, slot_08, slot_09, slot_10,
+	slot_11, slot_12, slot_13, slot_14, slot_15,
+	slot_16, slot_17, slot_18, slot_19, slot_20,
+]
+
+			
+func add_item(item: Item_Ressource):
+	var item_id_as_string = str(item.item_ID)
+	
+	if AllDictionary.Item_List.has(item_id_as_string):  # Check if the item exists
+		for i in range(inventorySize):
+			if slots[i] == null:  # Ensure the slot is empty
+				slots[i] = AllDictionary.Item_List[item_id_as_string]  # Add item to the slot
+				print(item.item_title, "added to slot", i)
+				return
+		print("Inventory full!")
+	else:
+		print("Error: Item not found in Item_List:", item_id_as_string)
+
+
+func OpenInventory():
+	print("Open Inventory")
+	Variable.InventoryOpen = !Variable.InventoryOpen
+	$".".show()
+	Variable.movelock = true
+	Variable.cameralock = true
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+func CloseInventory():
+	print("Close Inventory")
+	Variable.InventoryOpen = !Variable.InventoryOpen
+	$".".hide()
+	Variable.movelock = false
+	Variable.cameralock = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func set_description(item : Item_Ressource):
+	if name_label != null:
+		name_label.text = item.item_title
+	else:
+		print("null name_label")
+	if icon != null:
+		icon.texture = item.item_icon
+	else:
+		print("null icon")
+	if description_label != null:
+		description_label.text = item.item_description
+	else:
+		print("null description_label")
+
+```
+
+![alt text](./images/Inventory_screen.png)
+
+
+#### HUD
+
+From the main game screen, players can access a range of information : 
+
+
+##### Mini Maps
+
+A mini-map will be displayed in the top right-hand corner of the screen to help players find their way around.
+
+To create the mini The mini-maps consist of creating another point of life for the player, but from above.
+
+First of all, we need to add a Camera3D node dedicated to the mini-map in our scene, then we just need to configure it the way we want and add the visual features.
+
+##### Time
+
+The time will be displayed below the mini-map, allowing the player to keep track of the time.
+  
+The timer will be based on a clock of 24 minutes equivalent to 24 hours and will represent the real life cycle.
+
+```
+extends Node
+
+# Variables for the clock
+var hours = 0        # Initial hours (0-23)
+var minutes = 0      # Initial minutes (0-59)
+var seconds = 0      # Seconds (optional)
+
+const GAME_SECONDS_PER_REAL_SECOND = 60  # 1 real-world second = 1 in-game minute
+
+var elapsed_time = 0.0  # Time elapsed since the start
+
+func _process(delta):
+    # Add the elapsed time
+    elapsed_time += delta * GAME_SECONDS_PER_REAL_SECOND
+
+    # Convert to hours, minutes, and seconds
+    seconds = int(elapsed_time) % 60
+    minutes = int(elapsed_time / 60) % 60
+    hours = int(elapsed_time / 3600) % 24
+
+    # Debug print to display the time
+    print("Clock: %02d:%02d:%02d" % [hours, minutes, seconds])
+
+```
+##### Reputation
+
+A progress bar showing the reputation of the location the player is in will be placed at the top left.
+
+Reputation increases as the player completes quests. It also decreases with inactivity.
+
+| **Reputation Gain** | **Reputation Loss** (per period of inactivity) | **Inactivity period before loss** | **Max Reputation** | **Min Reputation** |
+|----|-----|--------------|-----|---|
+| +2 | -1  | 120 seconds  | 100 | 0 |
+
+  
+##### Quests Panel 
+
+A list of quests will be placed below the player to inform them of the actions to be carried out.
+
+We need to create a quest dictionary where all the names and actions are listed for each quest. 
+
+![alt text](./images/Quest_scheme.png)
+
+```
+extends Panel
+
+onready var quest_container = $VBoxContainer
+
+var quests = []  # List of quests
+
+func _ready():
+    load_quests()
+    display_quests()
+
+func load_quests():
+    # Load quests from a JSON file or another source
+    var file = File.new()
+    if file.open("res://quests.json", File.READ) == OK:
+        quests = JSON.parse(file.get_as_text()).result
+        file.close()
+
+func display_quests():
+    # Clear existing quests in the UI
+    quest_container.clear_children()
+    
+    # Add each quest to the list
+    for quest in quests:
+        var quest_label = Label.new()
+        quest_label.text = "[b]" + quest["title"] + "[/b]\n" + quest["description"]
+        quest_label.bbcode_enabled = true
+        quest_container.add_child(quest_label)
+
+# Add a quest (to be called when the player accepts a new quest)
+func add_quest(title, description):
+    quests.append({"title": title, "description": description})
+    display_quests()
+
+# Mark a quest as completed
+func complete_quest(title):
+    quests = quests.filter(func(q): return q.title != title)
+    display_quests()
+```
+
+## 4. Others features 
+
+- Add interaction between quests and the player,  all audio and dialogue. 
+
+### Audio 
+
+Audio is essential to the game's appeal, whether as background sounds or in connection with interactions.
+
+Then we can mix the audio using a control panel in the middle of the main Godot interface and select "Audio".
+
+![alt text](./images/Audio_panel.png)
+
+Finally, we can play the sound as follows : 
+
+```
+var sound = preload("res://sounds/your_sound.ogg")
+$AudioStreamPlayer.stream = sound
+
+```
+
+
+### Dialogue
+
+Dialogue is important for creating more immersion for players. 
+
+
+First of all, we need to add a new node to house all the dialogue. Then we can use an addon available from the ‘AssetLib’ in Godot: "dialogue_node". 
+
+Finally, we can set the dialogues as follows : 
+
+![alt text](./images/example_dialogue.png)
+
+### Interaction Quest & Player
+
+We then need to include the interaction between the quests and the player, and we'll use [this video](https://www.youtube.com/watch?v=QKdyUBjzPmk) as inspiration for our code. 
+
+So we have the following example, which represents a class of interactive objects with a customizable prompt message, displaying the key assigned to the interaction. When an object interacts, a message identifying the two parties is printed.
+
+
+```GDScript
+extends CollisionObject3D
+class_name Interactable
+@export var prompt_message = "Interact"
+func get_prompt():
+	var key_name = " "
+	for action in InputMap.action_get_events("interaction"):
+		if action is InputEventKey:
+			key_name = action.as_text_physical_keycode()
+			break
+			
+	return prompt_message + "\n[" + key_name + "]"
+func interact(body):
+	print(body.name, " interacted with ", name)
+```
+
+
+
+## 5. Gameplay testing 
+
+- Debugging: Fix bugs and improve game stability.
+
+To resolve problems and bugs, we can use Godot's terminal. The terminal displays debugging logs, which can help us spot errors or unexpected behaviour in your game. It also displays syntax errors, warnings**,** and other useful information during development.
+
+![alt text](./images/terminal_godot.png)
+
+
+## 6. Final phase and launch
+
+- Export: Bring the game to life by creating its executable file.
+
+Once the game is finished, it's time to export it. 
+
+First, we need to add the export templates for our version of Godot. You can download them directly from the Godot interface: Go to Editor -> Manage Export Templates.
+Click on Download and Install.
+
+Then we need to go to the menu: Project -> Export -> Add (choose the platform we want to use here Windows Desktop or macOS), add all the necessary parameters and finally export the project.
+
+![alt text](./images/export.png)
+![alt text](./images/export_2.png)
+
+---
+
+
 
 
 
