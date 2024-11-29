@@ -602,10 +602,13 @@ func _on_area_3d_body_exited(body: Node3D) -> void:
 	zone_name = ""
 ```
 
-
 ![alt text](./images/node_zone.png)
 
 ![alt text](./images/beach_area.png)
+
+The aim of delimitation is to create this mechanism : 
+
+![alt text](./images/zone_system.png)
 
 ### Add Assets
 
