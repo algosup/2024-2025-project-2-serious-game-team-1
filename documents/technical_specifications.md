@@ -131,27 +131,33 @@ ALGOSUP's school commissioned us to create a serious game on GODOT Game Engine.
 
 
 ## Glossary
+
 | Term           | Definition  |
 |----------------|-------------|
-| **Animation**  | A file used to define the movement of 3D objects in Unreal Engine |
-| **Asset**      | A file that can be imported into Godot Engine |
-| **Dialogue**   | Text that appears on the screen |
-| **FPS**        | First-person View |
-| **Game Engine**| A Game Engine is software that provides the tools needed to create video games, such as graphics, physics, audio, and interaction management |
-| **GitHub**     | A version control system |
-| **HUD**        | Heads-Up Display, a graphical interface that displays essential information to the player in real time, such as health, score, resources... |
-| **MIT**        | The MIT licence is a permissive open-source licence that allows developers to use, copy, modify, and distribute the software, even in commercial projects, without paying royalties |
-| **Lore**       | A story that is not directly related to the gameplay |
-| **NPC**        | Non-Playable Character |
-| **Path**       | A path is a sequence of points in space that defines a route for objects to move along |
-| **Path3D**     | A Path3D defines a 3D path for objects to follow.|
-| **Ragdolls**   | A Physical structures used to simulate the realistic movement of an articulated body |
-| **Texture**    | A file used to define the surface properties of 3D objects in Unreal Engine |
-| **UI**         | A User Interface is the set of visual elements that enable the user to interact with an application or game |
-| **WIP**        | Work In Progress |
-| **.glTF**        | The .glTF format is an open, standardised file format designed for the efficient and compact exchange of 3D models |
-| **.json**        | A .json file is a lightweight, human-readable data format used to store and exchange information |
-
+| **.glTF**      | The .glTF format is an open, standardized file format designed for the efficient and compact exchange of 3D models. |
+| **.json**      | A .json file is a lightweight, human-readable data format used to store and exchange information. |
+| **AI**         | Artificial Intelligence, used to simulate human-like behavior in games or applications. |
+| **Animation**  | A file used to define the movement of 3D objects in Unreal Engine. |
+| **Asset**      | A file that can be imported into Godot Engine. |
+| **Collision Shape** | A geometric shape used to define the area for detecting collisions in a game engine. |
+| **CSG**        | Constructive Solid Geometry, a method for creating complex 3D shapes by combining or subtracting simpler ones. |
+| **Dialogue**   | Text that appears on the screen, often as part of a character interaction or storytelling. |
+| **FPS**        | First-Person Shooter or First-Person View. |
+| **Game Engine**| Software that provides the tools needed to create video games, such as graphics, physics, audio, and interaction management. |
+| **GitHub**     | A version control platform used to host, review, and manage code collaboratively. |
+| **HUD**        | Heads-Up Display, a graphical interface that displays essential information to the player in real time, such as health, score, resources, etc. |
+| **Lore**       | The backstory, world-building, or narrative that provides depth to a game’s universe. |
+| **MIT License**| A permissive open-source license that allows developers to use, copy, modify, and distribute software, even in commercial projects, without paying royalties. |
+| **NPC**        | Non-Playable Character, a character controlled by the game rather than the player. |
+| **Path**       | A sequence of points in space that defines a route for objects to move along. |
+| **Path3D**     | A 3D path for objects to follow in a game engine. |
+| **Procedural Geometry** | Geometry dynamically generated through code, often used for creating environments or objects that change over time. |
+| **Ragdolls**   | Physical structures used to simulate realistic movement of an articulated body. |
+| **Static Body**| A non-moving object used for collisions or obstacles in a physics-based game engine. |
+| **Texture**    | A file used to define the surface properties of 3D objects, including colors, patterns, and details. |
+| **UI**         | User Interface, the set of visual elements that enable the user to interact with an application or game. |
+| **Vehicle Body**| A physics body type specifically designed to simulate vehicles in a game engine. |
+| **WIP**        | Work In Progress, indicating that something is not yet finalized or completed. |
 
 
 ## Client Requirements
@@ -336,12 +342,14 @@ This folder contains all the files relating to the game's user interfaces and th
 To edit and export to Godot Engine we need a desktop or laptop computer with the following minimum power : 
 
 
+| | |
+| :- | :- |
 | **CPU**              | - _Example: Intel Core i5-6600K, AMD Ryzen 5 1600, Apple M1_, Raspberry Pi 5 with overclocking |
-| -------------------- | ------------------------|
-| **GPU**              | - _Example: NVIDIA GeForce GTX 1050 (Pascal), AMD Radeon RX 460 (GCN 4.0)_ <br>|
+| **GPU**              | - _Example: NVIDIA GeForce GTX 1050, AMD Radeon RX 460|
 | **RAM**              | - **For native exports:** 4 GB  <br>  <br>- **For web exports:** 8 GB  |
 | **Storage**          | -  ~1GB (used for the executable, project files and cache)|
 | **Operating system** | - **For native exports:** Windows 10, macOS 10.15, Linux distribution released after 2020   <br> <br>- **For web exports:** Latest version of Firefox, Chrome, Edge, Safari, Opera |
+| | |
 
 ---
 
