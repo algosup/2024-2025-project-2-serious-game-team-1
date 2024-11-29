@@ -1,5 +1,6 @@
 extends Node
 
+var inventory_gestion: Node = null
 # Dictionary to store items with preloaded resources
 var Item_List: Dictionary = {
 	"1" : "res://assets/items/bin_bag.tres"
@@ -27,6 +28,25 @@ func load_resource_quest_list(quest_id: String):
 		return load(path)
 	else:
 		return null
+
+func check_item(object, item: Item_Ressource):
+	
+	inventory_gestion = get_node("Menus/Inventory_Gestion")
+	
+	if inventory_gestion == null:
+		print("Error: inventory_gestion is not set!")
+		return
+	# Ensure the item ID is used correctly
+	var item_id_as_string = str(item.item_ID)
+	
+	if Item_List.has(item_id_as_string):  # Check if the dictionary contains the key
+		object.queue_free()  # Remove the object
+		if inventory_gestion:
+			inventory_gestion.add_item(item)  # Add item to inventory
+		else:
+			print("Error: inventory_gestion is not set!")
+	else:
+		print("Item not recognized! ID: ", item_id_as_string)
 
 # Log quest progress
 func log_quest(quest_id: String, status: String) -> void:

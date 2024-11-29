@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("2_ggwes")
 item_title = "Bin bag"
-item_ID = 1
+item_ID = "1"
 item_icon = ExtResource("1_njar7")
 item_description = "A bin bag can liner is a disposable container for solid waste. These bags are useful for lining the inside of waste containers to prevent the inside of the container from being covered with garbage. Bin bags can also be used as waste containers.
 "

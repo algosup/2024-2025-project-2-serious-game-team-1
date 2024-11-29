@@ -38,11 +38,19 @@ var inventorySize : int = 20
 	slot_16, slot_17, slot_18, slot_19, slot_20,
 ]
 
-func add_item(item : Item_Ressource):
-	for i in range(inventorySize):
-		if slots[i].item == null:
-			slots[i].item = item
 			
+func add_item(item: Item_Ressource):
+	var item_id_as_string = str(item.item_ID)
+	
+	if AllDictionary.Item_List.has(item_id_as_string):  # Check if the item exists
+		for i in range(inventorySize):
+			if slots[i] == null:  # Ensure the slot is empty
+				slots[i] = AllDictionary.Item_List[item_id_as_string]  # Add item to the slot
+				print(item.item_title, "added to slot", i)
+				return
+		print("Inventory full!")
+	else:
+		print("Error: Item not found in Item_List:", item_id_as_string)
 
 
 func OpenInventory():

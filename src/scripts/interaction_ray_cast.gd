@@ -17,6 +17,7 @@ func _physics_process(_delta: float) -> void:
 				if collider.is_in_group("item") and collider is Item_Object:
 					# Add item to inventory if necessary
 					collider.interact(owner)
+					collider.pick_up()
 				if collider.is_in_group("pnj") and collider is Pnj:
 					if DialogManager.dialog(collider):
 						print("Entered dialog with " + str(collider))

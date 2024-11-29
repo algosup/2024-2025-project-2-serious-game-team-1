@@ -8,7 +8,6 @@
 
 [node name="bin bag" type="RigidBody3D" groups=["item"]]
 script = ExtResource("1_nd7sh")
-item_name = "bin bag"
 prompt_message = "pick up bin bag"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
