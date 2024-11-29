@@ -626,7 +626,7 @@ To simplify the positioning of assets, we can use an addon called: [Object Place
 
 A menu will be available, accessible by pressing the `esc` "escape" key. It will allow us to access all the settings (audio, graphics, keys, etc.), or quit the game.
 
-To create the menu, we'll take inspiration from this video [this video](https://www.youtube.com/watch?v=Z8jcjy_jZyk).
+To create the menu, we'll take inspiration from [this video](https://www.youtube.com/watch?v=Z8jcjy_jZyk).
 
 First we need to add a Control node and then a Button node for each menu option. And finally, we need to connect the button press signal to the menu script to execute the corresponding actions.
 
