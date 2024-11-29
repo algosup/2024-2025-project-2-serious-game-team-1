@@ -24,17 +24,17 @@
 
 - [**Technical Specifications - 2024-2025-project-2-serious-game-team-1**](#technical-specifications---2024-2025-project-2-serious-game-team-1)
     - [*Last Update on November 29th, 2024*](#last-update-on-november-29th-2024)
-- [Introduction](#introduction)
+- [I - Introduction](#i---introduction)
   - [Audience](#audience)
   - [Overview](#overview)
   - [Glossary](#glossary)
   - [Client Requirements](#client-requirements)
-    - [Objective :](#objective-)
-    - [Game Engine :](#game-engine-)
-    - [Game theme :](#game-theme-)
-    - [Game Quality :](#game-quality-)
-    - [Deliverable Requirements :](#deliverable-requirements-)
-- [Work Environement](#work-environement)
+    - [1. Objective](#1-objective)
+    - [2. Game Engine](#2-game-engine)
+    - [3. Game theme](#3-game-theme)
+    - [4. Game Quality](#4-game-quality)
+    - [5. Deliverable Requirements](#5-deliverable-requirements)
+- [II - Work Environement](#ii---work-environement)
   - [Github Conventions](#github-conventions)
     - [1. Branch](#1-branch)
     - [2. Commit](#2-commit)
@@ -57,7 +57,7 @@
     - [Interfaces](#interfaces)
   - [System :](#system-)
       - [Desktop or laptop PC - Recommended (More here)](#desktop-or-laptop-pc---recommended-more-here)
-- [Introduction to GODOT](#introduction-to-godot)
+- [III - Introduction to GODOT](#iii---introduction-to-godot)
   - [About Godot Engine](#about-godot-engine)
     - [Node](#node)
   - [Scene](#scene)
@@ -71,7 +71,7 @@
     - [GDScript:](#gdscript)
       - [Methods](#methods)
       - [Annotations](#annotations)
-- [Development Steps](#development-steps)
+- [IV - Development Steps](#iv---development-steps)
   - [1. Environement setup](#1-environement-setup)
     - [Godot architecture](#godot-architecture)
     - [Perspective](#perspective)
@@ -103,7 +103,7 @@
 
 --- 
 
-# Introduction
+# I - Introduction
 
 The goal of this document is to define the technical specifications of the project.
 It will be used to define the technical requirements and conventions of the project, as well as the tools we will be using.
@@ -131,61 +131,63 @@ ALGOSUP's school commissioned us to create a serious game on GODOT Game Engine.
 
 
 ## Glossary
-
-| Term           | Definition  |
-|----------------|-------------|
-| **.glTF**      | The .glTF format is an open, standardized file format designed for the efficient and compact exchange of 3D models. |
-| **.json**      | A .json file is a lightweight, human-readable data format used to store and exchange information. |
-| **AI**         | Artificial Intelligence, used to simulate human-like behavior in games or applications. |
-| **Animation**  | A file used to define the movement of 3D objects in Unreal Engine. |
-| **Asset**      | A file that can be imported into Godot Engine. |
-| **Collision Shape** | A geometric shape used to define the area for detecting collisions in a game engine. |
-| **CSG**        | Constructive Solid Geometry, a method for creating complex 3D shapes by combining or subtracting simpler ones. |
-| **Dialogue**   | Text that appears on the screen, often as part of a character interaction or storytelling. |
-| **FPS**        | First-Person Shooter or First-Person View. |
-| **Game Engine**| Software that provides the tools needed to create video games, such as graphics, physics, audio, and interaction management. |
-| **GitHub**     | A version control platform used to host, review, and manage code collaboratively. |
-| **HUD**        | Heads-Up Display, a graphical interface that displays essential information to the player in real time, such as health, score, resources, etc. |
-| **Lore**       | The backstory, world-building, or narrative that provides depth to a game’s universe. |
-| **MIT License**| A permissive open-source license that allows developers to use, copy, modify, and distribute software, even in commercial projects, without paying royalties. |
-| **NPC**        | Non-Playable Character, a character controlled by the game rather than the player. |
-| **Path**       | A sequence of points in space that defines a route for objects to move along. |
-| **Path3D**     | A 3D path for objects to follow in a game engine. |
+| Term               | Definition  |
+|--------------------|-------------|
+| **.glTF**          | The .glTF format is an open, standardized file format designed for the efficient and compact exchange of 3D models. |
+| **.json**          | A .json file is a lightweight, human-readable data format used to store and exchange information. |
+| **AI**             | Artificial Intelligence, used to simulate human-like behavior in games or applications. |
+| **Animation**      | A file used to define the movement of 3D objects in Unreal Engine. |
+| **Asset**          | A file that can be imported into Godot Engine. |
+| **Autoload**       | Scripts or scenes that Godot loads automatically when the game starts up and that remain globally accessible throughout the runtime. They are used for global variables or functions such as the score, game parameters or database management. |
+| **Collision Shape**| A geometric shape used to define the area for detecting collisions in a game engine. |
+| **CSG**            | Constructive Solid Geometry, a method for creating complex 3D shapes by combining or subtracting simpler ones. |
+| **Dialogue**       | Text that appears on the screen, often as part of a character interaction or storytelling. |
+| **FPS**            | First-Person Shooter or First-Person View. |
+| **Game Engine**    | Software that provides the tools needed to create video games, such as graphics, physics, audio, and interaction management. |
+| **GitHub**         | A version control platform used to host, review, and manage code collaboratively. |
+| **Groups**         | Used to organize nodes that share similar behavior or properties. This simplifies their collective management and improves code visibility. |
+| **HUD**            | Heads-Up Display, a graphical interface that displays essential information to the player in real time, such as health, score, resources, etc. |
+| **InputMap**       | A feature in Godot that lets you manage user inputs (keyboard, mouse, etc.). It is possible to associate custom actions with keys or buttons, which makes the code more readable and adaptable. |
+| **Lore**           | The backstory, world-building, or narrative that provides depth to a game’s universe. |
+| **MIT License**    | A permissive open-source license that allows developers to use, copy, modify, and distribute software, even in commercial projects, without paying royalties. |
+| **NPC**            | Non-Playable Character, a character controlled by the game rather than the player. |
+| **Path**           | A sequence of points in space that defines a route for objects to move along. |
+| **Path3D**         | A 3D path for objects to follow in a game engine. |
 | **Procedural Geometry** | Geometry dynamically generated through code, often used for creating environments or objects that change over time. |
-| **Ragdolls**   | Physical structures used to simulate realistic movement of an articulated body. |
-| **Static Body**| A non-moving object used for collisions or obstacles in a physics-based game engine. |
-| **Texture**    | A file used to define the surface properties of 3D objects, including colors, patterns, and details. |
-| **UI**         | User Interface, the set of visual elements that enable the user to interact with an application or game. |
-| **Vehicle Body**| A physics body type specifically designed to simulate vehicles in a game engine. |
-| **WIP**        | Work In Progress, indicating that something is not yet finalized or completed. |
+| **Ragdolls**       | Physical structures used to simulate realistic movement of an articulated body. |
+| **Static Body**    | A non-moving object used for collisions or obstacles in a physics-based game engine. |
+| **Texture**        | A file used to define the surface properties of 3D objects, including colors, patterns, and details. |
+| **UI**             | User Interface, the set of visual elements that enable the user to interact with an application or game. |
+| **Vehicle Body**   | A physics body type specifically designed to simulate vehicles in a game engine. |
+| **WIP**            | Work In Progress, indicating that something is not yet finalized or completed. |
 
 
 ## Client Requirements
 
-### Objective :
+### 1. Objective
 
 The aim of the game is to educate players about environmental and climate issues. The game aims to raise players' awareness of ecological issues and make them understand the impact of their actions on the planet.
 
-### Game Engine :
+### 2. Game Engine
 
 The game must be designed using the Godot Engine 4.3, relying on GDScript. 
 
-### Game theme :
+### 3. Game theme
 
 The central theme of the game is climat change, approached in a fun and educational way. 
 
-### Game Quality :
+### 4. Game Quality
 
 The game must be well finished, respecting the principles of game design and development. Regular and rigorous testing throughout the development process is necessary to ensure a smooth and enjoyable gaming experience.
   
-### Deliverable Requirements :
+### 5. Deliverable Requirements
 
 The final product must offer a pleasant and engaging experience for players. All essential elements must be included, the game must be bug-free for optimal playability and as full-featured as possible.
 
 ---
 
 
-# Work Environement
+# II - Work Environement
 
 ## Github Conventions 
 
@@ -353,7 +355,7 @@ To edit and export to Godot Engine we need a desktop or laptop computer with the
 
 ---
 
-# Introduction to GODOT
+# III - Introduction to GODOT
 
 ## About Godot Engine 
 
@@ -515,7 +517,7 @@ Annotations in Godot allow to enhance the functionality of your scripts by expos
 
 ---
 
-# Development Steps
+# IV - Development Steps
 
 ## 1. Environement setup
 
