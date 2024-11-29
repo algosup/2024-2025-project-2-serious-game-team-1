@@ -110,7 +110,7 @@ It will be used to define the technical requirements and conventions of the proj
 
 ## Audience 
 
-This document is intended for all the team:
+This document is intended for the team:
 
 Main audiences
 
@@ -773,7 +773,7 @@ From the main game screen, players can access a range of information :
 
 A mini-map will be displayed in the top right-hand corner of the screen to help players find their way around.
 
-To create the mini The mini maps consist of creating another point of life for the player, but from above. 
+To create the mini The mini-maps consist of creating another point of life for the player, but from above.
 
 First of all, we need to add a Camera3D node dedicated to the mini-map in our scene, then we just need to configure it the way we want and add the visual features.
 
