@@ -14,16 +14,16 @@
 
 ---
 
-### *Last Update on November 28th, 2024*
+### *Last Update on November 29th, 2024*
 
 ![alt text](./images/Godot_Logo-1.png)
 
 <details>
 
-<summary><h3> Table of Contents </h3></summary>
+<summary>Table of Contents</summary>
 
 - [**Technical Specifications - 2024-2025-project-2-serious-game-team-1**](#technical-specifications---2024-2025-project-2-serious-game-team-1)
-    - [*Last Update on November 28th, 2024*](#last-update-on-november-28th-2024)
+    - [*Last Update on November 29th, 2024*](#last-update-on-november-29th-2024)
 - [Introduction](#introduction)
   - [Audience](#audience)
   - [Overview](#overview)
@@ -85,19 +85,18 @@
   - [3. Game mechanics integration](#3-game-mechanics-integration)
     - [User Interface](#user-interface)
       - [Main Menu](#main-menu)
-    - [Inventory](#inventory)
-    - [HUD](#hud)
-      - [Mini Maps](#mini-maps)
-      - [Time](#time)
-      - [Reputation](#reputation)
-      - [Quests Panel](#quests-panel)
+      - [Inventory](#inventory)
+      - [HUD](#hud)
+        - [Mini Maps](#mini-maps)
+        - [Time](#time)
+        - [Reputation](#reputation)
+        - [Quests Panel](#quests-panel)
   - [4. Others features](#4-others-features)
     - [Audio](#audio)
     - [Dialogue](#dialogue-1)
     - [Interaction Quest \& Player](#interaction-quest--player)
   - [5. Gameplay testing](#5-gameplay-testing)
   - [6. Final phase and launch](#6-final-phase-and-launch)
-
 
 </details>
 
@@ -543,9 +542,9 @@ Players can move in four directions (up, down, left, right), jump and sprint usi
 
 | Key     | Direction |
 | --------| --------- |
-| `Z`     | Forward   |
+| `w`     | Forward   |
 | `S`     | Backward  |
-| `Q`     | Left      |
+| `A`     | Left      |
 | `D`     | Right     |
 | `Space` | Jump      |
 | `Shift` | Sprint    |
@@ -614,7 +613,7 @@ To simplify the positioning of assets, we can use an addon called: [Object Place
 
 A menu will be available, accessible by pressing the `esc` "escape" key. It will allow us to access all the settings (audio, graphics, keys, etc.), or quit the game.
 
-To create the menu we will use [this videos](https://www.youtube.com/watch?v=Z8jcjy_jZyk) in which we have all the characteristics.
+To create the menu, we'll take inspiration from this video [this video](https://www.youtube.com/watch?v=Z8jcjy_jZyk).
 
 We you need to add a Button node for each menu option. Next, we need to connect the pressed signal from the buttons to the menu script to execute the corresponding actions.
 
@@ -636,26 +635,22 @@ func _on_QuitButton_pressed():
 
 ```
 
-![alt text](./images/Main_menu.png)
-
-![alt text](./images/Menu_settings.png)
-
-### Inventory
+#### Inventory
 
 An inventory will keep track of all the player's items and allow them to navigate between the items in their bag by pressing the `e` key . A drag-and-drop system will be used to create this system.
 
-To create the menu we will use these videos : [inventory](https://www.youtube.com/watch?v=7RXm0-TSJMw&t=764s&pp=ygUSZ29kb3Qga2V5IGJpbmRpbmdz) and [drag&drop](https://www.youtube.com/watch?v=8cV-5ByZLOE)  in which we have all the characteristics.
+To create the inventor, we'll take inspiration from this video : [inventory](https://www.youtube.com/watch?v=7RXm0-TSJMw&t=764s&pp=ygUSZ29kb3Qga2V5IGJpbmRpbmdz) and [drag&drop](https://www.youtube.com/watch?v=8cV-5ByZLOE)  in which we have all the characteristics.
 
 
 ![alt text](./images/Inventory_screen.png)
 
 
-### HUD
+#### HUD
 
 From the main game screen, players can access a range of information : 
 
 
-#### Mini Maps
+##### Mini Maps
 
 A mini-map will be displayed in the top right-hand corner of the screen to help players find their way around.
 
@@ -663,7 +658,7 @@ To create the mini The mini maps consist of creating another point of life for t
 
 First of all we need to add a Camera3D node dedicated to the mini-map in our scene, then we just need to configure it the way we want and add the visual features.
 
-#### Time
+##### Time
 
 The time will be displayed below the mini-map, allowing the player to keep track of the time.
   
@@ -694,18 +689,18 @@ func _process(delta):
     print("Clock: %02d:%02d:%02d" % [hours, minutes, seconds])
 
 ```
-#### Reputation
+##### Reputation
 
 A progress bar showing the reputation of the location the player is in will be placed at the top left.
-  
-Reputation will grow as the player gains xp for each quest. It also decreases if there is a period of inactivity.
 
-| **XP gained** (per completed task) | **Reputation Gain** | **Reputation Loss** (per period of inactivity) | **Inactivity period before loss** | **Max Reputation** | **Min Reputation** |
-|----|----|-----|--------------|-----|---|
-| 10 | +2 | -1  | 120 seconds  | 100 | 0 |
+Reputation increases as the player completes quests. It also decreases with inactivity.
+
+| **Reputation Gain** | **Reputation Loss** (per period of inactivity) | **Inactivity period before loss** | **Max Reputation** | **Min Reputation** |
+|----|-----|--------------|-----|---|
+| +2 | -1  | 120 seconds  | 100 | 0 |
 
   
-#### Quests Panel 
+##### Quests Panel 
 
 A list of quests will be placed below the player to inform them of the actions to be carried out.
 
