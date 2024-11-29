@@ -83,14 +83,12 @@
     - [Zone Delimitation](#zone-delimitation)
     - [Add Assets](#add-assets)
   - [3. Game mechanics integration](#3-game-mechanics-integration)
-    - [User Interface](#user-interface)
-      - [Main Menu](#main-menu)
-      - [Inventory](#inventory)
-      - [HUD](#hud)
-        - [Mini Maps](#mini-maps)
-        - [Time](#time)
-        - [Reputation](#reputation)
-        - [Quests Panel](#quests-panel)
+    - [Main Menu](#main-menu)
+    - [Inventory](#inventory)
+    - [Mini Maps](#mini-maps)
+    - [Time](#time)
+    - [Reputation](#reputation)
+    - [Quests Panel](#quests-panel)
   - [4. Others features](#4-others-features)
     - [Audio](#audio)
     - [Dialogue](#dialogue-1)
@@ -455,7 +453,7 @@ GDScript is entirely independent of Python and is not based on it.
 
 Example : 
 
-```txt
+```GDScript
 func _ready():
 	print("Hello world!")
 ```
@@ -466,7 +464,7 @@ In GDScript, methods are functions that belong to a class. They are used to defi
 
 Example :
 
-```
+```GDScript
 func my_method():
   var my_array = [1, 2, 3, 4, 5]
   var array_length = len(my_array)
@@ -589,7 +587,7 @@ A child node of type CollisionShape3D has been added to a specific node to defin
 
 Next, we need to configure the detection between zones in the player, which will be used later for queries.
 
-```
+```GDScript
 extends StaticBody3D
 
 @export_category("Current_Zone")
@@ -621,9 +619,7 @@ To simplify the positioning of assets, we can use an addon called: [Object Place
 
 - Create the User Interface, and add the HUD (Quests, Mini-Map, Time,...).
 
-### User Interface
-
-#### Main Menu
+### Main Menu
 
 A menu will be available, accessible by pressing the `esc` "escape" key. It will allow us to access all the settings (audio, graphics, keys, etc.), or quit the game.
 
@@ -631,7 +627,7 @@ To create the menu, we'll take inspiration from [this video](https://www.youtube
 
 First we need to add a Control node and then a Button node for each menu option. And finally, we need to add a Button node for each menu option. Next, we need to connect the pressed signal from the buttons to the menu script to execute the corresponding actions.
 
-```
+```GDScript
 extends Control
 
 
@@ -667,13 +663,13 @@ func _on_option_button_pressed() -> void:
 
 ```
 
-#### Inventory
+### Inventory
 
 An inventory will keep track of all the player's items and allow them to navigate between the items in their bag by pressing the `e` key . A drag-and-drop system will be used to create this system.
 
 To create the inventor, we'll take inspiration from this video : [inventory](https://www.youtube.com/watch?v=7RXm0-TSJMw&t=764s&pp=ygUSZ29kb3Qga2V5IGJpbmRpbmdz) and [drag&drop](https://www.youtube.com/watch?v=8cV-5ByZLOE). Texture React nodes need to be created for each slot in the inventory panel.
 
-```
+```GDScript
 extends Control
 
 @onready var icon: TextureRect = $Inventory/Description/DescriptionBox/Header/Icon
@@ -763,13 +759,10 @@ func set_description(item : Item_Ressource):
 
 ![alt text](./images/Inventory_screen.png)
 
-
-#### HUD
-
 From the main game screen, players can access a range of information : 
 
 
-##### Mini Maps
+### Mini Maps
 
 A mini-map will be displayed in the top right-hand corner of the screen to help players find their way around.
 
@@ -777,13 +770,13 @@ To create the mini The mini-maps consist of creating another point of life for t
 
 First of all, we need to add a Camera3D node dedicated to the mini-map in our scene, then we just need to configure it the way we want and add the visual features.
 
-##### Time
+### Time
 
 The time will be displayed below the mini-map, allowing the player to keep track of the time.
   
 The timer will be based on a clock of 24 minutes equivalent to 24 hours and will represent the real life cycle.
 
-```
+```GDScript
 extends Node
 
 # Variables for the clock
@@ -808,7 +801,7 @@ func _process(delta):
     print("Clock: %02d:%02d:%02d" % [hours, minutes, seconds])
 
 ```
-##### Reputation
+### Reputation
 
 A progress bar showing the reputation of the location the player is in will be placed at the top left.
 
@@ -819,7 +812,7 @@ Reputation increases as the player completes quests. It also decreases with inac
 | +2 | -1  | 120 seconds  | 100 | 0 |
 
   
-##### Quests Panel 
+### Quests Panel 
 
 A list of quests will be placed below the player to inform them of the actions to be carried out.
 
@@ -827,7 +820,7 @@ We need to create a quest dictionary where all the names and actions are listed 
 
 ![alt text](./images/Quest_scheme.png)
 
-```
+```GDScript
 extends Panel
 
 onready var quest_container = $VBoxContainer
@@ -879,9 +872,9 @@ Then we can mix the audio using a control panel in the middle of the main Godot 
 
 ![alt text](./images/Audio_panel.png)
 
-Finally, we can play the sound as follows : 
+All the sounds need to be imported into Godot and stored in the Audio folder. Then we can play the sound as follows: 
 
-```
+```GDScript
 var sound = preload("res://sounds/your_sound.ogg")
 $AudioStreamPlayer.stream = sound
 
