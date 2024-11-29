@@ -38,6 +38,8 @@ var inventorySize : int = 20
 	slot_16, slot_17, slot_18, slot_19, slot_20,
 ]
 
+
+
 			
 func add_item(item: Item_Ressource):
 	var item_id_as_string = str(item.item_ID)
@@ -82,3 +84,9 @@ func set_description(item : Item_Ressource):
 		description_label.text = item.item_description
 	else:
 		print("null description_label")
+
+
+func _on_dictionary_manager_item_picked_up(item: Item_Ressource) -> void:
+	print("Signal connected successfully!")
+	print(item)
+	add_item(item)

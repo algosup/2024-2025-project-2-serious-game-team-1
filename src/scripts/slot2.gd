@@ -23,7 +23,6 @@ func set_item(value: Item):
 	print(item)
 
 func _on_mouse_entered():
-	print("Mouse entered slot 1")
 	if item != null:
 		base.set_description(item)
 
@@ -45,14 +44,9 @@ func _get_drag_data(_at_position):
 	return preview
 
 func _can_drop_data(_at_position, data):
-	print("Can drop data? ", data)
 	return data is ItemPreview
 
 func _drop_data(_at_position, data):
-	print("Dropped data: ", data)
 	if data is ItemPreview:
 		texture = data.preview_texture.texture
 		item = data.item_placeholder
-		print("Drop success! New item: ", item)
-	else:
-		print("Drop failed! Invalid data.")

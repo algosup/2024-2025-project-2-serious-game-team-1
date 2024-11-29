@@ -11,5 +11,5 @@ class_name Item_Object
 # Called when picked up
 func pick_up():
 	print(self.name + " picked up")
-	AllDictionary.check_item(self,item_ressource)
+	AllDictionary.check_item(self, item_ressource)
 	

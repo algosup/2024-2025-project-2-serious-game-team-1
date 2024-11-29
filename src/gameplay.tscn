@@ -1,15 +1,17 @@
-[gd_scene load_steps=11 format=3 uid="uid://chxfeda425gsu"]
+[gd_scene load_steps=13 format=3 uid="uid://chxfeda425gsu"]
 
 [ext_resource type="PackedScene" uid="uid://lrfexx8s0e13" path="res://assets/map/map.tscn" id="1_7b4si"]
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_hjvrf"]
 [ext_resource type="PackedScene" uid="uid://bwnfc1y2ijtef" path="res://assets/ui/pause_menu.tscn" id="3_75tor"]
 [ext_resource type="PackedScene" uid="uid://f51858rkgwej" path="res://assets/ui/inventory.tscn" id="3_grpvx"]
 [ext_resource type="PackedScene" uid="uid://bchj68adctaws" path="res://assets/models/roger.tscn" id="6_52vwr"]
+[ext_resource type="Resource" uid="uid://c1flp4su10cpp" path="res://assets/items/bin_bag.tres" id="7_p0csr"]
 [ext_resource type="PackedScene" uid="uid://umm5fxua0dmn" path="res://assets/models/spawn_area.tscn" id="7_s8y11"]
 [ext_resource type="PackedScene" uid="uid://dv14y8ppy7jy5" path="res://assets/models/trash.tscn" id="8_7tjyf"]
 [ext_resource type="PackedScene" uid="uid://domhm87hbhbg1" path="res://assets/models/Player.tscn" id="8_735e1"]
 [ext_resource type="PackedScene" uid="uid://6c6uwu7ip5h" path="res://assets/models/bin_bag.tscn" id="9_0mf82"]
 [ext_resource type="PackedScene" uid="uid://40vvrysqespg" path="res://assets/ui/quest_menu.tscn" id="10_hcxs7"]
+[ext_resource type="Script" path="res://scripts/all_dictionary.gd" id="12_i4brl"]
 
 [node name="gameplay" type="Node"]
 process_mode = 3
@@ -29,6 +31,7 @@ object_scene = ExtResource("8_7tjyf")
 
 [node name="bin bag" parent="Gameplay" instance=ExtResource("9_0mf82")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 398.338, 45.0605, 563.756)
+item_ressource = ExtResource("7_p0csr")
 
 [node name="Player" parent="Gameplay" instance=ExtResource("8_735e1")]
 unique_name_in_owner = true
@@ -46,3 +49,10 @@ unique_name_in_owner = true
 
 [node name="quest_menu" parent="Menus" instance=ExtResource("10_hcxs7")]
 unique_name_in_owner = true
+
+[node name="Manager" type="Node" parent="."]
+
+[node name="Dictionary_Manager" type="Node" parent="Manager"]
+script = ExtResource("12_i4brl")
+
+[connection signal="item_picked_up" from="Manager/Dictionary_Manager" to="Menus/Inventory_Gestion" method="_on_dictionary_manager_item_picked_up"]
