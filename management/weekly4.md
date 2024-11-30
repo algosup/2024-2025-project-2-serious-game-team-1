@@ -38,6 +38,6 @@
 | **Robin Goumy**      | I didn't make much progress on my document, but I was able to help my colleagues with other tasks.               | Better concentration from the people in the team                 | Fine, but very tired |Fine, but sometimes there were a few worries and tensions. | 0                  | 0                   | 
 | **Alexis Santos**    | We have merge our game and we fix some issues before make a lot of quests and pnj     |  advance | I am ok. | good | 0                  | 0                   |
 | **Mattéo Lefin**     | The progress seems to have been slower during this week, however it will surely rise up after our current issues                                 | nothing to change                            | Eager to start design next week possibly      |  The atmosphere is really great until people are getting tired and grumpy       | 0                  | 0                   |
-| **Guillaume Despaux**|good | nothing to change | Feeling positive | very good          | 0                  | 0                   |
+| **Guillaume Despaux**|Still on the map, the lack of finding good assets is hard (not bugged, of free)| More "pressure" on the devs to let them focus more on the essential. Give us more infos about tasks already set up. | Just little bit tired but nothing alarming. | The devs are talking maybe a little too much and maybe work as 2 for 1 they're looking each other code all the time and this is lose time I presume.         | 0                  | 0                   |
 
 ---
