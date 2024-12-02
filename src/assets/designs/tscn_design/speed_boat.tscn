@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://bchy7ondjkvai"]
+
+[ext_resource type="PackedScene" uid="uid://hjh1e5x08i62" path="res://assets/designs/Boats/FBX/Speed_Boat.fbx" id="1_mt8w1"]
+[ext_resource type="Texture2D" uid="uid://bo7bgv6sxilio" path="res://assets/designs/Boats/Texture/PolyPackBoats.png" id="2_no82a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l6voo"]
+albedo_texture = ExtResource("2_no82a")
+
+[node name="Speed_Boat" instance=ExtResource("1_mt8w1")]
+
+[node name="Speed_Boat" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_l6voo")

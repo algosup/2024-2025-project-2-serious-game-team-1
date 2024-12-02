@@ -29,6 +29,8 @@ enabled=PackedStringArray("res://addons/dialogue_nodes/plugin.cfg", "res://addon
 [file_customization]
 
 folder_colors={
+"res://assets/designs/Boats/": "blue",
+"res://assets/designs/Factories/": "gray",
 "res://assets/designs/Farm Buildings by Quaternius/": "purple",
 "res://assets/designs/Fishs/": "green",
 "res://assets/designs/Free Shrubs Flowers and Mushrooms 3D Low Poly Pack-2/": "red",
