@@ -20,6 +20,7 @@ func spawn_objects() -> void:
 		if obj_instance:
 			obj_instance.transform.origin = random_position(current_position)  # Spawn at the origin
 			add_child(obj_instance)
+			#EcoFollow.
 		else:
 			print("Failed to instantiate.")
 
