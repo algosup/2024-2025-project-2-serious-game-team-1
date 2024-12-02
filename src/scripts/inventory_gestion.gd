@@ -39,11 +39,8 @@ var inventorySize : int = 20
 ]
 
 
-
-			
 func add_item(item: Item_Ressource):
 	var item_id_as_string = str(item.item_ID)
-	
 	if AllDictionary.Item_List.has(item_id_as_string):  # Check if the item exists
 		for i in range(inventorySize):
 			if slots[i] == null:  # Ensure the slot is empty
@@ -88,5 +85,5 @@ func set_description(item : Item_Ressource):
 
 func _on_dictionary_manager_item_picked_up(item: Item_Ressource) -> void:
 	print("Signal connected successfully!")
-	print(item)
+	print(item.item_title)
 	add_item(item)

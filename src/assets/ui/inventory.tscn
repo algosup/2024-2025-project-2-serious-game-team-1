@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://f51858rkgwej"]
+[gd_scene load_steps=9 format=3 uid="uid://njg0gpbp1iqs"]
 
 [ext_resource type="Texture2D" uid="uid://bg85v4vpbk8n5" path="res://assets/images/WaintingBackground.jpg" id="1_81syd"]
 [ext_resource type="Script" path="res://scripts/inventory_gestion.gd" id="1_ya1uh"]

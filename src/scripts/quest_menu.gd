@@ -5,9 +5,10 @@ extends Control
 @onready var zone_label: Label = $Quest_Panel/Description/DescriptionBox/HBoxContainer/ZoneLabel
 @onready var giver_label: Label = $Quest_Panel/Description/DescriptionBox/HBoxContainer/GiverLabel
 @onready var goal_label: Label = $Quest_Panel/Description/DescriptionBox/GoalLabel
-@onready var quests_panel_1: Panel = $Quest_Panel/GridQuest/quests_panel1
-@onready var quests_panel_2: Panel = $Quest_Panel/GridQuest/quests_panel2
-@onready var quests_panel_3: Panel = $Quest_Panel/GridQuest/quests_panel3
+@onready var quests_panel_1: Panel = $"Quest_Panel/TabContainer/Current Quests/Currents Quests/quests_panel1"
+@onready var quests_panel_2: Panel = $"Quest_Panel/TabContainer/Current Quests/Currents Quests/quests_panel2"
+@onready var quests_panel_3: Panel = $"Quest_Panel/TabContainer/Current Quests/Currents Quests/quests_panel3"
+
 
 func OpenQuestMenu():
 	print("Open Quest Menu")
@@ -26,13 +27,13 @@ func CloseQuestMenu():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _process(_delta):
-	if AllDictionary.active_quests[0] != null:
+	if AllDictionary.active_quests[0] != null and AllDictionary.active_quests[0] != "":
 		var quest_id : String = AllDictionary.active_quests[0]
 		quests_panel_1.quests = AllDictionary.load_resource_quest_list(quest_id)
-	if AllDictionary.active_quests[1] != null:
+	if AllDictionary.active_quests[1] != null and AllDictionary.active_quests[0] != "":
 		var quest_id : String = AllDictionary.active_quests[1]
 		quests_panel_2.quests = AllDictionary.load_resource_quest_list(quest_id)
-	if AllDictionary.active_quests[2] != null:
+	if AllDictionary.active_quests[2] != null and AllDictionary.active_quests[0] != "":
 		var quest_id : String = AllDictionary.active_quests[2]
 		quests_panel_3.quests = AllDictionary.load_resource_quest_list(quest_id)
 

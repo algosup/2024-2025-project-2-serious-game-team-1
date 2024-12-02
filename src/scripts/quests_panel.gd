@@ -7,7 +7,7 @@ extends Panel
 @onready var zone_label: Label = %ZoneLabel
 @onready var pnj_giver_label: Label = %PnjGiverLabel
 
-@onready var base = $"../../.."
+@onready var base = $"../../../../.."
 
 func _process(_delta):
 	if quests != null:

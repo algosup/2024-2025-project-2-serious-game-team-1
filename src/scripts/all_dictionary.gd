@@ -2,8 +2,6 @@ extends Node
 
 signal item_picked_up(item: Item_Ressource)
 
-
-
 # Dictionary to store items with preloaded resources
 var Item_List: Dictionary = {
 	"1" : preload("res://assets/items/bin_bag.tres"),
@@ -19,6 +17,8 @@ var completed_quests : Array = []
 var active_quests : Array = [null, null, null]
 
 func get_resource_path_quest_list(quest_id: String) -> String:
+	print("Quests Search")
+	print(active_quests)
 	if Quest_List.has(quest_id):
 		return Quest_List[quest_id]
 	else:
@@ -41,8 +41,9 @@ func check_item(object, item: Item_Ressource):
 	var item_id_as_string = str(item.item_ID)
 
 	if Item_List.has(item_id_as_string):  # Check if the dictionary contains the key
-		emit_signal("item_picked_up", item)
-		object.queue_free()  # Remove the object
+		print("Message before signal emit")
+		item_picked_up.emit(item)
+		object.queue_free() 
 	else:
 		print("Item not recognized! ID: ", item_id_as_string)
 

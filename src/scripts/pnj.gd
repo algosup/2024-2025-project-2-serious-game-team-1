@@ -11,6 +11,7 @@ class_name Pnj
 
 var talking = false
 var queststarted = false
+var quest_id : String
 
 func _ready() -> void:
 	talking = false
@@ -25,11 +26,11 @@ func pnj_talk():
 		
 
 func _on_dialogue_box_dialogue_signal(value):
-	var quest_id : String
 	AllDictionary.debug_print()
 	print("start to talk with roger")
-	if value != "quest" and value != "end":
-		quest_id = value
+	if value == "test":
+		print(value)
+		quest_id = str(value)
 	if value == 'quest':
 		queststarted = true
 		for i in range(len(AllDictionary.active_quests)):

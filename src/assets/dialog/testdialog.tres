@@ -89,7 +89,7 @@ Trying to lay down on our humble beach?",
 "3_4": {
 "link": &"3_1",
 "offset": Vector2(1760, -360),
-"signalValue": "1"
+"signalValue": "test"
 },
 "5_1": {
 "false": "END",
