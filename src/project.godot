@@ -35,7 +35,7 @@ import/reimport_missing_imported_files=false
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_nodes/plugin.cfg", "res://addons/object_placer/plugin.cfg", "res://addons/proton_scatter/plugin.cfg", "res://addons/terrain_3d/plugin.cfg", "res://addons/wakatime/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogue_nodes/plugin.cfg", "res://addons/proton_scatter/plugin.cfg", "res://addons/terrain_3d/plugin.cfg", "res://addons/wakatime/plugin.cfg")
 
 [file_customization]
 

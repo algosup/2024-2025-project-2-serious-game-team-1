@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:src/assets/images/bin_bag.png.import
-uid="uid://j03ylp7rjwpp"
-path="res://.godot/imported/bin_bag.png-4be7611195ac8548fd3b07d86bede7f3.ctex"
-========
-uid="uid://jbq3swgrsbxv"
+uid="uid://rbwypns8aj2o"
 path="res://.godot/imported/Leaves_GiantPine_C.png-231d42160a1bb210ada0b3a4daa11cbf.ctex"
->>>>>>>> dev-world-building:src/assets/designs/Stylized_Nature/Textures/Leaves_GiantPine_C.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:src/assets/images/bin_bag.png.import
-source_file="res://assets/images/bin_bag.png"
-dest_files=["res://.godot/imported/bin_bag.png-4be7611195ac8548fd3b07d86bede7f3.ctex"]
-========
 source_file="res://assets/designs/Stylized_Nature/Textures/Leaves_GiantPine_C.png"
 dest_files=["res://.godot/imported/Leaves_GiantPine_C.png-231d42160a1bb210ada0b3a4daa11cbf.ctex"]
->>>>>>>> dev-world-building:src/assets/designs/Stylized_Nature/Textures/Leaves_GiantPine_C.png.import
 
 [params]
 

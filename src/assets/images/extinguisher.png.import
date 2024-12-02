@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:src/assets/images/extinguisher.png.import
-uid="uid://5aha4pbu7lcb"
+uid="uid://cbq50vmddu2pc"
 path="res://.godot/imported/extinguisher.png-6cee8d4ca1377992b4db87f6f774fc62.ctex"
-========
-uid="uid://i0d5fw1u1hdj"
-path="res://.godot/imported/Leaves_TwistedTree.png-32997bba595d2fe5155ce0db261e3955.ctex"
->>>>>>>> dev-world-building:src/assets/designs/Stylized_Nature/Textures/Leaves_TwistedTree.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:src/assets/images/extinguisher.png.import
 source_file="res://assets/images/extinguisher.png"
 dest_files=["res://.godot/imported/extinguisher.png-6cee8d4ca1377992b4db87f6f774fc62.ctex"]
-========
-source_file="res://assets/designs/Stylized_Nature/Textures/Leaves_TwistedTree.png"
-dest_files=["res://.godot/imported/Leaves_TwistedTree.png-32997bba595d2fe5155ce0db261e3955.ctex"]
->>>>>>>> dev-world-building:src/assets/designs/Stylized_Nature/Textures/Leaves_TwistedTree.png.import
 
 [params]
 

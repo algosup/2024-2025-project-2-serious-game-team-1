@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:src/assets/images/axe.png.import
-uid="uid://duf3ag0r4dhda"
+uid="uid://0thdtvvktbqv"
 path="res://.godot/imported/axe.png-6e17fb194a3916acb17667c684866d2a.ctex"
-========
-uid="uid://dsag1lkywgfcf"
-path="res://.godot/imported/Leaf_Pine.png-4a836694ad14b0868537c0c2a1a62bfb.ctex"
->>>>>>>> dev-world-building:src/assets/designs/Stylized_Nature/Textures/Leaf_Pine.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:src/assets/images/axe.png.import
 source_file="res://assets/images/axe.png"
 dest_files=["res://.godot/imported/axe.png-6e17fb194a3916acb17667c684866d2a.ctex"]
-========
-source_file="res://assets/designs/Stylized_Nature/Textures/Leaf_Pine.png"
-dest_files=["res://.godot/imported/Leaf_Pine.png-4a836694ad14b0868537c0c2a1a62bfb.ctex"]
->>>>>>>> dev-world-building:src/assets/designs/Stylized_Nature/Textures/Leaf_Pine.png.import
 
 [params]
 

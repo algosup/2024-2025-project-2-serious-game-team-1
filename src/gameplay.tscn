@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://chxfeda425gsu"]
+[gd_scene load_steps=13 format=3 uid="uid://chxfeda425gsu"]
 
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_hjvrf"]
 [ext_resource type="PackedScene" uid="uid://bwnfc1y2ijtef" path="res://assets/ui/pause_menu.tscn" id="3_75tor"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://umm5fxua0dmn" path="res://assets/models/spawn_area.tscn" id="7_s8y11"]
 [ext_resource type="PackedScene" uid="uid://dv14y8ppy7jy5" path="res://assets/models/trash.tscn" id="8_7tjyf"]
 [ext_resource type="PackedScene" uid="uid://domhm87hbhbg1" path="res://assets/models/Player.tscn" id="8_735e1"]
+[ext_resource type="PackedScene" uid="uid://lrfexx8s0e13" path="res://assets/map/map.tscn" id="8_f4p62"]
 [ext_resource type="PackedScene" uid="uid://6c6uwu7ip5h" path="res://assets/models/bin_bag.tscn" id="9_0mf82"]
 [ext_resource type="PackedScene" uid="uid://40vvrysqespg" path="res://assets/ui/quest_menu.tscn" id="10_hcxs7"]
 [ext_resource type="Script" path="res://scripts/all_dictionary.gd" id="12_i4brl"]
@@ -34,6 +35,8 @@ item_ressource = ExtResource("7_p0csr")
 unique_name_in_owner = true
 process_mode = 1
 transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941, 394.357, 45.5094, 567.677)
+
+[node name="Map" parent="Gameplay" instance=ExtResource("8_f4p62")]
 
 [node name="Menus" type="Node" parent="."]
 

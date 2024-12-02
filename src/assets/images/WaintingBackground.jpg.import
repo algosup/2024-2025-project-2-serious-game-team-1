@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:src/assets/images/WaintingBackground.jpg.import
-uid="uid://bg85v4vpbk8n5"
+uid="uid://dxr84bjywj4m6"
 path="res://.godot/imported/WaintingBackground.jpg-c9244347b9a8a1a7366e418c3623c4bc.ctex"
-========
-uid="uid://cuxs7m4blfwy4"
-path="res://.godot/imported/Leaves_NormalTree.png-be631fc0b3fe098f573063c5ba26acb8.ctex"
->>>>>>>> dev-world-building:src/assets/designs/Stylized_Nature/Textures/Leaves_NormalTree.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:src/assets/images/WaintingBackground.jpg.import
 source_file="res://assets/images/WaintingBackground.jpg"
 dest_files=["res://.godot/imported/WaintingBackground.jpg-c9244347b9a8a1a7366e418c3623c4bc.ctex"]
-========
-source_file="res://assets/designs/Stylized_Nature/Textures/Leaves_NormalTree.png"
-dest_files=["res://.godot/imported/Leaves_NormalTree.png-be631fc0b3fe098f573063c5ba26acb8.ctex"]
->>>>>>>> dev-world-building:src/assets/designs/Stylized_Nature/Textures/Leaves_NormalTree.png.import
 
 [params]
 
