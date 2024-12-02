@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dw1b2mn1kivmo"]
+
+[ext_resource type="PackedScene" uid="uid://kfq2tkugqnby" path="res://assets/designs/FarmPack/haybale.fbx" id="1_7kups"]
+
+[node name="haybale" instance=ExtResource("1_7kups")]

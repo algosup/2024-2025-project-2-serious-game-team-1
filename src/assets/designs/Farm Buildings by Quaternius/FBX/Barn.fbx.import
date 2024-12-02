@@ -16,7 +16,7 @@ dest_files=["res://.godot/imported/Barn.fbx-e7092fba2b758f03bccfb8c850171121.scn
 nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
-nodes/root_scale=1.0
+nodes/root_scale=2.0
 nodes/import_as_skeleton_bones=false
 meshes/ensure_tangents=true
 meshes/generate_lods=true
@@ -31,7 +31,25 @@ animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:Barn": {
+"generate/physics": true
+},
+"PATH:Barn_Door": {
+"generate/physics": true
+},
+"PATH:Barn_Door2": {
+"generate/physics": true
+},
+"PATH:Barn_Window": {
+"generate/physics": true
+},
+"PATH:Barn_Window2": {
+"generate/physics": true
+}
+}
+}
 fbx/importer=0
 fbx/allow_geometry_helper_nodes=false
 fbx/embedded_image_handling=1

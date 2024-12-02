@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdyf5c4mcyl6a"]
+
+[ext_resource type="PackedScene" uid="uid://cb32wiivivfnf" path="res://assets/designs/UTM Fantasy/TownCenter_SecondAge_Level1.fbx" id="1_waqpb"]
+
+[node name="TownCenter_SecondAge_Level1" instance=ExtResource("1_waqpb")]

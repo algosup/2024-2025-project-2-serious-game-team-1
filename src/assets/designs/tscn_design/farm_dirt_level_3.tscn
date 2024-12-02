@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://doascgd25pt4m"]
+
+[ext_resource type="PackedScene" uid="uid://ddtuqsqahis5m" path="res://assets/designs/UTM Fantasy/Farm_Dirt_Level3.fbx" id="1_xy64l"]
+
+[node name="Farm_Dirt_Level3" instance=ExtResource("1_xy64l")]

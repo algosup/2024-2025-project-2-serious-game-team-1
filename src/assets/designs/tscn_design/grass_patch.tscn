@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5khxqh0bwydw"]
+
+[ext_resource type="PackedScene" uid="uid://dkxk3as0tr2in" path="res://assets/designs/Stylized_Nature/Grass_Patch.glb" id="1_vsec3"]
+
+[node name="Grass_Patch" instance=ExtResource("1_vsec3")]

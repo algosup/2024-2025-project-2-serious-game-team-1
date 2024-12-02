@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cic0bl54ttr4u"]
+
+[ext_resource type="PackedScene" uid="uid://c7hqu7qi6huni" path="res://assets/designs/UTM Fantasy/Farm_SecondAge_Level1_Wheat.fbx" id="1_ogvjx"]
+
+[node name="Farm_SecondAge_Level1_Wheat" instance=ExtResource("1_ogvjx")]

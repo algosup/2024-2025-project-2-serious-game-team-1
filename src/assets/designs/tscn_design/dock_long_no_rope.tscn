@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dculhf5di75rh"]
+
+[ext_resource type="PackedScene" uid="uid://kc3sm6c8w81c" path="res://assets/designs/Fishs/FBX/Dock_Long_NoRope.fbx" id="1_sb5ht"]
+
+[node name="Dock_Long_NoRope" instance=ExtResource("1_sb5ht")]

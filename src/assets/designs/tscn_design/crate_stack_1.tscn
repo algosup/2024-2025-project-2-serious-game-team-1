@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6y14cshe1l85"]
+
+[ext_resource type="PackedScene" uid="uid://caeddwkkl2yx8" path="res://assets/designs/UTM Fantasy/Crate_Stack1.fbx" id="1_c8k2e"]
+
+[node name="Crate_Stack1" instance=ExtResource("1_c8k2e")]

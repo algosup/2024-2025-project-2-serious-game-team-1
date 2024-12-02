@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://me5qmvm80gpc"]
-
-[ext_resource type="PackedScene" uid="uid://bwmht6ejqmqfy" path="res://assets/designs/LowPolyNaturePackLite_FBX/Models/Trees/Tree_01_gradient_green.fbx" id="1_xcue0"]
-
-[node name="Tree_01_gradient_green" instance=ExtResource("1_xcue0")]
