@@ -40,7 +40,7 @@ func check_item(object, item: Item_Ressource):
 		print("Error: item is null!")
 		return
 	if item == Item :
-		%Inventory_Gestion.add_item(item)
+		inventory_gestion.add_item(item)
 
 	# Ensure the item ID is used correctly
 	var item_id_as_string = str(item.item_ID)
