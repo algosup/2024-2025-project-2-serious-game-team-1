@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://ij7mt5yar3cb"]
-
-[ext_resource type="PackedScene" uid="uid://ci5rwsblcurvi" path="res://assets/designs/LowPolyNaturePackLite_FBX/FBX/Stones/Stone_2.fbx" id="1_yeute"]
-
-[node name="Stone_2" instance=ExtResource("1_yeute")]
