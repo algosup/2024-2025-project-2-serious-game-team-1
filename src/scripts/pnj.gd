@@ -42,6 +42,7 @@ func _on_dialogue_box_dialogue_signal(value):
 		print("You cannot have more quests")
 	if value == 'end':
 		print('end')
+		%quest_menu.set_quests()
 		Variable.movelock = false
 		Variable.cameralock = false
 		talking = false

@@ -26,7 +26,7 @@ func CloseQuestMenu():
 	Variable.cameralock = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
-func _process(_delta):
+func set_quests():
 	if AllDictionary.active_quests[0] != null and AllDictionary.active_quests[0] != "":
 		var quest_id : String = AllDictionary.active_quests[0]
 		quests_panel_1.quests = AllDictionary.load_resource_quest_list(quest_id)
