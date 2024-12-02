@@ -54,5 +54,3 @@ unique_name_in_owner = true
 
 [node name="Dictionary_Manager" type="Node" parent="Manager"]
 script = ExtResource("12_i4brl")
-
-[connection signal="item_picked_up" from="Manager/Dictionary_Manager" to="Menus/Inventory_Gestion" method="_on_dictionary_manager_item_picked_up"]

@@ -1,6 +1,9 @@
 extends Node
 
-signal item_picked_up(item: Item_Ressource)
+@onready var inventory_gestion: Control = %Inventory_Gestion
+
+@warning_ignore("shadowed_global_identifier")
+var Item : Item_Ressource
 
 # Dictionary to store items with preloaded resources
 var Item_List: Dictionary = {
@@ -36,13 +39,14 @@ func check_item(object, item: Item_Ressource):
 	if item == null:
 		print("Error: item is null!")
 		return
+	if item == Item :
+		%Inventory_Gestion.add_item(item)
 
 	# Ensure the item ID is used correctly
 	var item_id_as_string = str(item.item_ID)
 
 	if Item_List.has(item_id_as_string):  # Check if the dictionary contains the key
 		print("Message before signal emit")
-		item_picked_up.emit(item)
 		object.queue_free() 
 	else:
 		print("Item not recognized! ID: ", item_id_as_string)

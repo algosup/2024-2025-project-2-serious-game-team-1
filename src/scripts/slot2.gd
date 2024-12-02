@@ -11,11 +11,6 @@ const ItemPreview = preload("res://scripts/item_preview.gd")
 func _ready():
 	if item :  
 		texture = item.item_icon
-	else :
-		if item == null : 
-			print('is null')
-		else:
-			print('is not an item')
 
 func set_item(value: Item):
 	item = value
