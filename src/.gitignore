@@ -5,4 +5,5 @@
 /android/
 wakatime*
 .DS_Store*
+.DS_Store
 ./src/.import/
