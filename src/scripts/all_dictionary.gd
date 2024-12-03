@@ -1,6 +1,6 @@
 extends Node
 
-@onready var inventory_gestion: Control = %Inventory_Gestion
+var inventory_gestion
 
 @warning_ignore("shadowed_global_identifier")
 var Item : Item_Ressource
@@ -35,6 +35,9 @@ func load_resource_quest_list(quest_id: String):
 	else:
 		return null
 
+
+func set_inventory_gestion(instance):
+	inventory_gestion = instance
 func check_item(object, item: Item_Ressource):
 	if item == null:
 		print("Error: item is null!")

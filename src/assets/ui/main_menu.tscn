@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c7grp6rev45qv"]
+[gd_scene load_steps=4 format=3 uid="uid://c7grp6rev45qv"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_ery66"]
-[ext_resource type="Texture2D" uid="uid://bg85v4vpbk8n5" path="res://assets/images/WaintingBackground.jpg" id="2_nqw8g"]
+[ext_resource type="Texture2D" uid="uid://dxr84bjywj4m6" path="res://assets/images/WaintingBackground.jpg" id="2_nqw8g"]
+[ext_resource type="PackedScene" uid="uid://b31wjwnn4gip3" path="res://assets/ui/option_menu.tscn" id="3_ica2l"]
 
 [node name="MainMenu" type="Control"]
 process_mode = 3
@@ -61,6 +62,10 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Quit"
 language = "en"
+
+[node name="OptionMenu" parent="." instance=ExtResource("3_ica2l")]
+visible = false
+layout_mode = 1
 
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/OptionButton" to="." method="_on_option_button_pressed"]

@@ -36,7 +36,7 @@ spring_length = 0.0
 unique_name_in_owner = true
 cull_mask = 1048573
 near = 0.25
-far = 16384.0
+far = 400.0
 
 [node name="Interaction" parent="CameraManager/Arm" instance=ExtResource("3_te68b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 2.98023e-08, 1, 0, 0, 0)

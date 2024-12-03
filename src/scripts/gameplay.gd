@@ -14,20 +14,26 @@ extends Node
 @onready var bin_bag: Item_Object = $"Gameplay/bin bag"
 @onready var player: CharacterBody3D = %Player
 
+@onready var option_menu: Control = $Menus/OptionMenu
 @onready var pause_menu: Control = %pause_menu
 @onready var inventory_gestion: Control = %Inventory_Gestion
 @onready var quest_menu: Control = %quest_menu
 
 
 func _ready() -> void:
+	pause_menu.ClosePlayMenu()
+	get_tree().paused = false
+	
+	Variable.CurrentScene = Variable.Gameplay_path
 	inventory_gestion.hide()
 	quest_menu.hide()
+	option_menu.hide()
 	# Set the minimum size in project settings
 	ProjectSettings.set_setting("display/window/size/min_width", Variable.min_size.x)
 	ProjectSettings.set_setting("display/window/size/min_height", Variable.min_size.y)
 	# Enforce the minimum window size using DisplayServer
 	DisplayServer.window_set_min_size(Variable.min_size)
-	Variable.current_scene = Variable.MainMenu_path
+	Variable.CurrentScene = Variable.MainMenu_path
 
 func _process(_delta):
 	if Variable.current_size.x < Variable.min_size.x or Variable.current_size.y < Variable.min_size.y:
