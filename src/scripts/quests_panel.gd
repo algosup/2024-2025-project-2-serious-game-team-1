@@ -1,27 +1,20 @@
-extends Panel
+extends Control
+
+@onready var quests_panel_slot_1: Panel = $Panel/VBoxContainer/quests_panel_slot_1
+@onready var quests_panel_slot_2: Panel = $Panel/VBoxContainer/quests_panel_slot_2
+@onready var quests_panel_slot_3: Panel = $Panel/VBoxContainer/quests_panel_slot_3
+
+@onready var quest_menu: Control = %quest_menu
+
+@onready var quests_panel_1: Panel = $"Quest_Panel/TabContainer/Current Quests/Currents Quests/quests_panel1"
+@onready var quests_panel_2: Panel = $"Quest_Panel/TabContainer/Current Quests/Currents Quests/quests_panel2"
+@onready var quests_panel_3: Panel = $"Quest_Panel/TabContainer/Current Quests/Currents Quests/quests_panel3"
 
 
-@export var quests : Quests_Resources
-
-@onready var quest_label: Label = %QuestLabel
-@onready var zone_label: Label = %ZoneLabel
-@onready var pnj_giver_label: Label = %PnjGiverLabel
-
-@onready var base = $"../../../../.."
-
-func _process(_delta):
-	if quests != null:
-		quest_label.text = quests.quests_name
-		var zone_text = "Zone : %s" % quests.quests_zone
-		zone_label.text = zone_text
-		var giver_text = "Giver : %s" % quests.quests_giver
-		pnj_giver_label.text = giver_text
-	else:
-		quest_label.text = "Empty Quest Slot"
-		zone_label.text = "Zone : Unknown"
-		pnj_giver_label.text = "Giver : Unknown"
-
-
-func _on_quests_button_pressed() -> void:
-	if quests != null:
-		base.set_description(quests)
+func set_quests():
+	if quests_panel_1.quests != null :
+		quests_panel_slot_1.quests = quests_panel_1.quests
+	if quests_panel_2.quests != null :
+		quests_panel_slot_2.quests = quests_panel_2.quests
+	if quests_panel_3.quests != null :
+		quests_panel_slot_3.quests = quests_panel_3.quests

@@ -10,6 +10,8 @@ extends Control
 @onready var quests_panel_3: Panel = $"Quest_Panel/TabContainer/Current Quests/Currents Quests/quests_panel3"
 
 
+
+
 func OpenQuestMenu():
 	print("Open Quest Menu")
 	Variable.QuestMenuOpen = !Variable.QuestMenuOpen
@@ -30,10 +32,10 @@ func set_quests():
 	if AllDictionary.active_quests[0] != null and AllDictionary.active_quests[0] != "":
 		var quest_id : String = AllDictionary.active_quests[0]
 		quests_panel_1.quests = AllDictionary.load_resource_quest_list(quest_id)
-	if AllDictionary.active_quests[1] != null and AllDictionary.active_quests[0] != "":
+	if AllDictionary.active_quests[1] != null and AllDictionary.active_quests[1] != "":
 		var quest_id : String = AllDictionary.active_quests[1]
 		quests_panel_2.quests = AllDictionary.load_resource_quest_list(quest_id)
-	if AllDictionary.active_quests[2] != null and AllDictionary.active_quests[0] != "":
+	if AllDictionary.active_quests[2] != null and AllDictionary.active_quests[2] != "":
 		var quest_id : String = AllDictionary.active_quests[2]
 		quests_panel_3.quests = AllDictionary.load_resource_quest_list(quest_id)
 

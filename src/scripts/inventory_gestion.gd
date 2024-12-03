@@ -4,7 +4,6 @@ extends Control
 @onready var description_label: RichTextLabel = $Inventory/Description/DescriptionBox/DescriptionLabel
 @onready var name_label: Label = $Inventory/Description/DescriptionBox/Header/Name_Label
 
-
 @warning_ignore("shadowed_global_identifier")
 var Item : Item_Ressource
 
@@ -90,9 +89,3 @@ func set_description(item : Item_Ressource):
 		description_label.text = item.item_description
 	else:
 		print("null description_label")
-
-
-func _on_dictionary_manager_item_picked_up(item: Item_Ressource) -> void:
-	print("Signal connected successfully!")
-	print(item.item_title)
-	add_item(item)

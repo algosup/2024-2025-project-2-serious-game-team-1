@@ -1,6 +1,6 @@
 extends Node
 
-var inventory_gestion
+@onready var inventory_gestion = %Inventory_Gestion
 
 @warning_ignore("shadowed_global_identifier")
 var Item : Item_Ressource
@@ -18,6 +18,19 @@ var Quest_List: Dictionary = {
 
 var completed_quests : Array = []
 var active_quests : Array = [null, null, null]
+
+func get_root_node():
+	var root_node = get_tree().root
+	print("Root node is:", root_node)
+	return root_node
+
+func add_item_inventory(item : Item_Ressource):
+	var my_node = get_tree().root.get_node("Menus/Inventory_Gestion")
+	if my_node != null:
+		my_node.add_item(item)
+		print('item added')
+	else:
+		print("Inventory Gestion is not found")
 
 func get_resource_path_quest_list(quest_id: String) -> String:
 	print("Quests Search")
@@ -42,14 +55,11 @@ func check_item(object, item: Item_Ressource):
 	if item == null:
 		print("Error: item is null!")
 		return
-	if item == Item :
-		inventory_gestion.add_item(item)
-
 	# Ensure the item ID is used correctly
 	var item_id_as_string = str(item.item_ID)
-
 	if Item_List.has(item_id_as_string):  # Check if the dictionary contains the key
 		print("Message before signal emit")
+		add_item_inventory(item)
 		object.queue_free() 
 	else:
 		print("Item not recognized! ID: ", item_id_as_string)

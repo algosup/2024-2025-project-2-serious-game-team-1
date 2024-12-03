@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=21 format=3 uid="uid://chxfeda425gsu"]
 
 [ext_resource type="PackedScene" uid="uid://lrfexx8s0e13" path="res://assets/map/map.tscn" id="1_7b4si"]
@@ -14,9 +15,11 @@
 [ext_resource type="Script" path="res://scripts/minimap.gd" id="9_xy0vo"]
 [ext_resource type="PackedScene" uid="uid://40vvrysqespg" path="res://assets/ui/quest_menu.tscn" id="10_hcxs7"]
 [ext_resource type="Texture2D" uid="uid://cnpuvewplbjwy" path="res://assets/images/red_square.png" id="11_m4aki"]
-[ext_resource type="Script" path="res://scripts/all_dictionary.gd" id="12_i4brl"]
 [ext_resource type="Shader" path="res://assets/ui/shaders/minimap.gdshader" id="12_ycxjg"]
 [ext_resource type="PackedScene" uid="uid://b31wjwnn4gip3" path="res://assets/ui/option_menu.tscn" id="16_goewa"]
+[ext_resource type="PackedScene" uid="uid://dfpxasv5v80bs" path="res://assets/ui/quests_panel.tscn" id="16_f6mam"]
+[ext_resource type="Script" path="res://scripts/all_dictionary.gd" id="16_oopfl"]
+[ext_resource type="Script" path="res://scripts/quests_panel.gd" id="17_gvvy6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nv1kv"]
 shader = ExtResource("12_ycxjg")
@@ -115,8 +118,11 @@ unique_name_in_owner = true
 visible = false
 
 [node name="OptionMenu" parent="Menus" instance=ExtResource("16_goewa")]
+[node name="quests_panel" parent="Menus" instance=ExtResource("16_f6mam")]
+unique_name_in_owner = true
+script = ExtResource("17_gvvy6")
 
 [node name="Manager" type="Node" parent="."]
 
-[node name="Dictionary_Manager" type="Node" parent="Manager"]
-script = ExtResource("12_i4brl")
+[node name="Dictionnary Manager" type="Node" parent="Manager"]
+script = ExtResource("16_oopfl")

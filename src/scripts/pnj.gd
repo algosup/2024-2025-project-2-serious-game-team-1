@@ -43,6 +43,7 @@ func _on_dialogue_box_dialogue_signal(value):
 	if value == 'end':
 		print('end')
 		%quest_menu.set_quests()
+		%quests_panel.set_quests()
 		Variable.movelock = false
 		Variable.cameralock = false
 		talking = false

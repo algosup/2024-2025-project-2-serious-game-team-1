@@ -17,7 +17,6 @@ var speed_multiplicator = 1
 var cameralock = false
 var movelock = false
 
-
 func show_current():
 	if CurrentScene == MainMenu_path:
 		print("Showing Option Menu for Main Menu.")

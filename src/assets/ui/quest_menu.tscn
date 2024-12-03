@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scripts/quest_menu.gd" id="1_sqmio"]
 [ext_resource type="Shader" path="res://assets/ui/shaders/ui_back_shader.gdshader" id="1_u3agi"]
-[ext_resource type="Texture2D" uid="uid://bg85v4vpbk8n5" path="res://assets/images/WaintingBackground.jpg" id="2_hewac"]
-[ext_resource type="PackedScene" uid="uid://cqd0i6thcpy2k" path="res://assets/ui/quests_panel.tscn" id="3_kgxg5"]
+[ext_resource type="Texture2D" uid="uid://dxr84bjywj4m6" path="res://assets/images/WaintingBackground.jpg" id="2_hewac"]
+[ext_resource type="PackedScene" uid="uid://cqd0i6thcpy2k" path="res://assets/ui/quests_slot.tscn" id="3_kgxg5"]
 [ext_resource type="Texture2D" uid="uid://i2kndroy583y" path="res://assets/images/inventory_slot_background.png" id="3_p1k0r"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_20ina"]
