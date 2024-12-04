@@ -21,3 +21,9 @@ func set_panel_size():
 	var panel_size = Vector2(quests_panel_slot_1.get_size().x, label.get_size().y + quests_panel_slot_1.get_size().y + quests_panel_slot_2.get_size().y + quests_panel_slot_3.get_size().y)
 	$".".set_size(panel_size)
 	v_box_container.set_size(panel_size)
+
+func HideQuestsPanels():
+	$Panel.hide()
+
+func ShowQuestsPanels():
+	$Panel.show()

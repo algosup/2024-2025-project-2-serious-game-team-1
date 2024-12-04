@@ -2,6 +2,8 @@ extends Control
 
 @onready var canvas_layer: CanvasLayer = $CanvasLayer
 @onready var option_menu: Control = $"../OptionMenu"
+@onready var player_ui: Control = $"../../Gameplay/Player/Player UI"
+@onready var quests_panel: Control = %quests_panel
 
 
 # Called when the node enters the scene tree for the first time.
@@ -22,6 +24,8 @@ func _on_resume_button_pressed() -> void:
 	resume_game()
 func _on_option_menu_pressed() -> void:
 	Variable.CurrentScene = Variable.Gameplay_path
+	player_ui.Player_uiInvisible()
+	quests_panel.HideQuestsPanels()
 	ClosePlayMenu()
 	option_menu.is_option_open = true
 	option_menu.show()

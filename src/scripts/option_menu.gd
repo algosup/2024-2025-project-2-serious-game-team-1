@@ -1,5 +1,8 @@
 extends Control
 
+@onready var quests_panel: Control = %quests_panel
+@onready var player_ui: Control = $"../../Gameplay/Player/Player UI"
+
 # Dynamic references, initialized based on the current scene
 var v_box_container: VBoxContainer
 var pause_menu: Control
@@ -28,13 +31,6 @@ func _ready():
 	# Enforce the minimum window size using DisplayServer
 	DisplayServer.window_set_min_size(Variable.min_size)
 
-
-var Scale: Dictionary = {
-	"Auto": "",
-	"Small": "",
-	"Medium": "",
-	"Large": "",
-}
 
 func _process(_delta: float) -> void:
 	if Variable.current_size.x < Variable.min_size.x or Variable.current_size.y < Variable.min_size.y:
@@ -72,3 +68,5 @@ func GoBack():
 	Variable.show_current()
 	if not in_menu:
 		pause_menu.pause_game()
+		player_ui.Player_uiVisible()
+		quests_panel.ShowQuestsPanels()

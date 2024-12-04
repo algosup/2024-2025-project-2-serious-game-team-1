@@ -13,11 +13,13 @@ extends Node
 @onready var spawn_area: Node3D = $"Gameplay/spawn area"
 @onready var bin_bag: Item_Object = $"Gameplay/bin bag"
 @onready var player: CharacterBody3D = %Player
+@onready var player_ui: Control = $"Gameplay/Player/Player UI"
 
 @onready var option_menu: Control = $Menus/OptionMenu
 @onready var pause_menu: Control = %pause_menu
 @onready var inventory_gestion: Control = %Inventory_Gestion
 @onready var quest_menu: Control = %quest_menu
+@onready var quests_panel: Control = %quests_panel
 
 
 func _ready() -> void:

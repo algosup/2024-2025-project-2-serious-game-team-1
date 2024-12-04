@@ -3,6 +3,7 @@ extends Node
 var InventoryOpen = false
 var PlayMenuOpen = false
 var QuestMenuOpen = false
+var player_uiVisible = true
 var CurrentScene: String = ""
 var MouseCapture = false
 static var MainMenu_path = "res://assets/ui/main_menu.tscn"

@@ -64,9 +64,11 @@ process_mode = 1
 transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941, 394.357, 45.5094, 567.677)
 
 [node name="Player UI" parent="Gameplay/Player" instance=ExtResource("9_61cme")]
+light_mask = 512
+visibility_layer = 512
 z_index = -1
 
-[node name="PanelContainer" type="PanelContainer" parent="Gameplay"]
+[node name="MiniMap" type="PanelContainer" parent="Gameplay"]
 process_mode = 1
 material = SubResource("ShaderMaterial_nv1kv")
 offset_left = 940.0
@@ -77,40 +79,23 @@ size_flags_horizontal = 8
 size_flags_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_dtc2j")
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="Gameplay/PanelContainer"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Gameplay/MiniMap"]
 material = SubResource("ShaderMaterial_bofjg")
 layout_mode = 2
 stretch = true
 
-[node name="SubViewport" type="SubViewport" parent="Gameplay/PanelContainer/SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="Gameplay/MiniMap/SubViewportContainer"]
 handle_input_locally = false
 size = Vector2i(186, 184)
 render_target_update_mode = 4
 script = ExtResource("9_xy0vo")
 
-[node name="Minimap_Camera" type="Camera3D" parent="Gameplay/PanelContainer/SubViewportContainer/SubViewport"]
+[node name="Minimap_Camera" type="Camera3D" parent="Gameplay/MiniMap/SubViewportContainer/SubViewport"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 357.978, 200, 528.735)
 fov = 37.8493
 
 [node name="Menus" type="Node" parent="."]
-
-[node name="quest_menu" parent="Menus" instance=ExtResource("12_unwyq")]
-unique_name_in_owner = true
-
-[node name="pause_menu" parent="Menus" instance=ExtResource("3_75tor")]
-unique_name_in_owner = true
-process_mode = 3
-visible = false
-
-[node name="Inventory_Gestion" parent="Menus" instance=ExtResource("3_grpvx")]
-unique_name_in_owner = true
-visible = false
-
-[node name="OptionMenu" parent="Menus" instance=ExtResource("16_goewa")]
-unique_name_in_owner = true
-visible = false
-z_index = 1
 
 [node name="quests_panel" parent="Menus" instance=ExtResource("16_qnyfx")]
 unique_name_in_owner = true
@@ -120,6 +105,20 @@ anchor_bottom = 0.5
 offset_top = -185.0
 offset_bottom = 185.0
 grow_vertical = 2
+
+[node name="pause_menu" parent="Menus" instance=ExtResource("3_75tor")]
+unique_name_in_owner = true
+process_mode = 3
+
+[node name="quest_menu" parent="Menus" instance=ExtResource("12_unwyq")]
+unique_name_in_owner = true
+
+[node name="Inventory_Gestion" parent="Menus" instance=ExtResource("3_grpvx")]
+unique_name_in_owner = true
+
+[node name="OptionMenu" parent="Menus" instance=ExtResource("16_goewa")]
+unique_name_in_owner = true
+z_index = 1
 
 [node name="Manager" type="Node" parent="."]
 
