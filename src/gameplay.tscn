@@ -102,22 +102,26 @@ unique_name_in_owner = true
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -185.0
-offset_bottom = 185.0
+offset_top = -175.0
+offset_bottom = 175.0
 grow_vertical = 2
 
 [node name="pause_menu" parent="Menus" instance=ExtResource("3_75tor")]
 unique_name_in_owner = true
 process_mode = 3
+visible = false
 
 [node name="quest_menu" parent="Menus" instance=ExtResource("12_unwyq")]
 unique_name_in_owner = true
+visible = false
 
 [node name="Inventory_Gestion" parent="Menus" instance=ExtResource("3_grpvx")]
 unique_name_in_owner = true
+visible = false
 
 [node name="OptionMenu" parent="Menus" instance=ExtResource("16_goewa")]
 unique_name_in_owner = true
+visible = false
 z_index = 1
 
 [node name="Manager" type="Node" parent="."]

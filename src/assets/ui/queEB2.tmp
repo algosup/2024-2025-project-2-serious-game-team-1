@@ -30,7 +30,7 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 2
+size_flags_vertical = 6
 theme_override_font_sizes/font_size = 19
 text = "Current Quests"
 horizontal_alignment = 1
@@ -38,12 +38,9 @@ vertical_alignment = 1
 
 [node name="quests_panel_slot_1" parent="Panel/VBoxContainer" instance=ExtResource("1_3dl8j")]
 layout_mode = 2
-size_flags_vertical = 1
 
 [node name="quests_panel_slot_2" parent="Panel/VBoxContainer" instance=ExtResource("1_3dl8j")]
 layout_mode = 2
-size_flags_vertical = 4
 
 [node name="quests_panel_slot_3" parent="Panel/VBoxContainer" instance=ExtResource("1_3dl8j")]
 layout_mode = 2
-size_flags_vertical = 8
