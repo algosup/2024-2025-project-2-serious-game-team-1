@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://chxfeda425gsu"]
+[gd_scene load_steps=21 format=3 uid="uid://chxfeda425gsu"]
 
 [ext_resource type="PackedScene" uid="uid://lrfexx8s0e13" path="res://assets/map/map.tscn" id="1_7b4si"]
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_hjvrf"]
@@ -17,7 +17,6 @@
 [ext_resource type="PackedScene" uid="uid://b31wjwnn4gip3" path="res://assets/ui/option_menu.tscn" id="16_goewa"]
 [ext_resource type="Script" path="res://scripts/all_dictionary.gd" id="16_oopfl"]
 [ext_resource type="PackedScene" uid="uid://dfpxasv5v80bs" path="res://assets/ui/quests_panel.tscn" id="16_qnyfx"]
-[ext_resource type="PackedScene" uid="uid://cqd0i6thcpy2k" path="res://assets/ui/quests_slot.tscn" id="16_sqpsd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nv1kv"]
 shader = ExtResource("12_ycxjg")
@@ -97,6 +96,7 @@ fov = 37.8493
 [node name="Menus" type="Node" parent="."]
 
 [node name="quest_menu" parent="Menus" instance=ExtResource("12_unwyq")]
+unique_name_in_owner = true
 
 [node name="pause_menu" parent="Menus" instance=ExtResource("3_75tor")]
 unique_name_in_owner = true
@@ -108,12 +108,18 @@ unique_name_in_owner = true
 visible = false
 
 [node name="OptionMenu" parent="Menus" instance=ExtResource("16_goewa")]
+unique_name_in_owner = true
 visible = false
 z_index = 1
 
 [node name="quests_panel" parent="Menus" instance=ExtResource("16_qnyfx")]
-
-[node name="quests_slot" parent="Menus" instance=ExtResource("16_sqpsd")]
+unique_name_in_owner = true
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -185.0
+offset_bottom = 185.0
+grow_vertical = 2
 
 [node name="Manager" type="Node" parent="."]
 

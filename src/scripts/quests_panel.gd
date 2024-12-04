@@ -3,18 +3,21 @@ extends Control
 @onready var quests_panel_slot_1: Panel = $Panel/VBoxContainer/quests_panel_slot_1
 @onready var quests_panel_slot_2: Panel = $Panel/VBoxContainer/quests_panel_slot_2
 @onready var quests_panel_slot_3: Panel = $Panel/VBoxContainer/quests_panel_slot_3
-
-@onready var quest_menu: Control = %quest_menu
-
-@onready var quests_panel_1: Panel = $"Quest_Panel/TabContainer/Current Quests/Currents Quests/quests_panel1"
-@onready var quests_panel_2: Panel = $"Quest_Panel/TabContainer/Current Quests/Currents Quests/quests_panel2"
-@onready var quests_panel_3: Panel = $"Quest_Panel/TabContainer/Current Quests/Currents Quests/quests_panel3"
-
+@onready var label: Label = $Panel/VBoxContainer/Label
+@onready var v_box_container: VBoxContainer = $Panel/VBoxContainer
 
 func set_quests():
-	if quests_panel_1.quests != null :
-		quests_panel_slot_1.quests = quests_panel_1.quests
-	if quests_panel_2.quests != null :
-		quests_panel_slot_2.quests = quests_panel_2.quests
-	if quests_panel_3.quests != null :
-		quests_panel_slot_3.quests = quests_panel_3.quests
+	if AllDictionary.active_quests[0] != null and AllDictionary.active_quests[0] != "":
+		var quest_id : String = AllDictionary.active_quests[0]
+		quests_panel_slot_1.quests = AllDictionary.load_resource_quest_list(quest_id)
+	if AllDictionary.active_quests[1] != null and AllDictionary.active_quests[1] != "":
+		var quest_id : String = AllDictionary.active_quests[1]
+		quests_panel_slot_2.quests = AllDictionary.load_resource_quest_list(quest_id)
+	if AllDictionary.active_quests[2] != null and AllDictionary.active_quests[2] != "":
+		var quest_id : String = AllDictionary.active_quests[2]
+		quests_panel_slot_3.quests = AllDictionary.load_resource_quest_list(quest_id)
+
+func set_panel_size():
+	var panel_size = Vector2(quests_panel_slot_1.get_size().x, label.get_size().y + quests_panel_slot_1.get_size().y + quests_panel_slot_2.get_size().y + quests_panel_slot_3.get_size().y)
+	$".".set_size(panel_size)
+	v_box_container.set_size(panel_size)
