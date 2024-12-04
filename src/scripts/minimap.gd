@@ -8,7 +8,7 @@ extends SubViewport
 
 
 func _physics_process(_delta):
-	minimap_camera.position = Vector3(player.position.x, (player.position.y+50), player.position.z)
+	minimap_camera.position = Vector3(player.position.x, 200, player.position.z)
 	
 	
 	

@@ -1,6 +1,6 @@
 extends Node
 
-@onready var inventory_gestion = %Inventory_Gestion
+var inventory_gestion
 
 @warning_ignore("shadowed_global_identifier")
 var Item : Item_Ressource

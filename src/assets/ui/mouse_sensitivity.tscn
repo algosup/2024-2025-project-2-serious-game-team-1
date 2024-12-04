@@ -28,4 +28,4 @@ layout_mode = 2
 text = "XX%"
 vertical_alignment = 1
 
-[connection signal="changed" from="SpeedSlider" to="." method="_on_sensitivity_slider_changed"]
+[connection signal="value_changed" from="SpeedSlider" to="." method="_on_speed_slider_value_changed"]

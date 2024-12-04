@@ -2,7 +2,7 @@ extends Control
 
 @onready var canvas_layer: CanvasLayer = $CanvasLayer
 @onready var option_menu: Control = $"../OptionMenu"
-@onready var player_ui: Control = $"../../Gameplay/Player UI"
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,8 +22,8 @@ func _on_resume_button_pressed() -> void:
 	resume_game()
 func _on_option_menu_pressed() -> void:
 	Variable.CurrentScene = Variable.Gameplay_path
-	Variable.PlayMenuOpen = false
-	player_ui.hide()
+	ClosePlayMenu()
+	option_menu.is_option_open = true
 	option_menu.show()
 func _on_back_button_pressed() -> void:
 	get_tree().change_scene_to_file(Variable.MainMenu_path)
@@ -34,6 +34,7 @@ func resume_game():
 	print("Resume Game")
 	ClosePlayMenu()
 func pause_game():
+	
 	get_tree().paused = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	print("Pause Game")

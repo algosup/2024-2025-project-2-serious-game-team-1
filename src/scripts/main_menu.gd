@@ -5,6 +5,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	option_menu.in_menu = true
 	Variable.CurrentScene = Variable.MainMenu_path
 	# Set the minimum size in project settings
 	ProjectSettings.set_setting("display/window/size/min_width", Variable.min_size.x)

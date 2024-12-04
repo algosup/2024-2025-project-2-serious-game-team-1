@@ -21,10 +21,9 @@ extends Node
 
 
 func _ready() -> void:
+	option_menu.in_menu = false
 	pause_menu.ClosePlayMenu()
 	get_tree().paused = false
-	
-	Variable.CurrentScene = Variable.Gameplay_path
 	inventory_gestion.hide()
 	quest_menu.hide()
 	option_menu.hide()
@@ -33,7 +32,6 @@ func _ready() -> void:
 	ProjectSettings.set_setting("display/window/size/min_height", Variable.min_size.y)
 	# Enforce the minimum window size using DisplayServer
 	DisplayServer.window_set_min_size(Variable.min_size)
-	Variable.CurrentScene = Variable.MainMenu_path
 
 func _process(_delta):
 	if Variable.current_size.x < Variable.min_size.x or Variable.current_size.y < Variable.min_size.y:
@@ -53,8 +51,7 @@ func _process(_delta):
 			inventory_gestion.CloseInventory()
 		elif Variable.QuestMenuOpen:
 			quest_menu.CloseQuestMenu()
+		elif Variable.PlayMenuOpen:
+			pause_menu.resume_game()
 		else:
-			if Variable.PlayMenuOpen:
-				pause_menu.resume_game()
-			else:
-				pause_menu.pause_game()
+			pause_menu.pause_game()

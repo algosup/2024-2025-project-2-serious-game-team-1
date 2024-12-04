@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://domhm87hbhbg1"]
+[gd_scene load_steps=11 format=3 uid="uid://domhm87hbhbg1"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_kxglq"]
 [ext_resource type="Script" path="res://scripts/CameraManager.gd" id="2_xl5pu"]
 [ext_resource type="PackedScene" uid="uid://0ydvsa4rak3r" path="res://assets/map/interaction.tscn" id="3_te68b"]
+[ext_resource type="Texture2D" uid="uid://bgixveqhejls2" path="res://assets/images/arrow1.png" id="4_p4yi5"]
+[ext_resource type="Script" path="res://scripts/player_marker.gd" id="5_gvss5"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_smq6u"]
 
@@ -40,6 +42,14 @@ far = 400.0
 
 [node name="Interaction" parent="CameraManager/Arm" instance=ExtResource("3_te68b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 2.98023e-08, 1, 0, 0, 0)
+
+[node name="Minimap_Marker" type="Node3D" parent="CameraManager"]
+
+[node name="Sprite3D" type="Sprite3D" parent="CameraManager/Minimap_Marker"]
+transform = Transform3D(-20, -1.74846e-06, 7.64274e-14, 0, -8.74228e-07, -20, 1.74846e-06, -20, 8.74228e-07, 0, 30, 0)
+layers = 2
+texture = ExtResource("4_p4yi5")
+script = ExtResource("5_gvss5")
 
 [node name="CollisionShapeBody" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

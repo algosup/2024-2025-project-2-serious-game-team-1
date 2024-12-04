@@ -1,5 +1,4 @@
-
-[gd_scene load_steps=21 format=3 uid="uid://chxfeda425gsu"]
+[gd_scene load_steps=22 format=3 uid="uid://chxfeda425gsu"]
 
 [ext_resource type="PackedScene" uid="uid://lrfexx8s0e13" path="res://assets/map/map.tscn" id="1_7b4si"]
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_hjvrf"]
@@ -13,13 +12,12 @@
 [ext_resource type="PackedScene" uid="uid://6c6uwu7ip5h" path="res://assets/models/bin_bag.tscn" id="9_0mf82"]
 [ext_resource type="PackedScene" uid="uid://bu66re8qcxct8" path="res://assets/ui/player_ui.tscn" id="9_61cme"]
 [ext_resource type="Script" path="res://scripts/minimap.gd" id="9_xy0vo"]
-[ext_resource type="PackedScene" uid="uid://40vvrysqespg" path="res://assets/ui/quest_menu.tscn" id="10_hcxs7"]
-[ext_resource type="Texture2D" uid="uid://cnpuvewplbjwy" path="res://assets/images/red_square.png" id="11_m4aki"]
+[ext_resource type="PackedScene" uid="uid://40vvrysqespg" path="res://assets/ui/quest_menu.tscn" id="12_unwyq"]
 [ext_resource type="Shader" path="res://assets/ui/shaders/minimap.gdshader" id="12_ycxjg"]
 [ext_resource type="PackedScene" uid="uid://b31wjwnn4gip3" path="res://assets/ui/option_menu.tscn" id="16_goewa"]
-[ext_resource type="PackedScene" uid="uid://dfpxasv5v80bs" path="res://assets/ui/quests_panel.tscn" id="16_f6mam"]
 [ext_resource type="Script" path="res://scripts/all_dictionary.gd" id="16_oopfl"]
-[ext_resource type="Script" path="res://scripts/quests_panel.gd" id="17_gvvy6"]
+[ext_resource type="PackedScene" uid="uid://dfpxasv5v80bs" path="res://assets/ui/quests_panel.tscn" id="16_qnyfx"]
+[ext_resource type="PackedScene" uid="uid://cqd0i6thcpy2k" path="res://assets/ui/quests_slot.tscn" id="16_sqpsd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nv1kv"]
 shader = ExtResource("12_ycxjg")
@@ -66,22 +64,15 @@ unique_name_in_owner = true
 process_mode = 1
 transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941, 394.357, 45.5094, 567.677)
 
-[node name="Minimap_Marker" type="Node3D" parent="Gameplay/Player"]
-
-[node name="Sprite3D" type="Sprite3D" parent="Gameplay/Player/Minimap_Marker"]
-transform = Transform3D(10, 0, 0, 0, -4.37114e-07, -10, 0, 10, -4.37114e-07, 0, 20, 0)
-layers = 2
-texture = ExtResource("11_m4aki")
-
-[node name="Player UI" parent="Gameplay" instance=ExtResource("9_61cme")]
-process_mode = 1
+[node name="Player UI" parent="Gameplay/Player" instance=ExtResource("9_61cme")]
+z_index = -1
 
 [node name="PanelContainer" type="PanelContainer" parent="Gameplay"]
 process_mode = 1
 material = SubResource("ShaderMaterial_nv1kv")
 offset_left = 940.0
 offset_top = 20.0
-offset_right = 1130.0
+offset_right = 1132.0
 offset_bottom = 210.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
@@ -94,15 +85,18 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="Gameplay/PanelContainer/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(184, 184)
+size = Vector2i(186, 184)
 render_target_update_mode = 4
 script = ExtResource("9_xy0vo")
 
 [node name="Minimap_Camera" type="Camera3D" parent="Gameplay/PanelContainer/SubViewportContainer/SubViewport"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 357.978, 200, 528.735)
+fov = 37.8493
 
 [node name="Menus" type="Node" parent="."]
+
+[node name="quest_menu" parent="Menus" instance=ExtResource("12_unwyq")]
 
 [node name="pause_menu" parent="Menus" instance=ExtResource("3_75tor")]
 unique_name_in_owner = true
@@ -113,14 +107,13 @@ visible = false
 unique_name_in_owner = true
 visible = false
 
-[node name="quest_menu" parent="Menus" instance=ExtResource("10_hcxs7")]
-unique_name_in_owner = true
-visible = false
-
 [node name="OptionMenu" parent="Menus" instance=ExtResource("16_goewa")]
-[node name="quests_panel" parent="Menus" instance=ExtResource("16_f6mam")]
-unique_name_in_owner = true
-script = ExtResource("17_gvvy6")
+visible = false
+z_index = 1
+
+[node name="quests_panel" parent="Menus" instance=ExtResource("16_qnyfx")]
+
+[node name="quests_slot" parent="Menus" instance=ExtResource("16_sqpsd")]
 
 [node name="Manager" type="Node" parent="."]
 
