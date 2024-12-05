@@ -1,6 +1,6 @@
 extends Node
 
-var inventory_gestion
+@onready var inventory_gestion: Control = %Inventory_Gestion
 
 @warning_ignore("shadowed_global_identifier")
 var Item : Item_Ressource
@@ -25,9 +25,10 @@ func get_root_node():
 	return root_node
 
 func add_item_inventory(item : Item_Ressource):
-	var my_node = get_tree().root.get_node("Menus/Inventory_Gestion")
-	if my_node != null:
-		my_node.add_item(item)
+	var inventory = get_tree().root.find_child("Inventory_Gestion", true, true)
+	print(inventory)
+	if inventory != null:
+		inventory.add_item(item)
 		print('item added')
 	else:
 		print("Inventory Gestion is not found")
@@ -48,9 +49,6 @@ func load_resource_quest_list(quest_id: String):
 	else:
 		return null
 
-
-func set_inventory_gestion(instance):
-	inventory_gestion = instance
 func check_item(object, item: Item_Ressource):
 	if item == null:
 		print("Error: item is null!")

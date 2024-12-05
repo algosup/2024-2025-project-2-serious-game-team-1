@@ -1,8 +1,5 @@
 extends Control
 
-@onready var quests_panel: Control = %quests_panel
-@onready var player_ui: Control = $"../../Gameplay/Player/Player UI"
-
 # Dynamic references, initialized based on the current scene
 var v_box_container: VBoxContainer
 var pause_menu: Control
@@ -12,6 +9,10 @@ var is_option_open: bool = false
 var in_menu: bool = false
 
 func _ready():
+	
+	if !in_menu:
+		var quests_panel: Control = %quests_panel
+		var player_ui: Control = $"../../Gameplay/Player/Player UI"
 	# Check if Main Menu context exists
 	if has_node("../VBoxContainer"):
 		v_box_container = get_node("../VBoxContainer")

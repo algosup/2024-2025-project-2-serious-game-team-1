@@ -37,16 +37,6 @@ var inventorySize : int = 20
 	slot_16, slot_17, slot_18, slot_19, slot_20,
 ]
 
-var inventory_gestion_instance
-
-func _ready():
-	# Instantiate inventory_gestion
-	inventory_gestion_instance = preload("res://scripts/inventory_gestion.gd").new()
-	
-	var other_script_instance = preload("res://scripts/all_dictionary.gd").new()
-	other_script_instance.set_inventory_gestion(inventory_gestion_instance)
-	
-
 func add_item(item: Item_Ressource):
 	var item_id_as_string = str(item.item_ID)
 	if AllDictionary.Item_List.has(item_id_as_string):  # Check if the item exists
