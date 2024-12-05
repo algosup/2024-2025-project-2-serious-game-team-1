@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://be12w8tmn0wlm"
+path="res://.godot/imported/Starbomb - Kiss The Elden Ring (Official Music Video).mp3-d5a876661201d2f5df8d729824064db6.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/environment/Starbomb - Kiss The Elden Ring (Official Music Video).mp3"
+dest_files=["res://.godot/imported/Starbomb - Kiss The Elden Ring (Official Music Video).mp3-d5a876661201d2f5df8d729824064db6.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
