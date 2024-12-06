@@ -32,8 +32,8 @@ Test priorities are differenciated as such:
 |5|Teleportation| The bike allows the player to teleport to key points on the map|When f is pressed on a bike, the map shows up and displays the locations of the other bikes. If the player clicks on one of them, he/she is teleported to that location. If the player is already at that location, a message will appear saying, ‘You are already at this location.’|Medium|None|
 ||||When esc pressed the map is close|Medium|None|
 |6|Interface, Home Page|When the player opens the game, the first open window is the Home page below.| When the game is launched, several buttons and functions must be displayed|High|None|
-||Setting| The player can modify some settings to adapt the game as he wants| By pressing the setting button an interface is displayed and the player can change the sound volume, camera sensitivity, keys, and graphics.|Medium|None|
-||New Game/Load/Quit| Different buttons on the homepage| Press the New Game button to create a new game. Press Load to load the player's last game. Press Quit to close the game.|High|None|
+||Setting| The player can modify some settings to adapt the game as he wants|Left click on Setting to display an interface and the player can change the sound volume, camera sensitivity, keys, and graphics.|Medium|None|
+||New Game/Load/Quit| Different buttons on the homepage| Left click on New Game to create a new game. Left click on Load to load the player's last game. Left click on Quit to close the game.|High|None|
 |7|Menu|When the player launches his/her part, he/she can open the menu window.|Menu open when esc pressed| High|None|
 |||In the Menu, there are 3 buttons, Setting, Save, Quit| Left click on Quit to close the game. Left-click on Save to save the part. Left-click on the setting to the sound volume, camera sensitivity, keys, and graphics.| Medium| None|
 |8|collision|The player must not be able to cross the map model.| When the player encounters an obstacle (3D model) he/she must not pass through it.|low|None|
