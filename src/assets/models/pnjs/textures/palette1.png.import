@@ -2,12 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bejkywggbdbdq"
-valid=false
+uid="uid://dqc8d5a6gwskq"
+path.s3tc="res://.godot/imported/palette1.png-fcde44e8d368131b43538b8baada3485.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
 
 [deps]
 
-source_file="res://assets/models/pnjs/textures/palette1.res"
+source_file="res://assets/models/pnjs/textures/palette1.png"
+dest_files=["res://.godot/imported/palette1.png-fcde44e8d368131b43538b8baada3485.s3tc.ctex"]
 
 [params]
 
@@ -15,12 +20,12 @@ compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://assets/models/pnjs/textures/palette1.res"
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
