@@ -101,7 +101,7 @@ All the bug funds in the project will be reported on the [GitHub issue](https://
 
 
 ## Test Cases
-All the test cases are in the markdown file [Test_Cases]("mettre lien").
+All the test cases are in the markdown file [Test_Cases](https://github.com/algosup/2024-2025-project-2-serious-game-team-1/blob/test-dev/documents/quality_assurance/Test_Cases.md).
 ## Glossary
 
  [^istqb]: The International Software Testing Qualifications Board is a software testing certification board that operates internationally.
