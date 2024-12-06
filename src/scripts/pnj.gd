@@ -14,12 +14,17 @@ var talking = false
 var queststarted = false
 var quest_id : String
 
+var previous_rotation : float 
+
 func _ready() -> void:
+	previous_rotation = rotation.y
 	talking = false
 	queststarted = false
+	
 
 func pnj_talk():
 	if talking == false :
+		rotation.y = player.camera_manager._camera_yaw.rotation.y
 		talking = true
 		Variable.movelock = true
 		Variable.cameralock = true
@@ -28,7 +33,7 @@ func pnj_talk():
 
 func _on_dialogue_box_dialogue_signal(value):
 	AllDictionary.debug_print()
-	print("start to talk with roger")
+	print("start to talk with" + str(self))
 	if value == "test":
 		print(value)
 		quest_id = str(value)
@@ -58,6 +63,7 @@ func _on_dialogue_box_dialogue_signal(value):
 		Variable.movelock = false
 		Variable.cameralock = false
 		talking = false
+		rotation.y = previous_rotation
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		
 	print(str(value))

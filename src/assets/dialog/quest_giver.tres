@@ -1,0 +1,126 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://b37m0x6oqcx8n"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_bammp"]
+
+[resource]
+script = ExtResource("1_bammp")
+starts = {
+"Martine": &"0_1",
+"Roger": &"0_2"
+}
+nodes = {
+"0_1": {
+"link": &"3_1",
+"offset": Vector2(-400.672, -295.18),
+"start_id": "Martine"
+},
+"0_2": {
+"link": &"3_3",
+"offset": Vector2(-480, 100),
+"start_id": "Roger"
+},
+"1_1": {
+"dialogue": "Hello world
+",
+"offset": Vector2(40, -400),
+"options": {
+0: {
+"condition": {},
+"link": &"3_2",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Martine"
+},
+"1_2": {
+"dialogue": "Hi! Are you the new environmentalist? Did you get settled in all right?",
+"offset": Vector2(60, -40),
+"options": {
+0: {
+"condition": {},
+"link": &"1_3",
+"text": "Mr Mayor told me to come and see you"
+}
+},
+"size": Vector2(300, 265),
+"speaker": "Roger"
+},
+"1_3": {
+"dialogue": "I would have told you, but as you can see, the beach takes up all my time.",
+"offset": Vector2(500, -40),
+"options": {
+0: {
+"condition": {},
+"link": &"1_4",
+"text": " I can help you if you like."
+},
+1: {
+"condition": {},
+"link": &"3_4",
+"text": "alright, see you later then !"
+}
+},
+"size": Vector2(300, 311),
+"speaker": "Roger"
+},
+"1_4": {
+"dialogue": "That would be incredible, but I don't want to force you. You've probably got better things to do.",
+"offset": Vector2(940, -20),
+"options": {
+0: {
+"condition": {},
+"link": &"1_5",
+"text": "Tell me what you want me to do"
+}
+},
+"size": Vector2(300, 265),
+"speaker": "Roger"
+},
+"1_5": {
+"dialogue": "All the waste has to be collected and taken to the recycling plant for reprocessing. Here's the bin liner for collecting them.",
+"offset": Vector2(1320, 20),
+"options": {
+0: {
+"condition": {},
+"link": &"3_5",
+"text": "Here we go."
+}
+},
+"size": Vector2(300, 265),
+"speaker": "Robert"
+},
+"3_1": {
+"link": &"1_1",
+"offset": Vector2(-200, -340),
+"signalValue": "talking"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2(520, -220),
+"signalValue": "end"
+},
+"3_3": {
+"link": &"1_2",
+"offset": Vector2(-240, 80),
+"signalValue": "talking"
+},
+"3_4": {
+"link": "END",
+"offset": Vector2(860, 440),
+"signalValue": "end"
+},
+"3_5": {
+"link": &"3_6",
+"offset": Vector2(1720, 160),
+"signalValue": "quest"
+},
+"3_6": {
+"link": "END",
+"offset": Vector2(2020, 160),
+"signalValue": "end"
+}
+}
+variables = {}
+strays = Array[String]([])
+characters = ""

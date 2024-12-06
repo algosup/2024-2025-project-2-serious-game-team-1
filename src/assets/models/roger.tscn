@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://scripts/pnj.gd" id="1_il4ok"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="2_8k1o8"]
-[ext_resource type="Resource" uid="uid://bhsr3gd1tv22e" path="res://assets/dialog/testdialog.tres" id="3_057ly"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="3_mcox8"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="4_3qurs"]
+[ext_resource type="Resource" uid="uid://b37m0x6oqcx8n" path="res://assets/dialog/quest_giver.tres" id="4_68ke0"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="5_trvav"]
 [ext_resource type="PackedScene" uid="uid://b1pe2c15fvwx5" path="res://assets/models/pnjs/fat_quest_giver.tscn" id="7_lnenn"]
 
@@ -38,13 +38,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -160.5
+offset_left = -240.0
 offset_top = -141.0
-offset_right = 160.5
+offset_right = 240.0
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("2_8k1o8")
-data = ExtResource("3_057ly")
+data = ExtResource("4_68ke0")
 start_id = "Roger"
 hide_portrait = true
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_t1s5g"), SubResource("RichTextEffect_xtxdd"), SubResource("RichTextEffect_qq5um")])
