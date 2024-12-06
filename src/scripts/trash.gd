@@ -4,12 +4,13 @@ class_name Waste
 
 @export var waste_name: String = "Default Waste"
 @export var no_bin_bag_message: String = "You need a Bin bag!"
+var bin_bag = preload("res://assets/items/bin_bag.tres")
 
 func cleanup():
 	# Print the inventory contents for debugging
 	print("Inventory contents:", AllDictionary.inventory)
 	# Check if "bin bag" exists in the autoload inventory
-	if "Bin bag" in AllDictionary.inventory:
+	if bin_bag in AllDictionary.inventory:
 		print("Cleaning up", waste_name)
 		EcoFollow.set_eco_beach(10)
 		print(EcoFollow.eco_beach)
