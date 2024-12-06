@@ -9,9 +9,9 @@
 | **Brainstorming**      | Team brainstorming session                          | Entire Team                                    | 100%               |
 | **Functional Specs**   | functional specifications       | Grégory Pagnoux                                | 100%                |
 | **Technical Specs**    | Drafting of technical specifications                | Robin Goumy                                    | 100%                |
-| **Getting Started**    | Mapping, game mechanics, and interface design       | Mattéo Lefin, Alexis Santos, Guillaume Despaux | 30%                |
-| **Retro-planning**     | Project scheduling and timeline                     | Mathis Lebel                                   | 60%                |
-| **Test Plan**          | Creation of test plan template                      | Lena De Germain                                | 5%                 |
+| **Getting Started**    | Mapping, game mechanics, and interface design       | Mattéo Lefin, Alexis Santos, Guillaume Despaux | 50%                |
+| **Retro-planning**     | Project scheduling and timeline                     | Mathis Lebel                                   | 70%                |
+| **Test Plan**          | Creation of test plan template                      | Lena De Germain                                | 100%                 |
 
 ---
 
