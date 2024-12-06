@@ -1,7 +1,5 @@
 extends Node
 
-@onready var inventory_gestion: Control = %Inventory_Gestion
-
 @warning_ignore("shadowed_global_identifier")
 var Item : Item_Ressource
 
@@ -15,6 +13,14 @@ var Quest_List: Dictionary = {
 	"test" : "res://assets/quests/clean_beach.tres",
 }
 
+var inventory : Array = [
+	null, null, null, null, null,
+	null, null, null, null, null,
+	null, null, null, null, null,
+	null, null, null, null, null, 
+]
+
+var inventorySize : int = 20
 
 var completed_quests : Array = []
 var active_quests : Array = [null, null, null]
@@ -24,14 +30,16 @@ func get_root_node():
 	print("Root node is:", root_node)
 	return root_node
 
-func add_item_inventory(item : Item_Ressource):
-	var inventory = get_tree().root.find_child("Inventory_Gestion", true, true)
-	print(inventory)
-	if inventory != null:
-		inventory.add_item(item)
-		print('item added')
-	else:
-		print("Inventory Gestion is not found")
+func add_item(item : Item_Ressource):
+	print("singal receive")
+	for i in range(inventorySize):
+		if inventory[i] == null:
+			print("item is not null")
+			inventory[i] = item
+			print(item.item_title, "added to slot", i)
+			print(inventory)
+			return
+		print("Inventory full!")
 
 func get_resource_path_quest_list(quest_id: String) -> String:
 	print("Quests Search")
@@ -53,12 +61,11 @@ func check_item(object, item: Item_Ressource):
 	if item == null:
 		print("Error: item is null!")
 		return
-	# Ensure the item ID is used correctly
 	var item_id_as_string = str(item.item_ID)
 	if Item_List.has(item_id_as_string):  # Check if the dictionary contains the key
 		print("Message before signal emit")
-		add_item_inventory(item)
-		object.queue_free() 
+		add_item(item)
+		object.queue_free()
 	else:
 		print("Item not recognized! ID: ", item_id_as_string)
 

@@ -63,7 +63,8 @@ unique_name_in_owner = true
 process_mode = 1
 transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941, 394.357, 45.5094, 567.677)
 
-[node name="Player UI" parent="Gameplay/Player" instance=ExtResource("9_61cme")]
+[node name="Player_UI" parent="Gameplay/Player" instance=ExtResource("9_61cme")]
+unique_name_in_owner = true
 light_mask = 512
 visibility_layer = 512
 z_index = -1
@@ -128,3 +129,5 @@ z_index = 1
 
 [node name="Dictionnary Manager" type="Node" parent="Manager"]
 script = ExtResource("16_oopfl")
+
+[connection signal="ready" from="Manager/Dictionnary Manager" to="Menus/Inventory_Gestion" method="_on_dictionnary_manager_ready"]

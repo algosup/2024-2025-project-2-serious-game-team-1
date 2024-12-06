@@ -2,7 +2,6 @@ extends TextureRect
 
 @warning_ignore("shadowed_global_identifier")
 const Item = preload("res://scripts/item_ressource.gd")
-const ItemPreview = preload("res://scripts/item_preview.gd")
 
 @export var item : Item_Ressource
 @onready var base = $"../../.."
@@ -12,7 +11,7 @@ func _ready():
 	if item :  
 		texture = item.item_icon
 
-func set_item(value: Item):
+func set_item(value: Item_Ressource):
 	item = value
 	texture = item.item_icon if item else null
 	print(item)
@@ -20,28 +19,3 @@ func set_item(value: Item):
 func _on_mouse_entered():
 	if item != null:
 		base.set_description(item)
-
-func _get_drag_data(_at_position):
-	var preview_texture = TextureRect.new()
-	preview_texture.texture = texture
-	preview_texture.expand_mode = 1
-	preview_texture.size = Vector2(64,64)
-
-	var preview = ItemPreview.new()
-	preview.preview_texture = preview_texture
-	preview.item_placeholder = item
-
-	print("Drag started with item: ", item)
-
-	set_drag_preview(preview.preview_texture)
-	texture = null
-	item = null
-	return preview
-
-func _can_drop_data(_at_position, data):
-	return data is ItemPreview
-
-func _drop_data(_at_position, data):
-	if data is ItemPreview:
-		texture = data.preview_texture.texture
-		item = data.item_placeholder

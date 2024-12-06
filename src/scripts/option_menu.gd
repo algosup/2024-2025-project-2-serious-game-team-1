@@ -3,16 +3,14 @@ extends Control
 # Dynamic references, initialized based on the current scene
 var v_box_container: VBoxContainer
 var pause_menu: Control
+var quests_panel : Control
+var player_ui : Control
 
 # Flag to track context
 var is_option_open: bool = false
 var in_menu: bool = false
 
 func _ready():
-	
-	if !in_menu:
-		var quests_panel: Control = %quests_panel
-		var player_ui: Control = $"../../Gameplay/Player/Player UI"
 	# Check if Main Menu context exists
 	if has_node("../VBoxContainer"):
 		v_box_container = get_node("../VBoxContainer")
@@ -20,6 +18,12 @@ func _ready():
 	# Check if Gameplay context exists
 	elif has_node("%pause_menu"):
 		pause_menu = get_node("%pause_menu")
+		in_menu = false
+	elif has_node("%quests_panel"):
+		quests_panel = get_node("%quests_panel")
+		in_menu = false
+	elif has_node("%Player_UI"):
+		player_ui = get_node("%Player_UI")
 		in_menu = false
 	else:
 		# Handle fallback case if neither context is found

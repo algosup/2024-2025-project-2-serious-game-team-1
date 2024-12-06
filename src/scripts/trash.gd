@@ -7,10 +7,9 @@ class_name Waste
 
 func cleanup():
 	# Print the inventory contents for debugging
-	print("Inventory contents:", EcoFollow.inventory)
-	
+	print("Inventory contents:", AllDictionary.inventory)
 	# Check if "bin bag" exists in the autoload inventory
-	if "Bin bag" in EcoFollow.inventory:
+	if "Bin bag" in AllDictionary.inventory:
 		print("Cleaning up", waste_name)
 		EcoFollow.set_eco_beach(10)
 		print(EcoFollow.eco_beach)

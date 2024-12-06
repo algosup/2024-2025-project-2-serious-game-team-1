@@ -7,8 +7,6 @@ extends Control
 @warning_ignore("shadowed_global_identifier")
 var Item : Item_Ressource
 
-var inventorySize : int = 20
-
 @onready var slot_01: TextureRect = $Inventory/GridInventory/Slot1
 @onready var slot_02: TextureRect = $Inventory/GridInventory/Slot2
 @onready var slot_03: TextureRect = $Inventory/GridInventory/Slot3
@@ -37,22 +35,11 @@ var inventorySize : int = 20
 	slot_16, slot_17, slot_18, slot_19, slot_20,
 ]
 
-func add_item(item: Item_Ressource):
-	var item_id_as_string = str(item.item_ID)
-	if AllDictionary.Item_List.has(item_id_as_string):  # Check if the item exists
-		for i in range(inventorySize):
-			if slots[i].item == null:  # Ensure the slot is empty
-				slots[i].item = AllDictionary.Item_List[item_id_as_string]  # Add item to the slot
-				print(item.item_title, "added to slot", i)
-				return
-		print("Inventory full!")
-	else:
-		print("Error: Item not found in Item_List:", item_id_as_string)
-
-
 func OpenInventory():
 	print("Open Inventory")
 	Variable.InventoryOpen = !Variable.InventoryOpen
+	for i in range(AllDictionary.inventorySize):
+		slots[i].set_item(AllDictionary.inventory[i])
 	$".".show()
 	Variable.movelock = true
 	Variable.cameralock = true
@@ -79,3 +66,6 @@ func set_description(item : Item_Ressource):
 		description_label.text = item.item_description
 	else:
 		print("null description_label")
+
+func _on_dictionnary_manager_ready() -> void:
+	print("All Dictionary Ready")

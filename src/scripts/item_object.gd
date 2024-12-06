@@ -12,4 +12,3 @@ class_name Item_Object
 func pick_up():
 	print(self.name + " picked up")
 	AllDictionary.check_item(self, item_ressource)
-	
