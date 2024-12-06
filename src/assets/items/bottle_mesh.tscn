@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci81y8gccw41w"]
+
+[ext_resource type="PackedScene" uid="uid://cgk8gy6vkuxok" path="res://assets/models/items/Bottle (Plastic).glb" id="1_7t45l"]
+
+[node name="bottle_Mesh" instance=ExtResource("1_7t45l")]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, -0.1, 0, 0.1, -4.37114e-09, 0, 0, 0)

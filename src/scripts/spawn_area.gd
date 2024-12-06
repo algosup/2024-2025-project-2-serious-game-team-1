@@ -1,7 +1,9 @@
+
+
 extends Node3D
 
 @export var object_scene: PackedScene
-@export var spawn_count: int = 10  # Number of objects to spawn
+@export var spawn_count: int = 20  # Number of objects to spawn
 @export var spawn_area_size: Vector3 = Vector3(10, 5, 10)  # Size of the spawn area
 @export var min_spawn_interval: float = 1.0  # Minimum cooldown in seconds
 @export var max_spawn_interval: float = 10.0  # Maximum cooldown in seconds

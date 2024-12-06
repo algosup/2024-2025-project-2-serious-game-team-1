@@ -34,7 +34,7 @@ func pnj_talk():
 func _on_dialogue_box_dialogue_signal(value):
 	AllDictionary.debug_print()
 	print("start to talk with" + str(self))
-	if value == "test":
+	if value == "clean_beach":
 		print(value)
 		quest_id = str(value)
 	if value == 'quest':

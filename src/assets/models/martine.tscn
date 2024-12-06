@@ -1,10 +1,10 @@
 [gd_scene load_steps=13 format=3 uid="uid://dungkr3duinky"]
 
 [ext_resource type="Script" path="res://scripts/pnj.gd" id="1_qxjfm"]
-[ext_resource type="PackedScene" uid="uid://xqyra8st4s6k" path="res://assets/models/pnjs/martine_mesh.tscn" id="1_xhtuf"]
+[ext_resource type="PackedScene" path="res://assets/models/pnjs/martine_mesh.tscn" id="1_xhtuf"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="2_s2mnr"]
 [ext_resource type="Script" path="res://scripts/pnj_mesh_animation.gd" id="3_5c3bd"]
-[ext_resource type="Resource" uid="uid://b37m0x6oqcx8n" path="res://assets/dialog/quest_giver.tres" id="3_wtd77"]
+[ext_resource type="Resource" uid="uid://c5ogtgfu5w3li" path="res://assets/dialog/quest_giver.tres" id="3_wtd77"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="4_kebax"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="5_g7l27"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="6_cjnsb"]
@@ -35,14 +35,15 @@ script = ExtResource("3_5c3bd")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogueBox" type="Panel" parent="CanvasLayer"]
+visible = false
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -224.5
+offset_left = -320.5
 offset_top = -141.0
-offset_right = 224.5
+offset_right = 320.5
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("2_s2mnr")
@@ -50,5 +51,3 @@ data = ExtResource("3_wtd77")
 start_id = "Martine"
 hide_portrait = true
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_t1s5g"), SubResource("RichTextEffect_xtxdd"), SubResource("RichTextEffect_qq5um")])
-
-[connection signal="dialogue_signal" from="CanvasLayer/DialogueBox" to="." method="_on_dialogue_box_dialogue_signal"]

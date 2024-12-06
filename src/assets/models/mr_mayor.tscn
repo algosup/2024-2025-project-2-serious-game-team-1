@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://scripts/pnj.gd" id="1_fkn53"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="2_5biav"]
 [ext_resource type="PackedScene" uid="uid://bnuj1vhug5vud" path="res://assets/models/pnjs/strong_man_quest_giver.tscn" id="2_sqgy8"]
-[ext_resource type="Resource" uid="uid://bhsr3gd1tv22e" path="res://assets/dialog/testdialog.tres" id="3_1ngrl"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="4_2j71m"]
+[ext_resource type="Resource" uid="uid://c5ogtgfu5w3li" path="res://assets/dialog/quest_giver.tres" id="4_e2c3k"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="5_dvffd"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="6_phr8d"]
 
@@ -21,6 +21,8 @@ script = ExtResource("6_phr8d")
 
 [node name="Mr_Mayor" type="StaticBody3D" groups=["pnj"]]
 script = ExtResource("1_fkn53")
+Pnj_name = "Mr. Meyor"
+prompt_message = "Talk"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_21s2q")
@@ -37,15 +39,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -160.5
+offset_left = -320.5
 offset_top = -141.0
-offset_right = 160.5
+offset_right = 320.5
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("2_5biav")
-data = ExtResource("3_1ngrl")
-start_id = "Roger"
+data = ExtResource("4_e2c3k")
+start_id = "Mr_Meyor"
 hide_portrait = true
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_t1s5g"), SubResource("RichTextEffect_xtxdd"), SubResource("RichTextEffect_qq5um")])
-
-[connection signal="dialogue_signal" from="CanvasLayer/DialogueBox" to="." method="_on_dialogue_box_dialogue_signal"]

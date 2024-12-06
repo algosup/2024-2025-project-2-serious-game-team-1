@@ -2,7 +2,6 @@ extends Resource
 
 class_name Quests_Resources
 
-@export var quests_id : String
 @export var quests_name : String
 @export var quests_giver : String
 @export var quests_ecopoint : int
@@ -12,3 +11,4 @@ class_name Quests_Resources
 @export var quests_goal_counter : int
 @export var quests_goal_objective : int
 @export_multiline var quests_description : String
+@export var quests_next_quests : Quests_Resources

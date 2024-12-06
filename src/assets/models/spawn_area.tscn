@@ -1,7 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://umm5fxua0dmn"]
+[gd_scene load_steps=3 format=3 uid="uid://umm5fxua0dmn"]
 
 [ext_resource type="Script" path="res://scripts/spawn_area.gd" id="1_rgxtp"]
+[ext_resource type="PackedScene" uid="uid://dv14y8ppy7jy5" path="res://assets/models/trash.tscn" id="2_o4bgs"]
 
 [node name="spawn area" type="Node3D"]
 script = ExtResource("1_rgxtp")
+object_scene = ExtResource("2_o4bgs")
 spawn_area_size = Vector3(10, 1, 10)

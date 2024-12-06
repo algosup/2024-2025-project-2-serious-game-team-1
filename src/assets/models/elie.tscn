@@ -3,9 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://d03r8k2thvupm" path="res://assets/models/pnjs/strong_woman_quest_giver.tscn" id="1_i5r42"]
 [ext_resource type="Script" path="res://scripts/pnj.gd" id="1_myooq"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="1_yh2kg"]
-[ext_resource type="Resource" uid="uid://bhsr3gd1tv22e" path="res://assets/dialog/testdialog.tres" id="2_7myvm"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="3_qjogr"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="4_3fe8m"]
+[ext_resource type="Resource" uid="uid://c5ogtgfu5w3li" path="res://assets/dialog/quest_giver.tres" id="4_t7hif"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="5_xhoxe"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h81br"]
@@ -21,6 +21,8 @@ script = ExtResource("5_xhoxe")
 
 [node name="Elie" type="StaticBody3D" groups=["pnj"]]
 script = ExtResource("1_myooq")
+Pnj_name = "Elie"
+prompt_message = "Talk"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_h81br")
@@ -36,14 +38,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -160.5
+offset_left = -320.5
 offset_top = -141.0
-offset_right = 160.5
+offset_right = 320.5
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("1_yh2kg")
-data = ExtResource("2_7myvm")
-start_id = "Roger"
+data = ExtResource("4_t7hif")
+start_id = "Elie"
 hide_portrait = true
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_t1s5g"), SubResource("RichTextEffect_xtxdd"), SubResource("RichTextEffect_qq5um")])
 

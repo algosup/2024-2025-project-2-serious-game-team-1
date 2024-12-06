@@ -32,6 +32,3 @@ func _on_quit_button_pressed() -> void:
 func _on_option_button_pressed() -> void:
 	Variable.CurrentScene = Variable.MainMenu_path
 	option_menu.show()
-
-	
-	

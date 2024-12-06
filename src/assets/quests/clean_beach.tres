@@ -4,13 +4,12 @@
 
 [resource]
 script = ExtResource("1_pif74")
-quests_id = 1
 quests_name = "Clean Beach"
 quests_giver = "Roger"
 quests_ecopoint = 50
 quests_zone = "Beach"
-quests_goal_label_part1 = "You need to pick up"
-quests_goal_label_part2 = "wastes plastic"
+quests_goal_label_part1 = "Collect the"
+quests_goal_label_part2 = "rubbish."
 quests_goal_counter = 0
-quests_goal_objective = 10
-quests_description = "Roger regret the beach status. He want to clean the beach but he cannot do that because he is a old person. Can you pick up 10 waste plastic ?"
+quests_goal_objective = 20
+quests_description = "Go along the beach to collect the 20 pieces of rubbish."

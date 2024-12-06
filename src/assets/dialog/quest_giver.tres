@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://b37m0x6oqcx8n"]
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://c5ogtgfu5w3li"]
 
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_bammp"]
 
 [resource]
 script = ExtResource("1_bammp")
 starts = {
+"Elie": &"0_3",
 "Martine": &"0_1",
+"Mr_Meyor": &"0_4",
 "Roger": &"0_2"
 }
 nodes = {
@@ -18,6 +20,16 @@ nodes = {
 "link": &"3_3",
 "offset": Vector2(-480, 100),
 "start_id": "Roger"
+},
+"0_3": {
+"link": &"3_8",
+"offset": Vector2(-440, -640),
+"start_id": "Elie"
+},
+"0_4": {
+"link": &"3_10",
+"offset": Vector2(-421.716, 650.023),
+"start_id": "Mr_Meyor"
 },
 "1_1": {
 "dialogue": "Hello world
@@ -33,22 +45,61 @@ nodes = {
 "size": Vector2(300, 240),
 "speaker": "Martine"
 },
+"1_10": {
+"dialogue": "If the legend is true, it could be really important to find the book to save our world before the end.",
+"offset": Vector2(980, 540),
+"options": {
+0: {
+"condition": {},
+"link": &"1_9",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Player"
+},
+"1_11": {
+"dialogue": "Thank you very much. I’ll do some research on it.",
+"offset": Vector2(1700, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"3_11",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Player"
+},
+"1_12": {
+"dialogue": "Hi Roger! Very good Mr Mayor told me to come and see you about the legend.",
+"offset": Vector2(440, -40),
+"options": {
+0: {
+"condition": {},
+"link": &"1_3",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Player"
+},
 "1_2": {
 "dialogue": "Hi! Are you the new environmentalist? Did you get settled in all right?",
 "offset": Vector2(60, -40),
 "options": {
 0: {
 "condition": {},
-"link": &"1_3",
-"text": "Mr Mayor told me to come and see you"
+"link": &"1_12",
+"text": ""
 }
 },
 "size": Vector2(300, 265),
 "speaker": "Roger"
 },
 "1_3": {
-"dialogue": "I would have told you, but as you can see, the beach takes up all my time.",
-"offset": Vector2(500, -40),
+"dialogue": "I would have helped you, but as you can see, the beach takes up all my time.",
+"offset": Vector2(860, -60),
 "options": {
 0: {
 "condition": {},
@@ -66,7 +117,7 @@ nodes = {
 },
 "1_4": {
 "dialogue": "That would be incredible, but I don't want to force you. You've probably got better things to do.",
-"offset": Vector2(940, -20),
+"offset": Vector2(1220, -140),
 "options": {
 0: {
 "condition": {},
@@ -79,21 +130,83 @@ nodes = {
 },
 "1_5": {
 "dialogue": "All the waste has to be collected and taken to the recycling plant for reprocessing. Here's the bin liner for collecting them.",
-"offset": Vector2(1320, 20),
+"offset": Vector2(1620, -140),
 "options": {
 0: {
 "condition": {},
-"link": &"3_5",
+"link": &"3_7",
 "text": "Here we go."
 }
 },
 "size": Vector2(300, 265),
 "speaker": "Robert"
 },
+"1_6": {
+"dialogue": "Hello World",
+"offset": Vector2(200, -740),
+"options": {
+0: {
+"condition": {},
+"link": &"3_9",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Elie"
+},
+"1_7": {
+"dialogue": "Hi. Sorry to disturb you again, but I remember a story about this house, and I think that you might be interested.",
+"offset": Vector2(180, 480),
+"options": {
+0: {
+"condition": {},
+"link": &"1_8",
+"text": "I listen."
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Mr. Meyor"
+},
+"1_8": {
+"dialogue": "Aristide wrote a manuscript in which he detailed a number of his research projects on climate change and solutions to prevent the end of the world. Unfortunately, all his research has been lost over time. But the book in which it was all written has reappeared in our little town. The previous owner had found it, but scientists tried to study it and it got lost in the hands of various people. Legend has it that it is still in this place and that it will reappear when the time is right. Unfortunately, the end is nigh and we still have nothing.",
+"offset": Vector2(600, 520),
+"options": {
+0: {
+"condition": {},
+"link": &"1_10",
+"text": "The story is really interesting."
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Mr. Meyor"
+},
+"1_9": {
+"dialogue": "Exactly. I know that Roger has done a lot of research on the subject and will probably be able to help you get started. Anyway, I'll leave you to your business. We'll be seeing each other again soon.",
+"offset": Vector2(1320, 560),
+"options": {
+0: {
+"condition": {},
+"link": &"1_11",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Mr. Meyor"
+},
 "3_1": {
 "link": &"1_1",
 "offset": Vector2(-200, -340),
 "signalValue": "talking"
+},
+"3_10": {
+"link": &"1_7",
+"offset": Vector2(-100, 640),
+"signalValue": "talking"
+},
+"3_11": {
+"link": "END",
+"offset": Vector2(2180, 780),
+"signalValue": "end"
 },
 "3_2": {
 "link": "END",
@@ -107,17 +220,32 @@ nodes = {
 },
 "3_4": {
 "link": "END",
-"offset": Vector2(860, 440),
+"offset": Vector2(1260, 340),
 "signalValue": "end"
 },
 "3_5": {
 "link": &"3_6",
-"offset": Vector2(1720, 160),
+"offset": Vector2(2300, 40),
 "signalValue": "quest"
 },
 "3_6": {
 "link": "END",
-"offset": Vector2(2020, 160),
+"offset": Vector2(2600, 140),
+"signalValue": "end"
+},
+"3_7": {
+"link": &"3_5",
+"offset": Vector2(2020, 0),
+"signalValue": "clean_beach"
+},
+"3_8": {
+"link": &"1_6",
+"offset": Vector2(-140, -680),
+"signalValue": "talking"
+},
+"3_9": {
+"link": "END",
+"offset": Vector2(752.284, -616.473),
 "signalValue": "end"
 }
 }
