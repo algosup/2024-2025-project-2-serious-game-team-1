@@ -1,0 +1,50 @@
+[gd_scene load_steps=12 format=3 uid="uid://buusob80cgrqh"]
+
+[ext_resource type="Script" path="res://scripts/pnj.gd" id="1_fkn53"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="2_5biav"]
+[ext_resource type="PackedScene" uid="uid://bltrb0wf6uw3j" path="res://assets/models/pnjs/strong_man_quest_giver.tscn" id="2_sqgy8"]
+[ext_resource type="Resource" uid="uid://bhsr3gd1tv22e" path="res://assets/dialog/testdialog.tres" id="3_1ngrl"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="4_2j71m"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="5_dvffd"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="6_phr8d"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_21s2q"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_t1s5g"]
+script = ExtResource("4_2j71m")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_xtxdd"]
+script = ExtResource("5_dvffd")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_qq5um"]
+script = ExtResource("6_phr8d")
+
+[node name="Mr_Mayor" type="StaticBody3D" groups=["pnj"]]
+script = ExtResource("1_fkn53")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_21s2q")
+
+[node name="strong_man_quest_giver" parent="." instance=ExtResource("2_sqgy8")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogueBox" type="Panel" parent="CanvasLayer"]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -160.5
+offset_top = -141.0
+offset_right = 160.5
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("2_5biav")
+data = ExtResource("3_1ngrl")
+start_id = "Roger"
+hide_portrait = true
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_t1s5g"), SubResource("RichTextEffect_xtxdd"), SubResource("RichTextEffect_qq5um")])
+
+[connection signal="dialogue_signal" from="CanvasLayer/DialogueBox" to="." method="_on_dialogue_box_dialogue_signal"]

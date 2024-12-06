@@ -20,6 +20,7 @@ script = ExtResource("4_3qurs")
 script = ExtResource("5_trvav")
 
 [node name="Roger" type="StaticBody3D" groups=["pnj"]]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0)
 script = ExtResource("1_il4ok")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

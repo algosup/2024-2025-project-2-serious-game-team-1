@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://chxfeda425gsu"]
+[gd_scene load_steps=22 format=3 uid="uid://chxfeda425gsu"]
 
 [ext_resource type="PackedScene" uid="uid://lrfexx8s0e13" path="res://assets/map/map.tscn" id="1_7b4si"]
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_hjvrf"]
 [ext_resource type="PackedScene" uid="uid://bwnfc1y2ijtef" path="res://assets/ui/pause_menu.tscn" id="3_75tor"]
 [ext_resource type="PackedScene" uid="uid://njg0gpbp1iqs" path="res://assets/ui/inventory.tscn" id="3_grpvx"]
+[ext_resource type="PackedScene" uid="uid://buusob80cgrqh" path="res://assets/models/mr_mayor.tscn" id="4_2lod7"]
 [ext_resource type="PackedScene" uid="uid://bchj68adctaws" path="res://assets/models/roger.tscn" id="6_52vwr"]
 [ext_resource type="Resource" uid="uid://c1flp4su10cpp" path="res://assets/items/bin_bag.tres" id="7_p0csr"]
 [ext_resource type="PackedScene" uid="uid://umm5fxua0dmn" path="res://assets/models/spawn_area.tscn" id="7_s8y11"]
@@ -46,17 +47,10 @@ process_mode = 1
 
 [node name="Map" parent="Gameplay" instance=ExtResource("1_7b4si")]
 
-[node name="Roger" parent="Gameplay" instance=ExtResource("6_52vwr")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 330.655, 37.3427, 565.188)
-
 [node name="spawn area" parent="Gameplay" instance=ExtResource("7_s8y11")]
 process_mode = 1
 transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 316.965, 34.727, 562.977)
 object_scene = ExtResource("8_7tjyf")
-
-[node name="bin bag" parent="Gameplay" instance=ExtResource("9_0mf82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 398.338, 45.0605, 563.756)
-item_ressource = ExtResource("7_p0csr")
 
 [node name="Player" parent="Gameplay" instance=ExtResource("8_735e1")]
 unique_name_in_owner = true
@@ -95,6 +89,19 @@ script = ExtResource("9_xy0vo")
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 357.978, 200, 528.735)
 fov = 37.8493
+
+[node name="Pnj" type="Node" parent="Gameplay"]
+
+[node name="Roger" parent="Gameplay/Pnj" instance=ExtResource("6_52vwr")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 330.655, 37.3427, 565.188)
+
+[node name="Mr_Mayor" parent="Gameplay/Pnj" instance=ExtResource("4_2lod7")]
+
+[node name="Object" type="Node" parent="Gameplay"]
+
+[node name="bin bag" parent="Gameplay/Object" instance=ExtResource("9_0mf82")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 330.648, 36.6179, 566.489)
+item_ressource = ExtResource("7_p0csr")
 
 [node name="Menus" type="Node" parent="."]
 

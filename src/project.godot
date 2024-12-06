@@ -49,6 +49,10 @@ folder_colors={
 "res://assets/designs/tscn_design/": "pink"
 }
 
+[global_group]
+
+pnj=""
+
 [input]
 
 jump={
