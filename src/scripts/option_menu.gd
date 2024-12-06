@@ -69,5 +69,5 @@ func GoBack():
 	Variable.show_current()
 	if not in_menu:
 		pause_menu.pause_game()
-		player_ui.Player_uiVisible()
-		quests_panel.ShowQuestsPanels()
+		#player_ui.Player_uiVisible()
+		#quests_panel.ShowQuestsPanels()

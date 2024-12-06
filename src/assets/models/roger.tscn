@@ -6,18 +6,17 @@
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="3_mcox8"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="4_3qurs"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="5_trvav"]
+[ext_resource type="PackedScene" uid="uid://b1pe2c15fvwx5" path="res://assets/models/pnjs/fat_quest_giver.tscn" id="7_lnenn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rrdw1"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_jrws7"]
-
-[sub_resource type="RichTextEffect" id="RichTextEffect_w3n3o"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_t1s5g"]
 script = ExtResource("3_mcox8")
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_7j7sd"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_xtxdd"]
 script = ExtResource("4_3qurs")
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_m1c4a"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_qq5um"]
 script = ExtResource("5_trvav")
 
 [node name="Roger" type="StaticBody3D" groups=["pnj"]]
@@ -26,8 +25,8 @@ script = ExtResource("1_il4ok")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_rrdw1")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("CapsuleMesh_jrws7")
+[node name="Mesh" parent="." instance=ExtResource("7_lnenn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.825173, 0)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -38,15 +37,15 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -386.0
-offset_top = -266.0
-offset_right = 386.0
+offset_left = -160.5
+offset_top = -141.0
+offset_right = 160.5
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("2_8k1o8")
 data = ExtResource("3_057ly")
 start_id = "Roger"
 hide_portrait = true
-custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_w3n3o"), SubResource("RichTextEffect_7j7sd"), SubResource("RichTextEffect_m1c4a")])
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_t1s5g"), SubResource("RichTextEffect_xtxdd"), SubResource("RichTextEffect_qq5um")])
 
 [connection signal="dialogue_signal" from="CanvasLayer/DialogueBox" to="." method="_on_dialogue_box_dialogue_signal"]

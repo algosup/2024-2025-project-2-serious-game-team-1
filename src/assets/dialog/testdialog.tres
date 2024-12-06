@@ -9,7 +9,7 @@ starts = {
 }
 nodes = {
 "0_1": {
-"link": &"1_1",
+"link": &"3_5",
 "offset": Vector2(-680, -420),
 "start_id": "Roger"
 },
@@ -90,6 +90,11 @@ Trying to lay down on our humble beach?",
 "link": &"3_1",
 "offset": Vector2(1760, -360),
 "signalValue": "test"
+},
+"3_5": {
+"link": &"1_1",
+"offset": Vector2(-360, -440),
+"signalValue": "talking"
 },
 "5_1": {
 "false": "END",

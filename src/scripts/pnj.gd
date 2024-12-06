@@ -6,6 +6,7 @@ class_name Pnj
 
 
 @onready var dialogue_box: DialogueBox = $CanvasLayer/DialogueBox
+@onready var mesh: Node3D = $Mesh
 
 @export var Pnj_name: String = "Insert Pnj name"
 
@@ -40,13 +41,20 @@ func _on_dialogue_box_dialogue_signal(value):
 				print("Quests Active Liste:", AllDictionary.active_quests)
 				break
 		print("You cannot have more quests")
+	if value == 'talking':
+		print('talking')
+		mesh.anim_tree.set("parameters/conditions/can_talk", true)
+		mesh.talking()
 	if value == 'end':
 		print('end')
 		%quest_menu.set_quests()
 		%quests_panel.set_quests()
+		mesh.anim_tree.set("parameters/conditions/can_talk", false)
+		mesh.talking()
 		Variable.movelock = false
 		Variable.cameralock = false
 		talking = false
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		
 	print(str(value))
 	AllDictionary.debug_print()
