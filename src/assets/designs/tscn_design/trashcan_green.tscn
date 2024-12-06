@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnyip8utkg3w5"]
+
+[ext_resource type="PackedScene" uid="uid://60vkjaphn4vm" path="res://assets/designs/Factories/Trashcan_Green.fbx" id="1_r2b0u"]
+
+[node name="Trashcan_Green" instance=ExtResource("1_r2b0u")]
