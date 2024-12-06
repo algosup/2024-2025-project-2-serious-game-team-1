@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_kxglq"]
 [ext_resource type="Script" path="res://scripts/CameraManager.gd" id="2_xl5pu"]
 [ext_resource type="PackedScene" uid="uid://0ydvsa4rak3r" path="res://assets/map/interaction.tscn" id="3_te68b"]
-[ext_resource type="Texture2D" uid="uid://baiop0wgs5tck" path="res://assets/images/arrow1.png" id="4_p4yi5"]
+[ext_resource type="Texture2D" uid="uid://cfl4rwijxk31j" path="res://assets/images/arrow1.png" id="4_p4yi5"]
 [ext_resource type="Script" path="res://scripts/player_marker.gd" id="5_gvss5"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_smq6u"]

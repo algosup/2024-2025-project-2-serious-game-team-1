@@ -47,11 +47,11 @@ process_mode = 1
 [node name="Map" parent="Gameplay" instance=ExtResource("1_7b4si")]
 
 [node name="Roger" parent="Gameplay" instance=ExtResource("6_52vwr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 399.3, 45.3941, 565.188)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 330.655, 37.3427, 565.188)
 
 [node name="spawn area" parent="Gameplay" instance=ExtResource("7_s8y11")]
 process_mode = 1
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 397.872, 48.9066, 562.977)
+transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 316.965, 34.727, 562.977)
 object_scene = ExtResource("8_7tjyf")
 
 [node name="bin bag" parent="Gameplay" instance=ExtResource("9_0mf82")]

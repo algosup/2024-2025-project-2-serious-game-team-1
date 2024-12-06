@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b1pe2c15fvwx5"]
+[gd_scene load_steps=13 format=3 uid="uid://b1pe2c15fvwx5"]
 
 [ext_resource type="PackedScene" uid="uid://btlfvakmto3mb" path="res://assets/models/pnjs/ressource/fat_quest_giver.glb" id="1_rbavp"]
 [ext_resource type="Script" path="res://scripts/pnj_mesh_animation.gd" id="2_rj5kh"]
@@ -6,13 +6,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ceql"]
 albedo_texture = ExtResource("3_fwa17")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c4uck"]
-metallic = 1.0
-metallic_specular = 0.51
-normal_enabled = true
-normal_scale = 0.0
-uv1_scale = Vector3(16, 16, 16)
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_r5jxo"]
 animation = &"fat-man-idle"
@@ -131,7 +124,6 @@ bones/25/rotation = Quaternion(2.72921e-08, -7.90133e-07, 1.91983e-07, 1)
 
 [node name="char-fat-man-type-1_001" parent="fat-man-a_001/Skeleton3D" index="0"]
 material_override = SubResource("StandardMaterial3D_1ceql")
-surface_material_override/0 = SubResource("StandardMaterial3D_c4uck")
 
 [node name="AnimationPlayer" parent="." index="1"]
 autoplay = "fat-man-idle"
