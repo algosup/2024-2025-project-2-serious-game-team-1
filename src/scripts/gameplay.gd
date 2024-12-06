@@ -9,11 +9,13 @@ extends Node
 @onready var gameplay: Node = $Gameplay
 #Game Play Loading nodes
 @onready var map: Node3D = $Gameplay/Map
-@onready var roger: Pnj = $Gameplay/Roger
+@onready var roger: Pnj = $Gameplay/Pnj/Roger
+@onready var mr_mayor: Pnj = $Gameplay/Pnj/Mr_Mayor
+@onready var elie: Pnj = $Gameplay/Pnj/Elie
 @onready var spawn_area: Node3D = $"Gameplay/spawn area"
-@onready var bin_bag: Item_Object = $"Gameplay/bin bag"
+@onready var bin_bag: Item_Object = $"Gameplay/Object/bin bag"
 @onready var player: CharacterBody3D = %Player
-@onready var player_ui: Control = $"Gameplay/Player/Player UI"
+@onready var player_ui: Control = %Player_UI
 
 @onready var option_menu: Control = $Menus/OptionMenu
 @onready var pause_menu: Control = %pause_menu

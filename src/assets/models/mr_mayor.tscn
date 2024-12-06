@@ -1,8 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://buusob80cgrqh"]
+[gd_scene load_steps=12 format=3 uid="uid://c0a24yagc8id"]
 
 [ext_resource type="Script" path="res://scripts/pnj.gd" id="1_fkn53"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="2_5biav"]
-[ext_resource type="PackedScene" uid="uid://bltrb0wf6uw3j" path="res://assets/models/pnjs/strong_man_quest_giver.tscn" id="2_sqgy8"]
+[ext_resource type="PackedScene" uid="uid://bnuj1vhug5vud" path="res://assets/models/pnjs/strong_man_quest_giver.tscn" id="2_sqgy8"]
 [ext_resource type="Resource" uid="uid://bhsr3gd1tv22e" path="res://assets/dialog/testdialog.tres" id="3_1ngrl"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="4_2j71m"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="5_dvffd"]
@@ -25,7 +25,8 @@ script = ExtResource("1_fkn53")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_21s2q")
 
-[node name="strong_man_quest_giver" parent="." instance=ExtResource("2_sqgy8")]
+[node name="Mesh" parent="." instance=ExtResource("2_sqgy8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.825, 0)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

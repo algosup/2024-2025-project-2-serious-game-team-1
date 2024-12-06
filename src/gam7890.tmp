@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://chxfeda425gsu"]
+[gd_scene load_steps=23 format=3 uid="uid://chxfeda425gsu"]
 
 [ext_resource type="PackedScene" uid="uid://lrfexx8s0e13" path="res://assets/map/map.tscn" id="1_7b4si"]
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_hjvrf"]
@@ -13,8 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://6c6uwu7ip5h" path="res://assets/models/bin_bag.tscn" id="9_0mf82"]
 [ext_resource type="PackedScene" uid="uid://bu66re8qcxct8" path="res://assets/ui/player_ui.tscn" id="9_61cme"]
 [ext_resource type="Script" path="res://scripts/minimap.gd" id="9_xy0vo"]
-[ext_resource type="PackedScene" uid="uid://di72usqhppqx4" path="res://assets/models/elie.tscn" id="12_1y7fe"]
-[ext_resource type="PackedScene" uid="uid://dungkr3duinky" path="res://assets/models/martine.tscn" id="12_37ul3"]
+[ext_resource type="PackedScene" uid="uid://di72usqhppqx4" path="res://assets/models/elie.tscn" id="11_nnc4n"]
 [ext_resource type="PackedScene" uid="uid://40vvrysqespg" path="res://assets/ui/quest_menu.tscn" id="12_unwyq"]
 [ext_resource type="Shader" path="res://assets/ui/shaders/minimap.gdshader" id="12_ycxjg"]
 [ext_resource type="PackedScene" uid="uid://b31wjwnn4gip3" path="res://assets/ui/option_menu.tscn" id="16_goewa"]
@@ -94,16 +93,14 @@ fov = 37.8493
 
 [node name="Pnj" type="Node" parent="Gameplay"]
 
-[node name="Elie" parent="Gameplay/Pnj" instance=ExtResource("12_1y7fe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 463.892, 48.5076, 401.042)
-
-[node name="Martine" parent="Gameplay/Pnj" instance=ExtResource("12_37ul3")]
-transform = Transform3D(-0.23911, 0, 0.970993, 0, 1, 0, -0.970993, 0, -0.23911, 279.434, 47.4093, 308.878)
-
-[node name="Mr_Mayor" parent="Gameplay/Pnj" instance=ExtResource("4_2lod7")]
-
 [node name="Roger" parent="Gameplay/Pnj" instance=ExtResource("6_52vwr")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 330.655, 37.3427, 565.188)
+
+[node name="Mr_Mayor" parent="Gameplay/Pnj" instance=ExtResource("4_2lod7")]
+transform = Transform3D(-0.442883, 0, -0.896579, 0, 1, 0, 0.896579, 0, -0.442883, 458.623, 46.3091, 579.87)
+
+[node name="Elie" parent="Gameplay/Pnj" instance=ExtResource("11_nnc4n")]
+transform = Transform3D(0.899527, 0, -0.436865, 0, 1, 0, 0.436865, 0, 0.899527, 465.975, 48.4374, 398.511)
 
 [node name="Object" type="Node" parent="Gameplay"]
 

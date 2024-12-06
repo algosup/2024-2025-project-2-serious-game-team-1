@@ -7,7 +7,7 @@ class_name Pnj
 
 @onready var dialogue_box: DialogueBox = $CanvasLayer/DialogueBox
 @onready var mesh: Node3D = $Mesh
-
+@onready var player_ui: Control = %Player_UI
 @export var Pnj_name: String = "Insert Pnj name"
 
 var talking = false

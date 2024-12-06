@@ -1,0 +1,67 @@
+[gd_scene load_steps=11 format=3 uid="uid://d03r8k2thvupm"]
+
+[ext_resource type="PackedScene" uid="uid://cd4wvpodnrqw8" path="res://assets/models/pnjs/ressource/strong_woman_a.glb" id="1_eyyax"]
+[ext_resource type="Script" path="res://scripts/pnj_mesh_animation.gd" id="2_4hymc"]
+[ext_resource type="Texture2D" uid="uid://dkycyxyhrck3u" path="res://assets/models/pnjs/textures/palette6.png" id="3_gw2dn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i01ha"]
+albedo_texture = ExtResource("3_gw2dn")
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_u0m2k"]
+animation = &"strong-woman-a-idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pu8cm"]
+animation = &"strong-woman-a-talk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_81rup"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ps7fj"]
+xfade_time = 3.0
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jgfhk"]
+xfade_time = 3.0
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_qbm1t"]
+states/Idle/node = SubResource("AnimationNodeAnimation_u0m2k")
+states/Idle/position = Vector2(340, 56)
+states/Talk/node = SubResource("AnimationNodeAnimation_pu8cm")
+states/Talk/position = Vector2(487, 125)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_81rup"), "Idle", "Talk", SubResource("AnimationNodeStateMachineTransition_ps7fj"), "Talk", "Idle", SubResource("AnimationNodeStateMachineTransition_jgfhk")]
+
+[node name="strong_woman_quest_giver" instance=ExtResource("1_eyyax")]
+script = ExtResource("2_4hymc")
+
+[node name="strong-woman-a" parent="." index="0"]
+transform = Transform3D(0.995006, 0.0958348, -0.0278925, -0.0946621, 0.994677, 0.0407043, 0.0316449, -0.0378607, 0.998782, -0.0875702, -0.0184318, 0.0171923)
+
+[node name="Skeleton3D" parent="strong-woman-a" index="0"]
+bones/1/rotation = Quaternion(0.0681358, 0.00527708, 0.0757921, 0.994779)
+bones/2/rotation = Quaternion(-0.00634024, -0.0200112, -0.0156893, 0.999657)
+bones/4/rotation = Quaternion(0.714136, 0.434324, 0.517911, -0.182045)
+bones/5/rotation = Quaternion(-0.199552, -0.0181199, 0.205524, 0.95792)
+bones/6/rotation = Quaternion(-0.000976597, 0.00257909, -0.528437, 0.848968)
+bones/7/rotation = Quaternion(-0.0142802, -0.157704, -0.0551314, 0.985843)
+bones/8/rotation = Quaternion(-0.0437336, -0.00116171, -0.0158539, 0.998917)
+bones/10/rotation = Quaternion(0.78026, -0.380517, -0.452364, -0.204375)
+bones/11/rotation = Quaternion(-0.115342, -0.103162, -0.0522554, 0.986571)
+bones/12/rotation = Quaternion(-0.000525567, -0.00191897, 0.500873, 0.865518)
+bones/13/rotation = Quaternion(0.021621, 0.194393, 0.0824743, 0.977211)
+bones/14/rotation = Quaternion(-0.0988141, 0.00170779, 0.00928119, 0.995061)
+bones/16/rotation = Quaternion(0.595351, 0.524313, 0.515253, -0.324295)
+bones/17/rotation = Quaternion(-0.259376, -0.684817, 0.406196, 0.546585)
+bones/18/rotation = Quaternion(0.302579, -0.0461462, 0.0231475, 0.951725)
+bones/19/rotation = Quaternion(-0.723215, -0.045669, 0.0321401, 0.688361)
+bones/21/rotation = Quaternion(0.598825, -0.519283, -0.51826, -0.321184)
+bones/22/rotation = Quaternion(-0.353536, 0.519037, -0.524395, 0.574998)
+bones/23/rotation = Quaternion(0.165036, 0.0697259, -0.0462745, 0.982731)
+bones/24/rotation = Quaternion(-0.707947, 0.0764363, 0.0621696, 0.699359)
+
+[node name="char-strong-woman-type-1" parent="strong-woman-a/Skeleton3D" index="0"]
+material_override = SubResource("StandardMaterial3D_i01ha")
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+tree_root = SubResource("AnimationNodeStateMachine_qbm1t")
+anim_player = NodePath("../AnimationPlayer")

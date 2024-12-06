@@ -2,8 +2,9 @@ extends Control
 
 @onready var canvas_layer: CanvasLayer = $CanvasLayer
 @onready var option_menu: Control = $"../OptionMenu"
-@onready var player_ui: Control = $"../../Gameplay/Player/Player UI"
+
 @onready var quests_panel: Control = %quests_panel
+@onready var player_ui: Control = %Player_UI
 
 
 # Called when the node enters the scene tree for the first time.

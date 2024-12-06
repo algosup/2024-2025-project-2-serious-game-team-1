@@ -1,7 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://bltrb0wf6uw3j"]
+[gd_scene load_steps=13 format=3 uid="uid://bnuj1vhug5vud"]
 
 [ext_resource type="PackedScene" uid="uid://4478a3teswbv" path="res://assets/models/pnjs/ressource/strong_man_a.glb" id="1_ngs8h"]
 [ext_resource type="Script" path="res://scripts/pnj_mesh_animation.gd" id="2_5srpd"]
+[ext_resource type="Texture2D" uid="uid://brwefvpkd5rxj" path="res://assets/models/pnjs/textures/palette3.png" id="3_flr01"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bamde"]
+albedo_texture = ExtResource("3_flr01")
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7foc6"]
 animation = &"strong-man-a idle"
@@ -42,29 +46,32 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 script = ExtResource("2_5srpd")
 
 [node name="strong-man-a" parent="." index="0"]
-transform = Transform3D(0.991173, 0.0783062, -0.106978, -0.0721666, 0.99558, 0.0601109, 0.111212, -0.0518601, 0.992443, -0.055781, -0.0262698, 0.0268462)
+transform = Transform3D(0.99812, 0.0278151, 0.05462, -0.0319311, 0.996598, 0.0759892, -0.0523205, -0.0775904, 0.995612, -0.0249939, -0.0130227, 0.0375796)
 
 [node name="Skeleton3D" parent="strong-man-a" index="0"]
-bones/1/rotation = Quaternion(-0.0197356, -0.0126865, 0.0416239, 0.998858)
-bones/2/rotation = Quaternion(0.04375, -0.0254218, 0.0928937, 0.994389)
-bones/4/rotation = Quaternion(0.709581, 0.466816, 0.447444, -0.279948)
-bones/5/rotation = Quaternion(-0.431885, 0.358069, 0.0867718, 0.823245)
-bones/6/rotation = Quaternion(4.52008e-08, -2.80561e-08, -0.115392, 0.99332)
-bones/7/rotation = Quaternion(-0.0300803, 0.0176157, -0.092864, 0.995068)
-bones/8/rotation = Quaternion(-0.0644488, -0.000423301, 0.00114482, 0.99792)
-bones/10/rotation = Quaternion(0.806747, -0.267431, -0.503435, -0.155544)
-bones/11/rotation = Quaternion(-0.226367, -0.325369, -0.135928, 0.907974)
-bones/12/rotation = Quaternion(1.83704e-08, -2.98023e-08, 0.097553, 0.99523)
-bones/13/rotation = Quaternion(-0.0246239, 0.0983826, -0.00585144, 0.994827)
-bones/14/rotation = Quaternion(-0.0727856, 0.000476377, -0.00226934, 0.997345)
+bones/1/rotation = Quaternion(0.0258249, 0.0198465, -0.0133816, 0.99938)
+bones/2/rotation = Quaternion(0.0162601, -0.0032258, 0.0044171, 0.999853)
+bones/4/rotation = Quaternion(0.74096, 0.368081, 0.476433, -0.297502)
+bones/5/rotation = Quaternion(-0.38376, 0.344777, -0.0355437, 0.855917)
+bones/6/rotation = Quaternion(2.18854e-07, 1.39074e-08, -0.117511, 0.993072)
+bones/7/rotation = Quaternion(-0.0362535, -0.0862277, 0.0201107, 0.995413)
+bones/8/rotation = Quaternion(-0.19829, -1.6969e-08, 0.0239296, 0.979851)
+bones/10/rotation = Quaternion(0.696632, -0.41698, -0.501976, -0.29808)
+bones/11/rotation = Quaternion(-0.412744, -0.325077, -0.00983819, 0.850806)
+bones/12/rotation = Quaternion(-2.53642e-08, 1.13018e-07, 0.143372, 0.989669)
+bones/13/rotation = Quaternion(-0.0625664, 0.099023, 0.00839711, 0.993081)
+bones/14/rotation = Quaternion(-0.164825, 7.67252e-08, -0.0200867, 0.986118)
 bones/16/rotation = Quaternion(0.595351, 0.524313, 0.515253, -0.324295)
-bones/17/rotation = Quaternion(-0.285374, -0.727559, 0.363709, 0.506887)
-bones/18/rotation = Quaternion(0.214377, 0.0437118, -0.00153091, 0.975771)
-bones/19/rotation = Quaternion(-0.605819, -0.0488103, 0.0553964, 0.792169)
+bones/17/rotation = Quaternion(-0.273817, -0.61814, 0.501181, 0.540134)
+bones/18/rotation = Quaternion(0.225156, -0.0767901, -0.0466145, 0.970173)
+bones/19/rotation = Quaternion(-0.691566, -0.184216, -0.035885, 0.697505)
 bones/21/rotation = Quaternion(0.598825, -0.519284, -0.51826, -0.321184)
-bones/22/rotation = Quaternion(-0.307125, 0.542799, -0.568457, 0.536563)
-bones/23/rotation = Quaternion(0.200085, 0.0670138, -0.0219752, 0.977237)
-bones/24/rotation = Quaternion(-0.742194, -0.0180802, 0.0209069, 0.669615)
+bones/22/rotation = Quaternion(-0.319666, 0.573915, -0.494368, 0.569242)
+bones/23/rotation = Quaternion(0.17666, 0.0811177, 0.0403264, 0.980094)
+bones/24/rotation = Quaternion(-0.656255, 0.177814, 0.0365538, 0.732377)
+
+[node name="char-strong-man-type-1" parent="strong-man-a/Skeleton3D" index="0"]
+material_override = SubResource("StandardMaterial3D_bamde")
 
 [node name="AnimationTree" type="AnimationTree" parent="." index="2"]
 tree_root = SubResource("AnimationNodeStateMachine_qqgu7")
