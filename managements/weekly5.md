@@ -23,7 +23,7 @@
 | **Team Time Summary**    | continue  Documenting team hours and productivity      | Mathis Lebel       |
 | **KPI's**                | continue the key performance metrics | Mathis Lebel           |
 | **User manuel**    | start the User manuel                            | Guillaume Despaux      |
-| **story of game** |inplement the story in the Game                           | Mattéo Lefin          |
+| **story of game** |inplement the story in the Game                           | Mattéo Lefin  , alexis       |
 
 ---
 
