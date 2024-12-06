@@ -89,6 +89,12 @@ The game script is written in the document below:
 
 - [Game script](https://docs.google.com/document/d/10kav_JRLYlZFFNsdD1kTdnwY3XdXzr1ps8o2i5b38b8/edit?tab=t.0)
 
+---
+
+You can find all meetings reports below:
+
+- [Meeting report 12/06/2024](meeting_report_12_06_2024.pdf)
+
 ## II. Project Overview
 
 ### A. Purpose
