@@ -5,8 +5,6 @@ extends Node3D
 @export var object_scene: PackedScene
 @export var spawn_count: int = 20  # Number of objects to spawn
 @export var spawn_area_size: Vector3 = Vector3(10, 5, 10)  # Size of the spawn area
-@export var min_spawn_interval: float = 1.0  # Minimum cooldown in seconds
-@export var max_spawn_interval: float = 10.0  # Maximum cooldown in seconds
 
 func _ready():
 	randomize()  # Ensure randomness each time the scene is run
@@ -16,13 +14,11 @@ func spawn_objects() -> void:
 	print("Spawning...")
 	for i in range(spawn_count):
 		
-		await get_tree().create_timer(randf_range(min_spawn_interval, max_spawn_interval)).timeout
 		var obj_instance = object_scene.instantiate()
 		var current_position = Vector3 (0,0,0)
 		if obj_instance:
 			obj_instance.transform.origin = random_position(current_position)  # Spawn at the origin
 			add_child(obj_instance)
-			#EcoFollow.
 		else:
 			print("Failed to instantiate.")
 

@@ -25,6 +25,8 @@ extends Node
 
 
 func _ready() -> void:
+	Variable.movelock = true
+	Variable.cameralock = true
 	option_menu.in_menu = false
 	pause_menu.ClosePlayMenu()
 	get_tree().paused = false
@@ -36,7 +38,8 @@ func _ready() -> void:
 	ProjectSettings.set_setting("display/window/size/min_height", Variable.min_size.y)
 	# Enforce the minimum window size using DisplayServer
 	DisplayServer.window_set_min_size(Variable.min_size)
-	
+
+
 
 func _process(_delta):
 	if Variable.current_size.x < Variable.min_size.x or Variable.current_size.y < Variable.min_size.y:
@@ -60,3 +63,9 @@ func _process(_delta):
 			pause_menu.resume_game()
 		else:
 			pause_menu.pause_game()
+
+
+func _on_introduction_animation_animation_end() -> void:
+	Variable.movelock = false
+	Variable.cameralock = false
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://chxfeda425gsu"]
+[gd_scene load_steps=24 format=3 uid="uid://chxfeda425gsu"]
 
 [ext_resource type="PackedScene" uid="uid://lrfexx8s0e13" path="res://assets/map/map.tscn" id="1_7b4si"]
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_hjvrf"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://b31wjwnn4gip3" path="res://assets/ui/option_menu.tscn" id="16_goewa"]
 [ext_resource type="Script" path="res://scripts/all_dictionary.gd" id="16_oopfl"]
 [ext_resource type="PackedScene" uid="uid://dfpxasv5v80bs" path="res://assets/ui/quests_panel.tscn" id="16_qnyfx"]
+[ext_resource type="PackedScene" uid="uid://d1uhb55q7ye7b" path="res://assets/ui/introduction_animation.tscn" id="20_oxljo"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nv1kv"]
 shader = ExtResource("12_ycxjg")
@@ -55,7 +56,7 @@ transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 
 [node name="Player" parent="Gameplay" instance=ExtResource("8_735e1")]
 unique_name_in_owner = true
 process_mode = 1
-transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941, 394.357, 45.5094, 567.677)
+transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941, 409.943, 45.5094, 616.804)
 
 [node name="Player_UI" parent="Gameplay/Player" instance=ExtResource("9_61cme")]
 unique_name_in_owner = true
@@ -148,4 +149,7 @@ z_index = 1
 [node name="Dictionnary Manager" type="Node" parent="Manager"]
 script = ExtResource("16_oopfl")
 
+[node name="Introduction_Animation" parent="." instance=ExtResource("20_oxljo")]
+
 [connection signal="ready" from="Manager/Dictionnary Manager" to="Menus/Inventory_Gestion" method="_on_dictionnary_manager_ready"]
+[connection signal="animation_end" from="Introduction_Animation" to="." method="_on_introduction_animation_animation_end"]

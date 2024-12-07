@@ -37,7 +37,7 @@ func _on_dialogue_box_dialogue_signal(value):
 	print("start to talk with" + str(self))
 	if value == "get_quest":
 		print(value)
-		quest_id = str(value)
+		quest_id = str(quest_name)
 	if value == 'quest':
 		queststarted = true
 		for i in range(len(AllDictionary.active_quests)):
