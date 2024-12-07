@@ -57,6 +57,7 @@ transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 
 unique_name_in_owner = true
 process_mode = 1
 transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941, 409.943, 45.5094, 616.804)
+collision_layer = 3
 
 [node name="Player_UI" parent="Gameplay/Player" instance=ExtResource("9_61cme")]
 unique_name_in_owner = true
