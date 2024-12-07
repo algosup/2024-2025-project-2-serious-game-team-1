@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://c5ogtgfu5w3li"]
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://b37m0x6oqcx8n"]
 
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_bammp"]
 
@@ -7,34 +7,34 @@ script = ExtResource("1_bammp")
 starts = {
 "Elie": &"0_3",
 "Martine": &"0_1",
-"Mr_Meyor": &"0_4",
+"Mr_Mayor": &"0_4",
 "Roger": &"0_2"
 }
 nodes = {
 "0_1": {
 "link": &"3_1",
-"offset": Vector2(-400.672, -295.18),
+"offset": Vector2(-940, -780),
 "start_id": "Martine"
 },
 "0_2": {
 "link": &"3_3",
-"offset": Vector2(-480, 100),
+"offset": Vector2(-620, 80),
 "start_id": "Roger"
 },
 "0_3": {
 "link": &"3_8",
-"offset": Vector2(-440, -640),
+"offset": Vector2(-940, -1040),
 "start_id": "Elie"
 },
 "0_4": {
 "link": &"3_10",
-"offset": Vector2(-421.716, 650.023),
-"start_id": "Mr_Meyor"
+"offset": Vector2(-620, 640),
+"start_id": "Mr_Mayor"
 },
 "1_1": {
 "dialogue": "Hello world
 ",
-"offset": Vector2(40, -400),
+"offset": Vector2(-160, -780),
 "options": {
 0: {
 "condition": {},
@@ -42,12 +42,12 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300, 420),
 "speaker": "Martine"
 },
 "1_10": {
-"dialogue": "If the legend is true, it could be really important to find the book to save our world before the end.",
-"offset": Vector2(980, 540),
+"dialogue": "[color=blue] If the legend is true, it could be really important to find the book to save our world before the end. [/color]",
+"offset": Vector2(1860, 680),
 "options": {
 0: {
 "condition": {},
@@ -55,12 +55,12 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
-"speaker": "Player"
+"size": Vector2(300, 420),
+"speaker": -1
 },
 "1_11": {
-"dialogue": "Thank you very much. I’ll do some research on it.",
-"offset": Vector2(1700, 580),
+"dialogue": "[color=blue]Thank you very much. I’ll do some research on it. [/color]",
+"offset": Vector2(2540, 680),
 "options": {
 0: {
 "condition": {},
@@ -68,12 +68,12 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
-"speaker": "Player"
+"size": Vector2(300, 420),
+"speaker": -1
 },
 "1_12": {
-"dialogue": "Hi Roger! Very good Mr Mayor told me to come and see you about the legend.",
-"offset": Vector2(440, -40),
+"dialogue": "[color=dark_blue] Hi Roger! Very good Mr Mayor told me to come and see you about the legend. [/color]",
+"offset": Vector2(460, -40),
 "options": {
 0: {
 "condition": {},
@@ -81,12 +81,51 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
-"speaker": "Player"
+"size": Vector2(300, 420),
+"speaker": -1
+},
+"1_13": {
+"dialogue": "[color=black] The previous owner had found it, but scientists tried to study it and it got lost in the hands of various people. [/color]",
+"offset": Vector2(1520, 680),
+"options": {
+0: {
+"condition": {},
+"link": &"1_10",
+"text": "The story is really interesting."
+}
+},
+"size": Vector2(300, 420),
+"speaker": -1
+},
+"1_14": {
+"dialogue": "[color=black] Unfortunately, all his research has been lost over time. But the book in which it was all written has reappeared in our little town. [/color]",
+"offset": Vector2(900, 680),
+"options": {
+0: {
+"condition": {},
+"link": &"1_15",
+"text": ""
+}
+},
+"size": Vector2(300, 359),
+"speaker": -1
+},
+"1_15": {
+"dialogue": "[color=black] Legend has it that it is still in this place and that it will reappear when the time is right. Unfortunately, the end is nigh and we still have nothing. [/color]",
+"offset": Vector2(1200, 680),
+"options": {
+0: {
+"condition": {},
+"link": &"1_13",
+"text": ""
+}
+},
+"size": Vector2(300, 359),
+"speaker": -1
 },
 "1_2": {
-"dialogue": "Hi! Are you the new environmentalist? Did you get settled in all right?",
-"offset": Vector2(60, -40),
+"dialogue": "[color=black] Hi! Are you the new environmentalist? Did you get settled in all right? [/color]",
+"offset": Vector2(40, 0),
 "options": {
 0: {
 "condition": {},
@@ -94,11 +133,11 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 265),
-"speaker": "Roger"
+"size": Vector2(300, 420),
+"speaker": -1
 },
 "1_3": {
-"dialogue": "I would have helped you, but as you can see, the beach takes up all my time.",
+"dialogue": "[color=black] I would have helped you, but as you can see, the beach takes up all my time. [/color]",
 "offset": Vector2(860, -60),
 "options": {
 0: {
@@ -112,11 +151,11 @@ nodes = {
 "text": "alright, see you later then !"
 }
 },
-"size": Vector2(300, 311),
-"speaker": "Roger"
+"size": Vector2(300, 542),
+"speaker": -1
 },
 "1_4": {
-"dialogue": "That would be incredible, but I don't want to force you. You've probably got better things to do.",
+"dialogue": "[color=black] That would be incredible, but I don't want to force you. You've probably got better things to do. [/color]",
 "offset": Vector2(1220, -140),
 "options": {
 0: {
@@ -125,11 +164,11 @@ nodes = {
 "text": "Tell me what you want me to do"
 }
 },
-"size": Vector2(300, 265),
-"speaker": "Roger"
+"size": Vector2(300, 481),
+"speaker": -1
 },
 "1_5": {
-"dialogue": "All the waste has to be collected and taken to the recycling plant for reprocessing. Here's the bin liner for collecting them.",
+"dialogue": "[color=dark_red]All the waste has to be collected and taken to the recycling plant for reprocessing.[/color][color=black] Here's the bin liner for collecting them.[/color]",
 "offset": Vector2(1620, -140),
 "options": {
 0: {
@@ -138,12 +177,12 @@ nodes = {
 "text": "Here we go."
 }
 },
-"size": Vector2(300, 265),
-"speaker": "Robert"
+"size": Vector2(300, 481),
+"speaker": -1
 },
 "1_6": {
 "dialogue": "Hello World",
-"offset": Vector2(200, -740),
+"offset": Vector2(160, -1040),
 "options": {
 0: {
 "condition": {},
@@ -151,12 +190,12 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300, 420),
 "speaker": "Elie"
 },
 "1_7": {
-"dialogue": "Hi. Sorry to disturb you again, but I remember a story about this house, and I think that you might be interested.",
-"offset": Vector2(180, 480),
+"dialogue": "[color=black] Hi. Sorry to disturb you again, but I remember a story about this house, and I think that you might be interested. [/color]",
+"offset": Vector2(40, 640),
 "options": {
 0: {
 "condition": {},
@@ -164,25 +203,25 @@ nodes = {
 "text": "I listen."
 }
 },
-"size": Vector2(300, 240),
-"speaker": "Mr. Meyor"
+"size": Vector2(300, 481),
+"speaker": -1
 },
 "1_8": {
-"dialogue": "Aristide wrote a manuscript in which he detailed a number of his research projects on climate change and solutions to prevent the end of the world. Unfortunately, all his research has been lost over time. But the book in which it was all written has reappeared in our little town. The previous owner had found it, but scientists tried to study it and it got lost in the hands of various people. Legend has it that it is still in this place and that it will reappear when the time is right. Unfortunately, the end is nigh and we still have nothing.",
-"offset": Vector2(600, 520),
+"dialogue": "[color=dark_green]Aristide[/color][color=black] wrote a manuscript in which he detailed a number of his research projects on climate change and solutions to prevent the end of the world. [/color]",
+"offset": Vector2(520, 640),
 "options": {
 0: {
 "condition": {},
-"link": &"1_10",
-"text": "The story is really interesting."
+"link": &"1_14",
+"text": ""
 }
 },
-"size": Vector2(300, 240),
-"speaker": "Mr. Meyor"
+"size": Vector2(300, 481),
+"speaker": -1
 },
 "1_9": {
-"dialogue": "Exactly. I know that Roger has done a lot of research on the subject and will probably be able to help you get started. Anyway, I'll leave you to your business. We'll be seeing each other again soon.",
-"offset": Vector2(1320, 560),
+"dialogue": "[color=black] Exactly. I know that Roger has done a lot of research on the subject and will probably be able to help you get started. Anyway, I'll leave you to your business. We'll be seeing each other again soon. [/color]",
+"offset": Vector2(2200, 680),
 "options": {
 0: {
 "condition": {},
@@ -190,27 +229,27 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
-"speaker": "Mr. Meyor"
+"size": Vector2(300, 420),
+"speaker": -1
 },
 "3_1": {
 "link": &"1_1",
-"offset": Vector2(-200, -340),
+"offset": Vector2(-420, -780),
 "signalValue": "talking"
 },
 "3_10": {
 "link": &"1_7",
-"offset": Vector2(-100, 640),
+"offset": Vector2(-260, 640),
 "signalValue": "talking"
 },
 "3_11": {
 "link": "END",
-"offset": Vector2(2180, 780),
+"offset": Vector2(3000, 800),
 "signalValue": "end"
 },
 "3_2": {
 "link": "END",
-"offset": Vector2(520, -220),
+"offset": Vector2(260, -260),
 "signalValue": "end"
 },
 "3_3": {
@@ -220,32 +259,32 @@ nodes = {
 },
 "3_4": {
 "link": "END",
-"offset": Vector2(1260, 340),
+"offset": Vector2(1260, 460),
 "signalValue": "end"
 },
 "3_5": {
 "link": &"3_6",
-"offset": Vector2(2300, 40),
+"offset": Vector2(2300, 0),
 "signalValue": "quest"
 },
 "3_6": {
 "link": "END",
-"offset": Vector2(2600, 140),
+"offset": Vector2(2580, 0),
 "signalValue": "end"
 },
 "3_7": {
 "link": &"3_5",
 "offset": Vector2(2020, 0),
-"signalValue": "clean_beach"
+"signalValue": "get_quest"
 },
 "3_8": {
 "link": &"1_6",
-"offset": Vector2(-140, -680),
+"offset": Vector2(-380, -1040),
 "signalValue": "talking"
 },
 "3_9": {
 "link": "END",
-"offset": Vector2(752.284, -616.473),
+"offset": Vector2(640, -1040),
 "signalValue": "end"
 }
 }

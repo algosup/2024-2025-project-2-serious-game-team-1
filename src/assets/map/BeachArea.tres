@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ProtonScatterPathShape" load_steps=3 format=3 uid="uid://7cljy3bvd8kf"]
+[gd_resource type="Resource" script_class="ProtonScatterPathShape" load_steps=3 format=3 uid="uid://bq1fjydlta2dn"]
 
 [ext_resource type="Script" path="res://addons/proton_scatter/src/shapes/path_shape.gd" id="1_grr1q"]
 

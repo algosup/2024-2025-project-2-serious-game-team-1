@@ -28,7 +28,7 @@ nodes = {
 "text": "Nah"
 }
 },
-"size": Vector2(300, 254),
+"size": Vector2(300, 542),
 "speaker": "Greg"
 },
 "1_2": {
@@ -41,7 +41,7 @@ nodes = {
 "text": "..."
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300, 481),
 "speaker": "Greg"
 },
 "1_3": {
@@ -54,12 +54,12 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300, 420),
 "speaker": "Greg"
 },
 "1_4": {
 "dialogue": "Like u for [u]underlining[/u] or [fade start=26 length=4]fade[/fade] or [color=red]color=red[/color] or [rainbow]rainbow[/rainbow] or [shake]shake[/shake] or [wave]wave[/wave] or [tornado]tornado[/tornado]",
-"offset": Vector2(900, 0),
+"offset": Vector2(960, 20),
 "options": {
 0: {
 "condition": {},
@@ -67,13 +67,13 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300, 420),
 "speaker": "Greg"
 },
 "1_5": {
 "dialogue": "You can even combine two or more effects to create [rainbow][wave]EVEN MORE AWESOME EFFECTS![/wave][/rainbow][br]
 Usage: [lb]effect1] [lb]effect2] text goes here [lb]/effect2] [lb]s/effect1]",
-"offset": Vector2(1240, 0),
+"offset": Vector2(1300, 40),
 "options": {
 0: {
 "condition": {},
@@ -86,7 +86,7 @@ Usage: [lb]effect1] [lb]effect2] text goes here [lb]/effect2] [lb]s/effect1]",
 "text": "Got it!"
 }
 },
-"size": Vector2(300, 254),
+"size": Vector2(300, 542),
 "speaker": "Greg"
 }
 }

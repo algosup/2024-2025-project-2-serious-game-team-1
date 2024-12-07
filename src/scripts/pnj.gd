@@ -9,6 +9,7 @@ class_name Pnj
 @onready var mesh: Node3D = $Mesh
 @onready var player_ui: Control = %Player_UI
 @export var Pnj_name: String = "Insert Pnj name"
+@export var quest_name : String = "None"
 
 var talking = false
 var queststarted = false
@@ -34,7 +35,7 @@ func pnj_talk():
 func _on_dialogue_box_dialogue_signal(value):
 	AllDictionary.debug_print()
 	print("start to talk with" + str(self))
-	if value == "clean_beach":
+	if value == "get_quest":
 		print(value)
 		quest_id = str(value)
 	if value == 'quest':
