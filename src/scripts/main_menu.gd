@@ -24,7 +24,7 @@ func _process(_delta: float) -> void:
 
 
 func _on_play_button_pressed() -> void:
-	get_tree().change_scene_to_file(Variable.Gameplay_path)
+	LoadManager.load_scene("res://gameplay.tscn")
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit() 

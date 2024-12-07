@@ -22,6 +22,7 @@ DialogManager="*res://scripts/dialog_manager.gd"
 Variable="*res://scripts/Variable.gd"
 Zones="*res://scripts/zones.gd"
 AllDictionary="*res://scripts/all_dictionary.gd"
+LoadManager="*res://scripts/load_manager.gd"
 
 [display]
 
