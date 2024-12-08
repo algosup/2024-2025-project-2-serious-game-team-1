@@ -7,7 +7,8 @@ script = ExtResource("1_bammp")
 starts = {
 "Elie": &"0_3",
 "Martine": &"0_1",
-"Mr_Mayor": &"0_4",
+"Mr_Mayor1": &"0_5",
+"Mr_Mayor2": &"0_4",
 "Roger": &"0_2"
 }
 nodes = {
@@ -29,7 +30,12 @@ nodes = {
 "0_4": {
 "link": &"3_10",
 "offset": Vector2(-620, 640),
-"start_id": "Mr_Mayor"
+"start_id": "Mr_Mayor2"
+},
+"0_5": {
+"link": &"3_12",
+"offset": Vector2(-500, 1280),
+"start_id": "Mr_Mayor1"
 },
 "1_1": {
 "dialogue": "Hello world
@@ -94,7 +100,7 @@ nodes = {
 "text": "The story is really interesting."
 }
 },
-"size": Vector2(300, 420),
+"size": Vector2(300, 476),
 "speaker": -1
 },
 "1_14": {
@@ -107,7 +113,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 359),
+"size": Vector2(300, 415),
 "speaker": -1
 },
 "1_15": {
@@ -117,6 +123,58 @@ nodes = {
 0: {
 "condition": {},
 "link": &"1_13",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": -1
+},
+"1_16": {
+"dialogue": "[color=black] Hello my friend. I hope your move wasn't too difficult. [/color]",
+"offset": Vector2(80, 1280),
+"options": {
+0: {
+"condition": {},
+"link": &"1_17",
+"text": ""
+}
+},
+"size": Vector2(300, 359),
+"speaker": -1
+},
+"1_17": {
+"dialogue": "[color=blue]Good morning, Mr Mayor. No, I just had a few boxes that were already packed away. Thank you very much for offering me this house. I was getting ready to discover the town before starting what I'm here for.[/color]",
+"offset": Vector2(480, 1280),
+"options": {
+0: {
+"condition": {},
+"link": &"1_18",
+"text": ""
+}
+},
+"size": Vector2(300, 359),
+"speaker": -1
+},
+"1_18": {
+"dialogue": "[color=black]I can see that our budding young ecologist is ready to save our pretty little town. I've got a first mission for you before you set off on your adventure.[/color]",
+"offset": Vector2(880, 1280),
+"options": {
+0: {
+"condition": {},
+"link": &"1_19",
+"text": "Go ahead"
+}
+},
+"size": Vector2(300, 415),
+"speaker": -1
+},
+"1_19": {
+"dialogue": "[color=black]We're trying to [/color][color=red]gather data on the air quality in our little town[/color][color=black], but we're still lacking. Here's the device that will help you. [/color][color=red]Come see me as soon as you've finished.[/color]",
+"offset": Vector2(1260, 1280),
+"options": {
+0: {
+"condition": {},
+"link": &"3_13",
 "text": ""
 }
 },
@@ -245,6 +303,26 @@ nodes = {
 "3_11": {
 "link": "END",
 "offset": Vector2(3000, 800),
+"signalValue": "end"
+},
+"3_12": {
+"link": &"1_16",
+"offset": Vector2(-160, 1280),
+"signalValue": "talking"
+},
+"3_13": {
+"link": &"3_14",
+"offset": Vector2(1650.53, 1387.72),
+"signalValue": "get_quest"
+},
+"3_14": {
+"link": &"3_15",
+"offset": Vector2(1920, 1380),
+"signalValue": "quest"
+},
+"3_15": {
+"link": "END",
+"offset": Vector2(2180, 1380),
 "signalValue": "end"
 },
 "3_2": {

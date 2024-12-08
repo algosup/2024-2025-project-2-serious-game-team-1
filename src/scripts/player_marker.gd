@@ -6,9 +6,6 @@ extends Sprite3D
 # Rotation speed for the sprite
 var rotation_speed: float = 5.0
 
-# Lock Y-axis position to avoid jumping
-@export var fixed_y_position: float = 30.0  # This is where you want the marker's Y position to stay
-
 func _process(delta: float) -> void:
 	# Check if camera_yaw_node is valid
 	if camera_yaw_node:

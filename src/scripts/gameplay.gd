@@ -25,6 +25,12 @@ extends Node
 
 
 func _ready() -> void:
+	mr_mayor.position = Vector3(412.907, 45.016, 616.121)
+	mr_mayor.rotation = Vector3(0, -26.2, 0)
+	#mr_mayor.position = Vector3(433.406, 47.287, 595.307)
+	#mr_mayor.rotation = Vector3(0, -15.2, 0)
+	mr_mayor.dialogue_box.start_id = "Mr_Mayor1"
+	mr_mayor.quest_name = "tutorial"
 	Variable.movelock = true
 	Variable.cameralock = true
 	option_menu.in_menu = false

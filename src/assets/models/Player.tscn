@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://domhm87hbhbg1"]
+[gd_scene load_steps=9 format=3 uid="uid://domhm87hbhbg1"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_kxglq"]
 [ext_resource type="Script" path="res://scripts/CameraManager.gd" id="2_xl5pu"]
@@ -12,13 +12,6 @@
 height = 1.5
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_twc2s"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_grsci"]
-radius = 0.2
-height = 0.5
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_lsqiy"]
-height = 1.5
 
 [node name="Player" type="CharacterBody3D"]
 collision_layer = 2
@@ -58,15 +51,3 @@ shape = SubResource("CapsuleShape3D_lwhhq")
 [node name="CollisionShapeRay" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1, 0)
 shape = SubResource("SeparationRayShape3D_twc2s")
-
-[node name="Body" type="Node3D" parent="."]
-
-[node name="Head" type="MeshInstance3D" parent="Body"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.94512, 0)
-mesh = SubResource("SphereMesh_grsci")
-skeleton = NodePath("../Body")
-
-[node name="Body" type="MeshInstance3D" parent="Body"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("CapsuleMesh_lsqiy")
-skeleton = NodePath("../..")

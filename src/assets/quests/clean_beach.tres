@@ -1,9 +1,9 @@
-[gd_resource type="Resource" script_class="Quests_Resources" load_steps=2 format=3 uid="uid://c463r6lgbn0i8"]
+[gd_resource type="Resource" script_class="Quests_Resources" load_steps=2 format=3 uid="uid://copclenoedrqy"]
 
-[ext_resource type="Script" path="res://scripts/quests_resource.gd" id="1_pif74"]
+[ext_resource type="Script" path="res://scripts/quests_resource.gd" id="1_rurvd"]
 
 [resource]
-script = ExtResource("1_pif74")
+script = ExtResource("1_rurvd")
 quests_name = "Clean Beach"
 quests_giver = "Roger"
 quests_ecopoint = 50

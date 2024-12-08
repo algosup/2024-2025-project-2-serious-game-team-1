@@ -1,0 +1,63 @@
+[gd_scene load_steps=14 format=3 uid="uid://hndsst0ius3s"]
+
+[ext_resource type="Script" path="res://scripts/pnj.gd" id="1_alfjs"]
+[ext_resource type="PackedScene" uid="uid://bnuj1vhug5vud" path="res://assets/models/pnjs/strong_man_quest_giver.tscn" id="2_ltqnv"]
+[ext_resource type="Texture2D" uid="uid://bd0rljfei17m2" path="res://assets/images/chat_bubble.png" id="3_wgpur"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="4_mwdlk"]
+[ext_resource type="Resource" uid="uid://b37m0x6oqcx8n" path="res://assets/dialog/quest_giver.tres" id="5_q3qvo"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="6_45w4b"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="7_fnitd"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="8_7idtw"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_21s2q"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gni5s"]
+texture = ExtResource("3_wgpur")
+expand_margin_left = 100.0
+expand_margin_top = 200.0
+expand_margin_right = 100.0
+expand_margin_bottom = 100.0
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_t1s5g"]
+script = ExtResource("6_45w4b")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_xtxdd"]
+script = ExtResource("7_fnitd")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_qq5um"]
+script = ExtResource("8_7idtw")
+
+[node name="Mr_Mayor" type="StaticBody3D" groups=["pnj"]]
+script = ExtResource("1_alfjs")
+Pnj_name = "Mr. Meyor"
+prompt_message = "Talk"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_21s2q")
+
+[node name="Mesh" parent="." instance=ExtResource("2_ltqnv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.825, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogueBox" type="Panel" parent="CanvasLayer"]
+visible = false
+modulate = Color(1, 1, 0.788235, 1)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -137.0
+offset_top = -220.0
+offset_right = 251.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_gni5s")
+script = ExtResource("4_mwdlk")
+data = ExtResource("5_q3qvo")
+start_id = "Mr_Mayor1"
+hide_portrait = true
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_t1s5g"), SubResource("RichTextEffect_xtxdd"), SubResource("RichTextEffect_qq5um")])
+
+[connection signal="dialogue_signal" from="CanvasLayer/DialogueBox" to="." method="_on_dialogue_box_dialogue_signal"]

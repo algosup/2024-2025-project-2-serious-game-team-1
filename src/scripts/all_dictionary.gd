@@ -11,6 +11,7 @@ var Item_List: Dictionary = {
 # Dictionary to store quests with preloaded resources
 var Quest_List: Dictionary = {
 	"clean_beach" : "res://assets/quests/clean_beach.tres",
+	"tutorial" : "res://assets/quests/tutorial.tres"
 }
 
 var inventory : Array = [

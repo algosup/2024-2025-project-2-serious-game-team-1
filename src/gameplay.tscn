@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://chxfeda425gsu"]
+[gd_scene load_steps=25 format=3 uid="uid://chxfeda425gsu"]
 
 [ext_resource type="PackedScene" uid="uid://lrfexx8s0e13" path="res://assets/map/map.tscn" id="1_7b4si"]
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_hjvrf"]
@@ -40,6 +40,8 @@ shader_parameter/circle_center_x = 0.5
 shader_parameter/circle_center_y = 0.5
 shader_parameter/radius = 0.5
 
+[sub_resource type="Environment" id="Environment_p8pkt"]
+
 [node name="gameplay" type="Node"]
 process_mode = 3
 script = ExtResource("1_hjvrf")
@@ -56,7 +58,7 @@ transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 
 [node name="Player" parent="Gameplay" instance=ExtResource("8_735e1")]
 unique_name_in_owner = true
 process_mode = 1
-transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941, 409.943, 45.5094, 616.804)
+transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941, 411.455, 45.5094, 618.561)
 collision_layer = 3
 
 [node name="Player_UI" parent="Gameplay/Player" instance=ExtResource("9_61cme")]
@@ -90,6 +92,7 @@ script = ExtResource("9_xy0vo")
 [node name="Minimap_Camera" type="Camera3D" parent="Gameplay/MiniMap/SubViewportContainer/SubViewport"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 357.978, 200, 528.735)
+environment = SubResource("Environment_p8pkt")
 fov = 37.8493
 
 [node name="Pnj" type="Node" parent="Gameplay"]
@@ -101,7 +104,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 463.892, 48.5076, 401.042)
 transform = Transform3D(-0.23911, 0, 0.970993, 0, 1, 0, -0.970993, 0, -0.23911, 279.434, 47.4093, 308.878)
 
 [node name="Mr_Mayor" parent="Gameplay/Pnj" instance=ExtResource("4_2lod7")]
-transform = Transform3D(-0.597317, 0, -0.802005, 0, 1, 0, 0.802005, 0, -0.597317, 433.406, 47.2866, 595.307)
+transform = Transform3D(0.897289, 0, -0.441443, 0, 1, 0, 0.441443, 0, 0.897289, 412.907, 45.0163, 616.121)
 Pnj_name = "Mr Mayor"
 prompt_message = "Talk to the mayor"
 
