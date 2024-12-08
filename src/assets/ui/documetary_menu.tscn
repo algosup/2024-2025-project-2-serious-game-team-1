@@ -1,12 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://dekxjqqux4lw3"]
+[gd_scene load_steps=6 format=3 uid="uid://dekxjqqux4lw3"]
 
+[ext_resource type="Shader" path="res://assets/ui/shaders/ui_back_shader.gdshader" id="1_eo85a"]
 [ext_resource type="Texture2D" uid="uid://c3kv450vvv41h" path="res://assets/images/documentary_background.png" id="1_i5ou0"]
+[ext_resource type="PackedScene" path="res://assets/ui/document_panel.tscn" id="3_ljuiy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_13r38"]
+shader = ExtResource("1_eo85a")
+shader_parameter/blur_radius = 4.0
+shader_parameter/samples = 8
+shader_parameter/darken_factor = 0.75
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qixet"]
 texture = ExtResource("1_i5ou0")
 
 [node name="Documetary_menu" type="Control"]
 layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Blur" type="Panel" parent="."]
+material = SubResource("ShaderMaterial_13r38")
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -21,18 +38,50 @@ offset_right = 1059.0
 offset_bottom = 602.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_qixet")
 
-[node name="Panel" type="Panel" parent="Panel"]
+[node name="Documents_Types_Container" type="ScrollContainer" parent="Panel"]
+layout_mode = 2
+offset_left = 115.0
+offset_top = 111.0
+offset_right = 457.0
+offset_bottom = 432.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Documents_Types_Container"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="Document_Panel" parent="Panel/Documents_Types_Container/VBoxContainer" instance=ExtResource("3_ljuiy")]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 layout_mode = 0
-offset_left = 99.0
+offset_left = 486.0
 offset_top = 46.0
-offset_right = 470.0
-offset_bottom = 440.0
+offset_right = 857.0
+offset_bottom = 437.0
+
+[node name="Title_Label" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+
+[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+selection_enabled = true
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 177.0
-offset_top = 108.0
-offset_right = 440.0
-offset_bottom = 163.0
+offset_left = 218.0
+offset_top = 170.0
+offset_right = 481.0
+offset_bottom = 225.0
 theme_override_font_sizes/font_size = 40
 text = "Documentary"
