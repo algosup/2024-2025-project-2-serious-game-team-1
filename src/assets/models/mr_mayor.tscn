@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c0a24yagc8id"]
+[gd_scene load_steps=16 format=3 uid="uid://c0a24yagc8id"]
 
 [ext_resource type="Script" path="res://scripts/pnj.gd" id="1_fkn53"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="2_5biav"]
@@ -8,6 +8,8 @@
 [ext_resource type="Resource" uid="uid://b37m0x6oqcx8n" path="res://assets/dialog/quest_giver.tres" id="4_e2c3k"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="5_dvffd"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="6_phr8d"]
+[ext_resource type="PackedScene" uid="uid://wl4rve86ex6h" path="res://assets/ui/quest_adder.tscn" id="9_wh3ua"]
+[ext_resource type="Script" path="res://scripts/quest_adder.gd" id="10_6fsii"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_21s2q"]
 
@@ -59,5 +61,8 @@ data = ExtResource("4_e2c3k")
 start_id = "Mr_Mayor2"
 hide_portrait = true
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_t1s5g"), SubResource("RichTextEffect_xtxdd"), SubResource("RichTextEffect_qq5um")])
+
+[node name="Quest_Adder" parent="." instance=ExtResource("9_wh3ua")]
+script = ExtResource("10_6fsii")
 
 [connection signal="dialogue_signal" from="CanvasLayer/DialogueBox" to="." method="_on_dialogue_box_dialogue_signal"]

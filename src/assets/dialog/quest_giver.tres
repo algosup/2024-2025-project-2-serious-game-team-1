@@ -169,7 +169,7 @@ nodes = {
 "speaker": -1
 },
 "1_19": {
-"dialogue": "[color=black]We're trying to [/color][color=red]gather data on the air quality in our little town[/color][color=black], but we're still lacking. Here's the device that will help you. [/color][color=red]Come see me as soon as you've finished.[/color]",
+"dialogue": "[color=black]We're trying to [/color][color=dark_red]gather data on the air quality in our little town[/color][color=black], but we're still lacking. Here's the device that will help you. [/color][color=dark_red]Come see me as soon as you've finished.[/color]",
 "offset": Vector2(1260, 1280),
 "options": {
 0: {

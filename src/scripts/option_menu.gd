@@ -1,7 +1,7 @@
 extends Control
 
 # Dynamic references, initialized based on the current scene
-var v_box_container: VBoxContainer
+var buttons: Control
 var pause_menu: Control
 var quests_panel : Control
 var player_ui : Control
@@ -12,8 +12,8 @@ var in_menu: bool = false
 
 func _ready():
 	# Check if Main Menu context exists
-	if has_node("../VBoxContainer"):
-		v_box_container = get_node("../VBoxContainer")
+	if has_node("Buttons"):
+		buttons = get_node("Buttons")
 		in_menu = true
 	# Check if Gameplay context exists
 	elif has_node("%pause_menu"):

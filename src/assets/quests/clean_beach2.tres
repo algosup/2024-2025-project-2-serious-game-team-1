@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Quests_Resources" load_steps=2 format=3 uid="uid://c8ncmb1ethcd6"]
+
+[ext_resource type="Script" path="res://scripts/quests_resource.gd" id="1_a7lh7"]
+
+[resource]
+script = ExtResource("1_a7lh7")
+quests_name = "Clean Beach"
+quests_giver = "Roger"
+quests_ecopoint = 25
+quests_zone = "Beach"
+quests_goal_label_part1 = "takes the waste "
+quests_goal_label_part2 = "to the recycling factory"
+quests_goal_counter = 0
+quests_goal_objective = 1
+quests_description = "Now that you've collected all the rubbish, head to the recycling plant to drop off your bin bag and recycle the plastic"

@@ -35,6 +35,8 @@ func set_action_name() -> void:
 			label.text = "Sprint"
 		"quest_menu":
 			label.text = "Open Quest Menu"
+		"documentary":
+			label.text = "Open Documentary"
 
 func set_text_for_key():
 	var action_events = InputMap.action_get_events(action_name)

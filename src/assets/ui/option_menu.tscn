@@ -193,6 +193,10 @@ action_name = "inventory"
 layout_mode = 2
 action_name = "quest_menu"
 
+[node name="KeyChange11" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding" instance=ExtResource("2_ufot1")]
+layout_mode = 2
+action_name = "documentary"
+
 [node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding"]
 layout_mode = 2
 theme_override_constants/separation = 32

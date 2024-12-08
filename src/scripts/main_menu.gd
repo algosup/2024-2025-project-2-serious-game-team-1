@@ -1,7 +1,8 @@
 extends Control
 
 @onready var option_menu: Control = $OptionMenu
-@onready var v_box_container: VBoxContainer = $VBoxContainer
+@onready var buttons: Control = $Buttons
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,7 +14,7 @@ func _ready():
 	
 	# Enforce the minimum window size using DisplayServer
 	DisplayServer.window_set_min_size(Variable.min_size)
-	v_box_container.show()
+	buttons.show()
 	option_menu.hide()
 
 

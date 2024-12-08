@@ -4,7 +4,7 @@ class_name Pnj
 
 @onready var player: CharacterBody3D = %Player
 
-
+@onready var quest_adder: CanvasLayer = $Quest_Adder
 @onready var dialogue_box: DialogueBox = $CanvasLayer/DialogueBox
 @onready var mesh: Node3D = $Mesh
 @onready var player_ui: Control = %Player_UI
@@ -38,6 +38,7 @@ func _on_dialogue_box_dialogue_signal(value):
 	if value == "get_quest":
 		print(value)
 		quest_id = str(quest_name)
+		quest_adder.play_animation()
 	if value == 'quest':
 		queststarted = true
 		for i in range(len(AllDictionary.active_quests)):
