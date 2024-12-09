@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scripts/pnj.gd" id="1_il4ok"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="2_8k1o8"]
-[ext_resource type="Texture2D" uid="uid://bd0rljfei17m2" path="res://assets/images/chat_bubble.png" id="3_7bw4j"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="3_mcox8"]
+[ext_resource type="Texture2D" uid="uid://cbi4hngk2yu68" path="res://assets/images/chat_bubble_green.PNG" id="3_u4i01"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="4_3qurs"]
 [ext_resource type="Resource" uid="uid://b37m0x6oqcx8n" path="res://assets/dialog/quest_giver.tres" id="4_68ke0"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="5_trvav"]
@@ -14,11 +14,11 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rrdw1"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lodiu"]
-texture = ExtResource("3_7bw4j")
-expand_margin_left = 100.0
-expand_margin_top = 200.0
-expand_margin_right = 100.0
-expand_margin_bottom = 100.0
+texture = ExtResource("3_u4i01")
+expand_margin_left = 67.0
+expand_margin_top = 169.0
+expand_margin_right = 67.0
+expand_margin_bottom = 200.0
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_t1s5g"]
 script = ExtResource("3_mcox8")
@@ -52,9 +52,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -137.0
-offset_top = -220.0
-offset_right = 251.0
+offset_left = -234.5
+offset_top = -229.0
+offset_right = 234.5
+offset_bottom = -9.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxTexture_lodiu")

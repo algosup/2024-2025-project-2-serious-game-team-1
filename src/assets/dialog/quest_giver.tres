@@ -733,7 +733,7 @@ nodes = {
 "signalValue": "quest"
 },
 "3_15": {
-"link": &"3_30",
+"link": "END",
 "offset": Vector2(1520, 2000),
 "signalValue": "end"
 },

@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/pnj.gd" id="1_myooq"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="1_yh2kg"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="3_qjogr"]
-[ext_resource type="Texture2D" uid="uid://bd0rljfei17m2" path="res://assets/images/chat_bubble.png" id="3_wrcom"]
+[ext_resource type="Texture2D" uid="uid://cbi4hngk2yu68" path="res://assets/images/chat_bubble_green.PNG" id="3_xfgpa"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="4_3fe8m"]
 [ext_resource type="Resource" uid="uid://b37m0x6oqcx8n" path="res://assets/dialog/quest_giver.tres" id="4_t7hif"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="5_xhoxe"]
@@ -13,12 +13,12 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h81br"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2gysn"]
-texture = ExtResource("3_wrcom")
-expand_margin_left = 100.0
-expand_margin_top = 200.0
-expand_margin_right = 100.0
-expand_margin_bottom = 100.0
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rvpmn"]
+texture = ExtResource("3_xfgpa")
+expand_margin_left = 67.0
+expand_margin_top = 169.0
+expand_margin_right = 67.0
+expand_margin_bottom = 200.0
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_t1s5g"]
 script = ExtResource("3_qjogr")
@@ -42,18 +42,20 @@ shape = SubResource("CapsuleShape3D_h81br")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogueBox" type="Panel" parent="CanvasLayer"]
+visible = false
 modulate = Color(1, 1, 0.788235, 1)
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -137.0
-offset_top = -220.0
-offset_right = 251.0
+offset_left = -234.5
+offset_top = -229.0
+offset_right = 234.5
+offset_bottom = -9.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxTexture_2gysn")
+theme_override_styles/panel = SubResource("StyleBoxTexture_rvpmn")
 script = ExtResource("1_yh2kg")
 data = ExtResource("4_t7hif")
 start_id = "Elie"
@@ -62,5 +64,3 @@ custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_t1s5g"), Sub
 
 [node name="Quest_Adder" parent="." instance=ExtResource("8_5i6dw")]
 script = ExtResource("9_8n21e")
-
-[connection signal="dialogue_signal" from="CanvasLayer/DialogueBox" to="." method="_on_dialogue_box_dialogue_signal"]
