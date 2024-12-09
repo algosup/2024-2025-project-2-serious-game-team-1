@@ -16,11 +16,8 @@ func cleanup():
 		print("Cleaning up", waste_name)
 		EcoFollow.set_eco_beach(10)
 		print(EcoFollow.eco_beach)
-		for i in range(len(AllDictionary.active_quests)):
-			if AllDictionary.active_quests[i] == clean_beach_quests:
-				quest_id = i
-		if AllDictionary.active_quests[quest_id].quests_goal_objective != AllDictionary.active_quests[quest_id].quests_goal_counter: 
-				AllDictionary.active_quests[quest_id].quests_goal_counter += 1
+		if clean_beach_quests in AllDictionary.active_quests:
+			clean_beach_quests.add_counter()
 		queue_free()  # Remove the waste item from the scene
 	else:
 		print(no_bin_bag_message)  # Print message if bin bag is missing

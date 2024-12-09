@@ -12,3 +12,8 @@ class_name Quests_Resources
 @export var quests_goal_objective : int
 @export_multiline var quests_description : String
 @export var quests_next_quests : Quests_Resources
+
+
+func add_counter():
+	if quests_goal_counter != quests_goal_objective:
+		quests_goal_counter += 1
