@@ -43,7 +43,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.825, 0)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogueBox" type="Panel" parent="CanvasLayer"]
-visible = false
 modulate = Color(1, 1, 0.788235, 1)
 anchors_preset = 7
 anchor_left = 0.5

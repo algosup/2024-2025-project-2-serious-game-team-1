@@ -23,6 +23,7 @@ Variable="*res://scripts/Variable.gd"
 Zones="*res://scripts/zones.gd"
 AllDictionary="*res://scripts/all_dictionary.gd"
 LoadManager="*res://scripts/load_manager.gd"
+QuestManager="*res://scripts/quest_manager.gd"
 
 [display]
 

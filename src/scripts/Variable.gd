@@ -3,6 +3,7 @@ extends Node
 var InventoryOpen = false
 var PlayMenuOpen = false
 var QuestMenuOpen = false
+var DocumentaryMenuOpen = false
 var player_uiVisible = true
 var CurrentScene: String = ""
 var MouseCapture = false
@@ -17,6 +18,12 @@ var current_size = DisplayServer.window_get_size()
 var speed_multiplicator = 1
 var cameralock = false
 var movelock = false
+var talking = false
+
+
+var first_open_inventory = false
+var first_open_quests = false
+var first_open_documentary = false
 
 func show_current():
 	if CurrentScene == MainMenu_path:

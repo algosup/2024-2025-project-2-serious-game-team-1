@@ -28,7 +28,6 @@ shape = SubResource("SphereShape3D_smq6u")
 spring_length = 0.0
 
 [node name="Camera3D" type="Camera3D" parent="CameraManager/Arm"]
-unique_name_in_owner = true
 cull_mask = 1048573
 near = 0.25
 far = 400.0

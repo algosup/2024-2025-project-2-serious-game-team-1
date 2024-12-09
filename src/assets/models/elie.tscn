@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://di72usqhppqx4"]
+[gd_scene load_steps=16 format=3 uid="uid://di72usqhppqx4"]
 
 [ext_resource type="PackedScene" uid="uid://d03r8k2thvupm" path="res://assets/models/pnjs/strong_woman_quest_giver.tscn" id="1_i5r42"]
 [ext_resource type="Script" path="res://scripts/pnj.gd" id="1_myooq"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="1_yh2kg"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="3_qjogr"]
+[ext_resource type="Texture2D" uid="uid://bd0rljfei17m2" path="res://assets/images/chat_bubble.png" id="3_wrcom"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="4_3fe8m"]
 [ext_resource type="Resource" uid="uid://b37m0x6oqcx8n" path="res://assets/dialog/quest_giver.tres" id="4_t7hif"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="5_xhoxe"]
@@ -11,6 +12,13 @@
 [ext_resource type="Script" path="res://scripts/quest_adder.gd" id="9_8n21e"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h81br"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2gysn"]
+texture = ExtResource("3_wrcom")
+expand_margin_left = 100.0
+expand_margin_top = 200.0
+expand_margin_right = 100.0
+expand_margin_bottom = 100.0
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_t1s5g"]
 script = ExtResource("3_qjogr")
@@ -34,17 +42,18 @@ shape = SubResource("CapsuleShape3D_h81br")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogueBox" type="Panel" parent="CanvasLayer"]
-visible = false
+modulate = Color(1, 1, 0.788235, 1)
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -320.5
-offset_top = -141.0
-offset_right = 320.5
+offset_left = -137.0
+offset_top = -220.0
+offset_right = 251.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_2gysn")
 script = ExtResource("1_yh2kg")
 data = ExtResource("4_t7hif")
 start_id = "Elie"
