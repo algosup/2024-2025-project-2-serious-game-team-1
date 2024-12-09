@@ -82,7 +82,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="Gameplay/MiniMap/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(186, 184)
+size = Vector2i(2, 2)
 render_target_update_mode = 4
 script = ExtResource("9_xy0vo")
 
@@ -156,7 +156,6 @@ unique_name_in_owner = true
 script = ExtResource("16_oopfl")
 
 [node name="Introduction_Animation" parent="." instance=ExtResource("20_oxljo")]
-visible = false
 
 [connection signal="ready" from="Manager/Dictionnary Manager" to="Menus/Inventory_Gestion" method="_on_dictionnary_manager_ready"]
 [connection signal="animation_end" from="Introduction_Animation" to="." method="_on_introduction_animation_animation_end"]
