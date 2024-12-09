@@ -12,38 +12,69 @@ offset_bottom = 345.0
 script = ExtResource("1_6txpd")
 
 [node name="Panel" type="Panel" parent="."]
-custom_minimum_size = Vector2(150, 345)
+custom_minimum_size = Vector2(150, 350)
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_right = 1.253
+anchor_bottom = 1.103
+offset_right = 0.0500031
+offset_bottom = -0.0500183
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.0
+offset_right = 75.0
+offset_bottom = 189.0
 grow_horizontal = 2
-grow_vertical = 2
 
-[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+[node name="Main Quests" type="VBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Main Quests"]
 layout_mode = 2
 size_flags_vertical = 2
 theme_override_font_sizes/font_size = 19
-text = "Current Quests"
+text = "Main Quests"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="quests_panel_slot_1" parent="Panel/VBoxContainer" instance=ExtResource("1_3dl8j")]
+[node name="quests_panel_slot_1" parent="Panel/VBoxContainer/Main Quests" instance=ExtResource("1_3dl8j")]
+custom_minimum_size = Vector2(185, 50)
 layout_mode = 2
 size_flags_vertical = 1
 
-[node name="quests_panel_slot_2" parent="Panel/VBoxContainer" instance=ExtResource("1_3dl8j")]
+[node name="quests_panel_slot_2" parent="Panel/VBoxContainer/Main Quests" instance=ExtResource("1_3dl8j")]
 layout_mode = 2
-size_flags_vertical = 4
+size_flags_vertical = 1
 
-[node name="quests_panel_slot_3" parent="Panel/VBoxContainer" instance=ExtResource("1_3dl8j")]
+[node name="quests_panel_slot_3" parent="Panel/VBoxContainer/Main Quests" instance=ExtResource("1_3dl8j")]
 layout_mode = 2
-size_flags_vertical = 8
+size_flags_vertical = 1
+
+[node name="Secondary Quests" type="VBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Secondary Quests"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_font_sizes/font_size = 19
+text = "Secondary Quests"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="quests_panel_slot_4" parent="Panel/VBoxContainer/Secondary Quests" instance=ExtResource("1_3dl8j")]
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="quests_panel_slot_5" parent="Panel/VBoxContainer/Secondary Quests" instance=ExtResource("1_3dl8j")]
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="quests_panel_slot_6" parent="Panel/VBoxContainer/Secondary Quests" instance=ExtResource("1_3dl8j")]
+layout_mode = 2
+size_flags_vertical = 1

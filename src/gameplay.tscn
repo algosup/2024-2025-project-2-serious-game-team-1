@@ -54,7 +54,7 @@ process_mode = 1
 [node name="Player" parent="Gameplay" instance=ExtResource("8_735e1")]
 unique_name_in_owner = true
 process_mode = 1
-transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941, 411.455, 45.5094, 618.561)
+transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941, 319.59, 35.6851, 567.799)
 collision_layer = 3
 
 [node name="Player_UI" parent="Gameplay/Player" instance=ExtResource("9_61cme")]
@@ -106,7 +106,6 @@ prompt_message = "Talk to the mayor"
 
 [node name="Roger" parent="Gameplay/Pnj" instance=ExtResource("6_52vwr")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 330.655, 37.3427, 565.188)
-Pnj_name = "Insert Pnj name"
 prompt_message = "Interact"
 
 [node name="Object" type="Node" parent="Gameplay"]
@@ -156,6 +155,7 @@ z_index = 1
 script = ExtResource("16_oopfl")
 
 [node name="Introduction_Animation" parent="." instance=ExtResource("20_oxljo")]
+visible = false
 
 [connection signal="ready" from="Manager/Dictionnary Manager" to="Menus/Inventory_Gestion" method="_on_dictionnary_manager_ready"]
 [connection signal="animation_end" from="Introduction_Animation" to="." method="_on_introduction_animation_animation_end"]

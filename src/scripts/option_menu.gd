@@ -10,6 +10,7 @@ var player_ui : Control
 var is_option_open: bool = false
 var in_menu: bool = false
 
+
 func _ready():
 	# Check if Main Menu context exists
 	if has_node("Buttons"):

@@ -1,8 +1,11 @@
 extends Control
 
-@onready var quests_panel_slot_1: Panel = $Panel/VBoxContainer/quests_panel_slot_1
-@onready var quests_panel_slot_2: Panel = $Panel/VBoxContainer/quests_panel_slot_2
-@onready var quests_panel_slot_3: Panel = $Panel/VBoxContainer/quests_panel_slot_3
+@onready var quests_panel_slot_1: Panel = $"Panel/VBoxContainer/Main Quests/quests_panel_slot_1"
+@onready var quests_panel_slot_2: Panel = $"Panel/VBoxContainer/Main Quests/quests_panel_slot_2"
+@onready var quests_panel_slot_3: Panel = $"Panel/VBoxContainer/Main Quests/quests_panel_slot_3"
+@onready var quests_panel_slot_4: Panel = $"Panel/VBoxContainer/Secondary Quests/quests_panel_slot_4"
+@onready var quests_panel_slot_5: Panel = $"Panel/VBoxContainer/Secondary Quests/quests_panel_slot_5"
+@onready var quests_panel_slot_6: Panel = $"Panel/VBoxContainer/Secondary Quests/quests_panel_slot_6"
 @onready var label: Label = $Panel/VBoxContainer/Label
 @onready var v_box_container: VBoxContainer = $Panel/VBoxContainer
 

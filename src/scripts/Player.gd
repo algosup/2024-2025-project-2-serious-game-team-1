@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 @onready var camera_manager: Node3D = $CameraManager
 
-@export var MOVE_SPEED: float = 5.0
+@export var MOVE_SPEED: float = 7.5
 @export var JUMP_SPEED: float = 10
 @export var ROTATION_SPEED : float = 0.005
 @export var movelock : bool = false
