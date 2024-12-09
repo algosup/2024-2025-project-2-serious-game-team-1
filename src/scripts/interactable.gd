@@ -10,8 +10,11 @@ func get_prompt():
 		if action is InputEventKey:
 			key_name = action.as_text_physical_keycode()
 			break
-			
+		if Variable.movelock:
+			key_name = " "
+			prompt_message = " "
+			break
 	return prompt_message + "\n[" + key_name + "]"
-
+	
 func interact(body):
 	print(body.name, " interacted with ", name)

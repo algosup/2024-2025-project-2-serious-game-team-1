@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://chxfeda425gsu"]
+[gd_scene load_steps=26 format=3 uid="uid://chxfeda425gsu"]
 
 [ext_resource type="PackedScene" uid="uid://lrfexx8s0e13" path="res://assets/map/map.tscn" id="1_7b4si"]
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_hjvrf"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://b31wjwnn4gip3" path="res://assets/ui/option_menu.tscn" id="16_goewa"]
 [ext_resource type="Script" path="res://scripts/all_dictionary.gd" id="16_oopfl"]
 [ext_resource type="PackedScene" uid="uid://dfpxasv5v80bs" path="res://assets/ui/quests_panel.tscn" id="16_qnyfx"]
+[ext_resource type="PackedScene" uid="uid://dekxjqqux4lw3" path="res://assets/ui/documetary_menu.tscn" id="19_tpto7"]
 [ext_resource type="PackedScene" uid="uid://d1uhb55q7ye7b" path="res://assets/ui/introduction_animation.tscn" id="20_oxljo"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nv1kv"]
@@ -54,7 +55,7 @@ process_mode = 1
 [node name="Player" parent="Gameplay" instance=ExtResource("8_735e1")]
 unique_name_in_owner = true
 process_mode = 1
-transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941, 319.59, 35.6851, 567.799)
+transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941, 411.455, 44.6958, 618.561)
 collision_layer = 3
 
 [node name="Player_UI" parent="Gameplay/Player" instance=ExtResource("9_61cme")]
@@ -106,12 +107,13 @@ prompt_message = "Talk to the mayor"
 
 [node name="Roger" parent="Gameplay/Pnj" instance=ExtResource("6_52vwr")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 330.655, 37.3427, 565.188)
+Pnj_name = "Insert Pnj name"
 prompt_message = "Interact"
 
 [node name="Object" type="Node" parent="Gameplay"]
 
 [node name="bin bag" parent="Gameplay/Object" instance=ExtResource("9_0mf82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 330.648, 36.6179, 566.489)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 329.329, 36.6179, 566.489)
 item_ressource = ExtResource("7_p0csr")
 
 [node name="Quest_Assets" type="Node" parent="Gameplay"]
@@ -134,20 +136,19 @@ grow_vertical = 2
 [node name="pause_menu" parent="Menus" instance=ExtResource("3_75tor")]
 unique_name_in_owner = true
 process_mode = 3
-visible = false
 
 [node name="quest_menu" parent="Menus" instance=ExtResource("12_unwyq")]
 unique_name_in_owner = true
-visible = false
 
 [node name="Inventory_Gestion" parent="Menus" instance=ExtResource("3_grpvx")]
 unique_name_in_owner = true
-visible = false
 
 [node name="OptionMenu" parent="Menus" instance=ExtResource("16_goewa")]
 unique_name_in_owner = true
-visible = false
 z_index = 1
+
+[node name="Documetary_menu" parent="Menus" instance=ExtResource("19_tpto7")]
+unique_name_in_owner = true
 
 [node name="Manager" type="Node" parent="."]
 

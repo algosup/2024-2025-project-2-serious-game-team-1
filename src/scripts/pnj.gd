@@ -4,6 +4,7 @@ class_name Pnj
 
 @onready var player: CharacterBody3D = %Player
 
+@onready var tutorial_bubble: CanvasLayer = %Tutorial_bubble
 @onready var quest_adder: CanvasLayer = $Quest_Adder
 @onready var dialogue_box: DialogueBox = $CanvasLayer/DialogueBox
 @onready var mesh: Node3D = $Mesh
@@ -11,7 +12,7 @@ class_name Pnj
 @export var Pnj_name: String = "Insert Pnj name"
 @export var quest_name : String = "None"
 
-var talking = false
+
 var queststarted = false
 var quest_id : String
 
@@ -19,14 +20,14 @@ var previous_rotation : float
 
 func _ready() -> void:
 	previous_rotation = rotation.y
-	talking = false
+	Variable.talking = false
 	queststarted = false
 	
 
 func pnj_talk():
-	if talking == false :
+	if Variable.talking == false :
 		rotation.y = player.camera_manager._camera_yaw.rotation.y
-		talking = true
+		Variable.talking = true
 		Variable.movelock = true
 		Variable.cameralock = true
 		$CanvasLayer/DialogueBox.start()
@@ -64,9 +65,10 @@ func _on_dialogue_box_dialogue_signal(value):
 		mesh.talking()
 		Variable.movelock = false
 		Variable.cameralock = false
-		talking = false
+		Variable.talking = false
 		rotation.y = previous_rotation
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		
+	if value == 'tutorial_launch':
+		tutorial_bubble.start_tutorial()
 	print(str(value))
 	AllDictionary.debug_print()
