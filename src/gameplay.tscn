@@ -89,6 +89,7 @@ script = ExtResource("9_xy0vo")
 [node name="Minimap_Camera" type="Camera3D" parent="Gameplay/MiniMap/SubViewportContainer/SubViewport"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 357.978, 200, 528.735)
+cull_mask = 1048571
 environment = SubResource("Environment_p8pkt")
 fov = 37.8493
 
