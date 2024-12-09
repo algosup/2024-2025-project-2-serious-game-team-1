@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dekxjqqux4lw3"]
+[gd_scene load_steps=7 format=3 uid="uid://dekxjqqux4lw3"]
 
 [ext_resource type="Shader" path="res://assets/ui/shaders/ui_back_shader.gdshader" id="1_eo85a"]
 [ext_resource type="Texture2D" uid="uid://c3kv450vvv41h" path="res://assets/images/documentary_background.png" id="1_i5ou0"]
-[ext_resource type="PackedScene" path="res://assets/ui/document_panel.tscn" id="3_ljuiy"]
+[ext_resource type="Script" path="res://scripts/documetary_menu.gd" id="1_oediq"]
+[ext_resource type="PackedScene" uid="uid://uojanrl6cmk8" path="res://assets/ui/document_panel.tscn" id="3_ljuiy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_13r38"]
 shader = ExtResource("1_eo85a")
@@ -20,6 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_oediq")
 
 [node name="Blur" type="Panel" parent="."]
 material = SubResource("ShaderMaterial_13r38")

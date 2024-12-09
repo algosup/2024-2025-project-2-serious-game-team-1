@@ -2,8 +2,6 @@ extends Node
 
 #Menus
 @onready var menus: Node = $Menus
-#Menus & UI Loading nodes
-
 
 #Game Play
 @onready var gameplay: Node = $Gameplay
@@ -16,14 +14,18 @@ extends Node
 @onready var player: CharacterBody3D = %Player
 @onready var player_ui: Control = %Player_UI
 
+#Menus & UI Loading nodes
 @onready var option_menu: Control = $Menus/OptionMenu
 @onready var pause_menu: Control = %pause_menu
 @onready var inventory_gestion: Control = %Inventory_Gestion
 @onready var quest_menu: Control = %quest_menu
 @onready var quests_panel: Control = %quests_panel
+@onready var documetary_menu: Control = %Documetary_menu
 
+@onready var introduction_animation: CanvasLayer = $Introduction_Animation
 
 func _ready() -> void:
+	introduction_animation.play_intro()
 	mr_mayor.position = Vector3(412.907, 45.016, 616.121)
 	mr_mayor.rotation = Vector3(0, -26.2, 0)
 	#mr_mayor.position = Vector3(433.406, 47.287, 595.307)
@@ -38,6 +40,7 @@ func _ready() -> void:
 	inventory_gestion.hide()
 	quest_menu.hide()
 	option_menu.hide()
+	documetary_menu.hide()
 	# Set the minimum size in project settings
 	ProjectSettings.set_setting("display/window/size/min_width", Variable.min_size.x)
 	ProjectSettings.set_setting("display/window/size/min_height", Variable.min_size.y)
@@ -59,6 +62,11 @@ func _process(_delta):
 			quest_menu.CloseQuestMenu()
 		else:
 			quest_menu.OpenQuestMenu()
+	if Input.is_action_just_pressed("documentary"):
+		if Variable.DocumentaryMenuOpen:
+			documetary_menu.CloseDoc()
+		else:
+			documetary_menu.OpenDoc()
 	if Input.is_action_just_pressed("escape"):
 		if Variable.InventoryOpen:
 			inventory_gestion.CloseInventory()
@@ -66,6 +74,8 @@ func _process(_delta):
 			quest_menu.CloseQuestMenu()
 		elif Variable.PlayMenuOpen:
 			pause_menu.resume_game()
+		elif Variable.DocumentaryMenuOpen:
+			documetary_menu.CloseDoc()
 		else:
 			pause_menu.pause_game()
 

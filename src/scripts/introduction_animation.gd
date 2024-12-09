@@ -7,8 +7,10 @@ var states: int
 
 func _ready() -> void:
 	states = 0
-	$AnimationPlayer.play("introduction")
 	
+func play_intro():
+	$AnimationPlayer.play("introduction")
+		
 func _process(_delta) -> void:
 	pass
 
