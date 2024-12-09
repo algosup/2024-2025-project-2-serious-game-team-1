@@ -3,16 +3,28 @@
 [ext_resource type="Script" path="res://scripts/quests_panel_slot.gd" id="1_qaplc"]
 
 [node name="quests_panel_slot" type="Panel"]
-custom_minimum_size = Vector2(150, 50)
+custom_minimum_size = Vector2(185, 50)
 offset_right = 150.0
-offset_bottom = 50.0
+offset_bottom = 64.0
 size_flags_vertical = 3
 script = ExtResource("1_qaplc")
 
-[node name="quest_label" type="Label" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 147.0
+offset_bottom = 47.0
+
+[node name="quest_label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-offset_right = 150.0
-offset_bottom = 49.0
 theme_override_font_sizes/font_size = 13
-text = "\"Empty Quest Slot\""
+text = "Empty Quest Slot"
 vertical_alignment = 1
+
+[node name="goal_label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Goal : Unknown"
+vertical_alignment = 1
+autowrap_mode = 2

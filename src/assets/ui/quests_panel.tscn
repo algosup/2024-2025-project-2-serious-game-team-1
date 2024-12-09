@@ -44,7 +44,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="quests_panel_slot_1" parent="Panel/VBoxContainer/Main Quests" instance=ExtResource("1_3dl8j")]
-custom_minimum_size = Vector2(185, 50)
 layout_mode = 2
 size_flags_vertical = 1
 
