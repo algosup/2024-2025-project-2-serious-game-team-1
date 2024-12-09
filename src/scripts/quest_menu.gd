@@ -56,9 +56,7 @@ func set_description(Quests : Quests_Resources):
 	else:
 		print("null giver_label")
 	if goal_label != null:
-		var goal_counter = str(Quests.quests_goal_counter) + "/" + str(Quests.quests_goal_objective)
-		var goal_text = "Goal : "+ Quests.quests_goal_label_part1 + " " + goal_counter + " " + Quests.quests_goal_label_part2
-		goal_label.text = goal_text
+		goal_label.text = QuestManager.goal_text(Quests)
 	else:
 		print("null goal_label")
 	if description_label != null:
