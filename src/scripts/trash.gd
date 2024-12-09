@@ -16,9 +16,8 @@ func cleanup():
 		print("Cleaning up", waste_name)
 		EcoFollow.set_eco_beach(10)
 		print(EcoFollow.eco_beach)
-		if AllDictionary.active_quests.has(clean_beach_quests):
-			for i in range(len(AllDictionary.active_quests)):
-				quest = AllDictionary.active_quests[i]
+		if AllDictionary.active_quests.has("clean_beach"):
+			quest = load("res://assets/quests/clean_beach.tres")
 			quest.add_counter()
 		queue_free()  # Remove the waste item from the scene
 	else:
