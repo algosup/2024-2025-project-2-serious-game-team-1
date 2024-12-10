@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/quests_panel_slot.gd" id="1_qaplc"]
 
 [node name="quests_panel_slot" type="Panel"]
-custom_minimum_size = Vector2(185, 50)
+custom_minimum_size = Vector2(185, 70)
 offset_right = 150.0
 offset_bottom = 64.0
 size_flags_vertical = 3
