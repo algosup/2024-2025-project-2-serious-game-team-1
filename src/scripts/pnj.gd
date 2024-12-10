@@ -4,7 +4,7 @@ class_name Pnj
 
 @onready var player: CharacterBody3D = %Player
 
-@onready var tutorial_bubble: CanvasLayer = %Tutorial_bubble
+
 @onready var quest_adder: CanvasLayer = $Quest_Adder
 @onready var dialogue_box: DialogueBox = $CanvasLayer/DialogueBox
 @onready var mesh: Node3D = $Mesh
@@ -68,7 +68,5 @@ func _on_dialogue_box_dialogue_signal(value):
 		Variable.talking = false
 		rotation.y = previous_rotation
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	if value == 'tutorial_launch':
-		tutorial_bubble.start_tutorial()
 	print(str(value))
 	AllDictionary.debug_print()

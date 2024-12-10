@@ -6,7 +6,7 @@ extends Control
 @onready var quests_panel_slot_4: Panel = $"Panel/VBoxContainer/Secondary Quests/quests_panel_slot_4"
 @onready var quests_panel_slot_5: Panel = $"Panel/VBoxContainer/Secondary Quests/quests_panel_slot_5"
 @onready var quests_panel_slot_6: Panel = $"Panel/VBoxContainer/Secondary Quests/quests_panel_slot_6"
-@onready var label: Label = $Panel/VBoxContainer/Label
+@onready var label: Label = $"Panel/VBoxContainer/Main Quests/Label"
 @onready var v_box_container: VBoxContainer = $Panel/VBoxContainer
 
 func set_quests():

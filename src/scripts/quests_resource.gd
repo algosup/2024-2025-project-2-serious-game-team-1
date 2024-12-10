@@ -17,3 +17,6 @@ class_name Quests_Resources
 func add_counter():
 	if quests_goal_counter != quests_goal_objective:
 		quests_goal_counter += 1
+		
+	if quests_goal_counter == quests_goal_objective:
+		pass
