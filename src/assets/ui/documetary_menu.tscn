@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dekxjqqux4lw3"]
+[gd_scene load_steps=8 format=3 uid="uid://dekxjqqux4lw3"]
 
 [ext_resource type="Shader" path="res://assets/ui/shaders/ui_back_shader.gdshader" id="1_eo85a"]
 [ext_resource type="Texture2D" uid="uid://c3kv450vvv41h" path="res://assets/images/documentary_background.png" id="1_i5ou0"]
 [ext_resource type="Script" path="res://scripts/documetary_menu.gd" id="1_oediq"]
 [ext_resource type="PackedScene" uid="uid://uojanrl6cmk8" path="res://assets/ui/document_panel.tscn" id="3_ljuiy"]
+[ext_resource type="Resource" uid="uid://cqi3t6lfp4hsg" path="res://assets/documentation/Climate_change.tres" id="5_kbelr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_13r38"]
 shader = ExtResource("1_eo85a")
@@ -14,7 +15,7 @@ shader_parameter/darken_factor = 0.75
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qixet"]
 texture = ExtResource("1_i5ou0")
 
-[node name="Documetary_menu" type="Control"]
+[node name="Documentary_menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -40,50 +41,64 @@ offset_right = 1059.0
 offset_bottom = 602.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_qixet")
 
-[node name="Documents_Types_Container" type="ScrollContainer" parent="Panel"]
-layout_mode = 2
-offset_left = 115.0
-offset_top = 111.0
-offset_right = 457.0
-offset_bottom = 432.0
+[node name="Left_page" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 49.0
+offset_right = 393.0
+offset_bottom = 116.0
+theme_override_constants/separation = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Documents_Types_Container"]
+[node name="Label" type="Label" parent="Panel/Left_page"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Documentary"
+
+[node name="HSeparator" type="HSeparator" parent="Panel/Left_page"]
+layout_mode = 2
+
+[node name="Documents_Types_Container" type="ScrollContainer" parent="Panel/Left_page"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Left_page/Documents_Types_Container"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/separation = 5
 
-[node name="Document_Panel" parent="Panel/Documents_Types_Container/VBoxContainer" instance=ExtResource("3_ljuiy")]
+[node name="Climate_Change" parent="Panel/Left_page/Documents_Types_Container/VBoxContainer" instance=ExtResource("3_ljuiy")]
 layout_mode = 2
+documentation = ExtResource("5_kbelr")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+[node name="Right_page" type="VBoxContainer" parent="Panel"]
 layout_mode = 0
 offset_left = 486.0
 offset_top = 46.0
 offset_right = 857.0
 offset_bottom = 437.0
 
-[node name="Title_Label" type="Label" parent="Panel/VBoxContainer"]
+[node name="Title_Label" type="Label" parent="Panel/Right_page"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 
-[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="Panel/Right_page"]
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Right_page"]
+custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 fit_content = true
 scroll_active = false
+autowrap_mode = 2
 selection_enabled = true
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 218.0
-offset_top = 170.0
-offset_right = 481.0
-offset_bottom = 225.0
-theme_override_font_sizes/font_size = 40
-text = "Documentary"
+[node name="Source_Label" type="Label" parent="Panel/Right_page"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)

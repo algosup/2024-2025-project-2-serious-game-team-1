@@ -1,11 +1,14 @@
 extends Panel
 
+@export var documentation : Documentation_Resource
+@onready var documentation_label: Label = $VBoxContainer/Documentation_label
+@onready var documentary_menu: Control = $"../../../../.."
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func set_documentation_panel():
+	documentation_label.text = documentation.Documentation_name
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta) -> void:
-	pass
+func _on_button_pressed():
+	documentary_menu.set_documentation(documentation)
+	
+func _ready():
+	documentation_label.text = documentation.Documentation_name
