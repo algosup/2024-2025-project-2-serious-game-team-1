@@ -46,6 +46,7 @@ func _on_dialogue_box_dialogue_signal(value):
 			if AllDictionary.active_quests[i] != quest_id:
 				if AllDictionary.active_quests[i] == null:
 					AllDictionary.active_quests[i] = quest_id
+					AllDictionary.load_resource_quest_list(quest_id).quest_state = 2
 					print("Quests Added")
 					print("Quests Active Liste:", AllDictionary.active_quests)
 					break

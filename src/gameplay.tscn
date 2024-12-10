@@ -82,7 +82,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="Gameplay/MiniMap/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(186, 184)
 render_target_update_mode = 4
 script = ExtResource("9_xy0vo")
 
@@ -107,7 +107,7 @@ Pnj_name = "Mr Mayor"
 prompt_message = "Talk to the mayor"
 
 [node name="Roger" parent="Gameplay/Pnj" instance=ExtResource("6_52vwr")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 330.655, 37.3427, 565.188)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 329.408, 37.0676, 565.188)
 Pnj_name = "Insert Pnj name"
 prompt_message = "Interact"
 
@@ -121,7 +121,7 @@ item_ressource = ExtResource("7_p0csr")
 
 [node name="trash area" parent="Gameplay/Quest_Assets" instance=ExtResource("7_s8y11")]
 process_mode = 1
-transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 316.965, 34.727, 562.977)
+transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 316.965, 35.2173, 562.977)
 
 [node name="Menus" type="Node" parent="."]
 

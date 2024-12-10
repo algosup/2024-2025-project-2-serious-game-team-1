@@ -47,7 +47,7 @@ nodes = {
 },
 "0_7": {
 "link": &"3_26",
-"offset": Vector2(-4580, -460),
+"offset": Vector2(-4480, -460),
 "start_id": "Martine2"
 },
 "0_8": {
@@ -728,13 +728,13 @@ nodes = {
 "signalValue": "get_quest"
 },
 "3_14": {
-"link": &"3_30",
+"link": &"3_15",
 "offset": Vector2(1920, 1380),
 "signalValue": "quest"
 },
 "3_15": {
 "link": "END",
-"offset": Vector2(1520, 2000),
+"offset": Vector2(2180, 1380),
 "signalValue": "end"
 },
 "3_16": {
@@ -794,7 +794,7 @@ nodes = {
 },
 "3_26": {
 "link": &"1_42",
-"offset": Vector2(-4164, -410.07),
+"offset": Vector2(-4100, -460),
 "signalValue": "talking"
 },
 "3_27": {
@@ -819,7 +819,7 @@ nodes = {
 },
 "3_30": {
 "link": "END",
-"offset": Vector2(2420, 1380),
+"offset": Vector2(1800, 1980),
 "signalValue": "tutorial_launch"
 },
 "3_4": {
@@ -854,5 +854,5 @@ nodes = {
 }
 }
 variables = {}
-strays = Array[String](["2_1", "3_15"])
+strays = Array[String](["2_1", "3_30"])
 characters = ""
