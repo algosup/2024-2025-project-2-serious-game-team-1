@@ -2,8 +2,8 @@ extends Panel
 
 @export var quests : Quests_Resources
 
-@onready var quest_label: Label = $VBoxContainer/quest_label
-@onready var goal_label: Label = $VBoxContainer/goal_label
+@onready var quest_label: Label = $HBoxContainer/VBoxContainer/quest_label
+@onready var goal_label: Label = $HBoxContainer/VBoxContainer/goal_label
 
 @onready var quests_panel_slot: Panel = $"."
 @onready var quests_panel: Control = $"../../.."
