@@ -9,6 +9,13 @@ offset_bottom = 64.0
 size_flags_vertical = 3
 script = ExtResource("1_qaplc")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 13.0
+offset_right = 1295.0
+offset_bottom = 1293.0
+
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
 offset_right = 186.0

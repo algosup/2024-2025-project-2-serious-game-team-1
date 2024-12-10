@@ -7,18 +7,18 @@
 custom_minimum_size = Vector2(150, 350)
 layout_mode = 3
 anchors_preset = 0
-offset_right = 150.0
-offset_bottom = 345.0
+offset_right = 206.0
+offset_bottom = 507.0
 script = ExtResource("1_6txpd")
 
 [node name="Panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(150, 350)
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 1.253
-anchor_bottom = 1.103
-offset_right = 0.0500031
-offset_bottom = -0.0500183
+anchor_right = 0.966
+anchor_bottom = 1.016
+offset_right = 0.0039978
+offset_bottom = -6.112
 grow_horizontal = 2
 grow_vertical = 2
 

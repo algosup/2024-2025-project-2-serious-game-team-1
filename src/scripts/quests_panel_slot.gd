@@ -7,9 +7,11 @@ extends Panel
 
 @onready var quests_panel_slot: Panel = $"."
 @onready var quests_panel: Control = $"../../../.."
-
+@onready var nine_patch_rect: NinePatchRect = $NinePatchRect
+@export var design : CompressedTexture2D
 
 func _process(_delta):
+	nine_patch_rect.texture = design
 	if quests != null:
 		quest_label.text = quests.quests_name
 		goal_label.text = QuestManager.goal_text(quests)

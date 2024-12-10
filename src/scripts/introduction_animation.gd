@@ -9,7 +9,8 @@ func _ready() -> void:
 	states = 0
 	
 func play_intro():
-	$AnimationPlayer.play("introduction")
+	#$AnimationPlayer.play("introduction")
+	pass
 		
 func _process(_delta) -> void:
 	pass

@@ -25,15 +25,15 @@ extends Node
 @onready var introduction_animation: CanvasLayer = $Introduction_Animation
 
 func _ready() -> void:
-	introduction_animation.play_intro()
+	#introduction_animation.play_intro()
 	mr_mayor.position = Vector3(412.907, 45.016, 616.121)
 	mr_mayor.rotation = Vector3(0, -26.2, 0)
 	#mr_mayor.position = Vector3(433.406, 47.287, 595.307)
 	#mr_mayor.rotation = Vector3(0, -15.2, 0)
 	mr_mayor.dialogue_box.start_id = "Mr_Mayor1"
 	mr_mayor.quest_name = "tutorial"
-	Variable.movelock = true
-	Variable.cameralock = true
+	#Variable.movelock = true
+	#Variable.cameralock = true
 	option_menu.in_menu = false
 	pause_menu.ClosePlayMenu()
 	get_tree().paused = false
@@ -80,7 +80,7 @@ func _process(_delta):
 			pause_menu.pause_game()
 
 
-func _on_introduction_animation_animation_end() -> void:
-	Variable.movelock = false
-	Variable.cameralock = false
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+#func _on_introduction_animation_animation_end() -> void:
+	#Variable.movelock = false
+	#Variable.cameralock = false
+	#Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

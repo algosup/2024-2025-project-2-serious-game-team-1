@@ -14,7 +14,7 @@ height = 1.5
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_twc2s"]
 
 [node name="Player" type="CharacterBody3D"]
-collision_layer = 2
+collision_layer = 3
 script = ExtResource("1_kxglq")
 
 [node name="CameraManager" type="Node3D" parent="."]

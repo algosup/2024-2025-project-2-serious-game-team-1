@@ -46,13 +46,13 @@ func _on_dialogue_box_dialogue_signal(value):
 			if AllDictionary.active_quests[i] != quest_id:
 				if AllDictionary.active_quests[i] == null:
 					AllDictionary.active_quests[i] = quest_id
+					print("Valeur de i : " + str(i))
 					AllDictionary.load_resource_quest_list(quest_id).quest_state = 2
 					print("Quests Added")
 					print("Quests Active Liste:", AllDictionary.active_quests)
-					break
+
 			else:
-				print("You have already this quest")
-				break
+				print("You have already this quest") 
 		print("You cannot have more quests")
 	if value == 'talking':
 		print('talking')

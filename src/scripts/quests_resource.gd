@@ -29,7 +29,7 @@ func add_counter():
 func shift_quest():
 	for i in range(len(AllDictionary.active_quests)):
 		if AllDictionary.active_quests[i] == quests_name:
-			AllDictionary.active_quests[i] = AllDictionary.completed_quests[i]
+			AllDictionary.completed_quests[i] = AllDictionary.active_quests[i]
 			AllDictionary.active_quests[i] = quests_next_quests.quest_name
 			print(AllDictionary.active_quests)
 			

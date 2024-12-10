@@ -56,7 +56,6 @@ process_mode = 1
 unique_name_in_owner = true
 process_mode = 1
 transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941, 411.455, 44.6958, 618.561)
-collision_layer = 3
 
 [node name="Player_UI" parent="Gameplay/Player" instance=ExtResource("9_61cme")]
 unique_name_in_owner = true
@@ -130,26 +129,31 @@ unique_name_in_owner = true
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -175.0
-offset_bottom = 175.0
+offset_top = -253.5
+offset_bottom = 253.5
 grow_vertical = 2
 
 [node name="pause_menu" parent="Menus" instance=ExtResource("3_75tor")]
 unique_name_in_owner = true
 process_mode = 3
+visible = false
 
 [node name="quest_menu" parent="Menus" instance=ExtResource("12_unwyq")]
 unique_name_in_owner = true
+visible = false
 
 [node name="Inventory_Gestion" parent="Menus" instance=ExtResource("3_grpvx")]
 unique_name_in_owner = true
+visible = false
 
 [node name="OptionMenu" parent="Menus" instance=ExtResource("16_goewa")]
 unique_name_in_owner = true
+visible = false
 z_index = 1
 
 [node name="Documetary_menu" parent="Menus" instance=ExtResource("19_tpto7")]
 unique_name_in_owner = true
+visible = false
 
 [node name="Manager" type="Node" parent="."]
 
@@ -157,6 +161,7 @@ unique_name_in_owner = true
 script = ExtResource("16_oopfl")
 
 [node name="Introduction_Animation" parent="." instance=ExtResource("20_oxljo")]
+visible = false
 
 [connection signal="ready" from="Manager/Dictionnary Manager" to="Menus/Inventory_Gestion" method="_on_dictionnary_manager_ready"]
 [connection signal="animation_end" from="Introduction_Animation" to="." method="_on_introduction_animation_animation_end"]
