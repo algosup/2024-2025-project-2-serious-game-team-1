@@ -13,7 +13,6 @@ class_name Pnj
 @export var quest_name : String = "None"
 
 
-var queststarted = false
 var quest_id : String
 
 var previous_rotation : float 
@@ -21,7 +20,6 @@ var previous_rotation : float
 func _ready() -> void:
 	previous_rotation = rotation.y
 	Variable.talking = false
-	queststarted = false
 	
 
 func pnj_talk():
@@ -41,16 +39,16 @@ func _on_dialogue_box_dialogue_signal(value):
 		quest_id = str(quest_name)
 		quest_adder.play_animation()
 	if value == 'quest':
-		queststarted = true
 		for i in range(len(AllDictionary.active_quests)):
 			if AllDictionary.active_quests[i] != quest_id:
 				if AllDictionary.active_quests[i] == null:
 					AllDictionary.active_quests[i] = quest_id
 					print("Valeur de i : " + str(i))
 					AllDictionary.load_resource_quest_list(quest_id).quest_state = 2
+					print(AllDictionary.load_resource_quest_list(quest_id).quests_name + "")
 					print("Quests Added")
 					print("Quests Active Liste:", AllDictionary.active_quests)
-
+					break
 			else:
 				print("You have already this quest") 
 		print("You cannot have more quests")

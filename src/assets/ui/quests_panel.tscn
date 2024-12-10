@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dfpxasv5v80bs"]
+[gd_scene load_steps=5 format=3 uid="uid://dfpxasv5v80bs"]
 
 [ext_resource type="PackedScene" uid="uid://dyxmcywp3874g" path="res://assets/ui/quests_panel_slot.tscn" id="1_3dl8j"]
 [ext_resource type="Script" path="res://scripts/quests_panel.gd" id="1_6txpd"]
+[ext_resource type="Texture2D" uid="uid://c4ts412s74tja" path="res://assets/images/Quests Panels Design/main_quest.PNG" id="2_xmow3"]
+[ext_resource type="Texture2D" uid="uid://bcgkx33mx8041" path="res://assets/images/Quests Panels Design/secondary_quests.PNG" id="3_l535r"]
 
 [node name="quests_panel" type="Control"]
 custom_minimum_size = Vector2(150, 350)
@@ -21,6 +23,22 @@ offset_right = 0.0039978
 offset_bottom = -6.112
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Main_Quests_Design" type="NinePatchRect" parent="Panel"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = -22.0
+offset_right = 213.0
+offset_bottom = 256.0
+texture = ExtResource("2_xmow3")
+
+[node name="Secondary_Quests_Design" type="NinePatchRect" parent="Panel"]
+layout_mode = 0
+offset_left = -7.0
+offset_top = 247.0
+offset_right = 206.0
+offset_bottom = 511.0
+texture = ExtResource("3_l535r")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 layout_mode = 1

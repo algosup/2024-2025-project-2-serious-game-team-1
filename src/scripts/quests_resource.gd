@@ -19,17 +19,17 @@ class_name Quests_Resources
 # state 3 : completed 
 
 func add_counter():
-	if quest_state  == 2: 
-		quests_goal_counter += 1
-		
 	if quests_goal_counter == quests_goal_objective:
 		quest_state = 3
-			
+		if quest_state != null:
+			shift_quest()
+	if quest_state  == 2: 
+		quests_goal_counter += 1
 			
 func shift_quest():
 	for i in range(len(AllDictionary.active_quests)):
 		if AllDictionary.active_quests[i] == quests_name:
-			AllDictionary.completed_quests[i] = AllDictionary.active_quests[i]
+			AllDictionary.completed_quests.append(AllDictionary.active_quests[i])
 			AllDictionary.active_quests[i] = quests_next_quests.quest_name
 			print(AllDictionary.active_quests)
 			
