@@ -7,7 +7,6 @@ extends Panel
 
 @onready var quests_panel_slot: Panel = $"."
 @onready var quests_panel: Control = $"../../../.."
-@export var design : CompressedTexture2D
 
 func _process(_delta):
 	if quests != null:

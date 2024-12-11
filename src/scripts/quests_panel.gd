@@ -9,12 +9,6 @@ extends Control
 @onready var label: Label = $"Panel/VBoxContainer/Main Quests/Label"
 @onready var v_box_container: VBoxContainer = $Panel/VBoxContainer
 
-func _ready():
-	quests_panel_slot_1.design = load("res://assets/images/Quests Panels Design/design_quest1.PNG")
-
-
-
-
 func set_quests():
 	if AllDictionary.active_quests[0] != null and AllDictionary.active_quests[0] != "":
 		var quest_id : String = AllDictionary.active_quests[0]
