@@ -5,11 +5,12 @@ extends Control
 @onready var zone_label: Label = $Quest_Panel/Description/DescriptionBox/HBoxContainer/ZoneLabel
 @onready var giver_label: Label = $Quest_Panel/Description/DescriptionBox/HBoxContainer/GiverLabel
 @onready var goal_label: Label = $Quest_Panel/Description/DescriptionBox/GoalLabel
-@onready var quests_panel_1: Panel = $"Quest_Panel/TabContainer/Current Quests/Currents Quests/quests_panel1"
-@onready var quests_panel_2: Panel = $"Quest_Panel/TabContainer/Current Quests/Currents Quests/quests_panel2"
-@onready var quests_panel_3: Panel = $"Quest_Panel/TabContainer/Current Quests/Currents Quests/quests_panel3"
-
-
+@onready var quests_panel_1: Panel = $"Quest_Panel/TabContainer/Current Quests/Currents Main Quests/quests_panel1"
+@onready var quests_panel_2: Panel = $"Quest_Panel/TabContainer/Current Quests/Currents Main Quests/quests_panel2"
+@onready var quests_panel_3: Panel = $"Quest_Panel/TabContainer/Current Quests/Currents Main Quests/quests_panel3"
+@onready var quests_panel_4: Panel = $"Quest_Panel/TabContainer/Current Quests/Currents Secondary Quests/quests_panel4"
+@onready var quests_panel_5: Panel = $"Quest_Panel/TabContainer/Current Quests/Currents Secondary Quests/quests_panel5"
+@onready var quests_panel_6: Panel = $"Quest_Panel/TabContainer/Current Quests/Currents Secondary Quests/quests_panel6"
 
 
 func OpenQuestMenu():
@@ -38,7 +39,15 @@ func set_quests():
 	if AllDictionary.active_main_quests[2] != null and AllDictionary.active_main_quests[2] != "":
 		var quest_id : String = AllDictionary.active_main_quests[2]
 		quests_panel_3.quests = AllDictionary.load_resource_quest_list(quest_id)
-
+	if AllDictionary.active_secondary_quests[0] != null and AllDictionary.active_secondary_quests[0] != "":
+		var quest_id : String = AllDictionary.active_secondary_quests[0]
+		quests_panel_4.quests = AllDictionary.load_resource_quest_list(quest_id)
+	if AllDictionary.active_secondary_quests[1] != null and AllDictionary.active_secondary_quests[1] != "":
+		var quest_id : String = AllDictionary.active_secondary_quests[1]
+		quests_panel_5.quests = AllDictionary.load_resource_quest_list(quest_id)
+	if AllDictionary.active_secondary_quests[2] != null and AllDictionary.active_secondary_quests[2] != "":
+		var quest_id : String = AllDictionary.active_secondary_quests[2]
+		quests_panel_6.quests = AllDictionary.load_resource_quest_list(quest_id)
 
 func set_description(Quests : Quests_Resources):
 	if name_label != null:

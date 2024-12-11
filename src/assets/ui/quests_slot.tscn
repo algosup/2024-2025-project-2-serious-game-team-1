@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqd0i6thcpy2k"]
+[gd_scene load_steps=5 format=3 uid="uid://cqd0i6thcpy2k"]
 
 [ext_resource type="Script" path="res://scripts/quests_slot.gd" id="1_h5gel"]
+[ext_resource type="Texture2D" uid="uid://cvd62xwikxx3x" path="res://assets/images/quest.PNG" id="2_4ki18"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ubtjj"]
 color = Color(0, 0, 0, 0)
@@ -9,47 +10,66 @@ color = Color(0, 0, 0, 0)
 color = Color(0, 0, 0, 0)
 
 [node name="quests_slot" type="Panel"]
-custom_minimum_size = Vector2(524, 150)
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(0.5, 0.5)
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(262, 75)
+offset_right = 262.0
+offset_bottom = 75.0
 script = ExtResource("1_h5gel")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(524, 150)
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(262, 75)
 layout_mode = 0
-offset_right = 400.0
-offset_bottom = 150.0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_4ki18")
 
-[node name="QuestLabel" type="Label" parent="VBoxContainer"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 75)
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Container" type="Container" parent="HBoxContainer"]
+custom_minimum_size = Vector2(5, 0)
 layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(262, 75)
+layout_mode = 2
+
+[node name="QuestLabel" type="Label" parent="HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 37.5)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
 text = "Empty Quest Slot"
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 75)
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 37.5)
 layout_mode = 2
 
-[node name="ZoneLabel" type="Label" parent="VBoxContainer/HBoxContainer"]
+[node name="ZoneLabel" type="Label" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(262, 65)
+custom_minimum_size = Vector2(131, 32.5)
 layout_mode = 2
+theme_override_font_sizes/font_size = 12
 text = "Zone : Unknown"
 vertical_alignment = 1
+justification_flags = 35
 
-[node name="PnjGiverLabel" type="Label" parent="VBoxContainer/HBoxContainer"]
+[node name="PnjGiverLabel" type="Label" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(262, 65)
+custom_minimum_size = Vector2(131, 32.5)
 layout_mode = 2
+theme_override_font_sizes/font_size = 12
 text = "Giver : Unknown"
 vertical_alignment = 1
 
 [node name="Quests_button" type="Button" parent="."]
+custom_minimum_size = Vector2(262, 75)
 layout_mode = 0
-offset_right = 522.0
-offset_bottom = 149.0
+offset_right = 262.0
+offset_bottom = 75.0
 theme_override_colors/font_disabled_color = Color(0, 0, 0, 0)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 0)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 0)
