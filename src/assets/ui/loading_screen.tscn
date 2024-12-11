@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://cr1qnhul40uwc"]
+[gd_scene load_steps=13 format=3 uid="uid://cr1qnhul40uwc"]
 
 [ext_resource type="Script" path="res://scripts/loading_screen.gd" id="1_sfbtb"]
+[ext_resource type="VideoStream" path="res://assets/ui/Loading-Screen-Background.ogv" id="2_wrala"]
 
 [sub_resource type="Animation" id="Animation_nu73g"]
 length = 0.001
@@ -160,6 +161,19 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_glucd")
 
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Panel"]
+layout_mode = 0
+offset_left = -90.0
+offset_top = -53.0
+offset_right = 1830.0
+offset_bottom = 1035.0
+scale = Vector2(0.7, 0.7)
+stream = ExtResource("2_wrala")
+autoplay = true
+expand = true
+loop = true
+bus = &"Music Volume"
+
 [node name="ProgressBar" type="ProgressBar" parent="Panel"]
 layout_mode = 1
 anchors_preset = 8
@@ -167,10 +181,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -289.0
-offset_top = -31.0
-offset_right = 289.0
-offset_bottom = 31.0
+offset_left = -470.0
+offset_top = 221.0
+offset_right = 473.0
+offset_bottom = 283.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -187,10 +201,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -95.5
-offset_top = -148.0
-offset_right = 95.5
-offset_bottom = -79.0
+offset_left = -90.0
+offset_top = 119.0
+offset_right = 101.0
+offset_bottom = 188.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50

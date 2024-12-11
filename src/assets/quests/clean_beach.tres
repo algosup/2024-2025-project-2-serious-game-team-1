@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Quests_Resources" load_steps=3 format=3 uid="uid://copclenoedrqy"]
 
+[ext_resource type="Resource" path="res://assets/quests/recycle_plastic.tres" id="1_c8fdb"]
 [ext_resource type="Script" path="res://scripts/quests_resource.gd" id="1_rurvd"]
-[ext_resource type="Resource" uid="uid://c8ncmb1ethcd6" path="res://assets/quests/clean_beach2.tres" id="1_wxrrn"]
 
 [resource]
 script = ExtResource("1_rurvd")
@@ -14,5 +14,5 @@ quests_goal_label_part2 = "rubbish."
 quests_goal_counter = 0
 quests_goal_objective = 20
 quests_description = "Go along the beach to collect the 20 pieces of rubbish."
-quests_next_quests = ExtResource("1_wxrrn")
+quests_next_quests = ExtResource("1_c8fdb")
 quest_state = 0
