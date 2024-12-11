@@ -2,46 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://lrfexx8s0e13" path="res://assets/map/map.tscn" id="1_eekee"]
 
-[sub_resource type="Animation" id="Animation_amaby"]
-resource_name = "cinematic"
-length = 20.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera3D:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 8, 8.7, 10.6333, 13, 14.6667, 16.0667, 20),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(256.039, 35.5, 742.152), Vector3(286.485, 36.8276, 728.372), Vector3(288.022, 36.9707, 727.461), Vector3(288.022, 36.9707, 727.461), Vector3(288.022, 36.9707, 727.461), Vector3(288.022, 36.9707, 727.461), Vector3(293.692, 38.011, 724.891), Vector3(299.682, 38.581, 724.741)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Camera3D:rotation")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 8.15, 8.66667, 9.03333, 9.4, 9.96667, 10.6333, 11.3667, 12, 13, 14.9, 15.7, 17, 20),
-"transitions": PackedFloat32Array(1, 0.8, 1.9, 1, 1, 1, 1.9, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(0, -1.18682, 0), Vector3(0, -1.18682, 0), Vector3(-0.260054, -1.37706, 0), Vector3(0, -1.18682, 0), Vector3(-0.260054, -1.37706, 0), Vector3(0, -1.18682, 0), Vector3(-0.260054, -1.37706, 0), Vector3(-0.260054, -1.37706, 0), Vector3(-0.260054, -1.37706, 0), Vector3(0.349066, -2.23402, -0.0872665), Vector3(0.349066, -2.23402, -0.0872665), Vector3(0, -1.18682, 0), Vector3(0, -1.18682, 0), Vector3(0, -1.39626, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/Panel:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 19, 20),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-1180, 0), Vector2(-1180, 0), Vector2(0, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_ymsrn"]
 length = 0.001
 tracks/0/type = "value"
@@ -81,6 +41,46 @@ tracks/2/keys = {
 "values": [Vector2(-1180, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_amaby"]
+resource_name = "cinematic"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8, 8.7, 10.6333, 11.4, 11.7, 12, 12.3, 12.6, 13, 13.3, 13.6, 13.9, 14.2, 14.5, 14.6667, 16.0667, 20),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(256.039, 35.5, 742.152), Vector3(286.485, 36.8276, 728.372), Vector3(288.022, 36.9707, 727.461), Vector3(288.022, 36.9707, 727.461), Vector3(288.022, 37.005, 727.461), Vector3(288.022, 36.9707, 727.461), Vector3(288.022, 37.005, 727.461), Vector3(288.022, 36.971, 727.461), Vector3(288.022, 37.005, 727.461), Vector3(288.022, 36.9707, 727.461), Vector3(288.022, 37.005, 727.461), Vector3(288.022, 36.971, 727.461), Vector3(288.022, 37.005, 727.461), Vector3(288.022, 36.971, 727.461), Vector3(288.022, 37.005, 727.461), Vector3(288.022, 37.05, 727.461), Vector3(293.692, 38.011, 724.891), Vector3(299.682, 38.581, 724.741)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 8.15, 8.66667, 9.03333, 9.4, 9.96667, 10.6333, 11.3667, 12, 13, 14.9, 15.7, 17, 20),
+"transitions": PackedFloat32Array(1, 0.8, 1.9, 1, 1, 1, 1.9, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -1.18682, 0), Vector3(0, -1.18682, 0), Vector3(-0.260054, -1.37706, 0), Vector3(0, -1.18682, 0), Vector3(-0.260054, -1.37706, 0), Vector3(0, -1.18682, 0), Vector3(-0.260054, -1.37706, 0), Vector3(-0.260054, -1.37706, 0), Vector3(-0.260054, -1.37706, 0), Vector3(0.349066, -2.23402, -0.0872665), Vector3(0.349066, -2.23402, -0.0872665), Vector3(0, -1.18682, 0), Vector3(0, -1.18682, 0), Vector3(0, -1.39626, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Panel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 19, 20),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-1180, 0), Vector2(-1180, 0), Vector2(0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_11cmp"]
 _data = {
 "RESET": SubResource("Animation_ymsrn"),
@@ -97,7 +97,7 @@ transform = Transform3D(0.998237, 0.0593586, 0, 0.0265543, -0.446564, 0.894357, 
 sky_mode = 1
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.374607, 0, -0.927184, 0, 1, 0, 0.927184, 0, 0.374607, 256.039, 35.5, 742.152)
+transform = Transform3D(0.37461, 0, -0.927183, 0, 1, 0, 0.927183, 0, 0.37461, 256.039, 35.5, 742.152)
 
 [node name="Map" parent="." instance=ExtResource("1_eekee")]
 
