@@ -64,3 +64,5 @@ custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_t1s5g"), Sub
 
 [node name="Quest_Adder" parent="." instance=ExtResource("8_5i6dw")]
 script = ExtResource("9_8n21e")
+
+[connection signal="dialogue_signal" from="CanvasLayer/DialogueBox" to="." method="_on_dialogue_box_dialogue_signal"]
