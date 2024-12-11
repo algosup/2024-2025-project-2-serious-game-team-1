@@ -21,17 +21,31 @@ enum category {Main_Quest, Secondary_Quest}
 # state 3 : completed 
 
 func add_counter():
-	if quests_goal_counter == quests_goal_objective:
-		quest_state = 3
-		if quest_state != null:
-			shift_quest()
 	if quest_state  == 2: 
 		quests_goal_counter += 1
-			
+		print(quests_goal_objective - quests_goal_counter)
+		if quests_goal_counter == quests_goal_objective:
+			quest_state = 3
+			print("Quest :", quests_name, "is at the state :", quest_state)
+			if quests_next_quests != null:
+				print("Quest have been shift")
+				shift_quest()
+
 func shift_quest():
-	for i in range(len(AllDictionary.active_quests)):
-		if AllDictionary.active_quests[i] == quests_name:
-			AllDictionary.completed_quests.append(AllDictionary.active_quests[i])
-			AllDictionary.active_quests[i] = quests_next_quests.quest_name
-			print(AllDictionary.active_quests)
-			
+	if quests_category == category.Main_Quest:
+		for i in range(len(AllDictionary.active_main_quests)):
+			if AllDictionary.active_main_quests[i] == quests_name:
+				print("quest found")
+				AllDictionary.completed_quests.append(AllDictionary.active_main_quests[i])
+				print("quest has been added to the array completed quests: ", AllDictionary.completed_quests)
+				AllDictionary.active_main_quests[i] = quests_next_quests.quests_name
+				print("quest has been changed: ", AllDictionary.active_main_quests[i])
+				print(AllDictionary.active_main_quests)
+	if quests_category == category.Secondary_Quest:
+		for i in range(len(AllDictionary.active_secondary_quests)):
+			if AllDictionary.active_secondary_quests[i] == quests_name:
+				AllDictionary.completed_quests.append(AllDictionary.active_secondary_quests[i])
+				AllDictionary.active_secondary_quests[i] = quests_next_quests.quests_name
+				print(AllDictionary.active_secondary_quests)
+	else:
+		print("categorie not found")

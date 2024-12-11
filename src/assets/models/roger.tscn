@@ -33,7 +33,7 @@ script = ExtResource("5_trvav")
 transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0)
 script = ExtResource("1_il4ok")
 Pnj_name = "Roger"
-quest_name = "clean_beach"
+quest_name = "Clean Beach"
 prompt_message = "Talk to Roger"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

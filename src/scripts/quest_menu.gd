@@ -29,14 +29,14 @@ func CloseQuestMenu():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func set_quests():
-	if AllDictionary.active_quests[0] != null and AllDictionary.active_quests[0] != "":
-		var quest_id : String = AllDictionary.active_quests[0]
+	if AllDictionary.active_main_quests[0] != null and AllDictionary.active_main_quests[0] != "":
+		var quest_id : String = AllDictionary.active_main_quests[0]
 		quests_panel_1.quests = AllDictionary.load_resource_quest_list(quest_id)
-	if AllDictionary.active_quests[1] != null and AllDictionary.active_quests[1] != "":
-		var quest_id : String = AllDictionary.active_quests[1]
+	if AllDictionary.active_main_quests[1] != null and AllDictionary.active_main_quests[1] != "":
+		var quest_id : String = AllDictionary.active_main_quests[1]
 		quests_panel_2.quests = AllDictionary.load_resource_quest_list(quest_id)
-	if AllDictionary.active_quests[2] != null and AllDictionary.active_quests[2] != "":
-		var quest_id : String = AllDictionary.active_quests[2]
+	if AllDictionary.active_main_quests[2] != null and AllDictionary.active_main_quests[2] != "":
+		var quest_id : String = AllDictionary.active_main_quests[2]
 		quests_panel_3.quests = AllDictionary.load_resource_quest_list(quest_id)
 
 

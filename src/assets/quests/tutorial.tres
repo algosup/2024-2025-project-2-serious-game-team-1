@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_rurvd")
-quests_name = "Get_data"
+quests_name = "Get  data"
 quests_category = 0
 quests_giver = "Mr Mayor"
 quests_ecopoint = 0
