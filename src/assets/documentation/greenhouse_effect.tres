@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Documentation_Resource" load_steps=2 format=3 uid="uid://cwi2djf3mfvfy"]
+
+[ext_resource type="Script" path="res://scripts/documentation_ressource.gd" id="1_amldk"]
+
+[resource]
+script = ExtResource("1_amldk")
+Documentation_name = "Greenhouse effect"
+Documentation_explanation = "Climate change is caused principally by the greenhouse effect.
+The greenhouse effect is a natural phenomenon that enables the Earth to maintain a temperature conducive to life. Without it, our planet's average surface temperature would be around -18°C, almost 30°C cooler than it is now, at +15°C.
+Its principle is : 
+The Sun sends out rays of light (energy in luminous form). Some of this energy is absorbed, while some is reflected into space through infrared radiation.
+Greenhouse gases (GHGs) in the atmosphere capture some of this infrared radiation, preventing it from escaping completely into space. This warms the air and stabilizes the planet's climate.
+We have different greenhouse gases: water vapor (H₂O), Carbon dioxide (CO₂), Methane (CH₄), nitrous oxide (N₂O), and Ozone (which protects the Earth from harmful UV rays).
+And different \"industrial\" greenhouse gases: Fluorinated gases, which come from the cooling systems in our refrigerators or are used as solvents, Sulfur hexafluoride (SF₆), used in transformers and double-glazing (sound insulation), Nitrogen trifluoride (NF₃), often used as an industrial degreaser in the manufacture of LCD screens and photovoltaic cells."
+Documentation_source = ["Climate.be"]

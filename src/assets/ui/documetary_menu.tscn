@@ -71,6 +71,21 @@ size_flags_vertical = 3
 layout_mode = 2
 documentation = ExtResource("5_kbelr")
 
+[node name="Greenhouse_Effect" parent="Panel/Left_page/Documents_Types_Container/VBoxContainer" instance=ExtResource("3_ljuiy")]
+layout_mode = 2
+
+[node name="Fossil_Full" parent="Panel/Left_page/Documents_Types_Container/VBoxContainer" instance=ExtResource("3_ljuiy")]
+layout_mode = 2
+
+[node name="Gas" parent="Panel/Left_page/Documents_Types_Container/VBoxContainer" instance=ExtResource("3_ljuiy")]
+layout_mode = 2
+
+[node name="Oil" parent="Panel/Left_page/Documents_Types_Container/VBoxContainer" instance=ExtResource("3_ljuiy")]
+layout_mode = 2
+
+[node name="Coal" parent="Panel/Left_page/Documents_Types_Container/VBoxContainer" instance=ExtResource("3_ljuiy")]
+layout_mode = 2
+
 [node name="Right_page" type="VBoxContainer" parent="Panel"]
 layout_mode = 0
 offset_left = 486.0

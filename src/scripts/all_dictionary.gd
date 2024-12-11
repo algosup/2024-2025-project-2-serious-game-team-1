@@ -23,6 +23,7 @@ var inventory : Array = [
 ]
 
 var inventorySize : int = 20
+enum category {Main_Quest, Secondary_Quest}
 
 var completed_quests : Array = []
 var active_main_quests : Array = [null, null, null]
@@ -46,7 +47,7 @@ func add_item(item : Item_Ressource):
 
 func get_resource_path_quest_list(quest_id: String) -> String:
 	print("Quests Search") 
-	print(active_quests)
+	print(active_main_quests, active_secondary_quests)
 	if Quest_List.has(quest_id):
 		return Quest_List[quest_id]
 	else:
@@ -77,11 +78,15 @@ func log_quest(quest_id: String, status: String) -> void:
 	if status == "complete":
 		completed_quests.append(quest_id)
 	elif status == "active":
-		active_quests.append(quest_id)
+		if load_resource_quest_list(quest_id).category == category.Main_Quest:
+			active_main_quests.append(quest_id)
+		if load_resource_quest_list(quest_id).category == category.Secondary_Quest:
+			active_secondary_quests.append(quest_id)
 
 # Debug print to check dictionaries
 func debug_print() -> void:
 	print("Item Dictionary:", Item_List)
 	print("Quest List Dictionary:", Quest_List)
 	print("Complete Quests :", completed_quests)
-	print("Active Quests :", active_quests)
+	print("Active Main Quests :", active_main_quests)
+	print("Active Secondary Quests :", active_secondary_quests)

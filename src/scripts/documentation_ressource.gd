@@ -3,8 +3,8 @@ extends Resource
 class_name Documentation_Resource
 
 @export var Documentation_name : String
-@export var Documentation_explanation : String
-@export var Documentation_source : Array = []
+@export_multiline var Documentation_explanation : String
+@export var Documentation_source : Array[String] = []
 
 func Documentation_source_to_text():
 	var Documentation_source_text : String = "Source : "
