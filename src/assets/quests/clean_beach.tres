@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_rurvd")
 quests_name = "Clean Beach"
+quests_category = 1
 quests_giver = "Roger"
 quests_ecopoint = 25
 quests_zone = "Beach"

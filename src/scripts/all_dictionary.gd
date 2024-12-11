@@ -25,7 +25,8 @@ var inventory : Array = [
 var inventorySize : int = 20
 
 var completed_quests : Array = []
-var active_quests : Array = [null, null, null]
+var active_main_quests : Array = [null, null, null]
+var active_secondary_quests : Array = [null, null, null]
 
 func get_root_node():
 	var root_node = get_tree().root

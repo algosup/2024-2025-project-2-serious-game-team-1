@@ -1,12 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dfpxasv5v80bs"]
+[gd_scene load_steps=5 format=3 uid="uid://dfpxasv5v80bs"]
 
 [ext_resource type="PackedScene" uid="uid://dyxmcywp3874g" path="res://assets/ui/quests_panel_slot.tscn" id="1_3dl8j"]
 [ext_resource type="Script" path="res://scripts/quests_panel.gd" id="1_6txpd"]
 [ext_resource type="Texture2D" uid="uid://c4ts412s74tja" path="res://assets/images/Quests Panels Design/main_quest.PNG" id="2_xmow3"]
 [ext_resource type="Texture2D" uid="uid://bcgkx33mx8041" path="res://assets/images/Quests Panels Design/secondary_quests.PNG" id="3_l535r"]
-[ext_resource type="Resource" uid="uid://c463r6lgbn0i8" path="res://assets/quests/tutorial.tres" id="5_lpmqq"]
-[ext_resource type="Resource" uid="uid://copclenoedrqy" path="res://assets/quests/clean_beach.tres" id="6_1w674"]
-[ext_resource type="Resource" uid="uid://q5i2rxt8envi" path="res://assets/quests/recycle_plastic.tres" id="7_66aiq"]
 
 [node name="quests_panel" type="Control"]
 custom_minimum_size = Vector2(150, 350)
@@ -67,17 +64,14 @@ vertical_alignment = 1
 [node name="quests_panel_slot_1" parent="Panel/VBoxContainer/Main Quests" instance=ExtResource("1_3dl8j")]
 layout_mode = 2
 size_flags_vertical = 1
-quests = ExtResource("5_lpmqq")
 
 [node name="quests_panel_slot_2" parent="Panel/VBoxContainer/Main Quests" instance=ExtResource("1_3dl8j")]
 layout_mode = 2
 size_flags_vertical = 1
-quests = ExtResource("6_1w674")
 
 [node name="quests_panel_slot_3" parent="Panel/VBoxContainer/Main Quests" instance=ExtResource("1_3dl8j")]
 layout_mode = 2
 size_flags_vertical = 1
-quests = ExtResource("7_66aiq")
 
 [node name="Secondary Quests" type="VBoxContainer" parent="Panel/VBoxContainer"]
 layout_mode = 2

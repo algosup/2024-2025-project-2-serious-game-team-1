@@ -11,7 +11,7 @@ class_name Pnj
 @onready var player_ui: Control = %Player_UI
 @export var Pnj_name: String = "Insert Pnj name"
 @export var quest_name : String = "None"
-
+enum category {Main_Quest, Secondary_Quest}
 
 var quest_id : String
 
@@ -39,18 +39,35 @@ func _on_dialogue_box_dialogue_signal(value):
 		quest_id = str(quest_name)
 		quest_adder.play_animation()
 	if value == 'quest':
-		for i in range(len(AllDictionary.active_quests)):
-			if AllDictionary.active_quests[i] != quest_id:
-				if AllDictionary.active_quests[i] == null:
-					AllDictionary.active_quests[i] = quest_id
-					print("Valeur de i : " + str(i))
-					AllDictionary.load_resource_quest_list(quest_id).quest_state = 2
-					print(AllDictionary.load_resource_quest_list(quest_id).quests_name + "")
-					print("Quests Added")
-					print("Quests Active Liste:", AllDictionary.active_quests)
-					break
-			else:
-				print("You have already this quest") 
+		var quest = AllDictionary.load_resource_quest_list(quest_id)
+		if quest.quests_category == category.Main_Quest:
+			for i in range(len(AllDictionary.active_main_quests)):
+				if AllDictionary.active_main_quests[i] != quest_id:
+					if AllDictionary.active_main_quests[i] == null:
+						AllDictionary.active_main_quests[i] = quest_id
+						print("Valeur de i : " + str(i))
+						quest.quest_state = 2
+						print(quest.quests_name + "")
+						print("Quests Added")
+						print("Quests Active Liste:", AllDictionary.active_main_quests)
+						break
+				else:
+					print("You have already this quest") 
+		if quest.quests_category == category.Secondary_Quest:
+			for i in range(len(AllDictionary.active_secondary_quests)):
+				if AllDictionary.active_secondary_quests[i] != quest_id:
+					if AllDictionary.active_secondary_quests[i] == null:
+						AllDictionary.active_secondary_quests[i] = quest_id
+						print("Valeur de i : " + str(i))
+						quest.quest_state = 2
+						print(quest.quests_name + "")
+						print("Quests Added")
+						print("Quests Active Liste:", AllDictionary.active_secondary_quests)
+						break
+				else:
+					print("You have already this quest") 
+		else:
+			print("We don't find quest's category")
 		print("You cannot have more quests")
 	if value == 'talking':
 		print('talking')

@@ -3,6 +3,8 @@ extends Resource
 class_name Quests_Resources
 
 @export var quests_name : String
+enum category {Main_Quest, Secondary_Quest}
+@export var quests_category : category
 @export var quests_giver : String
 @export var quests_ecopoint : int
 @export var quests_zone : String
