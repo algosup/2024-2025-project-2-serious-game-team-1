@@ -63,10 +63,9 @@ text = "Go Back"
 
 [node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-current_tab = 1
+current_tab = 0
 
 [node name="Sound" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
-visible = false
 custom_minimum_size = Vector2(0, 500)
 layout_mode = 2
 metadata/_tab_index = 0
@@ -106,28 +105,11 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Apply"
 
-[node name="Graphics" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
-custom_minimum_size = Vector2(0, 600)
-layout_mode = 2
-metadata/_tab_index = 1
-
-[node name="Resolution" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Graphics"]
-layout_mode = 2
-theme_override_constants/separation = 7
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Graphics/Resolution"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "Resolution"
-
-[node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/TabContainer/Graphics/Resolution"]
-layout_mode = 2
-
 [node name="Controls" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
 visible = false
 custom_minimum_size = Vector2(0, 600)
 layout_mode = 2
-metadata/_tab_index = 2
+metadata/_tab_index = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/TabContainer/Controls"]
 custom_minimum_size = Vector2(0, 575)

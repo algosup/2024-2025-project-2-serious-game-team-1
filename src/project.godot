@@ -58,6 +58,12 @@ folder_colors={
 
 pnj=""
 
+[importer_defaults]
+
+animation_library={
+"animation/fps": 60.0
+}
+
 [input]
 
 jump={
