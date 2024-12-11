@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://bds8yuj1g47t4"]
+
+[ext_resource type="Script" path="res://scripts/completed_quests_slot.gd" id="1_h7xuk"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_5116t"]
+color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_3eu80"]
+color = Color(0, 0, 0, 0)
+
+[node name="completed_quests_slot" type="Panel"]
+custom_minimum_size = Vector2(524, 150)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_h7xuk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(524, 150)
+offset_right = 400.0
+offset_bottom = 150.0
+
+[node name="QuestLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+text = "Empty Quest Slot"
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+
+[node name="ZoneLabel" type="Label" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(262, 65)
+layout_mode = 2
+text = "Zone : Unknown"
+vertical_alignment = 1
+
+[node name="PnjGiverLabel" type="Label" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(262, 65)
+layout_mode = 2
+text = "Giver : Unknown"
+vertical_alignment = 1
+
+[node name="Quests_button" type="Button" parent="."]
+offset_right = 522.0
+offset_bottom = 149.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 0)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
+theme_override_styles/focus = SubResource("StyleBoxLine_5116t")
+theme_override_styles/normal = SubResource("StyleBoxLine_3eu80")
+
+[connection signal="pressed" from="Quests_button" to="." method="_on_quests_button_pressed"]

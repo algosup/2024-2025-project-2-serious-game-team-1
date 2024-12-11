@@ -1,10 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://40vvrysqespg"]
+[gd_scene load_steps=11 format=3 uid="uid://40vvrysqespg"]
 
 [ext_resource type="Script" path="res://scripts/quest_menu.gd" id="1_sqmio"]
 [ext_resource type="Shader" path="res://assets/ui/shaders/ui_back_shader.gdshader" id="1_u3agi"]
 [ext_resource type="Texture2D" uid="uid://dxr84bjywj4m6" path="res://assets/images/WaintingBackground.jpg" id="2_hewac"]
 [ext_resource type="PackedScene" uid="uid://cqd0i6thcpy2k" path="res://assets/ui/quests_slot.tscn" id="3_kgxg5"]
 [ext_resource type="Texture2D" uid="uid://i2kndroy583y" path="res://assets/images/inventory_slot_background.png" id="3_p1k0r"]
+[ext_resource type="PackedScene" uid="uid://bds8yuj1g47t4" path="res://assets/ui/completed_quests_slot.tscn" id="5_cha2g"]
+[ext_resource type="Resource" uid="uid://c463r6lgbn0i8" path="res://assets/quests/tutorial.tres" id="5_jqnbn"]
+[ext_resource type="Resource" uid="uid://copclenoedrqy" path="res://assets/quests/clean_beach.tres" id="6_fthyc"]
+[ext_resource type="Resource" uid="uid://q5i2rxt8envi" path="res://assets/quests/recycle_plastic.tres" id="7_irpeb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_20ina"]
 shader = ExtResource("1_u3agi")
@@ -77,6 +81,21 @@ layout_mode = 2
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Quest_Panel/TabContainer/Complete Quests"]
+layout_mode = 2
+
+[node name="completed_quests_slot" parent="Quest_Panel/TabContainer/Complete Quests/VBoxContainer" instance=ExtResource("5_cha2g")]
+layout_mode = 2
+quests = ExtResource("5_jqnbn")
+
+[node name="completed_quests_slot2" parent="Quest_Panel/TabContainer/Complete Quests/VBoxContainer" instance=ExtResource("5_cha2g")]
+layout_mode = 2
+quests = ExtResource("6_fthyc")
+
+[node name="completed_quests_slot3" parent="Quest_Panel/TabContainer/Complete Quests/VBoxContainer" instance=ExtResource("5_cha2g")]
+layout_mode = 2
+quests = ExtResource("7_irpeb")
 
 [node name="Description" type="NinePatchRect" parent="Quest_Panel"]
 layout_mode = 1
