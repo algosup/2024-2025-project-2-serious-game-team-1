@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://chxfeda425gsu"]
+[gd_scene load_steps=29 format=3 uid="uid://chxfeda425gsu"]
 
 [ext_resource type="PackedScene" uid="uid://lrfexx8s0e13" path="res://assets/map/map.tscn" id="1_7b4si"]
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_hjvrf"]
@@ -17,7 +17,9 @@
 [ext_resource type="PackedScene" uid="uid://40vvrysqespg" path="res://assets/ui/quest_menu.tscn" id="12_unwyq"]
 [ext_resource type="Shader" path="res://assets/ui/shaders/minimap.gdshader" id="12_ycxjg"]
 [ext_resource type="PackedScene" uid="uid://cr25pnfa6ioqt" path="res://assets/models/garbage_can.tscn" id="13_5x3xm"]
+[ext_resource type="PackedScene" uid="uid://bpi826wg0fa6b" path="res://assets/models/Objective.tscn" id="15_h7f3s"]
 [ext_resource type="PackedScene" uid="uid://b31wjwnn4gip3" path="res://assets/ui/option_menu.tscn" id="16_goewa"]
+[ext_resource type="Resource" uid="uid://dx0okth0b6dxk" path="res://assets/quests/get_data.tres" id="16_jgd18"]
 [ext_resource type="Script" path="res://scripts/all_dictionary.gd" id="16_oopfl"]
 [ext_resource type="PackedScene" uid="uid://dfpxasv5v80bs" path="res://assets/ui/quests_panel.tscn" id="16_qnyfx"]
 [ext_resource type="PackedScene" uid="uid://dekxjqqux4lw3" path="res://assets/ui/documetary_menu.tscn" id="19_tpto7"]
@@ -130,6 +132,26 @@ process_mode = 1
 transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 309.761, 35.1006, 562.977)
 spawn_area_size = Vector3(10, 0.1, 10)
 
+[node name="Objective_Areas" type="Node" parent="Gameplay/Quest_Assets"]
+
+[node name="tutorial_objective_area1" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 408, 44.46, 569)
+time_to_stay = 3.0
+quest_name = "Get data"
+quest = ExtResource("16_jgd18")
+
+[node name="tutorial_objective_area2" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 323, 41.9, 748.17)
+time_to_stay = 3.0
+quest_name = "Get data"
+quest = ExtResource("16_jgd18")
+
+[node name="tutorial_objective_area3" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 155, 22.41, 787.99)
+time_to_stay = 3.0
+quest_name = "Get data"
+quest = ExtResource("16_jgd18")
+
 [node name="Menus" type="Node" parent="."]
 
 [node name="quests_panel" parent="Menus" instance=ExtResource("16_qnyfx")]
@@ -167,8 +189,6 @@ visible = false
 
 [node name="Dictionnary Manager" type="Node" parent="Manager"]
 script = ExtResource("16_oopfl")
-
-[node name="Node" type="Node" parent="Manager"]
 
 [node name="Introduction_Animation" parent="." instance=ExtResource("20_oxljo")]
 visible = false
