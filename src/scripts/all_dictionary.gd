@@ -12,7 +12,7 @@ var Item_List: Dictionary = {
 var Quest_List: Dictionary = {
 	"Clean Beach" : "res://assets/quests/clean_beach.tres",
 	"Recycle Plastic" : "res://assets/quests/recycle_plastic.tres",
-	"Get data" : "res://assets/quests/tutorial.tres"
+	"Get data" : "res://assets/quests/get_data.tres"
 }
 
 var inventory : Array = [

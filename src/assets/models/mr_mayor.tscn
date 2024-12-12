@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/pnj.gd" id="1_fkn53"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="2_5biav"]
 [ext_resource type="PackedScene" uid="uid://bnuj1vhug5vud" path="res://assets/models/pnjs/strong_man_quest_giver.tscn" id="2_sqgy8"]
-[ext_resource type="Texture2D" uid="uid://cbi4hngk2yu68" path="res://assets/images/chat_bubble_green.PNG" id="3_00wd4"]
+[ext_resource type="Texture2D" uid="uid://cbi4hngk2yu68" path="res://assets/images/NPC's asset/chat_bubble_green.PNG" id="3_00wd4"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="4_2j71m"]
 [ext_resource type="Resource" uid="uid://b37m0x6oqcx8n" path="res://assets/dialog/quest_giver.tres" id="4_e2c3k"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="5_dvffd"]
@@ -32,6 +32,7 @@ script = ExtResource("6_phr8d")
 [node name="Mr_Mayor" type="StaticBody3D" groups=["pnj"]]
 script = ExtResource("1_fkn53")
 Pnj_name = "Mr. Meyor"
+quest_name = "Get data"
 prompt_message = "Talk"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
