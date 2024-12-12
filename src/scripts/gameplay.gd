@@ -80,7 +80,7 @@ func _process(_delta):
 			pause_menu.pause_game()
 
 
-#func _on_introduction_animation_animation_end() -> void:
-	#Variable.movelock = false
-	#Variable.cameralock = false
-	#Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+func _on_introduction_animation_cinematic_done() -> void:
+	Variable.movelock = false
+	Variable.cameralock = false
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
