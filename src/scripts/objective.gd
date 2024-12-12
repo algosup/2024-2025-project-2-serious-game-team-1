@@ -30,6 +30,7 @@ func area_spawn():
 	for i in range(len(AllDictionary.active_main_quests)):
 		if AllDictionary.active_main_quests[i] == quest_name:
 			self.visible = true
+			print(self.visible)
 			collision_shape_3d.disabled = false
 		else :
 			self.visible = false

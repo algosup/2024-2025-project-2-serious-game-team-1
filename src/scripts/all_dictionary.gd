@@ -2,10 +2,6 @@ extends Node
 
 @warning_ignore("shadowed_global_identifier")
 var Item : Item_Ressource
-@onready var tutorial_objective_area_1: Area3D = $"../../Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1"
-@onready var tutorial_objective_area_2: Area3D = $"../../Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area2"
-@onready var tutorial_objective_area_3: Area3D = $"../../Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area3"
-
 
 # Dictionary to store items with preloaded resources
 var Item_List: Dictionary = {
@@ -32,7 +28,6 @@ enum category {Main_Quest, Secondary_Quest}
 var completed_quests : Array = []
 var active_main_quests : Array = [null, null, null]
 var active_secondary_quests : Array = [null, null, null]
-var quest_area : Array = [tutorial_objective_area_1, tutorial_objective_area_2, tutorial_objective_area_3]
 
 func get_root_node():
 	var root_node = get_tree().root
@@ -43,10 +38,6 @@ func show_documentation(quest_documentation):
 	for i in range(len(quest_documentation)):
 		if quest_documentation[i] == %Documetary_menu.documentation[i]:
 			%Documetary_menu.documentation[i].show()
-
-func spawn_area():
-	for i in quest_area:
-		i.area_spawn()
 
 
 func add_item(item : Item_Ressource):

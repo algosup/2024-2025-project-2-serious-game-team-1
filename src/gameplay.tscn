@@ -141,13 +141,13 @@ quest_name = "Get data"
 quest = ExtResource("16_jgd18")
 
 [node name="tutorial_objective_area2" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 323, 41.9, 748.17)
+transform = Transform3D(-4.37114e-08, -4.71176e-16, -1, -0.0377774, 0.999286, 1.6513e-09, 0.999286, 0.0377774, -4.36802e-08, 316.83, 36.052, 755.216)
 time_to_stay = 3.0
 quest_name = "Get data"
 quest = ExtResource("16_jgd18")
 
 [node name="tutorial_objective_area3" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 155, 22.41, 787.99)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 154.963, 22.6945, 787.98)
 time_to_stay = 3.0
 quest_name = "Get data"
 quest = ExtResource("16_jgd18")
@@ -192,5 +192,9 @@ script = ExtResource("16_oopfl")
 
 [node name="Introduction_Animation" parent="." instance=ExtResource("20_oxljo")]
 
+[connection signal="call_areas" from="Gameplay/Pnj/Elie" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]
+[connection signal="call_areas" from="Gameplay/Pnj/Martine" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]
+[connection signal="call_areas" from="Gameplay/Pnj/Mr_Mayor" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]
+[connection signal="call_areas" from="Gameplay/Pnj/Roger" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]
 [connection signal="ready" from="Manager/Dictionnary Manager" to="Menus/Inventory_Gestion" method="_on_dictionnary_manager_ready"]
 [connection signal="cinematic_done" from="Introduction_Animation" to="." method="_on_introduction_animation_cinematic_done"]
