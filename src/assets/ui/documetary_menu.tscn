@@ -1,9 +1,9 @@
 [gd_scene load_steps=21 format=3 uid="uid://dekxjqqux4lw3"]
 
 [ext_resource type="Shader" path="res://assets/ui/shaders/ui_back_shader.gdshader" id="1_eo85a"]
-[ext_resource type="Texture2D" uid="uid://c3kv450vvv41h" path="res://assets/images/documentary_background.png" id="1_i5ou0"]
 [ext_resource type="Script" path="res://scripts/documetary_menu.gd" id="1_oediq"]
 [ext_resource type="PackedScene" uid="uid://uojanrl6cmk8" path="res://assets/ui/document_panel.tscn" id="3_ljuiy"]
+[ext_resource type="Texture2D" uid="uid://c3kv450vvv41h" path="res://assets/images/documentary/documentary_background.png" id="3_s6rns"]
 [ext_resource type="Resource" uid="uid://cqi3t6lfp4hsg" path="res://assets/documentation/Climate_change.tres" id="5_kbelr"]
 [ext_resource type="Resource" uid="uid://djebfeduoqvvc" path="res://assets/documentation/greenhouse_effect.tres" id="6_0k1wb"]
 [ext_resource type="Resource" uid="uid://cvegiunjli5cs" path="res://assets/documentation/Fossil_fuels.tres" id="7_05moh"]
@@ -25,7 +25,7 @@ shader_parameter/samples = 8
 shader_parameter/darken_factor = 0.75
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qixet"]
-texture = ExtResource("1_i5ou0")
+texture = ExtResource("3_s6rns")
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_81c2c"]
 thickness = 3

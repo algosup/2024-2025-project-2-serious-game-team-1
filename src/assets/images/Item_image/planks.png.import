@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbi4hngk2yu68"
-path="res://.godot/imported/chat_bubble_green.PNG-c26812a1f8a5f10106ce36fa1eb8ea46.ctex"
+uid="uid://bdcj4whk5qhcv"
+path="res://.godot/imported/planks.png-4d84f4ac28974ce83470b575695ab981.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/chat_bubble_green.PNG"
-dest_files=["res://.godot/imported/chat_bubble_green.PNG-c26812a1f8a5f10106ce36fa1eb8ea46.ctex"]
+source_file="res://assets/images/Item_image/planks.png"
+dest_files=["res://.godot/imported/planks.png-4d84f4ac28974ce83470b575695ab981.ctex"]
 
 [params]
 

@@ -137,7 +137,9 @@ unique_name_in_owner = true
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
+offset_left = 10.0
 offset_top = -253.5
+offset_right = 216.0
 offset_bottom = 253.5
 grow_vertical = 2
 
@@ -159,7 +161,7 @@ unique_name_in_owner = true
 visible = false
 z_index = 1
 
-[node name="Documetary_menu" parent="Menus" instance=ExtResource("19_tpto7")]
+[node name="Documentary_menu" parent="Menus" instance=ExtResource("19_tpto7")]
 unique_name_in_owner = true
 visible = false
 

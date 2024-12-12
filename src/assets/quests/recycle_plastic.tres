@@ -15,3 +15,4 @@ quests_goal_counter = 0
 quests_goal_objective = 0
 quests_description = "Now that you've collected all the rubbish, head to the recycling plant to drop off your bin bag and recycle the plastic"
 quest_state = 0
+documentation = Array[String](["recycling_vegetative_waste", "plastic_recycling"])

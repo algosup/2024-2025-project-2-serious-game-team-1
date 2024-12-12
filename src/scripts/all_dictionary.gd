@@ -34,6 +34,12 @@ func get_root_node():
 	print("Root node is:", root_node)
 	return root_node
 
+func show_documentation(quest_documentation):
+	for i in range(len(quest_documentation)):
+		if quest_documentation[i] == %Documetary_menu.documentation[i]:
+			%Documetary_menu.documentation[i].show()
+
+
 func add_item(item : Item_Ressource):
 	print("singal receive")
 	for i in range(inventorySize):

@@ -1,10 +1,10 @@
 extends Control
 
-@onready var name_label: Label = $Quest_Panel/Description/DescriptionBox/NameLabel
-@onready var description_label: RichTextLabel = $Quest_Panel/Description/DescriptionBox/DescriptionLabel
+@onready var name_label: Label = $Quest_Panel/Description/DescriptionBox/HBoxContainer4/NameLabel
+@onready var description_label: RichTextLabel = $Quest_Panel/Description/DescriptionBox/HBoxContainer3/DescriptionLabel
 @onready var zone_label: Label = $Quest_Panel/Description/DescriptionBox/HBoxContainer/ZoneLabel
 @onready var giver_label: Label = $Quest_Panel/Description/DescriptionBox/HBoxContainer/GiverLabel
-@onready var goal_label: Label = $Quest_Panel/Description/DescriptionBox/GoalLabel
+@onready var goal_label: Label = $Quest_Panel/Description/DescriptionBox/HBoxContainer2/GoalLabel
 @onready var quests_panel_1: Panel = $"Quest_Panel/TabContainer/Current Quests/Currents Main Quests/quests_panel1"
 @onready var quests_panel_2: Panel = $"Quest_Panel/TabContainer/Current Quests/Currents Main Quests/quests_panel2"
 @onready var quests_panel_3: Panel = $"Quest_Panel/TabContainer/Current Quests/Currents Main Quests/quests_panel3"

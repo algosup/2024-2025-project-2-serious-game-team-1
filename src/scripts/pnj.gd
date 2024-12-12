@@ -39,7 +39,7 @@ func _on_dialogue_box_dialogue_signal(value):
 		quest_id = str(quest_name)
 		quest_adder.play_animation()
 	if value == 'quest':
-		var quest = AllDictionary.load_resource_quest_list(quest_id)
+		var quest : Quests_Resources  = AllDictionary.load_resource_quest_list(quest_id)
 		if quest.quests_category == category.Main_Quest:
 			for i in range(len(AllDictionary.active_main_quests)):
 				if AllDictionary.active_main_quests[i] != quest_id:

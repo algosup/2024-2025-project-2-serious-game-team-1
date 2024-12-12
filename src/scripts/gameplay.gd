@@ -20,7 +20,7 @@ extends Node
 @onready var inventory_gestion: Control = %Inventory_Gestion
 @onready var quest_menu: Control = %quest_menu
 @onready var quests_panel: Control = %quests_panel
-@onready var documetary_menu: Control = %Documetary_menu
+@onready var documentary_menu: Control = %Documentary_menu
 
 @onready var introduction_animation: CanvasLayer = $Introduction_Animation
 
@@ -31,7 +31,7 @@ func _ready() -> void:
 	#mr_mayor.position = Vector3(433.406, 47.287, 595.307)
 	#mr_mayor.rotation = Vector3(0, -15.2, 0)
 	mr_mayor.dialogue_box.start_id = "Mr_Mayor1"
-	mr_mayor.quest_name = "tutorial"
+	mr_mayor.quest_name = "Get data"
 	#Variable.movelock = true
 	#Variable.cameralock = true
 	option_menu.in_menu = false
@@ -40,7 +40,7 @@ func _ready() -> void:
 	inventory_gestion.hide()
 	quest_menu.hide()
 	option_menu.hide()
-	documetary_menu.hide()
+	documentary_menu.hide()
 	# Set the minimum size in project settings
 	ProjectSettings.set_setting("display/window/size/min_width", Variable.min_size.x)
 	ProjectSettings.set_setting("display/window/size/min_height", Variable.min_size.y)
@@ -64,9 +64,9 @@ func _process(_delta):
 			quest_menu.OpenQuestMenu()
 	if Input.is_action_just_pressed("documentary"):
 		if Variable.DocumentaryMenuOpen:
-			documetary_menu.CloseDoc()
+			documentary_menu.CloseDoc()
 		else:
-			documetary_menu.OpenDoc()
+			documentary_menu.OpenDoc()
 	if Input.is_action_just_pressed("escape"):
 		if Variable.InventoryOpen:
 			inventory_gestion.CloseInventory()
@@ -75,7 +75,7 @@ func _process(_delta):
 		elif Variable.PlayMenuOpen:
 			pause_menu.resume_game()
 		elif Variable.DocumentaryMenuOpen:
-			documetary_menu.CloseDoc()
+			documentary_menu.CloseDoc()
 		else:
 			pause_menu.pause_game()
 

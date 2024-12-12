@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bds8yuj1g47t4"]
 
 [ext_resource type="Script" path="res://scripts/completed_quests_slot.gd" id="1_h7xuk"]
-[ext_resource type="Texture2D" uid="uid://cvd62xwikxx3x" path="res://assets/images/quest.PNG" id="2_nu5c1"]
+[ext_resource type="Texture2D" uid="uid://cvd62xwikxx3x" path="res://assets/images/quest_menu/quest.PNG" id="2_nu5c1"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_vnbgb"]
 color = Color(0, 0, 0, 0)
@@ -65,7 +65,7 @@ theme_override_font_sizes/font_size = 12
 text = "Giver : Unknown"
 vertical_alignment = 1
 
-[node name="Quests_button2" type="Button" parent="."]
+[node name="Quests_button" type="Button" parent="."]
 custom_minimum_size = Vector2(262, 75)
 layout_mode = 0
 offset_right = 262.0
@@ -85,3 +85,5 @@ theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
 theme_override_styles/focus = SubResource("StyleBoxLine_vnbgb")
 theme_override_styles/normal = SubResource("StyleBoxLine_hlqhl")
+
+[connection signal="pressed" from="Quests_button" to="." method="_on_quests_button_pressed"]

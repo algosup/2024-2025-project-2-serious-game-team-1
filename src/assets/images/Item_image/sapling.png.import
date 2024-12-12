@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbq50vmddu2pc"
-path="res://.godot/imported/extinguisher.png-6cee8d4ca1377992b4db87f6f774fc62.ctex"
+uid="uid://cg2d1f5ldu1ny"
+path="res://.godot/imported/sapling.png-8a0d6c87cd177fa9ae68856389b7ed5f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/extinguisher.png"
-dest_files=["res://.godot/imported/extinguisher.png-6cee8d4ca1377992b4db87f6f774fc62.ctex"]
+source_file="res://assets/images/Item_image/sapling.png"
+dest_files=["res://.godot/imported/sapling.png-8a0d6c87cd177fa9ae68856389b7ed5f.ctex"]
 
 [params]
 

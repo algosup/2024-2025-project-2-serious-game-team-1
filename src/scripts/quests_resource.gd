@@ -19,6 +19,7 @@ enum category {Main_Quest, Secondary_Quest}
 # state 1 : available
 # state 2 : active
 # state 3 : completed 
+@export var quest_documentation : Array[String] = []
 
 func add_counter():
 	if quest_state  == 2: 
@@ -39,6 +40,7 @@ func shift_quest():
 				if !AllDictionary.completed_quests.has(AllDictionary.active_main_quests[i]):
 					AllDictionary.completed_quests.append(AllDictionary.active_main_quests[i])
 					print("quest has been added to the array completed quests: ", AllDictionary.completed_quests)
+					AllDictionary.show_documentation(quest_documentation)
 				if quests_next_quests != null:
 					AllDictionary.active_main_quests[i] = quests_next_quests.quests_name
 					print("quest has been changed: ", AllDictionary.active_main_quests[i])
