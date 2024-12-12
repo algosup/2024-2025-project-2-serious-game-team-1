@@ -195,6 +195,8 @@ script = ExtResource("16_oopfl")
 [connection signal="call_areas" from="Gameplay/Pnj/Elie" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]
 [connection signal="call_areas" from="Gameplay/Pnj/Martine" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]
 [connection signal="call_areas" from="Gameplay/Pnj/Mr_Mayor" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]
+[connection signal="call_areas" from="Gameplay/Pnj/Mr_Mayor" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area2" method="area_spawn"]
+[connection signal="call_areas" from="Gameplay/Pnj/Mr_Mayor" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area3" method="area_spawn"]
 [connection signal="call_areas" from="Gameplay/Pnj/Roger" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]
 [connection signal="ready" from="Manager/Dictionnary Manager" to="Menus/Inventory_Gestion" method="_on_dictionnary_manager_ready"]
 [connection signal="cinematic_done" from="Introduction_Animation" to="." method="_on_introduction_animation_cinematic_done"]

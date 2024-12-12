@@ -23,6 +23,9 @@ extends Node
 @onready var documentary_menu: Control = %Documentary_menu
 
 @onready var introduction_animation: CanvasLayer = $Introduction_Animation
+@onready var tutorial_objective_area_1: Area3D = $Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1
+@onready var tutorial_objective_area_2: Area3D = $Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area2
+@onready var tutorial_objective_area_3: Area3D = $Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area3
 
 func _ready() -> void:
 	#introduction_animation.play_intro()
@@ -41,12 +44,14 @@ func _ready() -> void:
 	quest_menu.hide()
 	option_menu.hide()
 	documentary_menu.hide()
-	# Set the minimum size in project settings
+	# Set the  minimum size in project settings
 	ProjectSettings.set_setting("display/window/size/min_width", Variable.min_size.x)
 	ProjectSettings.set_setting("display/window/size/min_height", Variable.min_size.y)
 	# Enforce the minimum window size using DisplayServer
 	DisplayServer.window_set_min_size(Variable.min_size)
-
+	tutorial_objective_area_1.hide_zone()
+	tutorial_objective_area_2.hide_zone()
+	tutorial_objective_area_3.hide_zone()
 
 
 func _process(_delta):
