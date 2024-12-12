@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Documentation_Resource" load_steps=2 format=3 uid="uid://bnwcw0okhdxa4"]
+
+[ext_resource type="Script" path="res://scripts/documentation_ressource.gd" id="1_kwopq"]
+
+[resource]
+script = ExtResource("1_kwopq")
+Documentation_name = "Wind turbine"
+Documentation_explanation = "Wind turbines have a minimal GHG impact compared to fossil fuels. Over their lifecycle, wind power emits approximately 11-12 grams of CO₂ equivalent per kilowatt-hour (kWh) of electricity, significantly less than fossil gas and coal, which emit around 400 and 900 gCO₂/kWh, respectively. This includes emissions from production, installation, and maintenance. Wind farms can offset their manufacturing and installation emissions within two years of operation, making them an efficient and clean energy source. Furthermore, they help reduce overall reliance on high-carbon energy sources, contributing to long-term carbon footprint reduction efforts. However, concerns about resource extraction for turbine materials, like rare earth metals, highlight the need for sustainable practices in the wind energy sector."
+Documentation_source = Array[String](["Environmental Protection Agency", "ScienceDaily", "the International Energy Agency"])

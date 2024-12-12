@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Documentation_Resource" load_steps=2 format=3 uid="uid://du47iply3rc3a"]
+
+[ext_resource type="Script" path="res://scripts/documentation_ressource.gd" id="1_8g821"]
+
+[resource]
+script = ExtResource("1_8g821")
+Documentation_name = "Recycling vegetative waste"
+Documentation_explanation = "Recycling vegetative waste into pellets offers environmental and economic benefits by reducing landfill use, preventing emissions, and conserving resources. This process saves landfill space, generates jobs, and supports the circular economy by converting waste into renewable products like fuel and soil amendments. Pellets, being energy-dense and efficient, serve as a cleaner alternative to fossil fuels, requiring up to 80% less energy to produce than new fuels. By adopting biomass recycling, communities enhance sustainability, reduce waste, and contribute to combating climate change."
+Documentation_source = Array[String](["IIETA", "Biocharpelletizing"])

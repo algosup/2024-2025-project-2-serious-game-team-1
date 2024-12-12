@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Documentation_Resource" load_steps=2 format=3 uid="uid://chei5yh17jxev"]
+
+[ext_resource type="Script" path="res://scripts/documentation_ressource.gd" id="1_g1a85"]
+
+[resource]
+script = ExtResource("1_g1a85")
+Documentation_name = "Renewable energies"
+Documentation_explanation = "Renewable energies like solar, wind, and hydroelectric power are low-carbon alternatives with emissions up to 90% lower than fossil fuels. While their infrastructure can impact habitats, a transition to renewables significantly reduces long-term environmental damage and helps limit global warming to 1.5°C."
+Documentation_source = Array[String](["World Economic Forum", "World Wide Fund for Nature"])

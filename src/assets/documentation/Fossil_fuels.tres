@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Documentation_Resource" load_steps=2 format=3 uid="uid://cvegiunjli5cs"]
+
+[ext_resource type="Script" path="res://scripts/documentation_ressource.gd" id="1_airy4"]
+
+[resource]
+script = ExtResource("1_airy4")
+Documentation_name = "Fossil fuels"
+Documentation_explanation = "Fossil fuels, including coal, oil, and natural gas, provide 80% of the world's energy but are the leading source of greenhouse gas emissions, causing climate change, ocean acidification, and severe ecosystem degradation. They also pose health risks through air and water pollution."
+Documentation_source = Array[String](["Our World in data", "World Wide Fund for Nature"])

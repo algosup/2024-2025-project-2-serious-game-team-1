@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Documentation_Resource" load_steps=2 format=3 uid="uid://cuocldwfbo61t"]
+
+[ext_resource type="Script" path="res://scripts/documentation_ressource.gd" id="1_djvh7"]
+
+[resource]
+script = ExtResource("1_djvh7")
+Documentation_name = "Solar panels"
+Documentation_explanation = "Installing solar panels can make farms energy self-sufficient, reduce GHGs emissions, and lower energy costs. Farms typically need 50-100 kWh per day, which a 20-50 kW solar array can supply based on location and sunlight. Solar energy replaces fossil fuels, cutting 1 kg of CO₂ per kWh, potentially preventing 365,000 kg of CO₂ emissions over 20 years for a 50 kW system. Financially, farms can save up to 75% on energy costs, with payback periods of 5-10 years. Excess energy can be sold back to the grid, offering additional income. Solar panels are a sustainable and cost-effective solution for farms, aligning with environmental goals."
+Documentation_source = Array[String](["Illinois"])

@@ -11,4 +11,4 @@ Documentation_explanation = "Forest fires have three main causes, their are:
 - Campfires: they cause more than 11,000 forest fires a year because people don't know how to contain their campfires and extinguish them properly.
 Fires were responsible for 15% of GHG emissions last year, and this figure is not expected to fall.
 "
-Documentation_source = Array[String](["Meteo Media"])
+Documentation_source = Array[String](["Météo Media"])

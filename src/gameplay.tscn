@@ -82,7 +82,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="Gameplay/MiniMap/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(186, 184)
 render_target_update_mode = 4
 script = ExtResource("9_xy0vo")
 

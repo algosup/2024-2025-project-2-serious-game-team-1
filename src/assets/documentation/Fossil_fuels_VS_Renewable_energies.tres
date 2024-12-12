@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Documentation_Resource" load_steps=2 format=3 uid="uid://iv1lyx7im7l0"]
+
+[ext_resource type="Script" path="res://scripts/documentation_ressource.gd" id="1_utjgq"]
+
+[resource]
+script = ExtResource("1_utjgq")
+Documentation_name = "Fossil fuels VS Renewable energies"
+Documentation_explanation = "Fossil fuels account for 75% of global greenhouse gas emissions, contributing to rising temperatures and severe ecological harm, such as ocean acidification and biodiversity loss. Conversely, renewables like solar and wind emit 70–90% less CO₂ over their lifecycle. By 2050, transitioning to renewables could reduce land-use impacts by 30% compared to fossil fuels and avoid up to four times more species extinctions. Despite requiring resources for infrastructure, renewables are crucial to limiting global warming to 1.5°C​"
+Documentation_source = Array[String](["Our World in data", "World Wide Fund for Nature"])
