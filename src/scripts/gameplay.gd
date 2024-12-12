@@ -52,7 +52,7 @@ func _ready() -> void:
 func _process(_delta):
 	if Variable.current_size.x < Variable.min_size.x or Variable.current_size.y < Variable.min_size.y:
 		DisplayServer.window_set_size(Vector2i(max(Variable.current_size.x, Variable.min_size.x), max(Variable.current_size.y, Variable.min_size.y)))
-	if Variable.movelock:
+	if !Variable.movelock:
 		if Input.is_action_just_pressed("inventory"):
 			if Variable.InventoryOpen:
 				inventory_gestion.CloseInventory()

@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/pnj.gd" id="1_myooq"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="1_yh2kg"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="3_qjogr"]
-[ext_resource type="Texture2D" uid="uid://cbi4hngk2yu68" path="res://assets/images/chat_bubble_green.PNG" id="3_xfgpa"]
+[ext_resource type="Texture2D" uid="uid://cbi4hngk2yu68" path="res://assets/images/NPC's asset/chat_bubble_green.PNG" id="3_xfgpa"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="4_3fe8m"]
 [ext_resource type="Resource" uid="uid://b37m0x6oqcx8n" path="res://assets/dialog/quest_giver.tres" id="4_t7hif"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="5_xhoxe"]

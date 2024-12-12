@@ -2,6 +2,7 @@ extends Area3D
 
 @onready var progress_bar: ProgressBar = $CanvasLayer/ProgressBar
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
+@onready var csg_cylinder_3d: CSGCylinder3D = $CollisionShape3D/CSGCylinder3D
 
 @export var time_to_stay : float
 @export var quest_name : String
@@ -29,11 +30,10 @@ func area_spawn():
 	$CanvasLayer/ProgressBar.hide()
 	for i in range(len(AllDictionary.active_main_quests)):
 		if AllDictionary.active_main_quests[i] == quest_name:
-			self.visible = true
-			print(self.visible)
+			csg_cylinder_3d.show()
 			collision_shape_3d.disabled = false
 		else :
-			self.visible = false
+			csg_cylinder_3d.hide()
 			collision_shape_3d.disabled = false
 
 
