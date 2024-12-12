@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://brda0mq3lfg3a"
 path.s3tc="res://.godot/imported/bin_bag_Zombie_Atlas.png-a64b43ae3b9b8bafbd12b8358a57cd2d.s3tc.ctex"
+path.etc2="res://.godot/imported/bin_bag_Zombie_Atlas.png-a64b43ae3b9b8bafbd12b8358a57cd2d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/items/bin_bag_Zombie_Atlas.png"
-dest_files=["res://.godot/imported/bin_bag_Zombie_Atlas.png-a64b43ae3b9b8bafbd12b8358a57cd2d.s3tc.ctex"]
+dest_files=["res://.godot/imported/bin_bag_Zombie_Atlas.png-a64b43ae3b9b8bafbd12b8358a57cd2d.s3tc.ctex", "res://.godot/imported/bin_bag_Zombie_Atlas.png-a64b43ae3b9b8bafbd12b8358a57cd2d.etc2.ctex"]
 
 [params]
 

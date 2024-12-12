@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dka00eonkw083"
 path.s3tc="res://.godot/imported/objective_arrow.png-edf1e41086e705ddf0e3e58cb6307a5e.s3tc.ctex"
+path.etc2="res://.godot/imported/objective_arrow.png-edf1e41086e705ddf0e3e58cb6307a5e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/images/objective_arrow.png"
-dest_files=["res://.godot/imported/objective_arrow.png-edf1e41086e705ddf0e3e58cb6307a5e.s3tc.ctex"]
+dest_files=["res://.godot/imported/objective_arrow.png-edf1e41086e705ddf0e3e58cb6307a5e.s3tc.ctex", "res://.godot/imported/objective_arrow.png-edf1e41086e705ddf0e3e58cb6307a5e.etc2.ctex"]
 
 [params]
 
