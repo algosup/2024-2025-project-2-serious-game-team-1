@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_tk2tc")
 Documentation_name = "Climate Change"
-Documentation_explanation = "Climate change refers to long-term shifts in temperatures and weather patterns. Such shifts can be natural, due to changes in the sun’s activity or large volcanic eruptions. But since the 1800s, human activities have been the main driver of climate change, primarily due to the burning of fossil fuels like coal, oil and gas."
-Documentation_source = ["Nasa", "United Nations"]
+Documentation_explanation = "Climate change refers to long-term shifts in temperatures and weather patterns. Such shifts can be natural, due to changes in the sun’s activity or large volcanic eruptions. But since the 1800s, human activities have been the main driver of climate change, primarily due to the burning of fossil fuels like coal, oil and gas. Burning fossil fuels generates greenhouse gas emissions that act like a blanket wrapped around the Earth, trapping the sun’s heat and raising temperatures."
+Documentation_source = Array[String](["Nasa", "United Nations"])

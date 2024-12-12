@@ -12,3 +12,13 @@ class_name Item_Object
 func pick_up():
 	print(self.name + " picked up")
 	AllDictionary.check_item(self, item_ressource)
+
+func disappear():
+	$".".set_gravity_scale(0)
+	$CollisionShape3D.disabled = true
+	$CollisionShape3D/bin_bag_mesh.hide()
+
+func appear():
+	$".".set_gravity_scale(1)
+	$CollisionShape3D.disabled = false
+	$CollisionShape3D/bin_bag_mesh.show()

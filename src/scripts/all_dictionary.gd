@@ -69,7 +69,7 @@ func check_item(object, item: Item_Ressource):
 	if Item_List.has(item_id_as_string):  # Check if the dictionary contains the key
 		print("Message before signal emit")
 		add_item(item)
-		object.queue_free()
+		object.disappear()
 	else:
 		print("Item not recognized! ID: ", item_id_as_string)
 

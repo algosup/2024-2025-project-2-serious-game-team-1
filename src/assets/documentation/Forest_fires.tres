@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Documentation_Resource" load_steps=2 format=3 uid="uid://yfto1tqt8783"]
+
+[ext_resource type="Script" path="res://scripts/documentation_ressource.gd" id="1_r5q1n"]
+
+[resource]
+script = ExtResource("1_r5q1n")
+Documentation_name = "Forest Fires"
+Documentation_explanation = "Forest fires have three main causes, their are:
+- Cigarette butts: poorly extinguished cigarettes cause almost 800 forest fires every year.
+- Burning rubbish: whether dead leaves, dry branches, or debris can escape and ignite the surrounding vegetation, as happens more than 3,000 times a year.
+- Campfires: they cause more than 11,000 forest fires a year because people don't know how to contain their campfires and extinguish them properly.
+Fires were responsible for 15% of GHG emissions last year, and this figure is not expected to fall.
+"
+Documentation_source = Array[String](["Meteo Media"])

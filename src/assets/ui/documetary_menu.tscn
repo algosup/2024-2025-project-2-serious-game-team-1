@@ -1,10 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://dekxjqqux4lw3"]
+[gd_scene load_steps=13 format=3 uid="uid://dekxjqqux4lw3"]
 
 [ext_resource type="Shader" path="res://assets/ui/shaders/ui_back_shader.gdshader" id="1_eo85a"]
 [ext_resource type="Texture2D" uid="uid://c3kv450vvv41h" path="res://assets/images/documentary_background.png" id="1_i5ou0"]
 [ext_resource type="Script" path="res://scripts/documetary_menu.gd" id="1_oediq"]
 [ext_resource type="PackedScene" uid="uid://uojanrl6cmk8" path="res://assets/ui/document_panel.tscn" id="3_ljuiy"]
 [ext_resource type="Resource" uid="uid://cqi3t6lfp4hsg" path="res://assets/documentation/Climate_change.tres" id="5_kbelr"]
+[ext_resource type="Resource" uid="uid://djebfeduoqvvc" path="res://assets/documentation/greenhouse_effect.tres" id="6_0k1wb"]
+[ext_resource type="Resource" uid="uid://cpfkmwqkduult" path="res://assets/documentation/Air_quality_measurement.tres" id="7_echnp"]
+[ext_resource type="Resource" uid="uid://hm6rbb2mxemi" path="res://assets/documentation/plastic_recycling.tres" id="8_arxl7"]
+[ext_resource type="Resource" uid="uid://ce8uxnwy4mj07" path="res://assets/documentation/Beach_waste_collection.tres" id="9_hq7hj"]
+[ext_resource type="Resource" uid="uid://yfto1tqt8783" path="res://assets/documentation/Forest_fires.tres" id="10_0rn3d"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_13r38"]
 shader = ExtResource("1_eo85a")
@@ -73,18 +78,23 @@ documentation = ExtResource("5_kbelr")
 
 [node name="Greenhouse_Effect" parent="Panel/Left_page/Documents_Types_Container/VBoxContainer" instance=ExtResource("3_ljuiy")]
 layout_mode = 2
+documentation = ExtResource("6_0k1wb")
 
-[node name="Fossil_Full" parent="Panel/Left_page/Documents_Types_Container/VBoxContainer" instance=ExtResource("3_ljuiy")]
+[node name="Air_quality_measurement" parent="Panel/Left_page/Documents_Types_Container/VBoxContainer" instance=ExtResource("3_ljuiy")]
 layout_mode = 2
+documentation = ExtResource("7_echnp")
 
-[node name="Gas" parent="Panel/Left_page/Documents_Types_Container/VBoxContainer" instance=ExtResource("3_ljuiy")]
+[node name="Plastic_recycling" parent="Panel/Left_page/Documents_Types_Container/VBoxContainer" instance=ExtResource("3_ljuiy")]
 layout_mode = 2
+documentation = ExtResource("8_arxl7")
 
-[node name="Oil" parent="Panel/Left_page/Documents_Types_Container/VBoxContainer" instance=ExtResource("3_ljuiy")]
+[node name="Beach_waste_collection" parent="Panel/Left_page/Documents_Types_Container/VBoxContainer" instance=ExtResource("3_ljuiy")]
 layout_mode = 2
+documentation = ExtResource("9_hq7hj")
 
-[node name="Coal" parent="Panel/Left_page/Documents_Types_Container/VBoxContainer" instance=ExtResource("3_ljuiy")]
+[node name="Forest_fires" parent="Panel/Left_page/Documents_Types_Container/VBoxContainer" instance=ExtResource("3_ljuiy")]
 layout_mode = 2
+documentation = ExtResource("10_0rn3d")
 
 [node name="Right_page" type="VBoxContainer" parent="Panel"]
 layout_mode = 0
@@ -117,3 +127,4 @@ selection_enabled = true
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+autowrap_mode = 2

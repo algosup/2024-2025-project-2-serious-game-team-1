@@ -36,16 +36,26 @@ func shift_quest():
 		for i in range(len(AllDictionary.active_main_quests)):
 			if AllDictionary.active_main_quests[i] == quests_name:
 				print("quest found")
-				AllDictionary.completed_quests.append(AllDictionary.active_main_quests[i])
-				print("quest has been added to the array completed quests: ", AllDictionary.completed_quests)
-				AllDictionary.active_main_quests[i] = quests_next_quests.quests_name
-				print("quest has been changed: ", AllDictionary.active_main_quests[i])
-				print(AllDictionary.active_main_quests)
-	if quests_category == category.Secondary_Quest:
+				if !AllDictionary.completed_quests.has(AllDictionary.active_main_quests[i]):
+					AllDictionary.completed_quests.append(AllDictionary.active_main_quests[i])
+					print("quest has been added to the array completed quests: ", AllDictionary.completed_quests)
+				if quests_next_quests != null:
+					AllDictionary.active_main_quests[i] = quests_next_quests.quests_name
+					print("quest has been changed: ", AllDictionary.active_main_quests[i])
+					print(AllDictionary.active_main_quests)
+				else:
+					AllDictionary.active_main_quests[i] = null
+				break
+	elif quests_category == category.Secondary_Quest:
 		for i in range(len(AllDictionary.active_secondary_quests)):
 			if AllDictionary.active_secondary_quests[i] == quests_name:
-				AllDictionary.completed_quests.append(AllDictionary.active_secondary_quests[i])
-				AllDictionary.active_secondary_quests[i] = quests_next_quests.quests_name
-				print(AllDictionary.active_secondary_quests)
+				if !AllDictionary.completed_quests.has(AllDictionary.active_secondary_quests[i]):
+					AllDictionary.completed_quests.append(AllDictionary.active_secondary_quests[i])
+				if quests_next_quests != null:
+					AllDictionary.active_secondary_quests[i] = quests_next_quests.quests_name
+					print(AllDictionary.active_secondary_quests)
+				else:
+					AllDictionary.active_secondary_quests[i] = null
+			break
 	else:
 		print("categorie not found")

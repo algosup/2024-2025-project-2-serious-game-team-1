@@ -13,7 +13,7 @@ config_version=5
 config/name="The Renewable Island"
 run/main_scene="res://assets/ui/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://logo.PNG"
 
 [autoload]
 
@@ -57,6 +57,8 @@ folder_colors={
 [global_group]
 
 pnj=""
+item=""
+other=""
 
 [importer_defaults]
 

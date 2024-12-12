@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://chxfeda425gsu"]
+[gd_scene load_steps=27 format=3 uid="uid://chxfeda425gsu"]
 
 [ext_resource type="PackedScene" uid="uid://lrfexx8s0e13" path="res://assets/map/map.tscn" id="1_7b4si"]
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_hjvrf"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dungkr3duinky" path="res://assets/models/martine.tscn" id="12_37ul3"]
 [ext_resource type="PackedScene" uid="uid://40vvrysqespg" path="res://assets/ui/quest_menu.tscn" id="12_unwyq"]
 [ext_resource type="Shader" path="res://assets/ui/shaders/minimap.gdshader" id="12_ycxjg"]
+[ext_resource type="PackedScene" uid="uid://cr25pnfa6ioqt" path="res://assets/models/garbage_can.tscn" id="13_5x3xm"]
 [ext_resource type="PackedScene" uid="uid://b31wjwnn4gip3" path="res://assets/ui/option_menu.tscn" id="16_goewa"]
 [ext_resource type="Script" path="res://scripts/all_dictionary.gd" id="16_oopfl"]
 [ext_resource type="PackedScene" uid="uid://dfpxasv5v80bs" path="res://assets/ui/quests_panel.tscn" id="16_qnyfx"]
@@ -115,6 +116,12 @@ prompt_message = "Interact"
 [node name="bin bag" parent="Gameplay/Object" instance=ExtResource("9_0mf82")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 329.329, 36.6179, 566.489)
 item_ressource = ExtResource("7_p0csr")
+
+[node name="Garbage_can" parent="Gameplay/Object" instance=ExtResource("13_5x3xm")]
+transform = Transform3D(-0.963826, 2.3927e-05, -0.266532, 0.000106552, 1, -0.000295538, 0.266532, -0.000313247, -0.963826, 323.36, 36.7838, 762.273)
+
+[node name="Garbage_can2" parent="Gameplay/Object" instance=ExtResource("13_5x3xm")]
+transform = Transform3D(-0.970397, 3.20205e-05, -0.241516, 0.000106552, 0.999999, -0.000295538, 0.241516, -0.000312523, -0.970397, 306.092, 36.7838, 767.077)
 
 [node name="Quest_Assets" type="Node" parent="Gameplay"]
 

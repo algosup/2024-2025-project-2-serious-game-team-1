@@ -11,5 +11,4 @@ func _on_button_pressed():
 	documentary_menu.set_documentation(documentation)
 	
 func _ready():
-	#documentation_label.text = documentation.Documentation_name
-	pass 
+	documentation_label.text = documentation.Documentation_name 

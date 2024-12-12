@@ -19,4 +19,5 @@ func _process(_delta):
 			quests_panel.set_quests()
 	else:
 		quest_label.text = "Empty Quest Slot"
+		goal_label.text = "Goal : Unknown"
 		

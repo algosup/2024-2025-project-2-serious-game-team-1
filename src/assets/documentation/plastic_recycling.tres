@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Documentation_Resource" load_steps=2 format=3 uid="uid://hm6rbb2mxemi"]
+
+[ext_resource type="Script" path="res://scripts/documentation_ressource.gd" id="1_frhdu"]
+
+[resource]
+script = ExtResource("1_frhdu")
+Documentation_name = "Plastic recycling"
+Documentation_explanation = "Today, we find more and more products with packaging made from recycled products. Even so, the recycling rate for household plastics is only 21%. And yet, the manufacture of plastic from recycled plastic emits 88% fewer GHGs than the production of plastic from primary materials. So it's vital to recycle this waste."
+Documentation_source = Array[String](["Reseau Action Climat"])

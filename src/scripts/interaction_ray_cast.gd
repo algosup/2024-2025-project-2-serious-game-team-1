@@ -18,15 +18,17 @@ func _physics_process(_delta: float) -> void:
 					# Add item to inventory if necessary
 					collider.interact(owner)
 					collider.pick_up()
-				if collider.is_in_group("pnj") and collider is Pnj:
+				elif collider.is_in_group("pnj") and collider is Pnj:
 					if DialogManager.dialog(collider):
 						print("Entered dialog with " + str(collider))
 					collider.interact(owner)
 					
-				if collider.is_in_group("waste"):
+				elif collider.is_in_group("waste"):
 					print("Waste object detected.")  # Debug: Waste object is detected
 					collider.cleanup()  # Call cleanup if Waste
 					prompt.text = collider.prompt_message  # Show the prompt message
+				elif collider.is_in_group("other"):
+					collider.action()
 		else:
 			prompt.text = "    "
 	else:
