@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://doim28rbyhr21"
 path.s3tc="res://.godot/imported/mud_normal_roughness.png-2096bb33a3b81648d379be7abb9eab40.s3tc.ctex"
+path.etc2="res://.godot/imported/mud_normal_roughness.png-2096bb33a3b81648d379be7abb9eab40.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/texture/mud_normal_roughness.png"
-dest_files=["res://.godot/imported/mud_normal_roughness.png-2096bb33a3b81648d379be7abb9eab40.s3tc.ctex"]
+dest_files=["res://.godot/imported/mud_normal_roughness.png-2096bb33a3b81648d379be7abb9eab40.s3tc.ctex", "res://.godot/imported/mud_normal_roughness.png-2096bb33a3b81648d379be7abb9eab40.etc2.ctex"]
 
 [params]
 
