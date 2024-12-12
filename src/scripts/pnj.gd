@@ -50,6 +50,7 @@ func _on_dialogue_box_dialogue_signal(value):
 						print(quest.quests_name + "")
 						print("Quests Added")
 						print("Quests Active Liste:", AllDictionary.active_main_quests)
+						AllDictionary.spawn_area() 
 						break
 				else:
 					print("You have already this quest") 

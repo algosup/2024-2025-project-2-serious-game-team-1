@@ -32,8 +32,8 @@ func _ready() -> void:
 	#mr_mayor.rotation = Vector3(0, -15.2, 0)
 	mr_mayor.dialogue_box.start_id = "Mr_Mayor1"
 	mr_mayor.quest_name = "Get data"
-	#Variable.movelock = true
-	#Variable.cameralock = true
+	Variable.movelock = true
+	Variable.cameralock = true
 	option_menu.in_menu = false
 	pause_menu.ClosePlayMenu()
 	get_tree().paused = false

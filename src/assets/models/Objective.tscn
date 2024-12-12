@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bpi826wg0fa6b"]
 
-[ext_resource type="Texture2D" uid="uid://dka00eonkw083" path="res://assets/images/objective_arrow.png" id="1_f07p4"]
+[ext_resource type="Texture2D" uid="uid://dka00eonkw083" path="res://assets/images/quest/objective_arrow.png" id="1_f07p4"]
 [ext_resource type="Script" path="res://scripts/objective.gd" id="1_y51co"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_0dy5b"]

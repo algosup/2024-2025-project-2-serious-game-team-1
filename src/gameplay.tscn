@@ -181,7 +181,7 @@ unique_name_in_owner = true
 visible = false
 z_index = 1
 
-[node name="Documetary_menu" parent="Menus" instance=ExtResource("19_tpto7")]
+[node name="Documentary_menu" parent="Menus" instance=ExtResource("19_tpto7")]
 unique_name_in_owner = true
 visible = false
 
@@ -191,7 +191,6 @@ visible = false
 script = ExtResource("16_oopfl")
 
 [node name="Introduction_Animation" parent="." instance=ExtResource("20_oxljo")]
-visible = false
 
 [connection signal="ready" from="Manager/Dictionnary Manager" to="Menus/Inventory_Gestion" method="_on_dictionnary_manager_ready"]
 [connection signal="cinematic_done" from="Introduction_Animation" to="." method="_on_introduction_animation_cinematic_done"]

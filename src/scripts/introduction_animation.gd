@@ -24,6 +24,7 @@ func _on_intro_waking_finished() -> void:
 	$AnimationPlayer.play("TRANSITION")
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	$CanvasLayer.hide()
 	emit_signal("cinematic_done")
 
 
