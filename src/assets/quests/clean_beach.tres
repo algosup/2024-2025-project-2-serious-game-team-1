@@ -17,4 +17,4 @@ quests_goal_objective = 20
 quests_description = "Go along the beach to collect the 20 pieces of rubbish."
 quests_next_quests = ExtResource("1_f281x")
 quest_state = 0
-documentation = Array[String](["beach_waste_collection"])
+quest_documentation = Array[String]([])
