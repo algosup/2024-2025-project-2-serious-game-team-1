@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bo7bgv6sxilio"
 path.s3tc="res://.godot/imported/PolyPackBoats.png-74d1356198d790d1cf9bb9509b709626.s3tc.ctex"
+path.etc2="res://.godot/imported/PolyPackBoats.png-74d1356198d790d1cf9bb9509b709626.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/designs/Boats/Texture/PolyPackBoats.png"
-dest_files=["res://.godot/imported/PolyPackBoats.png-74d1356198d790d1cf9bb9509b709626.s3tc.ctex"]
+dest_files=["res://.godot/imported/PolyPackBoats.png-74d1356198d790d1cf9bb9509b709626.s3tc.ctex", "res://.godot/imported/PolyPackBoats.png-74d1356198d790d1cf9bb9509b709626.etc2.ctex"]
 
 [params]
 
