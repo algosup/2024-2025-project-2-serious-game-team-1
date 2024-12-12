@@ -58,7 +58,7 @@ process_mode = 1
 [node name="Player" parent="Gameplay" instance=ExtResource("8_735e1")]
 unique_name_in_owner = true
 process_mode = 1
-transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941, 730.396, 155.151, 595.711)
+transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941, 409.422, 56.432, 612.27)
 
 [node name="Player_UI" parent="Gameplay/Player" instance=ExtResource("9_61cme")]
 unique_name_in_owner = true
