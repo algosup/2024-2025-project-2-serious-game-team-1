@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://d1uhb55q7ye7b"]
+[gd_scene load_steps=10 format=3 uid="uid://d1uhb55q7ye7b"]
 
 [ext_resource type="Script" path="res://scripts/introduction_animation.gd" id="1_oog01"]
 [ext_resource type="VideoStream" path="res://assets/ui/PLayer_come_to_town.ogv" id="2_02amn"]
+[ext_resource type="VideoStream" path="res://assets/ui/Game-introduction.ogv" id="3_ww1tn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g5ndb"]
 bg_color = Color(0, 0, 0, 1)
@@ -42,6 +43,24 @@ _data = {
 "TRANSITION": SubResource("Animation_w40t6")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t6l06"]
+bg_color = Color(1, 1, 1, 0.188235)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x53af"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="Introduction_Animation" type="CanvasLayer"]
 layer = 8
 script = ExtResource("1_oog01")
@@ -71,8 +90,12 @@ stream = ExtResource("2_02amn")
 expand = true
 
 [node name="Intro_presentation" type="VideoStreamPlayer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("3_ww1tn")
 expand = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -83,7 +106,26 @@ libraries = {
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 9
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -181.0
+offset_top = 29.0
+offset_right = -31.0
+offset_bottom = 52.0
+grow_horizontal = 0
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_t6l06")
+theme_override_styles/normal = SubResource("StyleBoxFlat_x53af")
+text = "press here to skip"
+
 [connection signal="finished" from="Intro_waking" to="." method="_on_intro_waking_finished"]
 [connection signal="finished" from="Intro_presentation" to="." method="_on_intro_presentation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

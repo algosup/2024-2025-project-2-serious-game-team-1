@@ -4,16 +4,15 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://feb0fhainvvx"
 path.s3tc="res://.godot/imported/palette2.png-23b92f3102fb4689ba960ae597c32f3f.s3tc.ctex"
-path.etc2="res://.godot/imported/palette2.png-23b92f3102fb4689ba960ae597c32f3f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/models/pnjs/textures/palette2.png"
-dest_files=["res://.godot/imported/palette2.png-23b92f3102fb4689ba960ae597c32f3f.s3tc.ctex", "res://.godot/imported/palette2.png-23b92f3102fb4689ba960ae597c32f3f.etc2.ctex"]
+dest_files=["res://.godot/imported/palette2.png-23b92f3102fb4689ba960ae597c32f3f.s3tc.ctex"]
 
 [params]
 

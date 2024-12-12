@@ -4,16 +4,15 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8lvremwf1qn4"
 path.s3tc="res://.godot/imported/forest_dirt_normal_roughness.png-85b37d7bc971e939b361c0bb86e9ff62.s3tc.ctex"
-path.etc2="res://.godot/imported/forest_dirt_normal_roughness.png-85b37d7bc971e939b361c0bb86e9ff62.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/texture/forest_dirt_normal_roughness.png"
-dest_files=["res://.godot/imported/forest_dirt_normal_roughness.png-85b37d7bc971e939b361c0bb86e9ff62.s3tc.ctex", "res://.godot/imported/forest_dirt_normal_roughness.png-85b37d7bc971e939b361c0bb86e9ff62.etc2.ctex"]
+dest_files=["res://.godot/imported/forest_dirt_normal_roughness.png-85b37d7bc971e939b361c0bb86e9ff62.s3tc.ctex"]
 
 [params]
 

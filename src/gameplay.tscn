@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://chxfeda425gsu"]
+[gd_scene load_steps=28 format=3 uid="uid://chxfeda425gsu"]
 
 [ext_resource type="PackedScene" uid="uid://lrfexx8s0e13" path="res://assets/map/map.tscn" id="1_7b4si"]
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_hjvrf"]
@@ -16,7 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://dungkr3duinky" path="res://assets/models/martine.tscn" id="12_37ul3"]
 [ext_resource type="PackedScene" uid="uid://40vvrysqespg" path="res://assets/ui/quest_menu.tscn" id="12_unwyq"]
 [ext_resource type="Shader" path="res://assets/ui/shaders/minimap.gdshader" id="12_ycxjg"]
-[ext_resource type="PackedScene" uid="uid://cr25pnfa6ioqt" path="res://assets/models/garbage_can.tscn" id="13_5x3xm"]
+[ext_resource type="PackedScene" uid="uid://bpi826wg0fa6b" path="res://assets/models/Objective.tscn" id="14_i8nfx"]
+[ext_resource type="Resource" uid="uid://c463r6lgbn0i8" path="res://assets/quests/get_data.tres" id="15_v5cq5"]
 [ext_resource type="PackedScene" uid="uid://b31wjwnn4gip3" path="res://assets/ui/option_menu.tscn" id="16_goewa"]
 [ext_resource type="Script" path="res://scripts/all_dictionary.gd" id="16_oopfl"]
 [ext_resource type="PackedScene" uid="uid://dfpxasv5v80bs" path="res://assets/ui/quests_panel.tscn" id="16_qnyfx"]
@@ -104,6 +105,7 @@ transform = Transform3D(-0.23911, 0, 0.970993, 0, 1, 0, -0.970993, 0, -0.23911, 
 [node name="Mr_Mayor" parent="Gameplay/Pnj" instance=ExtResource("4_2lod7")]
 transform = Transform3D(0.897289, 0, -0.441443, 0, 1, 0, 0.441443, 0, 0.897289, 412.907, 45.0163, 616.121)
 Pnj_name = "Mr Mayor"
+quest_name = "Get data"
 prompt_message = "Talk to the mayor"
 
 [node name="Roger" parent="Gameplay/Pnj" instance=ExtResource("6_52vwr")]
@@ -117,17 +119,31 @@ prompt_message = "Interact"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 329.329, 36.6179, 566.489)
 item_ressource = ExtResource("7_p0csr")
 
-[node name="Garbage_can" parent="Gameplay/Object" instance=ExtResource("13_5x3xm")]
-transform = Transform3D(-0.963826, 2.3927e-05, -0.266532, 0.000106552, 1, -0.000295538, 0.266532, -0.000313247, -0.963826, 323.36, 36.7838, 762.273)
-
-[node name="Garbage_can2" parent="Gameplay/Object" instance=ExtResource("13_5x3xm")]
-transform = Transform3D(-0.970397, 3.20205e-05, -0.241516, 0.000106552, 0.999999, -0.000295538, 0.241516, -0.000312523, -0.970397, 306.092, 36.7838, 767.077)
-
 [node name="Quest_Assets" type="Node" parent="Gameplay"]
+
+[node name="Objective_Areas" type="Node" parent="Gameplay/Quest_Assets"]
+
+[node name="tutorial_objective_area1" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("14_i8nfx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 408.019, 44.4598, 569.018)
+time_to_stay = 2.0
+quest_name = "tutorial"
+quest = ExtResource("15_v5cq5")
+
+[node name="tutorial_objective_area2" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("14_i8nfx")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 323.054, 41.9021, 748.177)
+time_to_stay = 2.0
+quest_name = "tutorial"
+quest = ExtResource("15_v5cq5")
+
+[node name="tutorial_objective_area3" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("14_i8nfx")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 155.026, 22.4182, 787.992)
+time_to_stay = 2.0
+quest_name = "tutorial"
+quest = ExtResource("15_v5cq5")
 
 [node name="trash area" parent="Gameplay/Quest_Assets" instance=ExtResource("7_s8y11")]
 process_mode = 1
-transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 309.761, 35.1006, 562.977)
+transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 309.761, 36, 562.977)
 spawn_area_size = Vector3(10, 0.1, 10)
 
 [node name="Menus" type="Node" parent="."]
@@ -171,7 +187,6 @@ visible = false
 script = ExtResource("16_oopfl")
 
 [node name="Introduction_Animation" parent="." instance=ExtResource("20_oxljo")]
-visible = false
 
 [connection signal="ready" from="Manager/Dictionnary Manager" to="Menus/Inventory_Gestion" method="_on_dictionnary_manager_ready"]
 [connection signal="cinematic_done" from="Introduction_Animation" to="." method="_on_introduction_animation_cinematic_done"]

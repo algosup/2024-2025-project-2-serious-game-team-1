@@ -4,16 +4,15 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkcfhpmwihv3p"
 path.s3tc="res://.godot/imported/asphalt_albedo_height.png-7da2e511c40defed4e5668793eed7d9c.s3tc.ctex"
-path.etc2="res://.godot/imported/asphalt_albedo_height.png-7da2e511c40defed4e5668793eed7d9c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/texture/asphalt_albedo_height.png"
-dest_files=["res://.godot/imported/asphalt_albedo_height.png-7da2e511c40defed4e5668793eed7d9c.s3tc.ctex", "res://.godot/imported/asphalt_albedo_height.png-7da2e511c40defed4e5668793eed7d9c.etc2.ctex"]
+dest_files=["res://.godot/imported/asphalt_albedo_height.png-7da2e511c40defed4e5668793eed7d9c.s3tc.ctex"]
 
 [params]
 

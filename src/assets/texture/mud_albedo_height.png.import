@@ -4,16 +4,15 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://chjqyx2njb0r0"
 path.s3tc="res://.godot/imported/mud_albedo_height.png-49412055e74b7dbd495986178c4ec4cb.s3tc.ctex"
-path.etc2="res://.godot/imported/mud_albedo_height.png-49412055e74b7dbd495986178c4ec4cb.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/texture/mud_albedo_height.png"
-dest_files=["res://.godot/imported/mud_albedo_height.png-49412055e74b7dbd495986178c4ec4cb.s3tc.ctex", "res://.godot/imported/mud_albedo_height.png-49412055e74b7dbd495986178c4ec4cb.etc2.ctex"]
+dest_files=["res://.godot/imported/mud_albedo_height.png-49412055e74b7dbd495986178c4ec4cb.s3tc.ctex"]
 
 [params]
 
