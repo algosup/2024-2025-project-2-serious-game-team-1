@@ -82,7 +82,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="Gameplay/MiniMap/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(186, 184)
+size = Vector2i(2, 2)
 render_target_update_mode = 4
 script = ExtResource("9_xy0vo")
 
@@ -127,7 +127,8 @@ transform = Transform3D(-0.970397, 3.20205e-05, -0.241516, 0.000106552, 0.999999
 
 [node name="trash area" parent="Gameplay/Quest_Assets" instance=ExtResource("7_s8y11")]
 process_mode = 1
-transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 316.965, 35.2173, 562.977)
+transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 309.761, 35.1006, 562.977)
+spawn_area_size = Vector3(10, 0.1, 10)
 
 [node name="Menus" type="Node" parent="."]
 
@@ -171,4 +172,4 @@ script = ExtResource("16_oopfl")
 visible = false
 
 [connection signal="ready" from="Manager/Dictionnary Manager" to="Menus/Inventory_Gestion" method="_on_dictionnary_manager_ready"]
-[connection signal="animation_end" from="Introduction_Animation" to="." method="_on_introduction_animation_animation_end"]
+[connection signal="cinematic_done" from="Introduction_Animation" to="." method="_on_introduction_animation_cinematic_done"]

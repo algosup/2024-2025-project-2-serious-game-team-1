@@ -14,9 +14,11 @@ func OpenDoc() -> void:
 	$".".show()
 	Variable.movelock = true
 	Variable.cameralock = true
+	
 
 func CloseDoc():
 	Variable.DocumentaryMenuOpen = !Variable.DocumentaryMenuOpen
 	$".".hide()
 	Variable.movelock = false
 	Variable.cameralock = false
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

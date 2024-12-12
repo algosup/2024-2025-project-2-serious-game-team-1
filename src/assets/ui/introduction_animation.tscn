@@ -1,173 +1,45 @@
-[gd_scene load_steps=9 format=3 uid="uid://d1uhb55q7ye7b"]
+[gd_scene load_steps=7 format=3 uid="uid://d1uhb55q7ye7b"]
 
-[ext_resource type="Texture2D" uid="uid://db7kvha6couc3" path="res://assets/images/introduction_images/aristote.webp" id="1_o0jvl"]
 [ext_resource type="Script" path="res://scripts/introduction_animation.gd" id="1_oog01"]
-[ext_resource type="Texture2D" uid="uid://dxr84bjywj4m6" path="res://assets/images/WaintingBackground.jpg" id="2_defe2"]
-[ext_resource type="Texture2D" uid="uid://rw1sqy3n053w" path="res://assets/images/introduction_images/Industrial_era.jpeg" id="3_7iltk"]
+[ext_resource type="VideoStream" path="res://assets/ui/PLayer_come_to_town.ogv" id="2_02amn"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fgthy"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g5ndb"]
 bg_color = Color(0, 0, 0, 1)
 
-[sub_resource type="Animation" id="Animation_pgben"]
+[sub_resource type="Animation" id="Animation_o8a11"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Panel/Aristote:visible")
+tracks/0/path = NodePath("Panel:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Panel/Nature:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Panel/Polution:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Panel/Bottom_Label:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Panel/Top_Label:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Vector2(0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_04u83"]
-resource_name = "introduction"
-length = 45.5
+[sub_resource type="Animation" id="Animation_w40t6"]
+resource_name = "TRANSITION"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Panel/Aristote:visible")
+tracks/0/path = NodePath("Panel:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5, 8),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [false, true, false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Panel/Nature:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 9, 12.0667),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [false, true, false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Panel/Polution:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 22.6, 26.9333),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [false, true, false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Panel/Bottom_Label:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1.5, 8, 9, 12.0667, 22.6, 26.9333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [false, true, false, true, false, true, false]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Panel/Top_Label:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 13.9333, 21.1, 29.0333, 36.5333, 38),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [false, true, false, true, false, true]
-}
-tracks/5/type = "method"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath(".")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(1.3, 8.1, 12.5667, 21.4333, 26.6333, 37.0667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"values": [{
-"args": [&"sequence_change"],
-"method": &"emit_signal"
-}, {
-"args": [&"sequence_change"],
-"method": &"emit_signal"
-}, {
-"args": [&"sequence_change"],
-"method": &"emit_signal"
-}, {
-"args": [&"sequence_change"],
-"method": &"emit_signal"
-}, {
-"args": [&"sequence_change"],
-"method": &"emit_signal"
-}, {
-"args": [&"sequence_change"],
-"method": &"emit_signal"
-}]
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1212, 0)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_3hhtt"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o7b42"]
 _data = {
-"RESET": SubResource("Animation_pgben"),
-"introduction": SubResource("Animation_04u83")
+"RESET": SubResource("Animation_o8a11"),
+"TRANSITION": SubResource("Animation_w40t6")
 }
 
 [node name="Introduction_Animation" type="CanvasLayer"]
@@ -180,89 +52,38 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_fgthy")
+theme_override_styles/panel = SubResource("StyleBoxFlat_g5ndb")
 
-[node name="Aristote" type="TextureRect" parent="Panel"]
-visible = false
-layout_mode = 1
-anchors_preset = 5
+[node name="Intro_waking" type="VideoStreamPlayer" parent="."]
+anchors_preset = 8
 anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -156.0
-offset_top = 35.0
-offset_right = 156.0
-offset_bottom = 347.0
-grow_horizontal = 2
-texture = ExtResource("1_o0jvl")
-
-[node name="Nature" type="TextureRect" parent="Panel"]
-visible = false
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -244.0
-offset_top = 55.0
-offset_right = 456.0
-offset_bottom = 455.0
-grow_horizontal = 2
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("2_defe2")
-
-[node name="Polution" type="TextureRect" parent="Panel"]
-visible = false
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -120.5
-offset_top = 46.0
-offset_right = 120.5
-offset_bottom = 344.0
-grow_horizontal = 2
-texture = ExtResource("3_7iltk")
-
-[node name="Bottom_Label" type="Label" parent="Panel"]
-visible = false
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -500.0
-offset_top = -182.0
-offset_right = 500.0
-offset_bottom = -33.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 20
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-
-[node name="Top_Label" type="Label" parent="Panel"]
-visible = false
-layout_mode = 1
-anchors_preset = 14
 anchor_top = 0.5
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 34.0
-offset_top = -81.0
-offset_right = -39.0
-offset_bottom = 98.0
+offset_left = -871.0
+offset_top = -505.0
+offset_right = 1049.0
+offset_bottom = 583.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 20
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
+scale = Vector2(0.9, 0.9)
+stream = ExtResource("2_02amn")
+expand = true
+
+[node name="Intro_presentation" type="VideoStreamPlayer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+expand = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_3hhtt")
+"": SubResource("AnimationLibrary_o7b42")
 }
 
-[connection signal="sequence_change" from="." to="." method="_on_sequence_change"]
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="finished" from="Intro_waking" to="." method="_on_intro_waking_finished"]
+[connection signal="finished" from="Intro_presentation" to="." method="_on_intro_presentation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
