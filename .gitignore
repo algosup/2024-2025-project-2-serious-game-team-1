@@ -6,3 +6,46 @@
 wakatime*
 .DS_Store
 ./src/.import/
+# System files
+.DS_Store
+Thumbs.db
+
+# Godot
+.import/
+*.godot/imported/
+*.godot/
+*/android/
+*.import
+
+# User-specific configuration files
+editor_settings-*.json
+config.cfg
+export_presets.cfg
+
+# Backup and temporary files
+*.tmp
+*.log
+*.bak
+*.swap
+*.old
+*.orig
+
+# Exported binaries or builds
+/bin/
+*.exe
+*.apk
+*.ipa
+*.zip
+*.tar.gz
+*.pck
+
+# Script cache
+.gdignore
+*.mono
+
+# VS Code
+.vscode/
+
+
+# For Windows users
+desktop.ini
