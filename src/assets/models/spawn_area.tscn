@@ -6,4 +6,4 @@
 [node name="spawn area" type="Node3D"]
 script = ExtResource("1_rgxtp")
 object_scene = ExtResource("2_o4bgs")
-spawn_area_size = Vector3(10, 1, 10)
+spawn_area_size = Vector3(80, 1, 130)
