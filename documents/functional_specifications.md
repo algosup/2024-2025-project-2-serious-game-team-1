@@ -53,8 +53,8 @@
 | Author | Grégory PAGNOUX |
 | - | - |
 | Creation date | 11/07/2024 |
-| Last Modification | 11/22/2024 |
-| Reviewer(s) | Léna DE GERMAIN / Robin GOUMY |
+| Last Modification | 12/02/2024 |
+| Reviewer(s) | Léna DE GERMAIN / Mathis LEBEL / Robin GOUMY |
 | Last review | 11/22/2024 |
 
 ### B. History
@@ -68,16 +68,32 @@
 | 1.5 | Grégory PAGNOUX | 11/20/2024 | flow charts for [Game Mechanic](#a-game-mechanic), <br> [Assests](#a-assets) |
 | 1.6 | Grégory PAGNOUX | 11/21/2024 | [Interface](#b-interface), <br> finish [Assets](#a-assets) |
 | 2.1 | Grégory PAGNOUX | 11/22/2024 | corrections of the first review, corrections of the second review |
+| 2.2 | Grégory PAGNOUX | 12/02/2024 | add three links in [Documents](#c-documents) |
 
 ### C. Documents
 
 During the brainstorming phase, we split researches between us and the table with results is below:
 
 - [Research table](https://docs.google.com/spreadsheets/d/18TqcBMzp2aJckCZGYooOq7OQtThMyXTudi9O38hkBC4/edit?usp=sharing)
+- [research annexes](research_annexes.pdf)
 
 You can find the One-sheet document below:
 
 - [One-sheet](https://docs.google.com/document/d/153vc26EhVamXTxfOmKHst1HX5ckaABPQhl9MGn1WX2Y/edit?tab=t.0)
+
+To help our software engineers, we have listed the quests clearly in the table below:
+
+- [Quests table](https://docs.google.com/spreadsheets/d/1aNKfzjWG7-oFY26XZnM16NuC8979EIsoUh7moqo3DYs/edit?gid=0#gid=0)
+
+The game script is written in the document below:
+
+- [Game script](https://docs.google.com/document/d/10kav_JRLYlZFFNsdD1kTdnwY3XdXzr1ps8o2i5b38b8/edit?tab=t.0)
+
+---
+
+You can find all meetings reports below:
+
+- [Meeting report 12/06/2024](meeting_report_12_06_2024.pdf)
 
 ## II. Project Overview
 
