@@ -10,7 +10,7 @@ size = Vector3(1, 1, 3.16141)
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 script = ExtResource("1_82vgb")
 waste_name = "plastic wastes"
-prompt_message = "clean the plastic"
+prompt_message = "Pick up the plastic bottle"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 0, 0, 0)
