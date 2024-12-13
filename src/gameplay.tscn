@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dungkr3duinky" path="res://assets/models/martine.tscn" id="12_37ul3"]
 [ext_resource type="PackedScene" uid="uid://40vvrysqespg" path="res://assets/ui/quest_menu.tscn" id="12_unwyq"]
 [ext_resource type="Shader" path="res://assets/ui/shaders/minimap.gdshader" id="12_ycxjg"]
-[ext_resource type="PackedScene" path="res://assets/models/garbage_can.tscn" id="13_5x3xm"]
+[ext_resource type="PackedScene" uid="uid://cr25pnfa6ioqt" path="res://assets/models/garbage_can.tscn" id="13_5x3xm"]
 [ext_resource type="PackedScene" uid="uid://bpi826wg0fa6b" path="res://assets/models/Objective.tscn" id="15_h7f3s"]
 [ext_resource type="PackedScene" uid="uid://b31wjwnn4gip3" path="res://assets/ui/option_menu.tscn" id="16_goewa"]
 [ext_resource type="Resource" uid="uid://dx0okth0b6dxk" path="res://assets/quests/get_data.tres" id="16_jgd18"]
@@ -135,19 +135,19 @@ spawn_area_size = Vector3(10, 0.1, 10)
 [node name="Objective_Areas" type="Node" parent="Gameplay/Quest_Assets"]
 
 [node name="tutorial_objective_area1" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 408, 44.46, 569)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 408, 41.7134, 569)
 time_to_stay = 3.0
 quest_name = "Get data"
 quest = ExtResource("16_jgd18")
 
 [node name="tutorial_objective_area2" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
-transform = Transform3D(-4.37114e-08, -4.71176e-16, -1, -0.0377774, 0.999286, 1.6513e-09, 0.999286, 0.0377774, -4.36802e-08, 316.83, 36.052, 755.216)
+transform = Transform3D(-0.000129274, 0.0034184, -0.999994, -0.0650372, 0.997877, 0.00341957, 0.997883, 0.0650373, 9.33233e-05, 316.83, 33.3521, 755.216)
 time_to_stay = 3.0
-quest_name = "Get data"
+quest_name = "Get zone"
 quest = ExtResource("16_jgd18")
 
 [node name="tutorial_objective_area3" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 154.963, 22.6945, 787.98)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 150.389, 18.8152, 789.99)
 time_to_stay = 3.0
 quest_name = "Get data"
 quest = ExtResource("16_jgd18")

@@ -20,33 +20,41 @@ func show_zone():
 	csg_cylinder_3d.show()
 	collision_shape_3d.disabled = false
 
+func show_progress_bar():
+	print("Show progress bar")
+	canvas_layer.visible = true
+
+func hide_progress_bar():
+	print("hide progress bar")
+	canvas_layer.visible = false
+
+
 func _process(delta: float) -> void:
 	if is_character_in_area:
 		timer += delta
 		progress_bar.value = timer
+		progress_bar.max_value = time_to_stay
 		if timer >= time_to_stay:
 			quest.add_counter()
 			queue_free()
 			
 func area_spawn():
-	canvas_layer.hide()
 	for i in range(len(AllDictionary.active_main_quests)):
 		if AllDictionary.active_main_quests[i] == quest_name:
-			csg_cylinder_3d.show()
-			collision_shape_3d.disabled = false
+			hide_zone()
 		else :
-			csg_cylinder_3d.hide()
-			collision_shape_3d.disabled = true
+			show_zone()
+	hide_progress_bar()
 
 func _on_body_entered(body: Node) -> void:
-	canvas_layer.show()
 	if body is CharacterBody3D:
 		is_character_in_area = true
 		timer = 0.0 
+		show_progress_bar()
 
 
 func _on_body_exited(body: Node3D) -> void:
-	canvas_layer.hide()
 	if body is CharacterBody3D:
 		is_character_in_area = false
 		timer = 0.0
+		hide_progress_bar()

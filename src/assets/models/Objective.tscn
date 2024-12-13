@@ -7,7 +7,7 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_12i6y"]
 transparency = 1
-albedo_color = Color(0, 1, 0, 0.113725)
+albedo_color = Color(0, 1, 0, 0.160784)
 refraction_scale = -1.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3bypq"]
@@ -26,7 +26,7 @@ corner_radius_bottom_left = 30
 script = ExtResource("1_y51co")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 0, 0, 0)
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, 0, 0)
 shape = SubResource("CylinderShape3D_0dy5b")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="CollisionShape3D"]
@@ -41,6 +41,7 @@ layers = 2
 texture = ExtResource("1_f07p4")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
 anchors_preset = 8
