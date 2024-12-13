@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Quests_Resources" load_steps=2 format=3 uid="uid://c87omku8pxcjw"]
+
+[ext_resource type="Script" path="res://scripts/quests_resource.gd" id="1_b0mdy"]
+
+[resource]
+script = ExtResource("1_b0mdy")
+quests_name = "A deserved Meal"
+quests_category = 0
+quests_giver = "Martine"
+quests_ecopoint = 0
+quests_zone = "Farm"
+quests_goal_label_part1 = "Talk to Martine"
+quests_goal_label_part2 = ""
+quests_goal_counter = 0
+quests_goal_objective = 1
+quests_description = "Thanks to you, Martine can finally use solar energy. Go claim your delicious reward !"
+quest_state = 0
+quest_documentation = Array[String](["beach_waste_collection"])

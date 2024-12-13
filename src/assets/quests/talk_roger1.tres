@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Quests_Resources" load_steps=2 format=3 uid="uid://r1ybhcb2mx5n"]
+
+[ext_resource type="Script" path="res://scripts/quests_resource.gd" id="2_aurlo"]
+
+[resource]
+script = ExtResource("2_aurlo")
+quests_name = "The Legend part 1"
+quests_category = 0
+quests_giver = "Mr Mayor"
+quests_ecopoint = 0
+quests_zone = "Beach"
+quests_goal_label_part1 = "Talk to Roger "
+quests_goal_label_part2 = ""
+quests_goal_counter = 0
+quests_goal_objective = 1
+quests_description = "To get more information about the legend, Mr Mayor asked you to talk to Roger."
+quest_state = 0
+quest_documentation = Array[String](["beach_waste_collection"])

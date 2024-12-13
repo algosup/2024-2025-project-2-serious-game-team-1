@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Quests_Resources" load_steps=2 format=3 uid="uid://q5i2rxt8envi"]
+[gd_resource type="Resource" script_class="Quests_Resources" load_steps=3 format=3 uid="uid://q5i2rxt8envi"]
 
+[ext_resource type="Resource" uid="uid://ch1eyxg3gxal2" path="res://assets/quests/talk_roger2.tres" id="1_led62"]
 [ext_resource type="Script" path="res://scripts/quests_resource.gd" id="1_qqc4w"]
 
 [resource]
@@ -14,5 +15,6 @@ quests_goal_label_part2 = ""
 quests_goal_counter = 0
 quests_goal_objective = 0
 quests_description = "Now that you've collected all the rubbish, head to the recycling plant to drop off your bin bag and recycle the plastic"
+quests_next_quests = ExtResource("1_led62")
 quest_state = 0
 quest_documentation = Array[String](["Plastic recycling", "Recycling vegetative waste"])

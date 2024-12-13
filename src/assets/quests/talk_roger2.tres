@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Quests_Resources" load_steps=2 format=3 uid="uid://ch1eyxg3gxal2"]
+
+[ext_resource type="Script" path="res://scripts/quests_resource.gd" id="1_dm7jn"]
+
+[resource]
+script = ExtResource("1_dm7jn")
+quests_name = "The Legend part 1"
+quests_category = 0
+quests_giver = "Roger"
+quests_ecopoint = 0
+quests_zone = "Beach"
+quests_goal_label_part1 = "Talk to Roger "
+quests_goal_label_part2 = ""
+quests_goal_counter = 0
+quests_goal_objective = 1
+quests_description = "Now that you've cleaned up the beach, it's time to ask Roger about the legend."
+quest_state = 0
+quest_documentation = Array[String](["beach_waste_collection"])

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Quests_Resources" load_steps=2 format=3 uid="uid://di1rncippqert"]
+
+[ext_resource type="Script" path="res://scripts/quests_resource.gd" id="2_qd6nv"]
+
+[resource]
+script = ExtResource("2_qd6nv")
+quests_name = "The legend part 3"
+quests_category = 0
+quests_giver = "Roger"
+quests_ecopoint = 0
+quests_zone = "Forest"
+quests_goal_label_part1 = "Talk to Elie"
+quests_goal_label_part2 = ""
+quests_goal_counter = 0
+quests_goal_objective = 1
+quests_description = "Roger told you that Elie can help you to know more about the legend."
+quest_state = 0
+quest_documentation = Array[String](["beach_waste_collection"])
