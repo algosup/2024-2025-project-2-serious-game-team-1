@@ -86,6 +86,7 @@ func _process(_delta):
 
 
 func _on_introduction_animation_cinematic_done() -> void:
+	$Introduction_Animation.queue_free()
 	Variable.movelock = false
 	Variable.cameralock = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
