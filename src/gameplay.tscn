@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://chxfeda425gsu"]
+[gd_scene load_steps=36 format=3 uid="uid://chxfeda425gsu"]
 
 [ext_resource type="PackedScene" uid="uid://lrfexx8s0e13" path="res://assets/map/map.tscn" id="1_7b4si"]
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_hjvrf"]
@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dungkr3duinky" path="res://assets/models/martine.tscn" id="12_37ul3"]
 [ext_resource type="PackedScene" uid="uid://40vvrysqespg" path="res://assets/ui/quest_menu.tscn" id="12_unwyq"]
 [ext_resource type="Shader" path="res://assets/ui/shaders/minimap.gdshader" id="12_ycxjg"]
-[ext_resource type="PackedScene" path="res://assets/models/garbage_can.tscn" id="13_5x3xm"]
+[ext_resource type="PackedScene" uid="uid://cr25pnfa6ioqt" path="res://assets/models/garbage_can.tscn" id="13_5x3xm"]
 [ext_resource type="PackedScene" uid="uid://d1p25uvpjx6b0" path="res://assets/designs/Factories/Tree branches.glb" id="14_rv5cq"]
 [ext_resource type="Resource" uid="uid://copclenoedrqy" path="res://assets/quests/clean_beach.tres" id="15_dlsg0"]
 [ext_resource type="PackedScene" uid="uid://bpi826wg0fa6b" path="res://assets/models/Objective.tscn" id="15_h7f3s"]
@@ -28,6 +28,8 @@
 [ext_resource type="Resource" uid="uid://balyer5qima0m" path="res://assets/quests/reconaissance_mission.tres" id="18_l4d27"]
 [ext_resource type="PackedScene" uid="uid://dekxjqqux4lw3" path="res://assets/ui/documetary_menu.tscn" id="19_tpto7"]
 [ext_resource type="PackedScene" uid="uid://d1uhb55q7ye7b" path="res://assets/ui/introduction_animation.tscn" id="20_oxljo"]
+[ext_resource type="PackedScene" uid="uid://b8x01jc5wd2a3" path="res://assets/designs/tscn_design/solar_panel_ground.tscn" id="21_3gr6i"]
+[ext_resource type="PackedScene" uid="uid://bpkmfirspkjsi" path="res://assets/models/block_area.tscn" id="21_isgtn"]
 [ext_resource type="Script" path="res://scripts/general_music.gd" id="25_oyn76"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nv1kv"]
@@ -159,11 +161,12 @@ quest = ExtResource("15_dlsg0")
 
 [node name="cigarette area" parent="Gameplay/Quest_Assets" instance=ExtResource("7_s8y11")]
 process_mode = 1
-transform = Transform3D(0.99734, -0.07289, 0, 0.07289, 0.99734, 0, 0, 0, 1, 538.719, 51.1079, 337.975)
+transform = Transform3D(0.99734, -0.07289, 0, 0.0723595, 0.990081, -0.120431, 0.00877824, 0.120111, 0.992722, 538.719, 49.1228, 337.975)
 object_scene = ExtResource("17_00eyk")
 spawn_count = 35
 spawn_area_size = Vector3(10, 0.1, 10)
 min_spawn_interval = 1.0
+max_spawn_interval = 3.0
 quest_name = "Clean Beach"
 quest = ExtResource("15_dlsg0")
 
@@ -178,7 +181,7 @@ quest = ExtResource("16_jgd18")
 [node name="tutorial_objective_area2" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 316.83, 33.3521, 755.216)
 time_to_stay = 3.0
-quest_name = "Get zone"
+quest_name = "Get data"
 quest = ExtResource("16_jgd18")
 
 [node name="tutorial_objective_area3" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
@@ -204,6 +207,52 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 539.265, 48.1937, 337.311)
 time_to_stay = 0.5
 quest_name = "Reconaissance"
 quest = ExtResource("18_l4d27")
+
+[node name="Block_Area" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("21_isgtn")]
+transform = Transform3D(0.269117, 0.141373, -0.952675, -0.436835, 0.899485, 0.0100802, 0.858342, 0.413449, 0.303823, 270.226, 54.4809, 336.447)
+
+[node name="Block_Area2" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("21_isgtn")]
+transform = Transform3D(0.269117, 0.141373, -0.952675, -0.521071, 0.853265, -0.0205741, 0.809976, 0.501948, 0.303293, 281.138, 54.4243, 332.432)
+
+[node name="Block_Area3" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("21_isgtn")]
+transform = Transform3D(0.269117, 0.141373, -0.952675, -0.436835, 0.899485, 0.0100802, 0.858342, 0.413449, 0.303823, 263.087, 54.2547, 318.864)
+
+[node name="Block_Area4" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("21_isgtn")]
+transform = Transform3D(0.269117, 0.141373, -0.952675, -0.521071, 0.853265, -0.0205741, 0.809976, 0.501948, 0.303293, 273.999, 54.2547, 314.849)
+
+[node name="Solar_Panels" type="Node" parent="Gameplay/Quest_Assets"]
+
+[node name="Group A" type="Node3D" parent="Gameplay/Quest_Assets/Solar_Panels"]
+
+[node name="SolarPanel_Ground" parent="Gameplay/Quest_Assets/Solar_Panels/Group A" instance=ExtResource("21_3gr6i")]
+transform = Transform3D(-2.81908, 0.209155, -0.811843, 0, 0.791224, 1.83458, 1.02606, 0.574647, -2.23052, 283.113, 54.012, 331.916)
+
+[node name="SolarPanel_Ground2" parent="Gameplay/Quest_Assets/Solar_Panels/Group A" instance=ExtResource("21_3gr6i")]
+transform = Transform3D(-2.81908, 0.209155, -0.811843, 0, 0.791224, 1.83458, 1.02606, 0.574647, -2.23052, 279.469, 54.012, 333.258)
+
+[node name="Group B" type="Node3D" parent="Gameplay/Quest_Assets/Solar_Panels"]
+
+[node name="SolarPanel_Ground3" parent="Gameplay/Quest_Assets/Solar_Panels/Group B" instance=ExtResource("21_3gr6i")]
+transform = Transform3D(-2.81908, 0.209155, -0.811843, 0, 0.791224, 1.83458, 1.02606, 0.574647, -2.23052, 272.228, 54.012, 335.916)
+
+[node name="SolarPanel_Ground4" parent="Gameplay/Quest_Assets/Solar_Panels/Group B" instance=ExtResource("21_3gr6i")]
+transform = Transform3D(-2.81908, 0.209155, -0.811843, 0, 0.791224, 1.83458, 1.02606, 0.574647, -2.23052, 268.584, 54.012, 337.258)
+
+[node name="Group C" type="Node3D" parent="Gameplay/Quest_Assets/Solar_Panels"]
+
+[node name="SolarPanel_Ground5" parent="Gameplay/Quest_Assets/Solar_Panels/Group C" instance=ExtResource("21_3gr6i")]
+transform = Transform3D(-2.83107, 0.20231, -0.785275, 1.43518e-07, 0.791223, 1.83458, 0.992482, 0.577093, -2.24001, 276.199, 54.012, 313.954)
+
+[node name="SolarPanel_Ground6" parent="Gameplay/Quest_Assets/Solar_Panels/Group C" instance=ExtResource("21_3gr6i")]
+transform = Transform3D(-2.83107, 0.20231, -0.785275, 1.43518e-07, 0.791223, 1.83458, 0.992482, 0.577093, -2.24001, 272.539, 54.012, 315.253)
+
+[node name="Group D" type="Node3D" parent="Gameplay/Quest_Assets/Solar_Panels"]
+
+[node name="SolarPanel_Ground7" parent="Gameplay/Quest_Assets/Solar_Panels/Group D" instance=ExtResource("21_3gr6i")]
+transform = Transform3D(-2.8191, 0.209145, -0.811804, 1.43518e-07, 0.791223, 1.83458, 1.02601, 0.574651, -2.23053, 265.18, 54.012, 317.717)
+
+[node name="SolarPanel_Ground8" parent="Gameplay/Quest_Assets/Solar_Panels/Group D" instance=ExtResource("21_3gr6i")]
+transform = Transform3D(-2.8191, 0.209145, -0.811804, 1.43518e-07, 0.791223, 1.83458, 1.02601, 0.574651, -2.23053, 261.536, 54.012, 319.058)
 
 [node name="Menus" type="Node" parent="."]
 
