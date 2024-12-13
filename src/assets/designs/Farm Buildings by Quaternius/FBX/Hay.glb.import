@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c2tr4ogtfkx3c"
-path="res://.godot/imported/Factory.glb-780c87bf5f90d8d4705cd49811714c37.scn"
+uid="uid://cdpslhqj5t57c"
+path="res://.godot/imported/Hay.glb-3158845f2f53e314e5e70f851cb1710c.scn"
 
 [deps]
 
-source_file="res://assets/designs/Factories/Factory.glb"
-dest_files=["res://.godot/imported/Factory.glb-780c87bf5f90d8d4705cd49811714c37.scn"]
+source_file="res://assets/designs/Farm Buildings by Quaternius/FBX/Hay.glb"
+dest_files=["res://.godot/imported/Hay.glb-3158845f2f53e314e5e70f851cb1710c.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
-"PATH:factory": {
+"PATH:RootNode/Hay": {
 "generate/physics": true
 }
 }

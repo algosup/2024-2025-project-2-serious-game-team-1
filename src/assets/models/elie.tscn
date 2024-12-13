@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://di72usqhppqx4"]
+[gd_scene load_steps=15 format=3 uid="uid://di72usqhppqx4"]
 
 [ext_resource type="PackedScene" uid="uid://d03r8k2thvupm" path="res://assets/models/pnjs/strong_woman_quest_giver.tscn" id="1_i5r42"]
 [ext_resource type="Script" path="res://scripts/pnj.gd" id="1_myooq"]
@@ -9,7 +9,6 @@
 [ext_resource type="Resource" uid="uid://b37m0x6oqcx8n" path="res://assets/dialog/quest_giver.tres" id="4_t7hif"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="5_xhoxe"]
 [ext_resource type="PackedScene" uid="uid://wl4rve86ex6h" path="res://assets/ui/quest_adder.tscn" id="8_5i6dw"]
-[ext_resource type="Script" path="res://scripts/quest_adder.gd" id="9_8n21e"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h81br"]
 
@@ -35,6 +34,7 @@ Pnj_name = "Elie"
 prompt_message = "Talk"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.936206, 0)
 shape = SubResource("CapsuleShape3D_h81br")
 
 [node name="Mesh" parent="." instance=ExtResource("1_i5r42")]
@@ -63,6 +63,5 @@ hide_portrait = true
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_t1s5g"), SubResource("RichTextEffect_xtxdd"), SubResource("RichTextEffect_qq5um")])
 
 [node name="Quest_Adder" parent="." instance=ExtResource("8_5i6dw")]
-script = ExtResource("9_8n21e")
 
 [connection signal="dialogue_signal" from="CanvasLayer/DialogueBox" to="." method="_on_dialogue_box_dialogue_signal"]

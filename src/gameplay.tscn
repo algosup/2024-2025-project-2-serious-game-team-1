@@ -302,7 +302,8 @@ script = ExtResource("16_oopfl")
 bus = &"Music Volume"
 script = ExtResource("25_oyn76")
 
-[connection signal="call_areas" from="Gameplay/Pnj/Elie" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]
+[connection signal="call_areas" from="Gameplay/Pnj/Elie" to="Gameplay/Quest_Assets/Objective_Areas/elie_objective" method="area_spawn"]
+[connection signal="call_areas" from="Gameplay/Pnj/Elie" to="Gameplay/Quest_Assets/Objective_Areas/elie_objective2" method="area_spawn"]
 [connection signal="call_areas" from="Gameplay/Pnj/Elie" to="Gameplay/Quest_Assets/Objective_Areas/elie_objective3" method="area_spawn"]
 [connection signal="call_areas" from="Gameplay/Pnj/Martine" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]
 [connection signal="call_areas" from="Gameplay/Pnj/Mr_Mayor" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]

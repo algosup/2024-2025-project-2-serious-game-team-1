@@ -3,20 +3,20 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c2tr4ogtfkx3c"
-path="res://.godot/imported/Factory.glb-780c87bf5f90d8d4705cd49811714c37.scn"
+uid="uid://djeonxo8wf6ll"
+path="res://.godot/imported/Sawmill Saw.glb-d463bd002b35a67c1515b1375a070de2.scn"
 
 [deps]
 
-source_file="res://assets/designs/Factories/Factory.glb"
-dest_files=["res://.godot/imported/Factory.glb-780c87bf5f90d8d4705cd49811714c37.scn"]
+source_file="res://assets/designs/Stylized_Nature/FBX/Sawmill Saw.glb"
+dest_files=["res://.godot/imported/Sawmill Saw.glb-d463bd002b35a67c1515b1375a070de2.scn"]
 
 [params]
 
 nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
-nodes/root_scale=10.0
+nodes/root_scale=3.0
 nodes/import_as_skeleton_bones=false
 meshes/ensure_tangents=true
 meshes/generate_lods=true
@@ -33,7 +33,7 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
-"PATH:factory": {
+"PATH:RootNode/Sawmill_saw": {
 "generate/physics": true
 }
 }

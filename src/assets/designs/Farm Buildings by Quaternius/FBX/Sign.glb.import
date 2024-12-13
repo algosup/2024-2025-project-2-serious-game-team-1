@@ -3,20 +3,20 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c2tr4ogtfkx3c"
-path="res://.godot/imported/Factory.glb-780c87bf5f90d8d4705cd49811714c37.scn"
+uid="uid://b2mdgaoqec1i"
+path="res://.godot/imported/Sign.glb-8dda2827bb7c7d821e8a029fe2a73eb9.scn"
 
 [deps]
 
-source_file="res://assets/designs/Factories/Factory.glb"
-dest_files=["res://.godot/imported/Factory.glb-780c87bf5f90d8d4705cd49811714c37.scn"]
+source_file="res://assets/designs/Farm Buildings by Quaternius/FBX/Sign.glb"
+dest_files=["res://.godot/imported/Sign.glb-8dda2827bb7c7d821e8a029fe2a73eb9.scn"]
 
 [params]
 
 nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
-nodes/root_scale=10.0
+nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
 meshes/ensure_tangents=true
 meshes/generate_lods=true
@@ -31,12 +31,6 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={
-"nodes": {
-"PATH:factory": {
-"generate/physics": true
-}
-}
-}
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

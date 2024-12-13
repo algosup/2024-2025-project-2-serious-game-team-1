@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bryamhoy0h4we"]
+
+[ext_resource type="PackedScene" uid="uid://c4hhk073poick" path="res://assets/designs/Farm Buildings by Quaternius/FBX/ChickenCoop.fbx" id="1_rke8y"]
+
+[node name="ChickenCoop" instance=ExtResource("1_rke8y")]

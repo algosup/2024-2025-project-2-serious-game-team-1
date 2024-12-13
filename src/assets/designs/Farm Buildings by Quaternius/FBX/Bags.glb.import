@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c2tr4ogtfkx3c"
-path="res://.godot/imported/Factory.glb-780c87bf5f90d8d4705cd49811714c37.scn"
+uid="uid://dpneuk0rfea0f"
+path="res://.godot/imported/Bags.glb-43733e8e26cf41917a72839c9b05e210.scn"
 
 [deps]
 
-source_file="res://assets/designs/Factories/Factory.glb"
-dest_files=["res://.godot/imported/Factory.glb-780c87bf5f90d8d4705cd49811714c37.scn"]
+source_file="res://assets/designs/Farm Buildings by Quaternius/FBX/Bags.glb"
+dest_files=["res://.godot/imported/Bags.glb-43733e8e26cf41917a72839c9b05e210.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
-"PATH:factory": {
+"PATH:RootNode/Bags": {
 "generate/physics": true
 }
 }
