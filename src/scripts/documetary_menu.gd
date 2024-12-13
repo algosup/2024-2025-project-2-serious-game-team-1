@@ -3,7 +3,7 @@ extends Control
 @onready var title_label: Label = $Panel/Right_page/Title_Label
 @onready var rich_text_label: RichTextLabel = $Panel/Right_page/RichTextLabel
 @onready var source_label: Label = $Panel/Right_page/Source_Label
-@onready var climate_change: VBoxContainer = $Panel/Left_page/Documents_Types_Container/Documentation/Climate_change
+@onready var climate_change: Panel = $Panel/Left_page/Documents_Types_Container/Documentation/Climate_change/Climate_Change
 @onready var forest_fires: Panel = $Panel/Left_page/Documents_Types_Container/Documentation/Forest/Forest_fires
 @onready var coal: Panel = $"Panel/Left_page/Documents_Types_Container/Documentation/Fossil_energies_&_Renewable_energies/Coal"
 @onready var fossil_fuels: Panel = $"Panel/Left_page/Documents_Types_Container/Documentation/Fossil_energies_&_Renewable_energies/Fossil_fuels"
@@ -16,7 +16,8 @@ extends Control
 @onready var beach_waste_collection: Panel = $"Panel/Left_page/Documents_Types_Container/Documentation/Recycling Materials/Beach_waste_collection"
 @onready var plastic_recycling: Panel = $"Panel/Left_page/Documents_Types_Container/Documentation/Recycling Materials/Plastic_recycling"
 @onready var recycling_vegetative_waste: Panel = $"Panel/Left_page/Documents_Types_Container/Documentation/Recycling Materials/Recycling_Vegetative_Waste"
-var documentation : Array = [
+
+var documentation_panel : Array[Panel] = [
 	climate_change, forest_fires, coal, 
 	fossil_fuels, renewable_energies, solar_panels,
 	wind_turbine, fossil_fuels_vs_renewable_energies, air_quality_measurement,
@@ -28,12 +29,26 @@ func set_documentation(documentation : Documentation_Resource):
 	rich_text_label.text = documentation.Documentation_explanation
 	source_label.text = documentation.Documentation_source_to_text()
 
-func OpenDoc() -> void:
+func show_documentation(documentation_panel: Panel):
+	documentation_panel.visible = true
+
+func show_documentation_doc_menu():
+	for i in range(len(documentation_panel)):
+		if AllDictionary.new_doc.has(documentation_panel[i]):
+			print(documentation_panel[i])
+			show_documentation(documentation_panel[i])
+			for j in range(len(AllDictionary.new_doc)):
+				if AllDictionary.new_doc[j] == documentation_panel[i]:
+					print(AllDictionary.new_doc[j])
+					AllDictionary.new_doc[j] = null
+
+func OpenDoc():
 	Variable.DocumentaryMenuOpen = !Variable.DocumentaryMenuOpen
+	show_documentation_doc_menu()
 	$".".show()
 	Variable.movelock = true
 	Variable.cameralock = true
-	
+
 
 func CloseDoc():
 	Variable.DocumentaryMenuOpen = !Variable.DocumentaryMenuOpen

@@ -27,10 +27,9 @@ func add_counter():
 		print(quests_goal_objective - quests_goal_counter)
 		if quests_goal_counter == quests_goal_objective:
 			quest_state = 3
-			print("Quest :", quests_name, "is at the state :", quest_state)
-			if quests_next_quests != null:
-				print("Quest have been shift")
-				shift_quest()
+			print("Quest :", quests_name, " is at the state :", quest_state)
+			print("Quest have been shift")
+			shift_quest()
 
 func shift_quest():
 	if quests_category == category.Main_Quest:
@@ -40,7 +39,7 @@ func shift_quest():
 				if !AllDictionary.completed_quests.has(AllDictionary.active_main_quests[i]):
 					AllDictionary.completed_quests.append(AllDictionary.active_main_quests[i])
 					print("quest has been added to the array completed quests: ", AllDictionary.completed_quests)
-					AllDictionary.show_documentation(quest_documentation)
+					AllDictionary.show_documentation_resource(quest_documentation)
 				if quests_next_quests != null:
 					AllDictionary.active_main_quests[i] = quests_next_quests.quests_name
 					print("quest has been changed: ", AllDictionary.active_main_quests[i])
