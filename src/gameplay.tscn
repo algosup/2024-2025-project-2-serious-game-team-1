@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://chxfeda425gsu"]
+[gd_scene load_steps=34 format=3 uid="uid://chxfeda425gsu"]
 
 [ext_resource type="PackedScene" uid="uid://lrfexx8s0e13" path="res://assets/map/map.tscn" id="1_7b4si"]
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_hjvrf"]
@@ -17,12 +17,15 @@
 [ext_resource type="PackedScene" uid="uid://40vvrysqespg" path="res://assets/ui/quest_menu.tscn" id="12_unwyq"]
 [ext_resource type="Shader" path="res://assets/ui/shaders/minimap.gdshader" id="12_ycxjg"]
 [ext_resource type="PackedScene" path="res://assets/models/garbage_can.tscn" id="13_5x3xm"]
+[ext_resource type="PackedScene" uid="uid://d1p25uvpjx6b0" path="res://assets/designs/Factories/Tree branches.glb" id="14_rv5cq"]
 [ext_resource type="Resource" uid="uid://copclenoedrqy" path="res://assets/quests/clean_beach.tres" id="15_dlsg0"]
 [ext_resource type="PackedScene" uid="uid://bpi826wg0fa6b" path="res://assets/models/Objective.tscn" id="15_h7f3s"]
 [ext_resource type="PackedScene" uid="uid://b31wjwnn4gip3" path="res://assets/ui/option_menu.tscn" id="16_goewa"]
 [ext_resource type="Resource" uid="uid://dx0okth0b6dxk" path="res://assets/quests/get_data.tres" id="16_jgd18"]
 [ext_resource type="Script" path="res://scripts/all_dictionary.gd" id="16_oopfl"]
 [ext_resource type="PackedScene" uid="uid://dfpxasv5v80bs" path="res://assets/ui/quests_panel.tscn" id="16_qnyfx"]
+[ext_resource type="PackedScene" uid="uid://cfwv11ciacq7x" path="res://assets/designs/Factories/Cigarette butt.glb" id="17_00eyk"]
+[ext_resource type="Resource" uid="uid://balyer5qima0m" path="res://assets/quests/reconaissance_mission.tres" id="18_l4d27"]
 [ext_resource type="PackedScene" uid="uid://dekxjqqux4lw3" path="res://assets/ui/documetary_menu.tscn" id="19_tpto7"]
 [ext_resource type="PackedScene" uid="uid://d1uhb55q7ye7b" path="res://assets/ui/introduction_animation.tscn" id="20_oxljo"]
 [ext_resource type="Script" path="res://scripts/general_music.gd" id="25_oyn76"]
@@ -101,9 +104,13 @@ fov = 37.8493
 
 [node name="Elie" parent="Gameplay/Pnj" instance=ExtResource("12_1y7fe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 463.892, 48.5076, 401.042)
+quest_name = "Reconaissance mission"
+prompt_message = "Talk to Elie"
 
 [node name="Martine" parent="Gameplay/Pnj" instance=ExtResource("12_37ul3")]
 transform = Transform3D(-0.23911, 0, 0.970993, 0, 1, 0, -0.970993, 0, -0.23911, 279.434, 47.4093, 308.878)
+quest_name = "Solar Connexion"
+prompt_message = "Talk to Martine"
 
 [node name="Mr_Mayor" parent="Gameplay/Pnj" instance=ExtResource("4_2lod7")]
 transform = Transform3D(0.897289, 0, -0.441443, 0, 1, 0, 0.441443, 0, 0.897289, 412.907, 45.0163, 616.121)
@@ -113,7 +120,6 @@ prompt_message = "Talk to the mayor"
 [node name="Roger" parent="Gameplay/Pnj" instance=ExtResource("6_52vwr")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 329.408, 37.0676, 565.188)
 Pnj_name = "Insert Pnj name"
-prompt_message = "Interact"
 
 [node name="Object" type="Node" parent="Gameplay"]
 
@@ -128,12 +134,36 @@ transform = Transform3D(-0.963826, 2.3927e-05, -0.266532, 0.000106552, 1, -0.000
 [node name="Garbage_can2" parent="Gameplay/Object" instance=ExtResource("13_5x3xm")]
 transform = Transform3D(-0.970397, 3.20205e-05, -0.241516, 0.000106552, 0.999999, -0.000295538, 0.241516, -0.000312523, -0.970397, 306.092, 36.7838, 767.077)
 
+[node name="Branches" type="Node" parent="Gameplay/Object"]
+
+[node name="Tree branches" parent="Gameplay/Object/Branches" instance=ExtResource("14_rv5cq")]
+transform = Transform3D(0.992941, 0.118612, 0, -0.118612, 0.992941, 0, 0, 0, 1, 472.406, 52.8757, 252.756)
+
+[node name="Tree branches2" parent="Gameplay/Object/Branches" instance=ExtResource("14_rv5cq")]
+transform = Transform3D(0.992941, 0.118612, 0, -0.118612, 0.992941, 0, 0, 0, 1, 473.176, 52.7571, 252.883)
+
+[node name="Tree branches3" parent="Gameplay/Object/Branches" instance=ExtResource("14_rv5cq")]
+transform = Transform3D(0.346599, 0.118612, -0.930484, -0.041403, 0.992941, 0.111151, 0.937099, 0, 0.349063, 472.065, 52.9355, 252.83)
+
+[node name="Tree branches4" parent="Gameplay/Object/Branches" instance=ExtResource("14_rv5cq")]
+transform = Transform3D(0.992941, 0.118612, 0, -0.118612, 0.992941, 0, 0, 0, 1, 472.928, 52.7812, 252.476)
+
 [node name="Quest_Assets" type="Node" parent="Gameplay"]
 
 [node name="trash area" parent="Gameplay/Quest_Assets" instance=ExtResource("7_s8y11")]
 process_mode = 1
 transform = Transform3D(0.99734, -0.07289, 0, 0.07289, 0.99734, 0, 0, 0, 1, 284.255, 37.5868, 562.977)
 spawn_area_size = Vector3(80, 0.1, 130)
+quest_name = "Clean Beach"
+quest = ExtResource("15_dlsg0")
+
+[node name="cigarette area" parent="Gameplay/Quest_Assets" instance=ExtResource("7_s8y11")]
+process_mode = 1
+transform = Transform3D(0.99734, -0.07289, 0, 0.07289, 0.99734, 0, 0, 0, 1, 538.719, 51.1079, 337.975)
+object_scene = ExtResource("17_00eyk")
+spawn_count = 35
+spawn_area_size = Vector3(10, 0.1, 10)
+min_spawn_interval = 1.0
 quest_name = "Clean Beach"
 quest = ExtResource("15_dlsg0")
 
@@ -156,6 +186,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150.389, 18.8152, 789.99)
 time_to_stay = 3.0
 quest_name = "Get data"
 quest = ExtResource("16_jgd18")
+
+[node name="elie_objective" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 625.231, 55.6985, 270.627)
+time_to_stay = 0.5
+quest_name = "Reconaissance"
+quest = ExtResource("18_l4d27")
+
+[node name="elie_objective2" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 472.278, 52.4008, 251.705)
+time_to_stay = 0.5
+quest_name = "Reconaissance"
+quest = ExtResource("18_l4d27")
+
+[node name="elie_objective3" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 539.265, 48.1937, 337.311)
+time_to_stay = 0.5
+quest_name = "Reconaissance"
+quest = ExtResource("18_l4d27")
 
 [node name="Menus" type="Node" parent="."]
 
@@ -206,6 +254,7 @@ bus = &"Music Volume"
 script = ExtResource("25_oyn76")
 
 [connection signal="call_areas" from="Gameplay/Pnj/Elie" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]
+[connection signal="call_areas" from="Gameplay/Pnj/Elie" to="Gameplay/Quest_Assets/Objective_Areas/elie_objective3" method="area_spawn"]
 [connection signal="call_areas" from="Gameplay/Pnj/Martine" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]
 [connection signal="call_areas" from="Gameplay/Pnj/Mr_Mayor" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]
 [connection signal="call_areas" from="Gameplay/Pnj/Mr_Mayor" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area2" method="area_spawn"]
