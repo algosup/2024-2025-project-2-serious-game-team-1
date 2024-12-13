@@ -1,0 +1,262 @@
+[gd_scene load_steps=13 format=3 uid="uid://40vvrysqespg"]
+
+[ext_resource type="Script" path="res://scripts/quest_menu.gd" id="1_sqmio"]
+[ext_resource type="Shader" path="res://assets/ui/shaders/ui_back_shader.gdshader" id="1_u3agi"]
+[ext_resource type="Texture2D" uid="uid://dxr84bjywj4m6" path="res://assets/images/WaintingBackground.jpg" id="2_hewac"]
+[ext_resource type="PackedScene" uid="uid://cqd0i6thcpy2k" path="res://assets/ui/quests_slot.tscn" id="3_kgxg5"]
+[ext_resource type="Texture2D" uid="uid://bgamsf8c87vo0" path="res://assets/images/quest_menu/quest_background.PNG" id="4_8uubd"]
+[ext_resource type="PackedScene" uid="uid://bds8yuj1g47t4" path="res://assets/ui/completed_quests_slot.tscn" id="5_cha2g"]
+[ext_resource type="Resource" uid="uid://copclenoedrqy" path="res://assets/quests/clean_beach.tres" id="6_fthyc"]
+[ext_resource type="Resource" uid="uid://q5i2rxt8envi" path="res://assets/quests/recycle_plastic.tres" id="7_irpeb"]
+[ext_resource type="Resource" uid="uid://dx0okth0b6dxk" path="res://assets/quests/get_data.tres" id="9_1soyo"]
+[ext_resource type="Texture2D" uid="uid://b6dh34chihyix" path="res://assets/images/quest_menu/quest_menu_info.PNG" id="10_bbofq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_20ina"]
+shader = ExtResource("1_u3agi")
+shader_parameter/blur_radius = 4.0
+shader_parameter/samples = 8
+shader_parameter/darken_factor = 0.75
+
+[sub_resource type="Resource" id="Resource_p4eb2"]
+metadata/__load_path__ = "res://assets/quests/tutorial.tres"
+
+[node name="quest_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sqmio")
+
+[node name="Panel" type="Panel" parent="."]
+material = SubResource("ShaderMaterial_20ina")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Quest_Panel" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(335, 212)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -307.0
+offset_top = -187.5
+offset_right = 307.0
+offset_bottom = 187.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_hewac")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Quest_Panel"]
+custom_minimum_size = Vector2(335, 573)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -254.0
+offset_top = -172.0
+offset_right = 81.0
+offset_bottom = 411.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_8uubd")
+region_rect = Rect2(275.163, 177.301, 743.017, 888.754)
+
+[node name="TabContainer" type="TabContainer" parent="Quest_Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(264, 500)
+layout_mode = 1
+offset_left = 53.0
+offset_top = 15.0
+offset_right = 388.0
+offset_bottom = 588.0
+scale = Vector2(0.6, 0.6)
+current_tab = 0
+
+[node name="Current Quests" type="VBoxContainer" parent="Quest_Panel/TabContainer"]
+custom_minimum_size = Vector2(131, 0)
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Currents Main Quests" type="VBoxContainer" parent="Quest_Panel/TabContainer/Current Quests"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Quest_Panel/TabContainer/Current Quests/Currents Main Quests"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "Main Quests"
+horizontal_alignment = 1
+
+[node name="quests_panel1" parent="Quest_Panel/TabContainer/Current Quests/Currents Main Quests" instance=ExtResource("3_kgxg5")]
+layout_mode = 2
+size_flags_horizontal = 4
+quests = ExtResource("6_fthyc")
+
+[node name="quests_panel2" parent="Quest_Panel/TabContainer/Current Quests/Currents Main Quests" instance=ExtResource("3_kgxg5")]
+layout_mode = 2
+size_flags_horizontal = 4
+quests = ExtResource("7_irpeb")
+
+[node name="quests_panel3" parent="Quest_Panel/TabContainer/Current Quests/Currents Main Quests" instance=ExtResource("3_kgxg5")]
+layout_mode = 2
+size_flags_horizontal = 4
+quests = SubResource("Resource_p4eb2")
+
+[node name="Currents Secondary Quests" type="VBoxContainer" parent="Quest_Panel/TabContainer/Current Quests"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Quest_Panel/TabContainer/Current Quests/Currents Secondary Quests"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "Secondary Quests"
+horizontal_alignment = 1
+
+[node name="quests_panel4" parent="Quest_Panel/TabContainer/Current Quests/Currents Secondary Quests" instance=ExtResource("3_kgxg5")]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="quests_panel5" parent="Quest_Panel/TabContainer/Current Quests/Currents Secondary Quests" instance=ExtResource("3_kgxg5")]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="quests_panel6" parent="Quest_Panel/TabContainer/Current Quests/Currents Secondary Quests" instance=ExtResource("3_kgxg5")]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Complete Quests" type="ScrollContainer" parent="Quest_Panel/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Quest_Panel/TabContainer/Complete Quests"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="Container" type="Container" parent="Quest_Panel/TabContainer/Complete Quests/VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="completed_quests_slot" parent="Quest_Panel/TabContainer/Complete Quests/VBoxContainer" instance=ExtResource("5_cha2g")]
+self_modulate = Color(1, 1, 1, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+quests = ExtResource("9_1soyo")
+
+[node name="completed_quests_slot2" parent="Quest_Panel/TabContainer/Complete Quests/VBoxContainer" instance=ExtResource("5_cha2g")]
+self_modulate = Color(1, 1, 1, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+quests = ExtResource("6_fthyc")
+
+[node name="completed_quests_slot3" parent="Quest_Panel/TabContainer/Complete Quests/VBoxContainer" instance=ExtResource("5_cha2g")]
+self_modulate = Color(1, 1, 1, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+quests = ExtResource("7_irpeb")
+
+[node name="Description" type="NinePatchRect" parent="Quest_Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -277.0
+offset_top = 15.0
+offset_right = -14.0
+offset_bottom = 358.0
+grow_horizontal = 0
+texture = ExtResource("10_bbofq")
+region_rect = Rect2(284.253, 168.424, 725.436, 906.411)
+
+[node name="DescriptionBox" type="VBoxContainer" parent="Quest_Panel/Description"]
+layout_mode = 0
+offset_right = 526.0
+offset_bottom = 632.0
+scale = Vector2(0.5, 0.5)
+
+[node name="Container" type="Container" parent="Quest_Panel/Description/DescriptionBox"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Quest_Panel/Description/DescriptionBox"]
+layout_mode = 2
+
+[node name="Container" type="Container" parent="Quest_Panel/Description/DescriptionBox/HBoxContainer4"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="Quest_Panel/Description/DescriptionBox/HBoxContainer4"]
+custom_minimum_size = Vector2(440, 80)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 40
+vertical_alignment = 1
+
+[node name="Container2" type="Container" parent="Quest_Panel/Description/DescriptionBox"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Quest_Panel/Description/DescriptionBox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Container" type="Container" parent="Quest_Panel/Description/DescriptionBox/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+
+[node name="ZoneLabel" type="Label" parent="Quest_Panel/Description/DescriptionBox/HBoxContainer"]
+custom_minimum_size = Vector2(255, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+
+[node name="GiverLabel" type="Label" parent="Quest_Panel/Description/DescriptionBox/HBoxContainer"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+
+[node name="Container3" type="Container" parent="Quest_Panel/Description/DescriptionBox"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Quest_Panel/Description/DescriptionBox"]
+layout_mode = 2
+
+[node name="Container" type="Container" parent="Quest_Panel/Description/DescriptionBox/HBoxContainer2"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+
+[node name="GoalLabel" type="Label" parent="Quest_Panel/Description/DescriptionBox/HBoxContainer2"]
+custom_minimum_size = Vector2(430, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+autowrap_mode = 2
+
+[node name="Container4" type="Container" parent="Quest_Panel/Description/DescriptionBox"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Quest_Panel/Description/DescriptionBox"]
+layout_mode = 2
+
+[node name="Container" type="Container" parent="Quest_Panel/Description/DescriptionBox/HBoxContainer3"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+
+[node name="DescriptionLabel" type="RichTextLabel" parent="Quest_Panel/Description/DescriptionBox/HBoxContainer3"]
+custom_minimum_size = Vector2(430, 220)
+layout_mode = 2
+focus_mode = 2
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+fit_content = true
+autowrap_mode = 2
+selection_enabled = true

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Documentation_Resource" load_steps=2 format=3 uid="uid://djebfeduoqvvc"]
+
+[ext_resource type="Script" path="res://scripts/documentation_ressource.gd" id="1_eoijy"]
+
+[resource]
+script = ExtResource("1_eoijy")
+Documentation_name = "Greenhouse gases (GHG)"
+Documentation_explanation = "Some gases in the Earth's atmosphere act a bit like the glass in a greenhouse, trapping the sun's heat and stopping it from leaking back into space and causing global warming. Many of these GHG occur naturally, but human activities are increasing the concentrations of some of them in the atmosphere. The main GHG that are causing climate change include carbon dioxide and methane. These come from using gasoline for driving a car or coal for heating a building, for example."
+Documentation_source = Array[String](["Climate Europa"])

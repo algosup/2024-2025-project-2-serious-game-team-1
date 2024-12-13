@@ -1,0 +1,261 @@
+[gd_scene load_steps=22 format=3 uid="uid://dekxjqqux4lw3"]
+
+[ext_resource type="Shader" path="res://assets/ui/shaders/ui_back_shader.gdshader" id="1_eo85a"]
+[ext_resource type="Script" path="res://scripts/documetary_menu.gd" id="1_oediq"]
+[ext_resource type="PackedScene" uid="uid://uojanrl6cmk8" path="res://assets/ui/document_panel.tscn" id="3_ljuiy"]
+[ext_resource type="Texture2D" uid="uid://c3kv450vvv41h" path="res://assets/images/documentary/documentary_background.png" id="3_s6rns"]
+[ext_resource type="Resource" uid="uid://cqi3t6lfp4hsg" path="res://assets/documentation/Climate_change.tres" id="5_kbelr"]
+[ext_resource type="Resource" uid="uid://djebfeduoqvvc" path="res://assets/documentation/greenhouse_effect.tres" id="6_0k1wb"]
+[ext_resource type="Resource" uid="uid://cvegiunjli5cs" path="res://assets/documentation/Fossil_fuels.tres" id="7_05moh"]
+[ext_resource type="Resource" uid="uid://cd7j8i0y2is18" path="res://assets/documentation/Coal.tres" id="7_60515"]
+[ext_resource type="Resource" uid="uid://cpfkmwqkduult" path="res://assets/documentation/Air_quality_measurement.tres" id="7_echnp"]
+[ext_resource type="Resource" uid="uid://hm6rbb2mxemi" path="res://assets/documentation/plastic_recycling.tres" id="8_arxl7"]
+[ext_resource type="Resource" uid="uid://chei5yh17jxev" path="res://assets/documentation/Renewable_energies.tres" id="8_mpd0b"]
+[ext_resource type="Resource" uid="uid://iv1lyx7im7l0" path="res://assets/documentation/Fossil_fuels_VS_Renewable_energies.tres" id="9_3rakx"]
+[ext_resource type="Resource" uid="uid://ce8uxnwy4mj07" path="res://assets/documentation/Beach_waste_collection.tres" id="9_hq7hj"]
+[ext_resource type="Resource" uid="uid://cuocldwfbo61t" path="res://assets/documentation/Solar_panels.tres" id="9_tv61c"]
+[ext_resource type="Resource" uid="uid://yfto1tqt8783" path="res://assets/documentation/Forest_fires.tres" id="10_0rn3d"]
+[ext_resource type="Resource" uid="uid://du47iply3rc3a" path="res://assets/documentation/Recycling_vegetative_waste.tres" id="11_7c8b4"]
+[ext_resource type="Resource" uid="uid://bnwcw0okhdxa4" path="res://assets/documentation/Wind_turbine.tres" id="11_a4hie"]
+[ext_resource type="PackedScene" uid="uid://crtrccaktk66" path="res://assets/ui/doc_adder.tscn" id="18_y6tbf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_13r38"]
+shader = ExtResource("1_eo85a")
+shader_parameter/blur_radius = 4.0
+shader_parameter/samples = 8
+shader_parameter/darken_factor = 0.75
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qixet"]
+texture = ExtResource("3_s6rns")
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_81c2c"]
+thickness = 3
+
+[node name="Documentary_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oediq")
+
+[node name="Blur" type="Panel" parent="."]
+material = SubResource("ShaderMaterial_13r38")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 104.0
+offset_top = 117.0
+offset_right = 1059.0
+offset_bottom = 602.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_qixet")
+
+[node name="Left_page" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 49.0
+offset_right = 393.0
+offset_bottom = 116.0
+theme_override_constants/separation = 4
+
+[node name="Label" type="Label" parent="Panel/Left_page"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Documentary"
+
+[node name="HSeparator" type="HSeparator" parent="Panel/Left_page"]
+layout_mode = 2
+
+[node name="Documents_Types_Container" type="ScrollContainer" parent="Panel/Left_page"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="Documentation" type="VBoxContainer" parent="Panel/Left_page/Documents_Types_Container"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Climate_change" type="VBoxContainer" parent="Panel/Left_page/Documents_Types_Container/Documentation"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/Left_page/Documents_Types_Container/Documentation/Climate_change"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Climate Change"
+
+[node name="HSeparator" type="HSeparator" parent="Panel/Left_page/Documents_Types_Container/Documentation/Climate_change"]
+visible = false
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_81c2c")
+
+[node name="Climate_Change" parent="Panel/Left_page/Documents_Types_Container/Documentation/Climate_change" instance=ExtResource("3_ljuiy")]
+visible = false
+layout_mode = 2
+documentation = ExtResource("5_kbelr")
+
+[node name="Forest" type="VBoxContainer" parent="Panel/Left_page/Documents_Types_Container/Documentation"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/Left_page/Documents_Types_Container/Documentation/Forest"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Forest"
+
+[node name="HSeparator" type="HSeparator" parent="Panel/Left_page/Documents_Types_Container/Documentation/Forest"]
+visible = false
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_81c2c")
+
+[node name="Forest_fires" parent="Panel/Left_page/Documents_Types_Container/Documentation/Forest" instance=ExtResource("3_ljuiy")]
+visible = false
+layout_mode = 2
+documentation = ExtResource("10_0rn3d")
+
+[node name="Fossil_energies_&_Renewable_energies" type="VBoxContainer" parent="Panel/Left_page/Documents_Types_Container/Documentation"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/Left_page/Documents_Types_Container/Documentation/Fossil_energies_&_Renewable_energies"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Fossil energies & Renewable energies"
+autowrap_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="Panel/Left_page/Documents_Types_Container/Documentation/Fossil_energies_&_Renewable_energies"]
+visible = false
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_81c2c")
+
+[node name="Coal" parent="Panel/Left_page/Documents_Types_Container/Documentation/Fossil_energies_&_Renewable_energies" instance=ExtResource("3_ljuiy")]
+visible = false
+layout_mode = 2
+documentation = ExtResource("7_60515")
+
+[node name="Fossil_fuels" parent="Panel/Left_page/Documents_Types_Container/Documentation/Fossil_energies_&_Renewable_energies" instance=ExtResource("3_ljuiy")]
+visible = false
+layout_mode = 2
+documentation = ExtResource("7_05moh")
+
+[node name="Renewable_energies" parent="Panel/Left_page/Documents_Types_Container/Documentation/Fossil_energies_&_Renewable_energies" instance=ExtResource("3_ljuiy")]
+visible = false
+layout_mode = 2
+documentation = ExtResource("8_mpd0b")
+
+[node name="Solar_panels" parent="Panel/Left_page/Documents_Types_Container/Documentation/Fossil_energies_&_Renewable_energies" instance=ExtResource("3_ljuiy")]
+visible = false
+layout_mode = 2
+documentation = ExtResource("9_tv61c")
+
+[node name="Wind_turbine" parent="Panel/Left_page/Documents_Types_Container/Documentation/Fossil_energies_&_Renewable_energies" instance=ExtResource("3_ljuiy")]
+visible = false
+layout_mode = 2
+documentation = ExtResource("11_a4hie")
+
+[node name="Fossil_fuels_VS_Renewable_energies" parent="Panel/Left_page/Documents_Types_Container/Documentation/Fossil_energies_&_Renewable_energies" instance=ExtResource("3_ljuiy")]
+visible = false
+layout_mode = 2
+documentation = ExtResource("9_3rakx")
+
+[node name="Greenhouse_gases" type="VBoxContainer" parent="Panel/Left_page/Documents_Types_Container/Documentation"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/Left_page/Documents_Types_Container/Documentation/Greenhouse_gases"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Greenhouse Gases"
+
+[node name="HSeparator" type="HSeparator" parent="Panel/Left_page/Documents_Types_Container/Documentation/Greenhouse_gases"]
+visible = false
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_81c2c")
+
+[node name="Air_quality_measurement" parent="Panel/Left_page/Documents_Types_Container/Documentation/Greenhouse_gases" instance=ExtResource("3_ljuiy")]
+visible = false
+layout_mode = 2
+documentation = ExtResource("7_echnp")
+
+[node name="Greenhouse_Effect" parent="Panel/Left_page/Documents_Types_Container/Documentation/Greenhouse_gases" instance=ExtResource("3_ljuiy")]
+visible = false
+layout_mode = 2
+documentation = ExtResource("6_0k1wb")
+
+[node name="Recycling Materials" type="VBoxContainer" parent="Panel/Left_page/Documents_Types_Container/Documentation"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/Left_page/Documents_Types_Container/Documentation/Recycling Materials"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Recycling Materials"
+
+[node name="HSeparator" type="HSeparator" parent="Panel/Left_page/Documents_Types_Container/Documentation/Recycling Materials"]
+visible = false
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_81c2c")
+
+[node name="Beach_waste_collection" parent="Panel/Left_page/Documents_Types_Container/Documentation/Recycling Materials" instance=ExtResource("3_ljuiy")]
+visible = false
+layout_mode = 2
+documentation = ExtResource("9_hq7hj")
+
+[node name="Plastic_recycling" parent="Panel/Left_page/Documents_Types_Container/Documentation/Recycling Materials" instance=ExtResource("3_ljuiy")]
+visible = false
+layout_mode = 2
+documentation = ExtResource("8_arxl7")
+
+[node name="Recycling_Vegetative_Waste" parent="Panel/Left_page/Documents_Types_Container/Documentation/Recycling Materials" instance=ExtResource("3_ljuiy")]
+visible = false
+layout_mode = 2
+documentation = ExtResource("11_7c8b4")
+
+[node name="Right_page" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 46.0
+offset_right = 857.0
+offset_bottom = 437.0
+
+[node name="Title_Label" type="Label" parent="Panel/Right_page"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+
+[node name="HSeparator" type="HSeparator" parent="Panel/Right_page"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Right_page"]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+focus_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+autowrap_mode = 2
+selection_enabled = true
+
+[node name="Container" type="Container" parent="Panel/Right_page"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="Source_Label" type="Label" parent="Panel/Right_page"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+autowrap_mode = 2
+
+[node name="doc_adder" parent="." instance=ExtResource("18_y6tbf")]

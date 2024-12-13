@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Quests_Resources" load_steps=3 format=3 uid="uid://bhbfrja4xrsoo"]
+
+[ext_resource type="Resource" uid="uid://c87omku8pxcjw" path="res://assets/quests/talk_Martine2.tres" id="1_ycabt"]
+[ext_resource type="Script" path="res://scripts/quests_resource.gd" id="2_cnrdu"]
+
+[resource]
+script = ExtResource("2_cnrdu")
+quests_name = "Solar Connexion"
+quests_category = 0
+quests_giver = "Elie"
+quests_ecopoint = 20
+quests_zone = "Farm"
+quests_goal_label_part1 = "connects solar panels"
+quests_goal_label_part2 = ""
+quests_goal_counter = 0
+quests_goal_objective = 8
+quests_description = "Go to Martine's barns and connects the cables for the solar panels to get them up and running."
+quests_next_quests = ExtResource("1_ycabt")
+quest_state = 0
+quest_documentation = Array[String](["beach_waste_collection"])

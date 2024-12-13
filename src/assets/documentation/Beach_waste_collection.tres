@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Documentation_Resource" load_steps=2 format=3 uid="uid://ce8uxnwy4mj07"]
+
+[ext_resource type="Script" path="res://scripts/documentation_ressource.gd" id="1_fxju6"]
+
+[resource]
+script = ExtResource("1_fxju6")
+Documentation_name = "Beach waste collection"
+Documentation_explanation = "Beach waste collection combined with plastic recycling delivers significant environmental and economic benefits. Removing plastics from beaches prevents harm to marine ecosystems, where animals are at risk of ingesting or becoming entangled in debris. Recycling one ton of plastic saves approximately 7.4 cubic yards of landfill space and reduces the reliance on virgin resources like petroleum. By integrating beach cleanups, communities protect ecosystems, mitigate climate impacts, and foster sustainable economic practices."
+Documentation_source = Array[String](["Blue Standard Inc", "Lavergne"])

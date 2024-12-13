@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4jx1gx3bxfo0"]
+
+[ext_resource type="PackedScene" uid="uid://dn5cjm81b5d1" path="res://assets/models/items/bin_bag.glb" id="1_mhbw5"]
+
+[node name="bin_bag_mesh" instance=ExtResource("1_mhbw5")]

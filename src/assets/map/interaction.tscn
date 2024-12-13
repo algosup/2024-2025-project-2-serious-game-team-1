@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://0ydvsa4rak3r"]
+
+[ext_resource type="Script" path="res://scripts/interaction_ray_cast.gd" id="1_mirv8"]
+
+[node name="Interaction" type="RayCast3D"]
+target_position = Vector3(0, 0, -4)
+script = ExtResource("1_mirv8")
+
+[node name="Prompt" type="Label" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 5.5
+offset_bottom = 54.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Prompt
+[KEY]"
+horizontal_alignment = 1

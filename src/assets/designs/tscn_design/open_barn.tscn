@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://didejncec8tk7"]
+
+[ext_resource type="PackedScene" uid="uid://bl4bjcae6n0jo" path="res://assets/designs/Farm Buildings by Quaternius/FBX/OpenBarn.fbx" id="1_a27lj"]
+
+[node name="OpenBarn" instance=ExtResource("1_a27lj")]

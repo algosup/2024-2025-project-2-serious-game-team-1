@@ -1,0 +1,318 @@
+[gd_scene load_steps=36 format=3 uid="uid://chxfeda425gsu"]
+
+[ext_resource type="PackedScene" uid="uid://lrfexx8s0e13" path="res://assets/map/map.tscn" id="1_7b4si"]
+[ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_hjvrf"]
+[ext_resource type="PackedScene" uid="uid://bwnfc1y2ijtef" path="res://assets/ui/pause_menu.tscn" id="3_75tor"]
+[ext_resource type="PackedScene" uid="uid://njg0gpbp1iqs" path="res://assets/ui/inventory.tscn" id="3_grpvx"]
+[ext_resource type="PackedScene" uid="uid://c0a24yagc8id" path="res://assets/models/mr_mayor.tscn" id="4_2lod7"]
+[ext_resource type="PackedScene" uid="uid://bchj68adctaws" path="res://assets/models/roger.tscn" id="6_52vwr"]
+[ext_resource type="Resource" uid="uid://c1flp4su10cpp" path="res://assets/items/bin_bag.tres" id="7_p0csr"]
+[ext_resource type="PackedScene" uid="uid://umm5fxua0dmn" path="res://assets/models/spawn_area.tscn" id="7_s8y11"]
+[ext_resource type="PackedScene" uid="uid://domhm87hbhbg1" path="res://assets/models/Player.tscn" id="8_735e1"]
+[ext_resource type="PackedScene" uid="uid://6c6uwu7ip5h" path="res://assets/models/bin_bag.tscn" id="9_0mf82"]
+[ext_resource type="PackedScene" uid="uid://bu66re8qcxct8" path="res://assets/ui/player_ui.tscn" id="9_61cme"]
+[ext_resource type="Script" path="res://scripts/minimap.gd" id="9_xy0vo"]
+[ext_resource type="PackedScene" uid="uid://di72usqhppqx4" path="res://assets/models/elie.tscn" id="12_1y7fe"]
+[ext_resource type="PackedScene" uid="uid://dungkr3duinky" path="res://assets/models/martine.tscn" id="12_37ul3"]
+[ext_resource type="PackedScene" uid="uid://40vvrysqespg" path="res://assets/ui/quest_menu.tscn" id="12_unwyq"]
+[ext_resource type="Shader" path="res://assets/ui/shaders/minimap.gdshader" id="12_ycxjg"]
+[ext_resource type="PackedScene" path="res://assets/models/garbage_can.tscn" id="13_5x3xm"]
+[ext_resource type="PackedScene" uid="uid://d1p25uvpjx6b0" path="res://assets/designs/Factories/Tree branches.glb" id="14_rv5cq"]
+[ext_resource type="Resource" uid="uid://copclenoedrqy" path="res://assets/quests/clean_beach.tres" id="15_dlsg0"]
+[ext_resource type="PackedScene" uid="uid://bpi826wg0fa6b" path="res://assets/models/Objective.tscn" id="15_h7f3s"]
+[ext_resource type="PackedScene" uid="uid://b31wjwnn4gip3" path="res://assets/ui/option_menu.tscn" id="16_goewa"]
+[ext_resource type="Resource" uid="uid://dx0okth0b6dxk" path="res://assets/quests/get_data.tres" id="16_jgd18"]
+[ext_resource type="Script" path="res://scripts/all_dictionary.gd" id="16_oopfl"]
+[ext_resource type="PackedScene" uid="uid://dfpxasv5v80bs" path="res://assets/ui/quests_panel.tscn" id="16_qnyfx"]
+[ext_resource type="PackedScene" uid="uid://cfwv11ciacq7x" path="res://assets/designs/Factories/Cigarette butt.glb" id="17_00eyk"]
+[ext_resource type="Resource" uid="uid://balyer5qima0m" path="res://assets/quests/reconaissance_mission.tres" id="18_l4d27"]
+[ext_resource type="PackedScene" uid="uid://dekxjqqux4lw3" path="res://assets/ui/documetary_menu.tscn" id="19_tpto7"]
+[ext_resource type="PackedScene" uid="uid://d1uhb55q7ye7b" path="res://assets/ui/introduction_animation.tscn" id="20_oxljo"]
+[ext_resource type="PackedScene" path="res://assets/designs/tscn_design/solar_panel_ground.tscn" id="21_3gr6i"]
+[ext_resource type="PackedScene" uid="uid://bpkmfirspkjsi" path="res://assets/models/block_area.tscn" id="21_isgtn"]
+[ext_resource type="Script" path="res://scripts/general_music.gd" id="25_oyn76"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nv1kv"]
+shader = ExtResource("12_ycxjg")
+shader_parameter/circle_center_x = 0.5
+shader_parameter/circle_center_y = 0.5
+shader_parameter/radius = 0.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dtc2j"]
+content_margin_left = 3.0
+content_margin_top = 3.0
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+bg_color = Color(1, 0.780392, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bofjg"]
+shader = ExtResource("12_ycxjg")
+shader_parameter/circle_center_x = 0.5
+shader_parameter/circle_center_y = 0.5
+shader_parameter/radius = 0.5
+
+[sub_resource type="Environment" id="Environment_p8pkt"]
+
+[node name="gameplay" type="Node"]
+process_mode = 3
+script = ExtResource("1_hjvrf")
+
+[node name="Gameplay" type="Node" parent="."]
+process_mode = 1
+
+[node name="Map" parent="Gameplay" instance=ExtResource("1_7b4si")]
+
+[node name="Player" parent="Gameplay" instance=ExtResource("8_735e1")]
+unique_name_in_owner = true
+process_mode = 1
+transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941, -243.387, 44.6958, 618.561)
+
+[node name="Player_UI" parent="Gameplay/Player" instance=ExtResource("9_61cme")]
+unique_name_in_owner = true
+light_mask = 512
+visibility_layer = 512
+z_index = -1
+
+[node name="MiniMap" type="PanelContainer" parent="Gameplay"]
+process_mode = 1
+material = SubResource("ShaderMaterial_nv1kv")
+offset_left = 940.0
+offset_top = 20.0
+offset_right = 1132.0
+offset_bottom = 210.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dtc2j")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Gameplay/MiniMap"]
+material = SubResource("ShaderMaterial_bofjg")
+layout_mode = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Gameplay/MiniMap/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(186, 184)
+render_target_update_mode = 4
+script = ExtResource("9_xy0vo")
+
+[node name="Minimap_Camera" type="Camera3D" parent="Gameplay/MiniMap/SubViewportContainer/SubViewport"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 357.978, 200, 528.735)
+cull_mask = 1048571
+environment = SubResource("Environment_p8pkt")
+fov = 37.8493
+
+[node name="Pnj" type="Node" parent="Gameplay"]
+
+[node name="Elie" parent="Gameplay/Pnj" instance=ExtResource("12_1y7fe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 463.892, 48.5076, 401.042)
+quest_name = "Reconaissance mission"
+prompt_message = "Talk to Elie"
+
+[node name="Martine" parent="Gameplay/Pnj" instance=ExtResource("12_37ul3")]
+transform = Transform3D(-0.23911, 0, 0.970993, 0, 1, 0, -0.970993, 0, -0.23911, 279.434, 47.4093, 308.878)
+quest_name = "Solar Connexion"
+prompt_message = "Talk to Martine"
+
+[node name="Mr_Mayor" parent="Gameplay/Pnj" instance=ExtResource("4_2lod7")]
+transform = Transform3D(0.897289, 0, -0.441443, 0, 1, 0, 0.441443, 0, 0.897289, 412.907, 45.0163, 616.121)
+Pnj_name = "Mr Mayor"
+prompt_message = "Talk to the mayor"
+
+[node name="Roger" parent="Gameplay/Pnj" instance=ExtResource("6_52vwr")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 329.408, 37.0676, 565.188)
+Pnj_name = "Insert Pnj name"
+
+[node name="Object" type="Node" parent="Gameplay"]
+
+[node name="bin bag" parent="Gameplay/Object" instance=ExtResource("9_0mf82")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 329.329, 36.6179, 566.489)
+item_ressource = ExtResource("7_p0csr")
+prompt_message = "Pick-up bin bag"
+
+[node name="Garbage_can" parent="Gameplay/Object" instance=ExtResource("13_5x3xm")]
+transform = Transform3D(-0.963826, 2.3927e-05, -0.266532, 0.000106552, 1, -0.000295538, 0.266532, -0.000313247, -0.963826, 323.36, 36.7838, 762.273)
+
+[node name="Garbage_can2" parent="Gameplay/Object" instance=ExtResource("13_5x3xm")]
+transform = Transform3D(-0.970397, 3.20205e-05, -0.241516, 0.000106552, 0.999999, -0.000295538, 0.241516, -0.000312523, -0.970397, 306.092, 36.7838, 767.077)
+
+[node name="Branches" type="Node" parent="Gameplay/Object"]
+
+[node name="Tree branches" parent="Gameplay/Object/Branches" instance=ExtResource("14_rv5cq")]
+transform = Transform3D(0.992941, 0.118612, 0, -0.118612, 0.992941, 0, 0, 0, 1, 472.406, 52.8757, 252.756)
+
+[node name="Tree branches2" parent="Gameplay/Object/Branches" instance=ExtResource("14_rv5cq")]
+transform = Transform3D(0.992941, 0.118612, 0, -0.118612, 0.992941, 0, 0, 0, 1, 473.176, 52.7571, 252.883)
+
+[node name="Tree branches3" parent="Gameplay/Object/Branches" instance=ExtResource("14_rv5cq")]
+transform = Transform3D(0.346599, 0.118612, -0.930484, -0.041403, 0.992941, 0.111151, 0.937099, 0, 0.349063, 472.065, 52.9355, 252.83)
+
+[node name="Tree branches4" parent="Gameplay/Object/Branches" instance=ExtResource("14_rv5cq")]
+transform = Transform3D(0.992941, 0.118612, 0, -0.118612, 0.992941, 0, 0, 0, 1, 472.928, 52.7812, 252.476)
+
+[node name="Quest_Assets" type="Node" parent="Gameplay"]
+
+[node name="trash area" parent="Gameplay/Quest_Assets" instance=ExtResource("7_s8y11")]
+process_mode = 1
+transform = Transform3D(0.99734, -0.07289, 0, 0.07289, 0.99734, 0, 0, 0, 1, 284.255, 37.5868, 562.977)
+spawn_area_size = Vector3(80, 0.1, 130)
+quest_name = "Clean Beach"
+quest = ExtResource("15_dlsg0")
+
+[node name="cigarette area" parent="Gameplay/Quest_Assets" instance=ExtResource("7_s8y11")]
+process_mode = 1
+transform = Transform3D(0.99734, -0.07289, 0, 0.0723595, 0.990081, -0.120431, 0.00877824, 0.120111, 0.992722, 538.719, 49.1228, 337.975)
+object_scene = ExtResource("17_00eyk")
+spawn_count = 35
+spawn_area_size = Vector3(10, 0.1, 10)
+min_spawn_interval = 1.0
+max_spawn_interval = 3.0
+quest_name = "Clean Beach"
+quest = ExtResource("15_dlsg0")
+
+[node name="Objective_Areas" type="Node" parent="Gameplay/Quest_Assets"]
+
+[node name="tutorial_objective_area1" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 405.962, 41.8723, 569.079)
+time_to_stay = 3.0
+quest_name = "Get data"
+quest = ExtResource("16_jgd18")
+
+[node name="tutorial_objective_area2" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 316.83, 33.3521, 755.216)
+time_to_stay = 3.0
+quest_name = "Get data"
+quest = ExtResource("16_jgd18")
+
+[node name="tutorial_objective_area3" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150.389, 18.8152, 789.99)
+time_to_stay = 3.0
+quest_name = "Get data"
+quest = ExtResource("16_jgd18")
+
+[node name="elie_objective" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 625.231, 55.6985, 270.627)
+time_to_stay = 0.5
+quest_name = "Reconaissance"
+quest = ExtResource("18_l4d27")
+
+[node name="elie_objective2" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 472.278, 52.4008, 251.705)
+time_to_stay = 0.5
+quest_name = "Reconaissance"
+quest = ExtResource("18_l4d27")
+
+[node name="elie_objective3" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 539.265, 48.1937, 337.311)
+time_to_stay = 0.5
+quest_name = "Reconaissance"
+quest = ExtResource("18_l4d27")
+
+[node name="Block_Area" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("21_isgtn")]
+transform = Transform3D(0.269117, 0.141373, -0.952675, -0.436835, 0.899485, 0.0100802, 0.858342, 0.413449, 0.303823, 270.226, 54.4809, 336.447)
+
+[node name="Block_Area2" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("21_isgtn")]
+transform = Transform3D(0.269117, 0.141373, -0.952675, -0.521071, 0.853265, -0.0205741, 0.809976, 0.501948, 0.303293, 281.138, 54.4243, 332.432)
+
+[node name="Block_Area3" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("21_isgtn")]
+transform = Transform3D(0.269117, 0.141373, -0.952675, -0.436835, 0.899485, 0.0100802, 0.858342, 0.413449, 0.303823, 263.087, 54.2547, 318.864)
+
+[node name="Block_Area4" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("21_isgtn")]
+transform = Transform3D(0.269117, 0.141373, -0.952675, -0.521071, 0.853265, -0.0205741, 0.809976, 0.501948, 0.303293, 273.999, 54.2547, 314.849)
+
+[node name="Solar_Panels" type="Node" parent="Gameplay/Quest_Assets"]
+
+[node name="Group A" type="Node3D" parent="Gameplay/Quest_Assets/Solar_Panels"]
+
+[node name="SolarPanel_Ground" parent="Gameplay/Quest_Assets/Solar_Panels/Group A" instance=ExtResource("21_3gr6i")]
+transform = Transform3D(-2.81908, 0.209155, -0.811843, 0, 0.791224, 1.83458, 1.02606, 0.574647, -2.23052, 283.113, 54.012, 331.916)
+
+[node name="SolarPanel_Ground2" parent="Gameplay/Quest_Assets/Solar_Panels/Group A" instance=ExtResource("21_3gr6i")]
+transform = Transform3D(-2.81908, 0.209155, -0.811843, 0, 0.791224, 1.83458, 1.02606, 0.574647, -2.23052, 279.469, 54.012, 333.258)
+
+[node name="Group B" type="Node3D" parent="Gameplay/Quest_Assets/Solar_Panels"]
+
+[node name="SolarPanel_Ground3" parent="Gameplay/Quest_Assets/Solar_Panels/Group B" instance=ExtResource("21_3gr6i")]
+transform = Transform3D(-2.81908, 0.209155, -0.811843, 0, 0.791224, 1.83458, 1.02606, 0.574647, -2.23052, 272.228, 54.012, 335.916)
+
+[node name="SolarPanel_Ground4" parent="Gameplay/Quest_Assets/Solar_Panels/Group B" instance=ExtResource("21_3gr6i")]
+transform = Transform3D(-2.81908, 0.209155, -0.811843, 0, 0.791224, 1.83458, 1.02606, 0.574647, -2.23052, 268.584, 54.012, 337.258)
+
+[node name="Group C" type="Node3D" parent="Gameplay/Quest_Assets/Solar_Panels"]
+
+[node name="SolarPanel_Ground5" parent="Gameplay/Quest_Assets/Solar_Panels/Group C" instance=ExtResource("21_3gr6i")]
+transform = Transform3D(-2.83107, 0.20231, -0.785275, 1.43518e-07, 0.791223, 1.83458, 0.992482, 0.577093, -2.24001, 276.199, 54.012, 313.954)
+
+[node name="SolarPanel_Ground6" parent="Gameplay/Quest_Assets/Solar_Panels/Group C" instance=ExtResource("21_3gr6i")]
+transform = Transform3D(-2.83107, 0.20231, -0.785275, 1.43518e-07, 0.791223, 1.83458, 0.992482, 0.577093, -2.24001, 272.539, 54.012, 315.253)
+
+[node name="Group D" type="Node3D" parent="Gameplay/Quest_Assets/Solar_Panels"]
+
+[node name="SolarPanel_Ground7" parent="Gameplay/Quest_Assets/Solar_Panels/Group D" instance=ExtResource("21_3gr6i")]
+transform = Transform3D(-2.8191, 0.209145, -0.811804, 1.43518e-07, 0.791223, 1.83458, 1.02601, 0.574651, -2.23053, 265.18, 54.012, 317.717)
+
+[node name="SolarPanel_Ground8" parent="Gameplay/Quest_Assets/Solar_Panels/Group D" instance=ExtResource("21_3gr6i")]
+transform = Transform3D(-2.8191, 0.209145, -0.811804, 1.43518e-07, 0.791223, 1.83458, 1.02601, 0.574651, -2.23053, 261.536, 54.012, 319.058)
+
+[node name="Menus" type="Node" parent="."]
+
+[node name="quests_panel" parent="Menus" instance=ExtResource("16_qnyfx")]
+unique_name_in_owner = true
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = -253.5
+offset_right = 216.0
+offset_bottom = 253.5
+grow_vertical = 2
+
+[node name="pause_menu" parent="Menus" instance=ExtResource("3_75tor")]
+unique_name_in_owner = true
+process_mode = 3
+visible = false
+
+[node name="quest_menu" parent="Menus" instance=ExtResource("12_unwyq")]
+unique_name_in_owner = true
+visible = false
+
+[node name="Inventory_Gestion" parent="Menus" instance=ExtResource("3_grpvx")]
+unique_name_in_owner = true
+visible = false
+
+[node name="OptionMenu" parent="Menus" instance=ExtResource("16_goewa")]
+unique_name_in_owner = true
+visible = false
+z_index = 1
+
+[node name="Documentary_menu" parent="Menus" instance=ExtResource("19_tpto7")]
+unique_name_in_owner = true
+visible = false
+
+[node name="Manager" type="Node" parent="."]
+
+[node name="Dictionnary Manager" type="Node" parent="Manager"]
+script = ExtResource("16_oopfl")
+
+[node name="Introduction_Animation" parent="." instance=ExtResource("20_oxljo")]
+
+[node name="Music" type="Node" parent="."]
+
+[node name="MusicAmbientPlayer" type="AudioStreamPlayer" parent="Music"]
+bus = &"Music Volume"
+script = ExtResource("25_oyn76")
+
+[connection signal="call_areas" from="Gameplay/Pnj/Elie" to="Gameplay/Quest_Assets/Objective_Areas/elie_objective" method="area_spawn"]
+[connection signal="call_areas" from="Gameplay/Pnj/Elie" to="Gameplay/Quest_Assets/Objective_Areas/elie_objective2" method="area_spawn"]
+[connection signal="call_areas" from="Gameplay/Pnj/Elie" to="Gameplay/Quest_Assets/Objective_Areas/elie_objective3" method="area_spawn"]
+[connection signal="call_areas" from="Gameplay/Pnj/Martine" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]
+[connection signal="call_areas" from="Gameplay/Pnj/Mr_Mayor" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]
+[connection signal="call_areas" from="Gameplay/Pnj/Mr_Mayor" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area2" method="area_spawn"]
+[connection signal="call_areas" from="Gameplay/Pnj/Mr_Mayor" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area3" method="area_spawn"]
+[connection signal="call_areas" from="Gameplay/Pnj/Roger" to="Gameplay/Quest_Assets/trash area" method="call_areas"]
+[connection signal="call_areas" from="Gameplay/Pnj/Roger" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]
+[connection signal="ready" from="Manager/Dictionnary Manager" to="Menus/Inventory_Gestion" method="_on_dictionnary_manager_ready"]
+[connection signal="cinematic_done" from="Introduction_Animation" to="." method="_on_introduction_animation_cinematic_done"]
+[connection signal="cinematic_done" from="Introduction_Animation" to="Gameplay/Player" method="_on_introduction_animation_cinematic_done"]
+[connection signal="cinematic_done" from="Introduction_Animation" to="Music/MusicAmbientPlayer" method="_on_introduction_animation_cinematic_done"]
+[connection signal="finished" from="Music/MusicAmbientPlayer" to="Music/MusicAmbientPlayer" method="_on_finished"]

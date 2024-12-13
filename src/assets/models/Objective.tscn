@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://bpi826wg0fa6b"]
+
+[ext_resource type="Texture2D" uid="uid://dka00eonkw083" path="res://assets/images/quest/objective_arrow.png" id="1_f07p4"]
+[ext_resource type="Script" path="res://scripts/objective.gd" id="1_y51co"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_0dy5b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_12i6y"]
+transparency = 1
+albedo_color = Color(0, 1, 0, 0.160784)
+refraction_scale = -1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3bypq"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[node name="Area3D" type="Area3D"]
+script = ExtResource("1_y51co")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, 0, 0)
+shape = SubResource("CylinderShape3D_0dy5b")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CollisionShape3D"]
+transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 1, 0, 0, 0)
+layers = 4
+sides = 32
+material = SubResource("StandardMaterial3D_12i6y")
+
+[node name="Upper_Icon" type="Sprite3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, -1.31134e-07, 3, 0, -3, -1.31134e-07, 0, 30, 0)
+layers = 2
+texture = ExtResource("1_f07p4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = 16.5
+offset_right = 175.0
+offset_bottom = 43.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_3bypq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Quests_Resources" load_steps=3 format=3 uid="uid://balyer5qima0m"]
+
+[ext_resource type="Script" path="res://scripts/quests_resource.gd" id="1_r7f5v"]
+[ext_resource type="Resource" uid="uid://cp8w728cjwhry" path="res://assets/quests/talk_Elie2.tres" id="1_xdrfx"]
+
+[resource]
+script = ExtResource("1_r7f5v")
+quests_name = "Reconaissance mission"
+quests_category = 0
+quests_giver = "Ellie"
+quests_ecopoint = 30
+quests_zone = "Forest"
+quests_goal_label_part1 = "Find causes of forest fires"
+quests_goal_label_part2 = ""
+quests_goal_counter = 0
+quests_goal_objective = 3
+quests_description = "Walk through the forest to find the causes and avoid forest fires” When the player has found the wild campfire area, the cigarette butts area and the dry twigs area."
+quests_next_quests = ExtResource("1_xdrfx")
+quest_state = 0
+quest_documentation = Array[String](["beach_waste_collection"])

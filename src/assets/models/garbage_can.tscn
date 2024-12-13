@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cr25pnfa6ioqt"]
+
+[ext_resource type="PackedScene" uid="uid://bedxvblg7n5th" path="res://assets/models/object/Dumpster.glb" id="1_hmlou"]
+[ext_resource type="Script" path="res://scripts/garbage_can.gd" id="1_jwcxo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dosbb"]
+size = Vector3(2.73718, 2.01285, 1.19934)
+
+[node name="Garbage_can" type="RigidBody3D" groups=["other"]]
+script = ExtResource("1_jwcxo")
+prompt_message = "Drop bin bag"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_dosbb")
+
+[node name="garbage_mesh" parent="CollisionShape3D" instance=ExtResource("1_hmlou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)

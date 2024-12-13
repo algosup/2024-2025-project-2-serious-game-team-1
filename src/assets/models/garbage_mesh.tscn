@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci7cb8gcn80oj"]
+
+[ext_resource type="PackedScene" uid="uid://bedxvblg7n5th" path="res://assets/models/object/Dumpster.glb" id="1_wcioc"]
+
+[node name="garbage_mesh" instance=ExtResource("1_wcioc")]

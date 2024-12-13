@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Documentation_Resource" load_steps=2 format=3 uid="uid://cd7j8i0y2is18"]
+
+[ext_resource type="Script" path="res://scripts/documentation_ressource.gd" id="1_4qbba"]
+
+[resource]
+script = ExtResource("1_4qbba")
+Documentation_name = "Coal"
+Documentation_explanation = "Coal is one of the largest contributors to global greenhouse gas emissions, responsible for about 20% of the total worldwide. Burning coal releases significant amounts of CO₂, along with other harmful pollutants like methane during mining. Coal power plants, which generate over a third of the world’s electricity, play a particularly significant role in global warming due to their high emissions levels. Despite a decline in coal use in some developed countries, new coal plants in developing regions, especially in Asia, are adding to emissions as electricity demand grows. Reducing coal dependency is critical to achieving net-zero targets and limiting global temperature rise to below 2°C, as outlined in the Paris Agreement. Innovative solutions like carbon capture technologies are necessary but currently underutilized due to high costs and limited adoption in emerging economies."
+Documentation_source = Array[String](["International Energy Agency", "U.S. Energy Information Administration", "University of Exeter research"])

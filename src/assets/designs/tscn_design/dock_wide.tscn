@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://core1xhkt58la"]
+
+[ext_resource type="PackedScene" uid="uid://b3y3abqk0xsfb" path="res://assets/designs/Fishs/FBX/Dock_Wide.fbx" id="1_t3diu"]
+
+[node name="Dock_Wide" instance=ExtResource("1_t3diu")]

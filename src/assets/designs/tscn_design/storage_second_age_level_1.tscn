@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://csmuxvnydxbas"]
+
+[ext_resource type="PackedScene" uid="uid://cjw3a88bbeajt" path="res://assets/designs/UTM Fantasy/Storage_SecondAge_Level1.fbx" id="1_xryvw"]
+
+[node name="Storage_SecondAge_Level1" instance=ExtResource("1_xryvw")]

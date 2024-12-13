@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbdmi2ylx2hef"]
+
+[ext_resource type="PackedScene" uid="uid://dhluw31no6cjm" path="res://assets/designs/Boats/FBX/Fisher_Boat.fbx" id="1_nn4xf"]
+[ext_resource type="Texture2D" uid="uid://bo7bgv6sxilio" path="res://assets/designs/Boats/Texture/PolyPackBoats.png" id="2_jieam"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7hea0"]
+albedo_texture = ExtResource("2_jieam")
+
+[node name="Fisher_Boat" instance=ExtResource("1_nn4xf")]
+
+[node name="Fisher_Boat" parent="." index="0"]
+layers = 17
+surface_material_override/0 = SubResource("StandardMaterial3D_7hea0")

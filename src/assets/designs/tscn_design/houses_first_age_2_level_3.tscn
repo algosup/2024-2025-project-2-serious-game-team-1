@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://danfprqlcxgkh"]
+
+[ext_resource type="PackedScene" uid="uid://cibwwfktmwrpj" path="res://assets/designs/UTM Fantasy/Houses_FirstAge_2_Level3.fbx" id="1_eb1aw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7bmkv"]
+size = Vector3(0.0261084, 0.00171661, 0.0183368)
+
+[node name="Houses_FirstAge_2_Level3" instance=ExtResource("1_eb1aw")]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Houses_FirstAge_2_Level3/StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.544861, 0.838532, 0, -0.838532, 0.544861, 0.000847168, -0.0613357, 0.00402558)
+shape = SubResource("BoxShape3D_7bmkv")

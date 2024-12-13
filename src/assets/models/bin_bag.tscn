@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://6c6uwu7ip5h"]
+
+[ext_resource type="Script" path="res://scripts/item_object.gd" id="1_nd7sh"]
+[ext_resource type="PackedScene" uid="uid://d4jx1gx3bxfo0" path="res://assets/models/items/bin_bag_mesh.tscn" id="2_0diup"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qrt4l"]
+
+[node name="bin bag" type="RigidBody3D" groups=["item"]]
+script = ExtResource("1_nd7sh")
+prompt_message = "pick up bin bag"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.071, 0, 0, 0, 1.5, 0, 0, 0)
+shape = SubResource("BoxShape3D_qrt4l")
+
+[node name="bin_bag_mesh" parent="CollisionShape3D" instance=ExtResource("2_0diup")]
+transform = Transform3D(1.42857, 0, 0, 0, 2, 0, 0, 0, 1.42857, 0, -0.540172, 0)

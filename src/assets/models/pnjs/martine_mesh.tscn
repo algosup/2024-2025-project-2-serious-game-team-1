@@ -1,0 +1,92 @@
+[gd_scene load_steps=12 format=3 uid="uid://xqyra8st4s6k"]
+
+[ext_resource type="PackedScene" uid="uid://3b8g3m2pnl4w" path="res://assets/models/pnjs/ressource/normal-woman-quest-giver.glb" id="1_arcpx"]
+[ext_resource type="Texture2D" uid="uid://bcsuq88drsitr" path="res://assets/models/pnjs/textures/palette7.png" id="2_xbs2o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bvqad"]
+albedo_texture = ExtResource("2_xbs2o")
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kbn5j"]
+animation = &"normal-woman-a bored idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kgyjf"]
+animation = &"normal-woman-a pissed talking"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lvits"]
+advance_mode = 2
+
+[sub_resource type="Curve" id="Curve_jm7vv"]
+_data = [Vector2(0.745645, 0.981612), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_o4bvv"]
+xfade_time = 5.0
+xfade_curve = SubResource("Curve_jm7vv")
+advance_mode = 2
+advance_condition = &"can_talk"
+
+[sub_resource type="Curve" id="Curve_6vbkd"]
+_data = [Vector2(0.250836, 0.711306), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wv0tu"]
+xfade_time = 5.0
+xfade_curve = SubResource("Curve_6vbkd")
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_hh378"]
+states/Idle/node = SubResource("AnimationNodeAnimation_kbn5j")
+states/Idle/position = Vector2(357, 100)
+states/Talk/node = SubResource("AnimationNodeAnimation_kgyjf")
+states/Talk/position = Vector2(531, 100)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_lvits"), "Idle", "Talk", SubResource("AnimationNodeStateMachineTransition_o4bvv"), "Talk", "Idle", SubResource("AnimationNodeStateMachineTransition_wv0tu")]
+
+[node name="normal-woman-quest-giver" instance=ExtResource("1_arcpx")]
+
+[node name="normal-woman-a" parent="." index="0"]
+transform = Transform3D(0.999753, 0.00868791, 0.0204775, -0.0107353, 0.994717, 0.102092, -0.0194823, -0.102286, 0.994564, -0.00918299, -0.0117049, 0.0906649)
+
+[node name="Skeleton3D" parent="normal-woman-a" index="0"]
+bones/1/rotation = Quaternion(0.0150925, -0.0014969, -0.000245553, 0.999885)
+bones/2/rotation = Quaternion(0.0939768, -0.0133902, 0.00337657, 0.995479)
+bones/4/rotation = Quaternion(0.695062, 0.381521, 0.554301, -0.253142)
+bones/5/rotation = Quaternion(-0.133539, 0.219589, -0.142133, 0.955901)
+bones/6/rotation = Quaternion(-0.00569693, -0.0039297, -0.074982, 0.997161)
+bones/6/scale = Vector3(1, 1, 1)
+bones/7/rotation = Quaternion(-0.102288, 0.161072, -0.00838852, 0.981592)
+bones/7/scale = Vector3(1, 1, 1)
+bones/8/rotation = Quaternion(-0.226775, -0.0156597, -0.0128402, 0.973737)
+bones/8/scale = Vector3(1, 1, 1)
+bones/10/rotation = Quaternion(0.73145, -0.341987, -0.527052, -0.265031)
+bones/10/scale = Vector3(1, 1, 1)
+bones/11/rotation = Quaternion(-0.0440009, -0.377268, 0.263205, 0.886823)
+bones/12/rotation = Quaternion(-0.00569026, 0.00224168, 0.0427763, 0.999066)
+bones/12/scale = Vector3(1, 1, 1)
+bones/13/rotation = Quaternion(-0.0542608, 0.01689, 0.00510072, 0.998371)
+bones/13/scale = Vector3(1, 1, 1)
+bones/14/rotation = Quaternion(-0.200843, 0.00319924, -0.0153742, 0.979498)
+bones/14/scale = Vector3(1, 1, 1)
+bones/16/rotation = Quaternion(0.624199, 0.492274, 0.456561, -0.399493)
+bones/17/rotation = Quaternion(-0.387328, -0.502474, 0.484642, 0.602179)
+bones/18/rotation = Quaternion(0.226413, -0.0303129, -0.0303216, 0.973087)
+bones/18/scale = Vector3(1, 1, 1)
+bones/19/rotation = Quaternion(-0.634895, -0.0236494, 0.0409163, 0.771152)
+bones/19/scale = Vector3(1, 1, 1)
+bones/21/rotation = Quaternion(0.624199, -0.492274, -0.45656, -0.399494)
+bones/21/scale = Vector3(1, 1, 1)
+bones/22/rotation = Quaternion(-0.384561, 0.488204, -0.498596, 0.604294)
+bones/22/scale = Vector3(1, 1, 1)
+bones/23/rotation = Quaternion(0.2094, 0.0553337, 0.0188863, 0.976081)
+bones/24/rotation = Quaternion(-0.635995, 0.0292645, -0.0309899, 0.770515)
+bones/24/scale = Vector3(1, 1, 1)
+
+[node name="char-normal-woman-type-1" parent="normal-woman-a/Skeleton3D" index="0"]
+material_override = SubResource("StandardMaterial3D_bvqad")
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "normal-woman-a bored idle"
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+tree_root = SubResource("AnimationNodeStateMachine_hh378")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/can_talk = false

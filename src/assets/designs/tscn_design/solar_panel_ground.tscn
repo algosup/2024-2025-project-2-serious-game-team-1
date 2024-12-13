@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8x01jc5wd2a3"]
+
+[ext_resource type="PackedScene" uid="uid://dihdm80k4scv2" path="res://assets/designs/Factories/SolarPanel_Ground.fbx" id="1_xtb84"]
+
+[node name="SolarPanel_Ground" instance=ExtResource("1_xtb84")]

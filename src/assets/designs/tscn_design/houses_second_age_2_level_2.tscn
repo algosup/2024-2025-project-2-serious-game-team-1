@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2s1evconep71"]
+
+[ext_resource type="PackedScene" uid="uid://cbagd5qll6uia" path="res://assets/designs/UTM Fantasy/Houses_SecondAge_2_Level2.fbx" id="1_jfscs"]
+
+[node name="Houses_SecondAge_2_Level2" instance=ExtResource("1_jfscs")]

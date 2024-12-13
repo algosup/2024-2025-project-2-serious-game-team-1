@@ -1,0 +1,936 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://b37m0x6oqcx8n"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_bammp"]
+
+[resource]
+script = ExtResource("1_bammp")
+starts = {
+"Elie": &"0_3",
+"Elie2": &"0_8",
+"Martine": &"0_1",
+"Martine2": &"0_7",
+"Mr_Mayor1": &"0_5",
+"Mr_Mayor2": &"0_4",
+"Roger": &"0_2",
+"Roger2": &"0_6"
+}
+nodes = {
+"0_1": {
+"link": &"3_1",
+"offset": Vector2(-2780, -1020),
+"start_id": "Martine"
+},
+"0_2": {
+"link": &"3_3",
+"offset": Vector2(2280, -520),
+"start_id": "Roger"
+},
+"0_3": {
+"link": &"3_8",
+"offset": Vector2(-720, -1520),
+"start_id": "Elie"
+},
+"0_4": {
+"link": &"3_10",
+"offset": Vector2(-620, 640),
+"start_id": "Mr_Mayor2"
+},
+"0_5": {
+"link": &"3_12",
+"offset": Vector2(-500, 1280),
+"start_id": "Mr_Mayor1"
+},
+"0_6": {
+"link": &"3_27",
+"offset": Vector2(4280, 280),
+"start_id": "Roger2"
+},
+"0_7": {
+"link": &"3_26",
+"offset": Vector2(-4480, -460),
+"start_id": "Martine2"
+},
+"0_8": {
+"link": &"3_28",
+"offset": Vector2(-582.003, -897.19),
+"start_id": "Elie2"
+},
+"1_1": {
+"dialogue": "[color=black]Who are you, stranger? I won't let you steal my crops![/color]
+",
+"offset": Vector2(-2800, -740),
+"options": {
+0: {
+"condition": {},
+"link": &"1_20",
+"text": ""
+}
+},
+"size": Vector2(300, 420),
+"speaker": "Martine"
+},
+"1_10": {
+"dialogue": "[color=blue] If the legend is true, it could be really important to find the book to save our world before the end. [/color]",
+"offset": Vector2(1860, 680),
+"options": {
+0: {
+"condition": {},
+"link": &"1_9",
+"text": ""
+}
+},
+"size": Vector2(300, 420),
+"speaker": "Bob"
+},
+"1_11": {
+"dialogue": "[color=blue]Thank you very much. I’ll do some research on it. [/color]",
+"offset": Vector2(2540, 680),
+"options": {
+0: {
+"condition": {},
+"link": &"3_11",
+"text": ""
+}
+},
+"size": Vector2(300, 420),
+"speaker": "Bob"
+},
+"1_12": {
+"dialogue": "[color=blue] Hi Roger! Very good, Mr Mayor told me to come and see you about the legend. [/color]",
+"offset": Vector2(3320, -520),
+"options": {
+0: {
+"condition": {},
+"link": &"1_3",
+"text": ""
+}
+},
+"size": Vector2(300, 420),
+"speaker": "Bob"
+},
+"1_13": {
+"dialogue": "[color=black] Legend has it that it is still in this place and that it will reappear when the time is right. Unfortunately, the end is nigh and we still have nothing. [/color]",
+"offset": Vector2(1520, 680),
+"options": {
+0: {
+"condition": {},
+"link": &"1_10",
+"text": "The story is really interesting."
+}
+},
+"size": Vector2(300, 476),
+"speaker": "Mayor"
+},
+"1_14": {
+"dialogue": "[color=black] Unfortunately, all his research has been lost over time. But the book in which it was all written has reappeared in our little town. [/color]",
+"offset": Vector2(900, 680),
+"options": {
+0: {
+"condition": {},
+"link": &"1_15",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Mayor"
+},
+"1_15": {
+"dialogue": "[color=black] The previous owner had found it, but scientists tried to study it and it got lost in the hands of various people. [/color]",
+"offset": Vector2(1200, 680),
+"options": {
+0: {
+"condition": {},
+"link": &"1_13",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Mayor"
+},
+"1_16": {
+"dialogue": "[color=black] Hello my friend. I hope your move wasn't too difficult. [/color]",
+"offset": Vector2(80, 1280),
+"options": {
+0: {
+"condition": {},
+"link": &"1_17",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Mayor"
+},
+"1_17": {
+"dialogue": "[color=blue]Good morning, Mr Mayor. No, I just had a few boxes that were already packed away. Thank you very much for offering me this house. I was getting ready to discover the town before starting what I'm here for.[/color]",
+"offset": Vector2(480, 1280),
+"options": {
+0: {
+"condition": {},
+"link": &"1_18",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Bob"
+},
+"1_18": {
+"dialogue": "[color=black]I can see that our budding young ecologist is ready to save our pretty little town. I've got a first mission for you before you set off on your adventure.[/color]",
+"offset": Vector2(880, 1280),
+"options": {
+0: {
+"condition": {},
+"link": &"1_19",
+"text": "Go ahead"
+}
+},
+"size": Vector2(300, 476),
+"speaker": "Mayor"
+},
+"1_19": {
+"dialogue": "[color=black]We're trying to [/color][color=dark_red]gather data on the air quality in our little town[/color][color=black], but we're still lacking. Here's the device that will help you. [/color][color=dark_red]Come see me as soon as you've finished.[/color]",
+"offset": Vector2(1260, 1280),
+"options": {
+0: {
+"condition": {},
+"link": &"3_13",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Mayor"
+},
+"1_2": {
+"dialogue": "[color=black] Hi! Are you the new ecologist? Did you get settled in all right? [/color]",
+"offset": Vector2(2960, -520),
+"options": {
+0: {
+"condition": {},
+"link": &"1_12",
+"text": ""
+}
+},
+"size": Vector2(300, 420),
+"speaker": "Roger"
+},
+"1_20": {
+"dialogue": "[color=blue]That's not why I'm here, I'm the city's new ecologist and I've been told to come and see you.[/color]",
+"offset": Vector2(-2440, -720),
+"options": {
+0: {
+"condition": {},
+"link": &"1_21",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Bob"
+},
+"1_21": {
+"dialogue": "[color=black]Oh, sorry. I've been a bit tense the last few days with all these tourists coming in and trashing all my work.[/color]",
+"offset": Vector2(-2100, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_22",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Martine"
+},
+"1_22": {
+"dialogue": "[color=blue]I can understand that.[/color]",
+"offset": Vector2(-2800, -200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_23",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Bob"
+},
+"1_23": {
+"dialogue": "[color=black] Pleased to meet you. I'm Martine. [/color]",
+"offset": Vector2(-2440, -200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_24",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Martine"
+},
+"1_24": {
+"dialogue": "[color=blue]And I’m Bob[/color]",
+"offset": Vector2(-2060, -200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_25",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Bob"
+},
+"1_25": {
+"dialogue": "[color=black]That's... an original name.[/color]",
+"offset": Vector2(-1700, -200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_26",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Martine"
+},
+"1_26": {
+"dialogue": "[color=blue]Do you want me to help you do something?[/color]",
+"offset": Vector2(-2800, 260),
+"options": {
+0: {
+"condition": {},
+"link": &"1_27",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Bob"
+},
+"1_27": {
+"dialogue": "[color=black]If you insist, I'd like you to connect the solar panels on my barns. I haven't had time to connect them properly yet.[/color]",
+"offset": Vector2(-2380, 280),
+"options": {
+0: {
+"condition": {},
+"link": &"3_16",
+"text": "I'll be off straight away."
+},
+1: {
+"condition": {},
+"link": &"3_2",
+"text": "I'll do it later."
+}
+},
+"size": Vector2(300, 537),
+"speaker": "Martine"
+},
+"1_28": {
+"dialogue": "[color=black]I see you've finished picking everything up. Thank you very much for your help. Now it's my turn to help you. What did you want to know?[/color]",
+"offset": Vector2(5100, 280),
+"options": {
+0: {
+"condition": {},
+"link": &"1_29",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Roger"
+},
+"1_29": {
+"dialogue": "[color=blue]It was a pleasure. What do you know about the legend of the lost book?
+[/color]",
+"offset": Vector2(5500, 280),
+"options": {
+0: {
+"condition": {},
+"link": &"1_30",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Bob"
+},
+"1_3": {
+"dialogue": "[color=black] I would have helped you, but as you can see, the beach takes up all my time. [/color]",
+"offset": Vector2(3680, -520),
+"options": {
+0: {
+"condition": {},
+"link": &"1_4",
+"text": " I can help you if you like."
+},
+1: {
+"condition": {},
+"link": &"3_4",
+"text": "alright, see you later then !"
+}
+},
+"size": Vector2(300, 542),
+"speaker": "Roger"
+},
+"1_30": {
+"dialogue": "[color=black]I see that our dear friend the Mayor has spoken to you about it. Well, I must say that I've spent a lot of time researching it, as I'm fascinated by all these stories, but it hasn't been very fruitful.[/color]",
+"offset": Vector2(5900, 320),
+"options": {
+0: {
+"condition": {},
+"link": &"1_31",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Roger"
+},
+"1_31": {
+"dialogue": "[color=black]We've probably already told you, but the book has been passed around by scientists. It travelled all over the world before arriving here with Charles Darwin in the house that is now yours.[/color]",
+"offset": Vector2(6300, 340),
+"options": {
+0: {
+"condition": {},
+"link": &"1_32",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Roger"
+},
+"1_32": {
+"dialogue": "[color=black]It's silly, but you have to believe that even the greatest sages lose their stuff. He was so meticulous and organised in his affairs. At first he thought a thief had stolen it, but many people noticed that he was losing more and more of his things.[/color]",
+"offset": Vector2(6680, 340),
+"options": {
+0: {
+"condition": {},
+"link": &"1_33",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Roger"
+},
+"1_33": {
+"dialogue": "[color=black]After his death, many curious people turned the house upside down to find the book, but nothing. But I can assure you that the book is still on our beautiful island. [/color]",
+"offset": Vector2(7060, 380),
+"options": {
+0: {
+"condition": {},
+"link": &"1_34",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Roger"
+},
+"1_34": {
+"dialogue": "[color=black]Charles was good at solving riddles and I think that only an outstanding ecologist will be able to find the answers. It's a good thing you arrived.[/color]",
+"offset": Vector2(7420, 400),
+"options": {
+0: {
+"condition": {},
+"link": &"1_35",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Roger"
+},
+"1_35": {
+"dialogue": "[color=blue]It gives me a lot of responsibility all at once.[/color]",
+"offset": Vector2(7760, 420),
+"options": {
+0: {
+"condition": {},
+"link": &"1_36",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Bob"
+},
+"1_36": {
+"dialogue": "[color=black]I'll be there to help you and I think Elie will be able to help you too, she's our park ranger and she talks to animals. Have a nice day.[/color]",
+"offset": Vector2(8160, 480),
+"options": {
+0: {
+"condition": {},
+"link": &"3_19",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Roger"
+},
+"1_37": {
+"dialogue": "[color=blue]I'm afraid so. I've been advised to come and see you because I've heard that your communication skills make you the keeper of the town's secrets and gossip.[/color]",
+"offset": Vector2(300, -1520),
+"options": {
+0: {
+"condition": {},
+"link": &"1_38",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Bob"
+},
+"1_38": {
+"dialogue": "[color=black]Oh, I can see that it must have been Roger who told you that. He tends to exaggerate things sometimes. Listen, if you help me, I might consider giving you a few minutes to answer your questions.[/color]",
+"offset": Vector2(660, -1520),
+"options": {
+0: {
+"condition": {},
+"link": &"1_39",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Elie"
+},
+"1_39": {
+"dialogue": "[color=blue]I'm ready, tell me everything.[/color]",
+"offset": Vector2(1040, -1480),
+"options": {
+0: {
+"condition": {},
+"link": &"1_40",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Bob"
+},
+"1_4": {
+"dialogue": "[color=black] That would be incredible, but I don't want to force you. You've probably got better things to do. [/color]",
+"offset": Vector2(4060, -520),
+"options": {
+0: {
+"condition": {},
+"link": &"1_5",
+"text": "Tell me what you want me to do"
+}
+},
+"size": Vector2(300, 481),
+"speaker": "Roger"
+},
+"1_40": {
+"dialogue": "[color=black]Yesterday, many visitors went for a walk in our beautiful forest, but they didn't respect the rules and we're risking a fire that could devastate it.[/color]",
+"offset": Vector2(1400, -1480),
+"options": {
+0: {
+"condition": {},
+"link": &"1_41",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "ELie"
+},
+"1_41": {
+"dialogue": "[color=black]I have to look in every nook and cranny and pay attention to the smallest details that might alert me. If you could do that for me, that would be great.[/color]",
+"offset": Vector2(1800, -1460),
+"options": {
+0: {
+"condition": {},
+"link": &"3_22",
+"text": "It would be a pleasure. I'll get started straight away."
+},
+1: {
+"condition": {},
+"link": &"3_9",
+"text": "I'll do it later"
+}
+},
+"size": Vector2(300, 537),
+"speaker": "Elie"
+},
+"1_42": {
+"dialogue": "[color=black]Have you finished your task?[/color]",
+"offset": Vector2(-3820, -460),
+"options": {
+0: {
+"condition": {},
+"link": &"1_43",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Martine"
+},
+"1_43": {
+"dialogue": "[color=blue]Yes. Now you can use renewable energy.[/color]",
+"offset": Vector2(-3400, -460),
+"options": {
+0: {
+"condition": {},
+"link": &"1_44",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Bob"
+},
+"1_44": {
+"dialogue": "[color=black]Thank you very much. Take some of my vegetables to eat.[/color]",
+"offset": Vector2(-4200, 60),
+"options": {
+0: {
+"condition": {},
+"link": &"1_45",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Martine"
+},
+"1_45": {
+"dialogue": "[color=blue]Thank you very much. See you later.[/color]",
+"offset": Vector2(-3800, 80),
+"options": {
+0: {
+"condition": {},
+"link": &"3_25",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Bob"
+},
+"1_46": {
+"dialogue": "[color=black]So what did you find?[/color]",
+"offset": Vector2(60, -900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_47",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Elie"
+},
+"1_47": {
+"dialogue": "[color=blue]There was a wild campfire area, a cigarette butts area, and a dry leaves area.[/color]",
+"offset": Vector2(520, -880),
+"options": {
+0: {
+"condition": {},
+"link": &"1_48",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Bob"
+},
+"1_48": {
+"dialogue": "[color=black]Thank you so much for your help. It would have taken me all day if you hadn't been there. Now it's up to me to keep my promise. Tell me what you want to know.[/color]",
+"offset": Vector2(900, -860),
+"options": {
+0: {
+"condition": {},
+"link": &"1_49",
+"text": ""
+}
+},
+"size": Vector2(300, 415),
+"speaker": "Elie"
+},
+"1_49": {
+"dialogue": "[color=blue]Roger explained that you could help me with the legend of the lost book.[/color]",
+"offset": Vector2(1280, -860),
+"options": {
+0: {
+"condition": {},
+"link": &"1_50",
+"text": ""
+}
+},
+"size": Vector2(300, 420),
+"speaker": "Bob"
+},
+"1_5": {
+"dialogue": "[color=dark_red]All the waste has to be collected and taken to the recycling plant for reprocessing.[/color][color=black] Here's the bin liner for collecting them.[/color]",
+"offset": Vector2(4440, -520),
+"options": {
+0: {
+"condition": {},
+"link": &"3_7",
+"text": "Here we go."
+}
+},
+"size": Vector2(300, 481),
+"speaker": "Roger"
+},
+"1_50": {
+"dialogue": "[color=black]It's not a legend. The book exists and we need to find it as soon as possible, because our hours are numbered. [/color]",
+"offset": Vector2(1660, -860),
+"options": {
+0: {
+"condition": {},
+"link": &"1_51",
+"text": ""
+}
+},
+"size": Vector2(300, 420),
+"speaker": "Elie"
+},
+"1_51": {
+"dialogue": "[color=blue]That's precisely why I'm here. Do you have any new information?[/color]",
+"offset": Vector2(520, -360),
+"options": {
+0: {
+"condition": {},
+"link": &"1_52",
+"text": ""
+}
+},
+"size": Vector2(300, 400),
+"speaker": "Bob"
+},
+"1_52": {
+"dialogue": "[color=black]It could well be. My little squirrels told me that when they went for a walk in the town one morning, they saw someone rummaging around on the stairs a few days before you arrived. But he ran off when he heard the Mayor coming, because he was probably preparing for you to come into the house.[/color]",
+"offset": Vector2(900, -360),
+"options": {
+0: {
+"condition": {},
+"link": &"1_53",
+"text": ""
+}
+},
+"size": Vector2(300, 400),
+"speaker": "Elie"
+},
+"1_53": {
+"dialogue": "[color=blue]So I should start my search at the stairs. Thank you very much. I'll keep you posted on my progress.[/color]",
+"offset": Vector2(1280, -360),
+"options": {
+0: {
+"condition": {},
+"link": &"1_54",
+"text": ""
+}
+},
+"size": Vector2(300, 400),
+"speaker": "Bob"
+},
+"1_54": {
+"dialogue": "[color=black]Don't worry, my friends will tell me all about it first. Come and see Martine first. She'll be able to give you something to eat with her organic vegetables before you do your research, but be careful, she can be quite... scary. I look forward to seeing you again.[/color]",
+"offset": Vector2(1660, -360),
+"options": {
+0: {
+"condition": {},
+"link": &"3_29",
+"text": ""
+}
+},
+"size": Vector2(300, 400),
+"speaker": "Elie"
+},
+"1_6": {
+"dialogue": "[color=black]Hi! You're the new guy. Welcome among us! I hope you don't need my help straight away, because I'm very busy today.[/color]",
+"offset": Vector2(-40, -1520),
+"options": {
+0: {
+"condition": {},
+"link": &"1_37",
+"text": ""
+}
+},
+"size": Vector2(300, 420),
+"speaker": "Elie"
+},
+"1_7": {
+"dialogue": "[color=black] Hi. Sorry to disturb you again, but I remember a story about this house, and I think that you might be interested. [/color]",
+"offset": Vector2(40, 640),
+"options": {
+0: {
+"condition": {},
+"link": &"1_8",
+"text": "I listen."
+}
+},
+"size": Vector2(300, 481),
+"speaker": "Mayor"
+},
+"1_8": {
+"dialogue": "[color=dark_green]Aristotle[/color][color=black] wrote a manuscript in which he detailed a number of his research projects on climate change and solutions to prevent the end of the world. [/color]",
+"offset": Vector2(520, 640),
+"options": {
+0: {
+"condition": {},
+"link": &"1_14",
+"text": ""
+}
+},
+"size": Vector2(300, 481),
+"speaker": "Mayor"
+},
+"1_9": {
+"dialogue": "[color=black] Exactly. I know that Roger has done a lot of research on the subject and will probably be able to help you get started. Anyway, I'll leave you to your business. We'll be seeing each other again soon. [/color]",
+"offset": Vector2(2200, 680),
+"options": {
+0: {
+"condition": {},
+"link": &"1_11",
+"text": ""
+}
+},
+"size": Vector2(300, 420),
+"speaker": "Mayor"
+},
+"2_1": {
+"comment": "Martines dialogs
+",
+"offset": Vector2(-3400, -860),
+"size": Vector2(320, 140)
+},
+"3_1": {
+"link": &"1_1",
+"offset": Vector2(-2420, -1000),
+"signalValue": "talking"
+},
+"3_10": {
+"link": &"1_7",
+"offset": Vector2(-260, 640),
+"signalValue": "talking"
+},
+"3_11": {
+"link": "END",
+"offset": Vector2(3000, 800),
+"signalValue": "end"
+},
+"3_12": {
+"link": &"1_16",
+"offset": Vector2(-160, 1280),
+"signalValue": "talking"
+},
+"3_13": {
+"link": &"3_14",
+"offset": Vector2(1650.53, 1387.72),
+"signalValue": "get_quest"
+},
+"3_14": {
+"link": &"3_15",
+"offset": Vector2(1920, 1380),
+"signalValue": "quest"
+},
+"3_15": {
+"link": "END",
+"offset": Vector2(2180, 1380),
+"signalValue": "end"
+},
+"3_16": {
+"link": &"3_17",
+"offset": Vector2(-1920, 540),
+"signalValue": "get_quest"
+},
+"3_17": {
+"link": &"3_18",
+"offset": Vector2(-1660, 540),
+"signalValue": "quest"
+},
+"3_18": {
+"link": "END",
+"offset": Vector2(-1400, 540),
+"signalValue": "end"
+},
+"3_19": {
+"link": &"3_20",
+"offset": Vector2(8640, 780),
+"signalValue": "get_quest"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2(-2040, 780),
+"signalValue": "end"
+},
+"3_20": {
+"link": &"3_21",
+"offset": Vector2(8900, 780),
+"signalValue": "quest"
+},
+"3_21": {
+"link": "END",
+"offset": Vector2(9180, 780),
+"signalValue": "end"
+},
+"3_22": {
+"link": &"3_23",
+"offset": Vector2(2220, -1180),
+"signalValue": "get_quest"
+},
+"3_23": {
+"link": &"3_24",
+"offset": Vector2(2540, -1180),
+"signalValue": "quest"
+},
+"3_24": {
+"link": "END",
+"offset": Vector2(2800, -1180),
+"signalValue": "end"
+},
+"3_25": {
+"link": "END",
+"offset": Vector2(-3370.16, 518.81),
+"signalValue": "end"
+},
+"3_26": {
+"link": &"1_42",
+"offset": Vector2(-4100, -460),
+"signalValue": "talking"
+},
+"3_27": {
+"link": &"1_28",
+"offset": Vector2(4700, 300),
+"signalValue": "talking"
+},
+"3_28": {
+"link": &"1_46",
+"offset": Vector2(-220, -900),
+"signalValue": "talking"
+},
+"3_29": {
+"link": "END",
+"offset": Vector2(2000, -180),
+"signalValue": "end"
+},
+"3_3": {
+"link": &"1_2",
+"offset": Vector2(2660, -520),
+"signalValue": "talking"
+},
+"3_30": {
+"link": "END",
+"offset": Vector2(1800, 1980),
+"signalValue": "tutorial_launch"
+},
+"3_4": {
+"link": "END",
+"offset": Vector2(4040, 140),
+"signalValue": "end"
+},
+"3_5": {
+"link": &"3_6",
+"offset": Vector2(5120, -160),
+"signalValue": "quest"
+},
+"3_6": {
+"link": "END",
+"offset": Vector2(5400, -160),
+"signalValue": "end"
+},
+"3_7": {
+"link": &"3_5",
+"offset": Vector2(4820, -160),
+"signalValue": "get_quest"
+},
+"3_8": {
+"link": &"1_6",
+"offset": Vector2(-360, -1520),
+"signalValue": "talking"
+},
+"3_9": {
+"link": "END",
+"offset": Vector2(2220, -1000),
+"signalValue": "end"
+}
+}
+variables = {}
+strays = Array[String](["2_1", "3_30"])
+characters = ""

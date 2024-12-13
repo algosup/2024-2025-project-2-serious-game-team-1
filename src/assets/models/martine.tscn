@@ -1,0 +1,69 @@
+[gd_scene load_steps=17 format=3 uid="uid://dungkr3duinky"]
+
+[ext_resource type="Script" path="res://scripts/pnj.gd" id="1_qxjfm"]
+[ext_resource type="PackedScene" uid="uid://xqyra8st4s6k" path="res://assets/models/pnjs/martine_mesh.tscn" id="1_xhtuf"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="2_s2mnr"]
+[ext_resource type="Script" path="res://scripts/pnj_mesh_animation.gd" id="3_5c3bd"]
+[ext_resource type="Resource" uid="uid://b37m0x6oqcx8n" path="res://assets/dialog/quest_giver.tres" id="3_wtd77"]
+[ext_resource type="Texture2D" uid="uid://cbi4hngk2yu68" path="res://assets/images/chat_bubble_green.PNG" id="4_ajbe3"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="4_kebax"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="5_g7l27"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="6_cjnsb"]
+[ext_resource type="PackedScene" uid="uid://wl4rve86ex6h" path="res://assets/ui/quest_adder.tscn" id="9_x06vk"]
+[ext_resource type="Script" path="res://scripts/quest_adder.gd" id="10_yswsc"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8niu1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kn3wq"]
+texture = ExtResource("4_ajbe3")
+expand_margin_left = 67.0
+expand_margin_top = 169.0
+expand_margin_right = 67.0
+expand_margin_bottom = 200.0
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_t1s5g"]
+script = ExtResource("4_kebax")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_xtxdd"]
+script = ExtResource("5_g7l27")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_qq5um"]
+script = ExtResource("6_cjnsb")
+
+[node name="StaticBody3D" type="StaticBody3D" groups=["pnj"]]
+script = ExtResource("1_qxjfm")
+Pnj_name = "Martine"
+prompt_message = "Talk"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_8niu1")
+
+[node name="Mesh" parent="." instance=ExtResource("1_xhtuf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.892118, 0)
+script = ExtResource("3_5c3bd")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogueBox" type="Panel" parent="CanvasLayer"]
+visible = false
+modulate = Color(1, 1, 0.788235, 1)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -234.5
+offset_top = -229.0
+offset_right = 234.5
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_kn3wq")
+script = ExtResource("2_s2mnr")
+data = ExtResource("3_wtd77")
+start_id = "Martine"
+hide_portrait = true
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_t1s5g"), SubResource("RichTextEffect_xtxdd"), SubResource("RichTextEffect_qq5um")])
+
+[node name="Quest_Adder" parent="." instance=ExtResource("9_x06vk")]
+script = ExtResource("10_yswsc")

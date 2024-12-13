@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbghcs8d7ilfx"]
+
+[ext_resource type="PackedScene" uid="uid://pafpwvgj6hlw" path="res://assets/designs/UTM Fantasy/Port_SecondAge_Level3.fbx" id="1_uqsyu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8j833"]
+size = Vector3(0.193646, 0.00691986, 0.00334167)
+
+[node name="Port_SecondAge_Level3" instance=ExtResource("1_uqsyu")]
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Port_SecondAge_Level3/StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, -2.84217e-14, 0, 2.84217e-14, 1, 0.0359237, -0.0220962, 0.00106343)
+shape = SubResource("BoxShape3D_8j833")

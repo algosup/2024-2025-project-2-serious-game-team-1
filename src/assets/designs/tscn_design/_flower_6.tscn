@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtcaxf1afttx3"]
+
+[ext_resource type="PackedScene" uid="uid://r3ywvsjxrv8x" path="res://assets/designs/Free Shrubs Flowers and Mushrooms 3D Low Poly Pack-2/fbx/_flower_6.fbx" id="1_e6ix4"]
+[ext_resource type="Texture2D" uid="uid://bqa6wwvvho1b7" path="res://assets/designs/Free Shrubs Flowers and Mushrooms 3D Low Poly Pack-2/texture/Ekfs_bush_map.png" id="2_5ro00"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sxe74"]
+albedo_texture = ExtResource("2_5ro00")
+
+[node name="_flower_6" instance=ExtResource("1_e6ix4")]
+
+[node name="flower_6" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_sxe74")

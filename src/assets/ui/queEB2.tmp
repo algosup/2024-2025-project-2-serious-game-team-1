@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfpxasv5v80bs"]
+
+[ext_resource type="PackedScene" uid="uid://dyxmcywp3874g" path="res://assets/ui/quests_panel_slot.tscn" id="1_3dl8j"]
+[ext_resource type="Script" path="res://scripts/quests_panel.gd" id="1_6txpd"]
+
+[node name="quests_panel" type="Control"]
+custom_minimum_size = Vector2(150, 350)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 150.0
+offset_bottom = 345.0
+script = ExtResource("1_6txpd")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(150, 345)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 19
+text = "Current Quests"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="quests_panel_slot_1" parent="Panel/VBoxContainer" instance=ExtResource("1_3dl8j")]
+layout_mode = 2
+
+[node name="quests_panel_slot_2" parent="Panel/VBoxContainer" instance=ExtResource("1_3dl8j")]
+layout_mode = 2
+
+[node name="quests_panel_slot_3" parent="Panel/VBoxContainer" instance=ExtResource("1_3dl8j")]
+layout_mode = 2

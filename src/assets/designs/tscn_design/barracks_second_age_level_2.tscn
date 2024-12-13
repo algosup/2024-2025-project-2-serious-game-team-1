@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://wl21oc0nbmwx"]
+
+[ext_resource type="PackedScene" uid="uid://f27x4f78dv4f" path="res://assets/designs/UTM Fantasy/Barracks_SecondAge_Level2.fbx" id="1_b3cx6"]
+
+[node name="Barracks_SecondAge_Level2" instance=ExtResource("1_b3cx6")]

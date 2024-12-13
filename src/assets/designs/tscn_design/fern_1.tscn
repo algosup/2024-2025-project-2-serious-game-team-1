@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmt0iieiiu2r6"]
+
+[ext_resource type="PackedScene" uid="uid://p263cfk82x4t" path="res://assets/designs/Stylized_Nature/FBX/Fern_1.fbx" id="1_g3hov"]
+
+[node name="Fern_1" instance=ExtResource("1_g3hov")]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cf0f2nhkwe8ki"]
+
+[ext_resource type="PackedScene" uid="uid://blxdleg06s8qt" path="res://assets/designs/UTM Fantasy/TowerHouse_SecondAge.fbx" id="1_t2o3d"]
+
+[node name="TowerHouse_SecondAge" instance=ExtResource("1_t2o3d")]

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Quests_Resources" load_steps=3 format=3 uid="uid://n506t248htv7"]
+
+[ext_resource type="Script" path="res://scripts/quests_resource.gd" id="1_4ybta"]
+[ext_resource type="Resource" uid="uid://r1ybhcb2mx5n" path="res://assets/quests/talk_roger1.tres" id="1_k3aju"]
+
+[resource]
+script = ExtResource("1_4ybta")
+quests_name = "Mayor's issue"
+quests_category = 0
+quests_giver = ""
+quests_ecopoint = 0
+quests_zone = "Town"
+quests_goal_label_part1 = "Talk to the mayor"
+quests_goal_label_part2 = ""
+quests_goal_counter = 0
+quests_goal_objective = 1
+quests_description = "The mayor would like to talk to you about your new home."
+quests_next_quests = ExtResource("1_k3aju")
+quest_state = 0
+quest_documentation = Array[String](["beach_waste_collection"])

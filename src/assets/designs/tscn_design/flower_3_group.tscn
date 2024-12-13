@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://0cn10gh3gwy5"]
+
+[ext_resource type="PackedScene" uid="uid://unngx7oc8abm" path="res://assets/designs/Stylized_Nature/FBX/Flower_3_Group.fbx" id="1_d66ol"]
+
+[node name="Flower_3_Group" instance=ExtResource("1_d66ol")]

@@ -1,0 +1,83 @@
+[gd_scene load_steps=13 format=3 uid="uid://bnuj1vhug5vud"]
+
+[ext_resource type="PackedScene" uid="uid://4478a3teswbv" path="res://assets/models/pnjs/ressource/strong_man_a.glb" id="1_ngs8h"]
+[ext_resource type="Script" path="res://scripts/pnj_mesh_animation.gd" id="2_5srpd"]
+[ext_resource type="Texture2D" uid="uid://brwefvpkd5rxj" path="res://assets/models/pnjs/textures/palette3.png" id="3_flr01"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bamde"]
+albedo_texture = ExtResource("3_flr01")
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7foc6"]
+animation = &"strong-man-a idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rujew"]
+animation = &"strong-man-a talk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_g8r85"]
+advance_mode = 2
+
+[sub_resource type="Curve" id="Curve_w57jy"]
+_data = [Vector2(0.331081, 1), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hjlpi"]
+xfade_time = 5.0
+xfade_curve = SubResource("Curve_w57jy")
+advance_mode = 2
+advance_condition = &"can_talk"
+
+[sub_resource type="Curve" id="Curve_ve7d0"]
+_data = [Vector2(0.331081, 1), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wlv2b"]
+xfade_time = 5.0
+xfade_curve = SubResource("Curve_ve7d0")
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_qqgu7"]
+states/Idle/node = SubResource("AnimationNodeAnimation_7foc6")
+states/Idle/position = Vector2(325, 78)
+states/Start/position = Vector2(159, 115)
+states/Talk/node = SubResource("AnimationNodeAnimation_rujew")
+states/Talk/position = Vector2(466, 115)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_g8r85"), "Idle", "Talk", SubResource("AnimationNodeStateMachineTransition_hjlpi"), "Talk", "Idle", SubResource("AnimationNodeStateMachineTransition_wlv2b")]
+
+[node name="strong_man_quest_giver" instance=ExtResource("1_ngs8h")]
+script = ExtResource("2_5srpd")
+
+[node name="strong-man-a" parent="." index="0"]
+transform = Transform3D(0.988382, 0.0800607, -0.1292, -0.0720224, 0.995235, 0.0657388, 0.133847, -0.0556697, 0.989438, -0.0566497, -0.0252705, 0.0315781)
+
+[node name="Skeleton3D" parent="strong-man-a" index="0"]
+bones/1/rotation = Quaternion(-0.0140403, -0.009861, 0.0386751, 0.999105)
+bones/2/rotation = Quaternion(0.0606666, -0.0143764, 0.0839065, 0.994521)
+bones/4/rotation = Quaternion(0.712586, 0.45222, 0.449643, -0.292471)
+bones/5/rotation = Quaternion(-0.423409, 0.356624, 0.0837324, 0.828573)
+bones/6/rotation = Quaternion(-3.48872e-08, -2.64263e-08, -0.115672, 0.993287)
+bones/7/rotation = Quaternion(-0.0264348, 0.00632615, -0.0996245, 0.994654)
+bones/8/rotation = Quaternion(-0.0644488, -0.000423301, 0.00114482, 0.99792)
+bones/10/rotation = Quaternion(0.791291, -0.26843, -0.525387, -0.160539)
+bones/11/rotation = Quaternion(-0.233519, -0.32482, -0.115054, 0.909243)
+bones/12/rotation = Quaternion(-5.79564e-08, 1.36206e-07, 0.0868732, 0.996219)
+bones/13/rotation = Quaternion(-0.0261128, 0.0998097, 0.000180086, 0.994664)
+bones/14/rotation = Quaternion(-0.0735053, 0.000444038, -0.00287029, 0.997291)
+bones/16/rotation = Quaternion(0.595351, 0.524313, 0.515253, -0.324295)
+bones/17/rotation = Quaternion(-0.277384, -0.727059, 0.366356, 0.510124)
+bones/18/rotation = Quaternion(0.215883, 0.0348952, -0.00154319, 0.975794)
+bones/19/rotation = Quaternion(-0.609374, -0.0494762, 0.0563226, 0.789331)
+bones/21/rotation = Quaternion(0.598825, -0.519284, -0.51826, -0.321184)
+bones/22/rotation = Quaternion(-0.302979, 0.541127, -0.570517, 0.53842)
+bones/23/rotation = Quaternion(0.19495, 0.0555182, -0.0230598, 0.978969)
+bones/24/rotation = Quaternion(-0.739977, -0.018878, 0.0222929, 0.671997)
+
+[node name="char-strong-man-type-1" parent="strong-man-a/Skeleton3D" index="0"]
+material_override = SubResource("StandardMaterial3D_bamde")
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "strong-man-a idle"
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+tree_root = SubResource("AnimationNodeStateMachine_qqgu7")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/can_talk = false

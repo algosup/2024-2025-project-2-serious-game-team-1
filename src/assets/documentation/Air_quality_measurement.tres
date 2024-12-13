@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Documentation_Resource" load_steps=2 format=3 uid="uid://cpfkmwqkduult"]
+
+[ext_resource type="Script" path="res://scripts/documentation_ressource.gd" id="1_qn4ql"]
+
+[resource]
+script = ExtResource("1_qn4ql")
+Documentation_name = "Air quality measurement"
+Documentation_explanation = "Before Covid 19, we were at 35 μg/m3 and by 2023, the average was 24 μg/m3, a measure decreasing in the right direction, and certainly below the limit not to be exceeded being 40 μg/m3, however, the threshold not to be spent for the WHO (World Health Organization) is 10."
+Documentation_source = Array[String](["French Ministry of Ecological Transition and Territorial Cohesion"])

@@ -1,0 +1,75 @@
+[gd_scene load_steps=15 format=3 uid="uid://d06skomyaolfc"]
+
+[ext_resource type="Script" path="res://addons/proton_scatter/src/scatter.gd" id="1_matol"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/stack/modifier_stack.gd" id="2_b8qdt"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/base_modifier.gd" id="3_mi2ot"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/create_inside_random.gd" id="4_fxwpu"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/randomize_transforms.gd" id="5_pyea3"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/project_on_terrain3d.gd" id="6_sbcp1"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/scatter_item.gd" id="7_v4dx2"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/scatter_shape.gd" id="8_xnlu7"]
+[ext_resource type="Resource" uid="uid://bq1fjydlta2dn" path="res://assets/map/BeachArea.tres" id="9_kby4u"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/common/physics_helper.gd" id="10_bkrio"]
+
+[sub_resource type="Resource" id="Resource_qyukb"]
+script = ExtResource("4_fxwpu")
+amount = 75
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 1
+
+[sub_resource type="Resource" id="Resource_562wi"]
+script = ExtResource("5_pyea3")
+position = Vector3(5, 5, 5)
+rotation = Vector3(7, 360, 7)
+scale = Vector3(20, 20, 20)
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 2
+
+[sub_resource type="Resource" id="Resource_bhmv1"]
+script = ExtResource("6_sbcp1")
+terrain_node = NodePath("../../../Terrain3D")
+align_with_collision_normal = false
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 0
+
+[sub_resource type="Resource" id="Resource_frin2"]
+script = ExtResource("2_b8qdt")
+stack = Array[ExtResource("3_mi2ot")]([SubResource("Resource_qyukb"), SubResource("Resource_562wi"), SubResource("Resource_bhmv1")])
+
+[node name="Rocks" type="Node3D"]
+script = ExtResource("1_matol")
+keep_static_colliders = true
+modifier_stack = SubResource("Resource_frin2")
+Performance/use_chunks = true
+Performance/chunk_dimensions = Vector3(15, 15, 15)
+
+[node name="Little" type="Node3D" parent="."]
+script = ExtResource("7_v4dx2")
+source_scale_multiplier = 50.0
+source_ignore_scale = false
+path = "res://assets/designs/tscn_design/stone_2.tscn"
+
+[node name="ScatterShape" type="Node3D" parent="."]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0, 0, 0)
+script = ExtResource("8_xnlu7")
+shape = ExtResource("9_kby4u")
+
+[node name="Big" type="Node3D" parent="."]
+script = ExtResource("7_v4dx2")
+proportion = 10
+source_scale_multiplier = 50.0
+path = "res://assets/designs/tscn_design/stone_5.tscn"
+
+[node name="PhysicsHelper" type="Node" parent="."]
+script = ExtResource("10_bkrio")
+
+[node name="ScatterOutput" type="Marker3D" parent="."]
