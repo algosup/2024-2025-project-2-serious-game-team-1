@@ -12,7 +12,22 @@ var Item_List: Dictionary = {
 var Quest_List: Dictionary = {
 	"Clean Beach" : "res://assets/quests/clean_beach.tres",
 	"Recycle Plastic" : "res://assets/quests/recycle_plastic.tres",
-	"Get data" : "res://assets/quests/get_data.tres"
+	"Get data" : "res://assets/quests/get_data.tres",
+	"Reconaissance mission" : "res://assets/quests/reconaissance_mission.tres",
+	"Solar Connexion" : "res://assets/quests/solar_connexion.tres",
+	
+	"Introduction" : "res://assets/quests/talk_mayor1.tres",
+	"Retrieve the data" : "res://assets/quests/talk_mayor2.tres",
+	"Mayor's issue" : "res://assets/quests/talk_mayor3.tres",
+	
+	"The Legend part 1" : "res://assets/quests/talk_roger1.tres",
+	"The Legend part 2" : "res://assets/quests/talk_roger2.tres",
+	
+	"The legend part 3" : "res://assets/quests/talk_Elie.tres",
+	"End of mission" : "res://assets/quests/talk_Elie2.tres",
+	
+	"A short break" : "res://assets/quests/talk_Martine.tres",
+	"A deserved meal" : "res://assets/quests/talk_Martine2.tres"
 }
 
 var inventory : Array = [

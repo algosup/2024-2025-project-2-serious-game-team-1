@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("2_cnrdu")
-quests_name = "solar connexion"
+quests_name = "Solar Connexion"
 quests_category = 0
 quests_giver = "Elie"
 quests_ecopoint = 20

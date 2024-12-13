@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_dm7jn")
-quests_name = "The Legend part 1"
+quests_name = "The Legend part 2"
 quests_category = 0
 quests_giver = "Roger"
 quests_ecopoint = 0

@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("2_6qofn")
-quests_name = ""
+quests_name = "End of mission"
 quests_category = 0
 quests_giver = "Elie"
 quests_ecopoint = 0

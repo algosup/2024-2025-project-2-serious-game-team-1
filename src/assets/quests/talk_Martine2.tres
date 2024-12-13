@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_b0mdy")
-quests_name = "A deserved Meal"
+quests_name = "A deserved meal"
 quests_category = 0
 quests_giver = "Martine"
 quests_ecopoint = 0
