@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dekxjqqux4lw3"]
+[gd_scene load_steps=22 format=3 uid="uid://dekxjqqux4lw3"]
 
 [ext_resource type="Shader" path="res://assets/ui/shaders/ui_back_shader.gdshader" id="1_eo85a"]
 [ext_resource type="Script" path="res://scripts/documetary_menu.gd" id="1_oediq"]
@@ -17,6 +17,7 @@
 [ext_resource type="Resource" uid="uid://yfto1tqt8783" path="res://assets/documentation/Forest_fires.tres" id="10_0rn3d"]
 [ext_resource type="Resource" uid="uid://du47iply3rc3a" path="res://assets/documentation/Recycling_vegetative_waste.tres" id="11_7c8b4"]
 [ext_resource type="Resource" uid="uid://bnwcw0okhdxa4" path="res://assets/documentation/Wind_turbine.tres" id="11_a4hie"]
+[ext_resource type="PackedScene" uid="uid://crtrccaktk66" path="res://assets/ui/doc_adder.tscn" id="18_y6tbf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_13r38"]
 shader = ExtResource("1_eo85a")
@@ -256,3 +257,5 @@ custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 autowrap_mode = 2
+
+[node name="doc_adder" parent="." instance=ExtResource("18_y6tbf")]

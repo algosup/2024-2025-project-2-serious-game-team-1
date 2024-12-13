@@ -3,6 +3,7 @@ extends Control
 @onready var title_label: Label = $Panel/Right_page/Title_Label
 @onready var rich_text_label: RichTextLabel = $Panel/Right_page/RichTextLabel
 @onready var source_label: Label = $Panel/Right_page/Source_Label
+@onready var doc_adder: CanvasLayer = $doc_adder
 @onready var climate_change: Panel = $Panel/Left_page/Documents_Types_Container/Documentation/Climate_change/Climate_Change
 @onready var forest_fires: Panel = $Panel/Left_page/Documents_Types_Container/Documentation/Forest/Forest_fires
 @onready var coal: Panel = $"Panel/Left_page/Documents_Types_Container/Documentation/Fossil_energies_&_Renewable_energies/Coal"
@@ -23,6 +24,13 @@ extends Control
 	wind_turbine, fossil_fuels_vs_renewable_energies, air_quality_measurement,
 	greenhouse_effect, beach_waste_collection, plastic_recycling,
 	recycling_vegetative_waste]
+
+var current_doc_available = []
+
+func _process(_delta):
+	if AllDictionary.documentation_available != current_doc_available:
+		doc_adder.play_animation()
+		current_doc_available = AllDictionary.documentation_available
 
 func set_documentation(documentation : Documentation_Resource):
 	title_label.text = documentation.Documentation_name
