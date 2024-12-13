@@ -46,14 +46,14 @@ func add_item(item : Item_Ressource):
 	for i in range(inventorySize):
 		if inventory[i] == null:
 			print("item is not null")
-			inventory[i] = item
+			inventory[i] =  item
 			print(item.item_title, "added to slot", i)
 			print(inventory)
 			return
 		print("Inventory full!")
 
 func get_resource_path_quest_list(quest_id: String) -> String:
-	print("Quests Search") 
+	print("Quests Search")  
 	print(active_main_quests, active_secondary_quests)
 	if Quest_List.has(quest_id):
 		return Quest_List[quest_id]

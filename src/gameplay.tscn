@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://chxfeda425gsu"]
+[gd_scene load_steps=30 format=3 uid="uid://chxfeda425gsu"]
 
 [ext_resource type="PackedScene" uid="uid://lrfexx8s0e13" path="res://assets/map/map.tscn" id="1_7b4si"]
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_hjvrf"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://dfpxasv5v80bs" path="res://assets/ui/quests_panel.tscn" id="16_qnyfx"]
 [ext_resource type="PackedScene" uid="uid://dekxjqqux4lw3" path="res://assets/ui/documetary_menu.tscn" id="19_tpto7"]
 [ext_resource type="PackedScene" uid="uid://d1uhb55q7ye7b" path="res://assets/ui/introduction_animation.tscn" id="20_oxljo"]
+[ext_resource type="Script" path="res://scripts/general_music.gd" id="25_oyn76"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nv1kv"]
 shader = ExtResource("12_ycxjg")
@@ -58,7 +59,7 @@ process_mode = 1
 [node name="Player" parent="Gameplay" instance=ExtResource("8_735e1")]
 unique_name_in_owner = true
 process_mode = 1
-transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941, 411.455, 44.6958, 618.561)
+transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941, -243.387, 44.6958, 618.561)
 
 [node name="Player_UI" parent="Gameplay/Player" instance=ExtResource("9_61cme")]
 unique_name_in_owner = true
@@ -197,6 +198,12 @@ script = ExtResource("16_oopfl")
 
 [node name="Introduction_Animation" parent="." instance=ExtResource("20_oxljo")]
 
+[node name="Music" type="Node" parent="."]
+
+[node name="MusicAmbientPlayer" type="AudioStreamPlayer" parent="Music"]
+bus = &"Music Volume"
+script = ExtResource("25_oyn76")
+
 [connection signal="call_areas" from="Gameplay/Pnj/Elie" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]
 [connection signal="call_areas" from="Gameplay/Pnj/Martine" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]
 [connection signal="call_areas" from="Gameplay/Pnj/Mr_Mayor" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]
@@ -205,3 +212,6 @@ script = ExtResource("16_oopfl")
 [connection signal="call_areas" from="Gameplay/Pnj/Roger" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]
 [connection signal="ready" from="Manager/Dictionnary Manager" to="Menus/Inventory_Gestion" method="_on_dictionnary_manager_ready"]
 [connection signal="cinematic_done" from="Introduction_Animation" to="." method="_on_introduction_animation_cinematic_done"]
+[connection signal="cinematic_done" from="Introduction_Animation" to="Gameplay/Player" method="_on_introduction_animation_cinematic_done"]
+[connection signal="cinematic_done" from="Introduction_Animation" to="Music/MusicAmbientPlayer" method="_on_introduction_animation_cinematic_done"]
+[connection signal="finished" from="Music/MusicAmbientPlayer" to="Music/MusicAmbientPlayer" method="_on_finished"]
