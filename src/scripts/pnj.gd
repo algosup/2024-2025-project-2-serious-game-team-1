@@ -34,6 +34,7 @@ func pnj_talk():
 		
 
 func _on_dialogue_box_dialogue_signal(value):
+	AllDictionary.NPC_talking = true
 	AllDictionary.debug_print()
 	print("start to talk with" + str(self))
 	if value == "get_quest":
@@ -87,5 +88,6 @@ func _on_dialogue_box_dialogue_signal(value):
 		Variable.talking = false
 		rotation.y = previous_rotation
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		AllDictionary.NPC_talking = false
 	print(str(value))
 	AllDictionary.debug_print()

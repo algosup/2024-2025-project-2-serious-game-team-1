@@ -57,32 +57,33 @@ func _ready() -> void:
 func _process(_delta):
 	if Variable.current_size.x < Variable.min_size.x or Variable.current_size.y < Variable.min_size.y:
 		DisplayServer.window_set_size(Vector2i(max(Variable.current_size.x, Variable.min_size.x), max(Variable.current_size.y, Variable.min_size.y)))
-	if Input.is_action_just_pressed("inventory"):
-		if Variable.InventoryOpen:
-			inventory_gestion.CloseInventory()
-		else:
-			inventory_gestion.OpenInventory()
-	if Input.is_action_just_pressed("quest_menu"):
-		if Variable.QuestMenuOpen:
-			quest_menu.CloseQuestMenu()
-		else:
-			quest_menu.OpenQuestMenu()
-	if Input.is_action_just_pressed("documentary"):
-		if Variable.DocumentaryMenuOpen:
-			documentary_menu.CloseDoc()
-		else:
-			documentary_menu.OpenDoc()
-	if Input.is_action_just_pressed("escape"):
-		if Variable.InventoryOpen:
-			inventory_gestion.CloseInventory()
-		elif Variable.QuestMenuOpen:
-			quest_menu.CloseQuestMenu()
-		elif Variable.PlayMenuOpen:
-			pause_menu.resume_game()
-		elif Variable.DocumentaryMenuOpen:
-			documentary_menu.CloseDoc()
-		else:
-			pause_menu.pause_game()
+	if !AllDictionary.NPC_talking:
+		if Input.is_action_just_pressed("inventory"):
+			if Variable.InventoryOpen:
+				inventory_gestion.CloseInventory()
+			else:
+				inventory_gestion.OpenInventory()
+		if Input.is_action_just_pressed("quest_menu"):
+			if Variable.QuestMenuOpen:
+				quest_menu.CloseQuestMenu()
+			else:
+				quest_menu.OpenQuestMenu()
+		if Input.is_action_just_pressed("documentary"):
+			if Variable.DocumentaryMenuOpen:
+				documentary_menu.CloseDoc()
+			else:
+				documentary_menu.OpenDoc()
+		if Input.is_action_just_pressed("escape"):
+			if Variable.InventoryOpen:
+				inventory_gestion.CloseInventory()
+			elif Variable.QuestMenuOpen:
+				quest_menu.CloseQuestMenu()
+			elif Variable.PlayMenuOpen:
+				pause_menu.resume_game()
+			elif Variable.DocumentaryMenuOpen:
+				documentary_menu.CloseDoc()
+			else:
+				pause_menu.pause_game()
 
 
 func _on_introduction_animation_cinematic_done() -> void:

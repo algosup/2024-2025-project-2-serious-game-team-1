@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://chxfeda425gsu"]
+[gd_scene load_steps=29 format=3 uid="uid://chxfeda425gsu"]
 
 [ext_resource type="PackedScene" uid="uid://lrfexx8s0e13" path="res://assets/map/map.tscn" id="1_7b4si"]
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_hjvrf"]
@@ -22,7 +22,6 @@
 [ext_resource type="Resource" uid="uid://dx0okth0b6dxk" path="res://assets/quests/get_data.tres" id="16_jgd18"]
 [ext_resource type="Script" path="res://scripts/all_dictionary.gd" id="16_oopfl"]
 [ext_resource type="PackedScene" uid="uid://dfpxasv5v80bs" path="res://assets/ui/quests_panel.tscn" id="16_qnyfx"]
-[ext_resource type="Script" path="res://scripts/general_music.gd" id="17_b77i8"]
 [ext_resource type="PackedScene" uid="uid://dekxjqqux4lw3" path="res://assets/ui/documetary_menu.tscn" id="19_tpto7"]
 [ext_resource type="PackedScene" uid="uid://d1uhb55q7ye7b" path="res://assets/ui/introduction_animation.tscn" id="20_oxljo"]
 
@@ -59,7 +58,7 @@ process_mode = 1
 [node name="Player" parent="Gameplay" instance=ExtResource("8_735e1")]
 unique_name_in_owner = true
 process_mode = 1
-transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941, -112.478, 126.658, 790.586)
+transform = Transform3D(1, 0, 0, 0, 0.999941, -0.0108732, 0, 0.0108732, 0.999941, 411.455, 44.6958, 618.561)
 
 [node name="Player_UI" parent="Gameplay/Player" instance=ExtResource("9_61cme")]
 unique_name_in_owner = true
@@ -153,12 +152,6 @@ time_to_stay = 3.0
 quest_name = "Get data"
 quest = ExtResource("16_jgd18")
 
-[node name="Music" type="Node" parent="Gameplay"]
-
-[node name="Music_Player" type="AudioStreamPlayer" parent="Gameplay/Music"]
-bus = &"Music Volume"
-script = ExtResource("17_b77i8")
-
 [node name="Menus" type="Node" parent="."]
 
 [node name="quests_panel" parent="Menus" instance=ExtResource("16_qnyfx")]
@@ -166,7 +159,9 @@ unique_name_in_owner = true
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
+offset_left = 10.0
 offset_top = -253.5
+offset_right = 216.0
 offset_bottom = 253.5
 grow_vertical = 2
 
@@ -205,8 +200,5 @@ script = ExtResource("16_oopfl")
 [connection signal="call_areas" from="Gameplay/Pnj/Mr_Mayor" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area2" method="area_spawn"]
 [connection signal="call_areas" from="Gameplay/Pnj/Mr_Mayor" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area3" method="area_spawn"]
 [connection signal="call_areas" from="Gameplay/Pnj/Roger" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]
-[connection signal="finished" from="Gameplay/Music/Music_Player" to="Gameplay/Music/Music_Player" method="_on_finished"]
 [connection signal="ready" from="Manager/Dictionnary Manager" to="Menus/Inventory_Gestion" method="_on_dictionnary_manager_ready"]
 [connection signal="cinematic_done" from="Introduction_Animation" to="." method="_on_introduction_animation_cinematic_done"]
-[connection signal="cinematic_done" from="Introduction_Animation" to="Gameplay/Player" method="_on_introduction_animation_cinematic_done"]
-[connection signal="cinematic_done" from="Introduction_Animation" to="Gameplay/Music/Music_Player" method="_on_introduction_animation_cinematic_done"]
