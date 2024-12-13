@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://c7grp6rev45qv"]
+[gd_scene load_steps=10 format=3 uid="uid://c7grp6rev45qv"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_ery66"]
 [ext_resource type="Texture2D" uid="uid://bumxewmi2rpcp" path="res://assets/images/main_menu/Menu_Background.JPG" id="2_ctpgs"]
 [ext_resource type="Texture2D" uid="uid://cbmcqt15yn27q" path="res://assets/images/main_menu/image-removebg-preview (1).png" id="3_3l7jv"]
 [ext_resource type="PackedScene" uid="uid://b31wjwnn4gip3" path="res://assets/ui/option_menu.tscn" id="3_ica2l"]
+[ext_resource type="AudioStream" uid="uid://cg6e754b7x7ai" path="res://assets/music/instrumental-ambient-calming-269887.mp3" id="5_kp6lv"]
+[ext_resource type="Script" path="res://scripts/general_music.gd" id="6_0pqx4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f427p"]
 bg_color = Color(0.767464, 0.696928, 0.604029, 1)
@@ -87,6 +89,14 @@ texture = ExtResource("3_3l7jv")
 visible = false
 layout_mode = 1
 
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_kp6lv")
+volume_db = 15.0
+autoplay = true
+bus = &"Music Volume"
+script = ExtResource("6_0pqx4")
+
 [connection signal="pressed" from="Buttons/OptionButton" to="." method="_on_option_button_pressed"]
 [connection signal="pressed" from="Buttons/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="Buttons/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Buttons/PlayButton" to="MenuMusic" method="_on_play_button_pressed"]
