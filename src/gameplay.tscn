@@ -119,6 +119,7 @@ prompt_message = "Interact"
 [node name="bin bag" parent="Gameplay/Object" instance=ExtResource("9_0mf82")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 329.329, 36.6179, 566.489)
 item_ressource = ExtResource("7_p0csr")
+prompt_message = "Pick-up bin bag"
 
 [node name="Garbage_can" parent="Gameplay/Object" instance=ExtResource("13_5x3xm")]
 transform = Transform3D(-0.963826, 2.3927e-05, -0.266532, 0.000106552, 1, -0.000295538, 0.266532, -0.000313247, -0.963826, 323.36, 36.7838, 762.273)

@@ -122,7 +122,7 @@ theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
 theme_override_styles/hover = SubResource("StyleBoxFlat_t6l06")
 theme_override_styles/normal = SubResource("StyleBoxFlat_x53af")
-text = "press here to skip"
+text = "Press to skip"
 
 [connection signal="finished" from="Intro_waking" to="." method="_on_intro_waking_finished"]
 [connection signal="finished" from="Intro_presentation" to="." method="_on_intro_presentation_finished"]
