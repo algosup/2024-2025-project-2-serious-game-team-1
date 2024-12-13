@@ -47,3 +47,9 @@ func _physics_process(delta: float) -> void:
 
 		# Movement
 		move_and_slide()
+
+
+func _on_introduction_animation_cinematic_done() -> void:
+	position.x = 411
+	position.y = 44
+	position.z = 618
