@@ -4,6 +4,7 @@ extends Area3D
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
 @onready var csg_cylinder_3d: CSGCylinder3D = $CollisionShape3D/CSGCylinder3D
 @onready var canvas_layer: CanvasLayer = $CanvasLayer
+@onready var upper_icon: Sprite3D = $Upper_Icon
 
 @export var time_to_stay : float
 @export var quest_name : String
@@ -14,10 +15,12 @@ var is_character_in_area: bool
 func hide_zone() -> void:
 	canvas_layer.hide()
 	csg_cylinder_3d.hide()
+	upper_icon.hide()
 	collision_shape_3d.disabled = true
 
 func show_zone():
 	csg_cylinder_3d.show()
+	upper_icon.show()
 	collision_shape_3d.disabled = false
 
 func show_progress_bar():

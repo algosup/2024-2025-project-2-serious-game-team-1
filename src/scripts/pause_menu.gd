@@ -31,7 +31,7 @@ func _on_option_menu_pressed() -> void:
 	option_menu.is_option_open = true
 	option_menu.show()
 func _on_back_button_pressed() -> void:
-	get_tree().change_scene_to_file(Variable.MainMenu_path)
+	get_tree().quit()
 	
 func resume_game():
 	get_tree().paused = false

@@ -131,7 +131,10 @@ transform = Transform3D(-0.970397, 3.20205e-05, -0.241516, 0.000106552, 0.999999
 [node name="trash area" parent="Gameplay/Quest_Assets" instance=ExtResource("7_s8y11")]
 process_mode = 1
 transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 309.761, 35.1006, 562.977)
+spawn_count = null
 spawn_area_size = Vector3(10, 0.1, 10)
+min_spawn_interval = null
+max_spawn_interval = null
 
 [node name="Objective_Areas" type="Node" parent="Gameplay/Quest_Assets"]
 
@@ -142,13 +145,13 @@ quest_name = "Get data"
 quest = ExtResource("16_jgd18")
 
 [node name="tutorial_objective_area2" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
-transform = Transform3D(-0.000129274, 0.0034184, -0.999994, -0.0650372, 0.997877, 0.00341957, 0.997883, 0.0650373, 9.33233e-05, 316.83, 33.3521, 755.216)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 316.83, 33.3521, 755.216)
 time_to_stay = 3.0
 quest_name = "Get zone"
 quest = ExtResource("16_jgd18")
 
 [node name="tutorial_objective_area3" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 150.389, 18.8152, 789.99)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150.389, 18.8152, 789.99)
 time_to_stay = 3.0
 quest_name = "Get data"
 quest = ExtResource("16_jgd18")

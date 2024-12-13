@@ -19,41 +19,45 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4tu4t")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 15
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -1.0
 offset_top = 2.0
+offset_right = 1.0
 offset_bottom = 23.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/MarginContainer"]
 layout_mode = 2
 color = Color(0.501961, 0.501961, 0.501961, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer"]
 layout_mode = 2
 
-[node name="Header" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="Header" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(1154, 50)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Header"]
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/Header"]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 theme_override_font_sizes/font_size = 35
 text = "   Option"
 
-[node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/Header"]
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/MarginContainer/VBoxContainer/Header"]
 layout_mode = 2
 theme_override_constants/separation = 840
 theme_override_styles/separator = SubResource("StyleBoxLine_r27m1")
 
-[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer/Header"]
+[node name="BackButton" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer/Header"]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -61,128 +65,128 @@ size_flags_vertical = 4
 theme_override_font_sizes/font_size = 30
 text = "Go Back"
 
-[node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer"]
+[node name="TabContainer" type="TabContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 current_tab = 0
 
-[node name="Sound" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
+[node name="Sound" type="VBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer"]
 custom_minimum_size = Vector2(0, 500)
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/TabContainer/Sound"]
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Sound"]
 layout_mode = 2
 
-[node name="VolumeManager1" parent="MarginContainer/VBoxContainer/TabContainer/Sound" instance=ExtResource("2_4vjif")]
+[node name="VolumeManager1" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Sound" instance=ExtResource("2_4vjif")]
 layout_mode = 2
 volume_name = "master"
 
-[node name="VolumeManager2" parent="MarginContainer/VBoxContainer/TabContainer/Sound" instance=ExtResource("2_4vjif")]
+[node name="VolumeManager2" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Sound" instance=ExtResource("2_4vjif")]
 layout_mode = 2
 volume_name = "music"
 
-[node name="VolumeManager3" parent="MarginContainer/VBoxContainer/TabContainer/Sound" instance=ExtResource("2_4vjif")]
+[node name="VolumeManager3" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Sound" instance=ExtResource("2_4vjif")]
 layout_mode = 2
 volume_name = "sound effect"
 
-[node name="VolumeManager4" parent="MarginContainer/VBoxContainer/TabContainer/Sound" instance=ExtResource("2_4vjif")]
+[node name="VolumeManager4" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Sound" instance=ExtResource("2_4vjif")]
 layout_mode = 2
 volume_name = "dialogue"
 
-[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer/TabContainer/Sound"]
+[node name="HSeparator2" type="HSeparator" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Sound"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Sound"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Sound"]
 layout_mode = 2
 
-[node name="Container" type="Container" parent="MarginContainer/VBoxContainer/TabContainer/Sound/HBoxContainer"]
+[node name="Container" type="Container" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Sound/HBoxContainer"]
 custom_minimum_size = Vector2(1000, 0)
 layout_mode = 2
 
-[node name="ConfirmButton" type="Button" parent="MarginContainer/VBoxContainer/TabContainer/Sound/HBoxContainer"]
+[node name="ConfirmButton" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Sound/HBoxContainer"]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Apply"
 
-[node name="Controls" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
+[node name="Controls" type="VBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer"]
 visible = false
 custom_minimum_size = Vector2(0, 600)
 layout_mode = 2
 metadata/_tab_index = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/TabContainer/Controls"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Controls"]
 custom_minimum_size = Vector2(0, 575)
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer"]
 custom_minimum_size = Vector2(1152, 575)
 layout_mode = 2
 theme_override_constants/separation = 5
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "Mouse Settings"
 
-[node name="Mouse" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer"]
+[node name="Mouse" type="VBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Mouse_sensitivity" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/Mouse" instance=ExtResource("3_ugiug")]
+[node name="Mouse_sensitivity" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/Mouse" instance=ExtResource("3_ugiug")]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "Key Binding"
 
-[node name="KeyBinding" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer"]
+[node name="KeyBinding" type="VBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 60
 
-[node name="KeyChange" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding" instance=ExtResource("2_ufot1")]
+[node name="KeyChange" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding" instance=ExtResource("2_ufot1")]
 layout_mode = 2
 action_name = "move_forward"
 
-[node name="KeyChange2" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding" instance=ExtResource("2_ufot1")]
+[node name="KeyChange2" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding" instance=ExtResource("2_ufot1")]
 layout_mode = 2
 action_name = "move_backward"
 
-[node name="KeyChange3" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding" instance=ExtResource("2_ufot1")]
+[node name="KeyChange3" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding" instance=ExtResource("2_ufot1")]
 layout_mode = 2
 action_name = "move_left"
 
-[node name="KeyChange4" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding" instance=ExtResource("2_ufot1")]
+[node name="KeyChange4" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding" instance=ExtResource("2_ufot1")]
 layout_mode = 2
 action_name = "move_right"
 
-[node name="KeyChange5" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding" instance=ExtResource("2_ufot1")]
+[node name="KeyChange5" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding" instance=ExtResource("2_ufot1")]
 layout_mode = 2
 action_name = "sprint"
 
-[node name="KeyChange9" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding" instance=ExtResource("2_ufot1")]
+[node name="KeyChange9" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding" instance=ExtResource("2_ufot1")]
 layout_mode = 2
 action_name = "jump"
 
-[node name="KeyChange7" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding" instance=ExtResource("2_ufot1")]
+[node name="KeyChange7" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding" instance=ExtResource("2_ufot1")]
 layout_mode = 2
 action_name = "interaction"
 
-[node name="KeyChange8" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding" instance=ExtResource("2_ufot1")]
+[node name="KeyChange8" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding" instance=ExtResource("2_ufot1")]
 layout_mode = 2
 action_name = "inventory"
 
-[node name="KeyChange10" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding" instance=ExtResource("2_ufot1")]
+[node name="KeyChange10" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding" instance=ExtResource("2_ufot1")]
 layout_mode = 2
 action_name = "quest_menu"
 
-[node name="KeyChange11" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding" instance=ExtResource("2_ufot1")]
+[node name="KeyChange11" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding" instance=ExtResource("2_ufot1")]
 layout_mode = 2
 action_name = "documentary"
 
-[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding"]
+[node name="HSeparator2" type="HSeparator" parent="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer/VBoxContainer/KeyBinding"]
 layout_mode = 2
 theme_override_constants/separation = 32
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Header/BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/TabContainer/Sound/HBoxContainer/ConfirmButton" to="." method="_on_confirm_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/Header/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Sound/HBoxContainer/ConfirmButton" to="." method="_on_confirm_button_pressed"]

@@ -12,6 +12,7 @@ var in_menu: bool = false
 
 
 func _ready():
+	hide_option()
 	# Check if Main Menu context exists
 	if has_node("Buttons"):
 		buttons = get_node("Buttons")
@@ -47,32 +48,26 @@ func _process(_delta: float) -> void:
 
 	if Input.is_action_just_pressed("escape") and is_option_open:
 		is_option_open = false
+		hide_option()
 		GoBack()
+
+func hide_option():
+	$CanvasLayer.hide()
+	
+func show_option():
+	$CanvasLayer.show()
 
 func _on_back_button_pressed() -> void:
 	GoBack()
 
-func _on_test_button_toggled(button_pressed):
-	if button_pressed:
-		print("Button is Pressed")
-		$TestButton.text = "Pressed"
-	else:
-		print("Button is Released")
-		$TestButton.text = "Released"
-
-func _on_test_button_pressed() -> void:
-	$TestButton.text = "Dommage"
-
 func _on_confirm_button_pressed() -> void:
-	$MarginContainer/VBoxContainer/TabContainer/Sound/VolumeManager1.set_slider()
-	$MarginContainer/VBoxContainer/TabContainer/Sound/VolumeManager2.set_slider()
-	$MarginContainer/VBoxContainer/TabContainer/Sound/VolumeManager3.set_slider()
-	$MarginContainer/VBoxContainer/TabContainer/Sound/VolumeManager4.set_slider()
+	$CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Sound/VolumeManager1.set_slider()
+	$CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Sound/VolumeManager2.set_slider()
+	$CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Sound/VolumeManager3.set_slider()
+	$CanvasLayer/MarginContainer/VBoxContainer/TabContainer/Sound/VolumeManager4.set_slider()
 
 func GoBack():
-	hide()
+	hide_option()
 	Variable.show_current()
 	if not in_menu:
 		pause_menu.pause_game()
-		player_ui.Player_uiVisible()
-		quests_panel.ShowQuestsPanels()

@@ -26,6 +26,7 @@ func _process(_delta: float) -> void:
 
 func _on_play_button_pressed() -> void:
 	LoadManager.load_scene("res://gameplay.tscn")
+	$Buttons/PlayButton.queue_free()
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit() 

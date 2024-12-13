@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_kxglq"]
 [ext_resource type="Script" path="res://scripts/CameraManager.gd" id="2_xl5pu"]
 [ext_resource type="PackedScene" uid="uid://0ydvsa4rak3r" path="res://assets/map/interaction.tscn" id="3_te68b"]
-[ext_resource type="Texture2D" uid="uid://dtbulwgg5jfno" path="res://assets/images/arrow1.png" id="4_p4yi5"]
+[ext_resource type="Texture2D" uid="uid://dtbulwgg5jfno" path="res://assets/images/quest/arrow1.png" id="4_p4yi5"]
 [ext_resource type="Script" path="res://scripts/player_marker.gd" id="5_gvss5"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_smq6u"]
@@ -23,7 +23,7 @@ script = ExtResource("2_xl5pu")
 
 [node name="Arm" type="SpringArm3D" parent="CameraManager"]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 1.78897, -0.296767)
+transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 1.78897, 0.0238492)
 shape = SubResource("SphereShape3D_smq6u")
 spring_length = 0.0
 

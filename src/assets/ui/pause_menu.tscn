@@ -71,7 +71,7 @@ theme_override_styles/separator = SubResource("StyleBoxLine_5w8xc")
 [node name="back_button" type="Button" parent="CanvasLayer/VBoxContainer"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
-text = "Go Back To Menu"
+text = "Quit"
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/resume_button" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/option_menu" to="." method="_on_option_menu_pressed"]
