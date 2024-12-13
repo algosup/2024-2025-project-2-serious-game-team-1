@@ -239,16 +239,17 @@ theme_override_font_sizes/font_size = 30
 layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/Right_page"]
-custom_minimum_size = Vector2(0, 200)
+custom_minimum_size = Vector2(0, 250)
 layout_mode = 2
-size_flags_vertical = 3
 focus_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
-fit_content = true
-scroll_active = false
 autowrap_mode = 2
 selection_enabled = true
+
+[node name="Container" type="Container" parent="Panel/Right_page"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
 
 [node name="Source_Label" type="Label" parent="Panel/Right_page"]
 custom_minimum_size = Vector2(0, 30)
