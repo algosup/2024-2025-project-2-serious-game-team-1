@@ -6,3 +6,4 @@ extends CanvasLayer
 func play_animation():
 	$AnimationPlayer.play("doc_received")
 	audio_stream_player_2d.play()
+	

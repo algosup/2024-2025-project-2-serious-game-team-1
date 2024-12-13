@@ -170,7 +170,7 @@ quest = ExtResource("15_dlsg0")
 [node name="Objective_Areas" type="Node" parent="Gameplay/Quest_Assets"]
 
 [node name="tutorial_objective_area1" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 408, 41.7134, 569)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 405.962, 41.8723, 569.079)
 time_to_stay = 3.0
 quest_name = "Get data"
 quest = ExtResource("16_jgd18")

@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://wl4rve86ex6h"]
+[gd_scene load_steps=6 format=3 uid="uid://crtrccaktk66"]
 
-[ext_resource type="Script" path="res://scripts/quest_adder.gd" id="1_p0w8t"]
-[ext_resource type="AudioStream" uid="uid://do0fxfm0abehx" path="res://assets/sounds/environment/level-passed-142971.mp3" id="1_y14ta"]
+[ext_resource type="Script" path="res://scripts/doc_adder.gd" id="1_1mnot"]
+[ext_resource type="AudioStream" uid="uid://do0fxfm0abehx" path="res://assets/sounds/environment/level-passed-142971.mp3" id="1_v7ire"]
 
 [sub_resource type="Animation" id="Animation_exqa2"]
 length = 0.001
@@ -19,7 +19,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_0wrne"]
-resource_name = "quest_received"
+resource_name = "doc_received"
 length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -37,11 +37,11 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_80fpg"]
 _data = {
 "RESET": SubResource("Animation_exqa2"),
-"quest_received": SubResource("Animation_0wrne")
+"doc_received": SubResource("Animation_0wrne")
 }
 
-[node name="Quest_Adder" type="CanvasLayer"]
-script = ExtResource("1_p0w8t")
+[node name="doc_adder" type="CanvasLayer"]
+script = ExtResource("1_1mnot")
 
 [node name="Panel" type="Panel" parent="."]
 anchors_preset = 8
@@ -63,7 +63,7 @@ offset_bottom = 57.0
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "Quest added in the quest log"
+text = "Documentation added in the Documentary Menu"
 autowrap_mode = 2
 
 [node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer"]
@@ -75,4 +75,4 @@ libraries = {
 }
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("1_y14ta")
+stream = ExtResource("1_v7ire")
