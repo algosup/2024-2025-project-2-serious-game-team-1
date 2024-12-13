@@ -1,30 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bu66re8qcxct8"]
+[gd_scene load_steps=3 format=3 uid="uid://bu66re8qcxct8"]
 
 [ext_resource type="Script" path="res://scripts/player_ui.gd" id="1_eioef"]
-[ext_resource type="Texture2D" uid="uid://b56qp2n7e4px3" path="res://assets/images/cross.png" id="2_8gm43"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kbwys"]
-bg_color = Color(0, 0, 0, 0.0862745)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 30
-corner_radius_top_right = 30
-corner_radius_bottom_right = 30
-corner_radius_bottom_left = 30
-expand_margin_left = 2.0
-expand_margin_top = 2.0
-expand_margin_right = 2.0
-expand_margin_bottom = 2.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_shilg"]
-bg_color = Color(1, 0, 0, 1)
-corner_radius_top_left = 30
-corner_radius_top_right = 30
-corner_radius_bottom_right = 30
-corner_radius_bottom_left = 30
+[ext_resource type="Texture2D" uid="uid://b56qp2n7e4px3" path="res://assets/images/player_ui/cross.png" id="2_8gm43"]
 
 [node name="Player UI" type="Control"]
 layout_mode = 3
@@ -36,33 +13,6 @@ grow_vertical = 2
 script = ExtResource("1_eioef")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -150.0
-offset_top = 65.0
-offset_right = 150.0
-offset_bottom = 90.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0, 1, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_styles/background = SubResource("StyleBoxFlat_kbwys")
-theme_override_styles/fill = SubResource("StyleBoxFlat_shilg")
-value = 10.0
-
-[node name="Location_Label" type="Label" parent="CanvasLayer"]
-unique_name_in_owner = true
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -39.5
-offset_right = 39.5
-offset_bottom = 42.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 30
-text = "Town"
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 custom_minimum_size = Vector2(16, 16)
