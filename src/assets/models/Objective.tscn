@@ -41,6 +41,7 @@ layers = 2
 texture = ExtResource("1_f07p4")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
 anchors_preset = 8

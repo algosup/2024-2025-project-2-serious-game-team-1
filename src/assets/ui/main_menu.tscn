@@ -86,7 +86,6 @@ position = Vector2(119, 488)
 texture = ExtResource("3_3l7jv")
 
 [node name="OptionMenu" parent="." instance=ExtResource("3_ica2l")]
-visible = false
 layout_mode = 1
 
 [node name="MenuMusic" type="AudioStreamPlayer" parent="."]

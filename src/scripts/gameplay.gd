@@ -26,6 +26,9 @@ extends Node
 @onready var tutorial_objective_area_1: Area3D = $Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1
 @onready var tutorial_objective_area_2: Area3D = $Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area2
 @onready var tutorial_objective_area_3: Area3D = $Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area3
+@onready var elie_objective: Area3D = $Gameplay/Quest_Assets/Objective_Areas/elie_objective
+@onready var elie_objective_2: Area3D = $Gameplay/Quest_Assets/Objective_Areas/elie_objective2
+@onready var elie_objective_3: Area3D = $Gameplay/Quest_Assets/Objective_Areas/elie_objective3
 
 func _ready() -> void:
 	#introduction_animation.play_intro()
@@ -52,6 +55,9 @@ func _ready() -> void:
 	tutorial_objective_area_1.hide_zone()
 	tutorial_objective_area_2.hide_zone()
 	tutorial_objective_area_3.hide_zone()
+	elie_objective.hide()
+	elie_objective_2.hide()
+	elie_objective_3.hide()
 
 
 func _process(_delta):
