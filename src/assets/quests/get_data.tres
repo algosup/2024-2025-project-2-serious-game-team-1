@@ -15,4 +15,4 @@ quests_goal_counter = 0
 quests_goal_objective = 3
 quests_description = "Use the air measuring device and measure the air quality in the harbour, the town centre and the factory."
 quest_state = 0
-quest_documentation = Array[String](["climate_change", "greenhouse_effect", "air_quality_measurement"])
+quest_documentation = Array[String](["Climate Change", "Greenhouse gases (GHG)", "Air quality measurement"])

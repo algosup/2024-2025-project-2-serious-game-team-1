@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cekaafpjb52lv"]
 
 [ext_resource type="Script" path="res://scripts/slot2.gd" id="1_8rftt"]
-[ext_resource type="Texture2D" uid="uid://831ecoiig4er" path="res://assets/images/slot_inventory.PNG" id="2_e7vdw"]
+[ext_resource type="Texture2D" uid="uid://831ecoiig4er" path="res://assets/images/Inventory/slot_inventory.PNG" id="2_e7vdw"]
 
 [node name="Slot" type="TextureRect"]
 custom_minimum_size = Vector2(128, 128)

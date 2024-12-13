@@ -25,7 +25,7 @@ var inventory : Array = [
 var NPC_talking = false
 var inventorySize : int = 20
 enum category {Main_Quest, Secondary_Quest}
-var new_doc = []
+var documentation_available = []
 
 var completed_quests : Array = []
 var active_main_quests : Array = [null, null, null]
@@ -38,8 +38,8 @@ func get_root_node():
 
 func show_documentation_resource(quest_documentation):
 	for i in quest_documentation:
-		new_doc.append(i)
-	print("New_doc: ", new_doc)
+		documentation_available.append(i)
+	print("New_doc: ", documentation_available)
 
 func add_item(item : Item_Ressource):
 	print("singal receive")

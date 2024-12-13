@@ -3,7 +3,7 @@
 extends Node3D
 
 @export var object_scene: PackedScene
-@export var spawn_count: int = 20  # Number of objects to spawn
+@export var spawn_count: int = 21  # Number of objects to spawn
 @export var spawn_area_size: Vector3 = Vector3(10, 5, 10)  # Size of the spawn area
 @export var min_spawn_interval: float = 5.0  # Minimum cooldown in seconds
 @export var max_spawn_interval: float = 30.0  # Maximum cooldown in seconds
@@ -15,7 +15,7 @@ func _ready():
 func spawn_objects() -> void:
 	print("Spawning...")
 	for i in range(spawn_count):
-		
+		print("Bottle spawned ", i)
 		var obj_instance = object_scene.instantiate()
 		var current_position = Vector3 (0,0,0)
 		if obj_instance:

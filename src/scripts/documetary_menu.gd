@@ -17,7 +17,7 @@ extends Control
 @onready var plastic_recycling: Panel = $"Panel/Left_page/Documents_Types_Container/Documentation/Recycling Materials/Plastic_recycling"
 @onready var recycling_vegetative_waste: Panel = $"Panel/Left_page/Documents_Types_Container/Documentation/Recycling Materials/Recycling_Vegetative_Waste"
 
-var documentation_panel : Array[Panel] = [
+@onready var documentation_panel : Array = [
 	climate_change, forest_fires, coal, 
 	fossil_fuels, renewable_energies, solar_panels,
 	wind_turbine, fossil_fuels_vs_renewable_energies, air_quality_measurement,
@@ -29,18 +29,10 @@ func set_documentation(documentation : Documentation_Resource):
 	rich_text_label.text = documentation.Documentation_explanation
 	source_label.text = documentation.Documentation_source_to_text()
 
-func show_documentation(documentation_panel: Panel):
-	documentation_panel.visible = true
-
 func show_documentation_doc_menu():
+	print(documentation_panel)
 	for i in range(len(documentation_panel)):
-		if AllDictionary.new_doc.has(documentation_panel[i]):
-			print(documentation_panel[i])
-			show_documentation(documentation_panel[i])
-			for j in range(len(AllDictionary.new_doc)):
-				if AllDictionary.new_doc[j] == documentation_panel[i]:
-					print(AllDictionary.new_doc[j])
-					AllDictionary.new_doc[j] = null
+		documentation_panel[i].show_documentation()
 
 func OpenDoc():
 	Variable.DocumentaryMenuOpen = !Variable.DocumentaryMenuOpen

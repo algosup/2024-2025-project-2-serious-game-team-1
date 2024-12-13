@@ -38,6 +38,7 @@ var Item : Item_Ressource
 func OpenInventory():
 	print("Open Inventory")
 	Variable.InventoryOpen = !Variable.InventoryOpen
+	print(slots)
 	for i in range(AllDictionary.inventorySize):
 		slots[i].set_item(AllDictionary.inventory[i])
 	$".".show()
