@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://chxfeda425gsu"]
+[gd_scene load_steps=31 format=3 uid="uid://chxfeda425gsu"]
 
 [ext_resource type="PackedScene" uid="uid://lrfexx8s0e13" path="res://assets/map/map.tscn" id="1_7b4si"]
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_hjvrf"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://40vvrysqespg" path="res://assets/ui/quest_menu.tscn" id="12_unwyq"]
 [ext_resource type="Shader" path="res://assets/ui/shaders/minimap.gdshader" id="12_ycxjg"]
 [ext_resource type="PackedScene" uid="uid://cr25pnfa6ioqt" path="res://assets/models/garbage_can.tscn" id="13_5x3xm"]
+[ext_resource type="Resource" uid="uid://copclenoedrqy" path="res://assets/quests/clean_beach.tres" id="15_dlsg0"]
 [ext_resource type="PackedScene" uid="uid://bpi826wg0fa6b" path="res://assets/models/Objective.tscn" id="15_h7f3s"]
 [ext_resource type="PackedScene" uid="uid://b31wjwnn4gip3" path="res://assets/ui/option_menu.tscn" id="16_goewa"]
 [ext_resource type="Resource" uid="uid://dx0okth0b6dxk" path="res://assets/quests/get_data.tres" id="16_jgd18"]
@@ -130,11 +131,10 @@ transform = Transform3D(-0.970397, 3.20205e-05, -0.241516, 0.000106552, 0.999999
 
 [node name="trash area" parent="Gameplay/Quest_Assets" instance=ExtResource("7_s8y11")]
 process_mode = 1
-transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 309.761, 35.1006, 562.977)
-spawn_count = null
-spawn_area_size = Vector3(10, 0.1, 10)
-min_spawn_interval = null
-max_spawn_interval = null
+transform = Transform3D(0.99734, -0.07289, 0, 0.07289, 0.99734, 0, 0, 0, 1, 284.255, 37.5868, 562.977)
+spawn_area_size = Vector3(80, 0.1, 130)
+quest_name = "Clean Beach"
+quest = ExtResource("15_dlsg0")
 
 [node name="Objective_Areas" type="Node" parent="Gameplay/Quest_Assets"]
 
@@ -209,6 +209,7 @@ script = ExtResource("25_oyn76")
 [connection signal="call_areas" from="Gameplay/Pnj/Mr_Mayor" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]
 [connection signal="call_areas" from="Gameplay/Pnj/Mr_Mayor" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area2" method="area_spawn"]
 [connection signal="call_areas" from="Gameplay/Pnj/Mr_Mayor" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area3" method="area_spawn"]
+[connection signal="call_areas" from="Gameplay/Pnj/Roger" to="Gameplay/Quest_Assets/trash area" method="call_areas"]
 [connection signal="call_areas" from="Gameplay/Pnj/Roger" to="Gameplay/Quest_Assets/Objective_Areas/tutorial_objective_area1" method="area_spawn"]
 [connection signal="ready" from="Manager/Dictionnary Manager" to="Menus/Inventory_Gestion" method="_on_dictionnary_manager_ready"]
 [connection signal="cinematic_done" from="Introduction_Animation" to="." method="_on_introduction_animation_cinematic_done"]

@@ -7,12 +7,14 @@ extends Node3D
 @export var spawn_area_size: Vector3 = Vector3(10, 5, 10)  # Size of the spawn area
 @export var min_spawn_interval: float = 5.0  # Minimum cooldown in seconds
 @export var max_spawn_interval: float = 30.0  # Maximum cooldown in seconds
+@export var quest_name : String
+@export var quest : Quests_Resources
 
 func _ready():
 	randomize()  # Ensure randomness each time the scene is run
-	spawn_objects()
+	call_areas()
 
-func spawn_objects() -> void:
+func call_areas() -> void:
 	print("Spawning...")
 	for i in range(spawn_count):
 		print("Bottle spawned ", i)
