@@ -27,6 +27,9 @@ grow_vertical = 2
 script = ExtResource("1_ery66")
 metadata/_edit_lock_ = true
 
+[node name="OptionMenu" parent="." instance=ExtResource("3_ica2l")]
+layout_mode = 1
+
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -84,9 +87,6 @@ language = "en"
 [node name="Sprite2D" type="Sprite2D" parent="Buttons"]
 position = Vector2(119, 488)
 texture = ExtResource("3_3l7jv")
-
-[node name="OptionMenu" parent="." instance=ExtResource("3_ica2l")]
-layout_mode = 1
 
 [node name="MenuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_kp6lv")

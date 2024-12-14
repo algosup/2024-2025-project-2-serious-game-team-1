@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dungkr3duinky" path="res://assets/models/martine.tscn" id="12_37ul3"]
 [ext_resource type="PackedScene" uid="uid://40vvrysqespg" path="res://assets/ui/quest_menu.tscn" id="12_unwyq"]
 [ext_resource type="Shader" path="res://assets/ui/shaders/minimap.gdshader" id="12_ycxjg"]
-[ext_resource type="PackedScene" path="res://assets/models/garbage_can.tscn" id="13_5x3xm"]
+[ext_resource type="PackedScene" uid="uid://cr25pnfa6ioqt" path="res://assets/models/garbage_can.tscn" id="13_5x3xm"]
 [ext_resource type="PackedScene" uid="uid://d1p25uvpjx6b0" path="res://assets/designs/Factories/Tree branches.glb" id="14_rv5cq"]
 [ext_resource type="Resource" uid="uid://copclenoedrqy" path="res://assets/quests/clean_beach.tres" id="15_dlsg0"]
 [ext_resource type="PackedScene" uid="uid://bpi826wg0fa6b" path="res://assets/models/Objective.tscn" id="15_h7f3s"]
@@ -28,7 +28,7 @@
 [ext_resource type="Resource" uid="uid://balyer5qima0m" path="res://assets/quests/reconaissance_mission.tres" id="18_l4d27"]
 [ext_resource type="PackedScene" uid="uid://dekxjqqux4lw3" path="res://assets/ui/documetary_menu.tscn" id="19_tpto7"]
 [ext_resource type="PackedScene" uid="uid://d1uhb55q7ye7b" path="res://assets/ui/introduction_animation.tscn" id="20_oxljo"]
-[ext_resource type="PackedScene" path="res://assets/designs/tscn_design/solar_panel_ground.tscn" id="21_3gr6i"]
+[ext_resource type="PackedScene" uid="uid://b8x01jc5wd2a3" path="res://assets/designs/tscn_design/solar_panel_ground.tscn" id="21_3gr6i"]
 [ext_resource type="PackedScene" uid="uid://bpkmfirspkjsi" path="res://assets/models/block_area.tscn" id="21_isgtn"]
 [ext_resource type="Script" path="res://scripts/general_music.gd" id="25_oyn76"]
 
@@ -91,7 +91,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="Gameplay/MiniMap/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(186, 184)
+size = Vector2i(2, 2)
 render_target_update_mode = 4
 script = ExtResource("9_xy0vo")
 

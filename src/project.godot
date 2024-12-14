@@ -13,9 +13,13 @@ config_version=5
 config/name="The Renewable Island"
 run/main_scene="res://assets/ui/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://logo.png"
+config/icon="res://logo.PNG"
 config/macos_native_icon="res://logo.png"
 config/windows_native_icon="res://logo.png"
+
+[audio]
+
+driver/driver="OpenAL"
 
 [autoload]
 

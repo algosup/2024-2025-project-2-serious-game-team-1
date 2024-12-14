@@ -15,7 +15,7 @@ func _ready():
 	# Enforce the minimum window size using DisplayServer
 	DisplayServer.window_set_min_size(Variable.min_size)
 	buttons.show()
-	option_menu.hide()
+	option_menu.hide_option()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -33,4 +33,4 @@ func _on_quit_button_pressed() -> void:
 	
 func _on_option_button_pressed() -> void:
 	Variable.CurrentScene = Variable.MainMenu_path
-	option_menu.show()
+	option_menu.show_option()
