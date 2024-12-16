@@ -4,5 +4,5 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func play_animation():
-	$AnimationPlayer.play("doc_received")
+	$AnimationPlayer.play("quest_received")
 	audio_stream_player_2d.play()

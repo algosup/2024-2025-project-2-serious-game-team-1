@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cqd0i6thcpy2k"]
 
 [ext_resource type="Script" path="res://scripts/quests_slot.gd" id="1_h5gel"]
-[ext_resource type="Texture2D" uid="uid://cvd62xwikxx3x" path="res://assets/images/quest.PNG" id="2_4ki18"]
+[ext_resource type="Texture2D" uid="uid://cvd62xwikxx3x" path="res://assets/images/quest_menu/quest.PNG" id="2_4ki18"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ubtjj"]
 color = Color(0, 0, 0, 0)
