@@ -91,7 +91,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="Gameplay/MiniMap/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(186, 184)
+size = Vector2i(2, 2)
 render_target_update_mode = 4
 script = ExtResource("9_xy0vo")
 
@@ -193,19 +193,19 @@ quest = ExtResource("16_jgd18")
 [node name="elie_objective" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 625.231, 55.6985, 270.627)
 time_to_stay = 0.5
-quest_name = "Reconaissance"
+quest_name = "Reconaissance mission"
 quest = ExtResource("18_l4d27")
 
 [node name="elie_objective2" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 472.278, 52.4008, 251.705)
 time_to_stay = 0.5
-quest_name = "Reconaissance"
+quest_name = "Reconaissance mission"
 quest = ExtResource("18_l4d27")
 
 [node name="elie_objective3" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("15_h7f3s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 539.265, 48.1937, 337.311)
 time_to_stay = 0.5
-quest_name = "Reconaissance"
+quest_name = "Reconaissance mission"
 quest = ExtResource("18_l4d27")
 
 [node name="Block_Area" parent="Gameplay/Quest_Assets/Objective_Areas" instance=ExtResource("21_isgtn")]

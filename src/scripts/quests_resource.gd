@@ -39,6 +39,7 @@ func shift_quest():
 				if !AllDictionary.completed_quests.has(AllDictionary.active_main_quests[i]):
 					AllDictionary.completed_quests.append(AllDictionary.active_main_quests[i])
 					print("quest has been added to the array completed quests: ", AllDictionary.completed_quests)
+					EcoFollow.set_new_eco(quests_zone, quests_ecopoint)
 					AllDictionary.show_documentation_resource(quest_documentation)
 				if quests_next_quests != null:
 					AllDictionary.active_main_quests[i] = quests_next_quests.quests_name

@@ -12,9 +12,6 @@ func cleanup():
 	print("Inventory contents:", AllDictionary.inventory)
 	# Check if "bin bag" exists in the autoload inventory
 	if bin_bag in AllDictionary.inventory:
-		print("Cleaning up", waste_name)
-		EcoFollow.set_eco_beach(10)
-		print(EcoFollow.eco_beach)
 		if AllDictionary.active_main_quests.has("Clean Beach") or AllDictionary.active_secondary_quests.has("Clean Beach"):
 			quest = load("res://assets/quests/clean_beach.tres")
 			quest.add_counter()

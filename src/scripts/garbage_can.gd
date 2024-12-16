@@ -16,5 +16,6 @@ func action():
 		print("Bin bag discard")
 		$"../bin bag".appear()
 		recycle_plastic_quest.quest_state = 3
+		recycle_plastic_quest.shift_quest()
 		%quests_panel.set_quests()
 		%quest_menu.set_quests()

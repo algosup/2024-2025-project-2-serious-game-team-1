@@ -18,16 +18,26 @@ var Localisation: Dictionary = {
 	"mountains": eco_mountains,
 }
 
-func set_eco_city(value):
-	eco_town = clamp(value, 0, 100)
-func set_eco_beach(value):
-	eco_beach = clamp(value, 0, 100)
-func set_eco_forest(value):
-	eco_forest = clamp(value, 0, 100)
-func set_eco_farm(value):
-	eco_farm = clamp(value, 0, 100)
+func set_eco_city(value:int):
+	eco_town = eco_town + clamp(value, 0, 100)
+	return eco_town
+func set_eco_beach(value:int):
+	eco_beach = eco_beach + clamp(value, 0, 100)
+	return eco_beach
+func set_eco_forest(value:int):
+	eco_forest = eco_forest + clamp(value, 0, 100)
+	return eco_forest
+func set_eco_farm(value:int):
+	eco_farm = eco_farm + clamp(value, 0, 100)
+	return eco_farm
+func set_eco_port(value:int):
+	eco_port = eco_port + clamp(value, 0, 100)
+	return eco_port
+func set_eco_mountain(value:int):
+	eco_mountains = eco_mountains + clamp(value, 0, 100)
+	return eco_mountains
 
-func eco_zone(zone: String, value: float):
+func eco_zone(zone: String, value: int):
 	if zone == "Town":
 		value = eco_town
 	if zone == "Beach":
@@ -43,3 +53,19 @@ func eco_zone(zone: String, value: float):
 	
 	return value
 		
+		
+		
+func set_new_eco(zone: String, points:int):
+	if zone == "Town":
+		set_eco_city(points)
+	if zone == "Beach":
+		set_eco_beach(points)
+	if zone == "Farm":
+		set_eco_farm(points)
+	if zone == "Forest":
+		set_eco_forest(points)
+	if zone == "Port":
+		set_eco_port(points)
+	if zone == "Mountains":
+		set_eco_mountain(points)
+	eco_zone(zone, points)
