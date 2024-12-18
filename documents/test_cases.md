@@ -2,9 +2,12 @@
 |author|Léna|
 |-|-|
 |Created|11/27/2024|
-|Finished|12/06/2024|
+|Finished|12/18/2024|
 
 ![-](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+you can see all bugs found on the file *bug_database.md*
+
 ## Priority
 Test priorities are differentiated as such:
 | Number | Priority |
@@ -27,7 +30,7 @@ Test priorities are differentiated as such:
 ||||Jump when space bar pressed|High|Done|
 ||||Sprint when shift pressed|High|Done|
 |2|Inventory|Use of inventory|When E pressed open or close the inventory|High|Done|
-||||Left click  to select an object|High|None|
+||||Left click  to select an object and see all the information about this object|High|Done|
 |3|Interactions|Talk with png|When you press f you talk to the png.|High|Done|
 ||| Interacts with objects|When you press f the player grabs it and the object goes into the inventory.|High|Done|
 |4|Quest|Quests are small objectives that the player completes during the game. The player has an interface interface so that he/she can see his/her quest progress (The player can only do 3 quests at the same time).|When you press C, the quest window opens or closes|High|Done|
