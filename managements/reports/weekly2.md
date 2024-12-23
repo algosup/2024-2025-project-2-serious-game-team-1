@@ -1,6 +1,3 @@
-# Report of 11/15/2024
-
----
 
 ## Tasks of the Day
 
